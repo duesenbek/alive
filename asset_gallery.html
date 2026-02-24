@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            background: #333;
+            color: white;
+            font-family: sans-serif;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+
+        .item {
+            background: #444;
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Asset Verification Gallery</h1>
+    <div class="grid" id="container"></div>
+    <script>
+        const container = document.getElementById('container');
+        // Generate 1-99
+        for (let i = 1; i <= 99; i++) {
+            const div = document.createElement('div');
+            div.className = 'item';
+            div.innerHTML = `
+      <img src="assets/transport/transport_${i}.webp" loading="lazy">
+      <div>transport_${i}</div>
+    `;
+            container.appendChild(div);
+        }
+    </script>
+</body>
+
+</html>

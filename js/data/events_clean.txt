@@ -1,0 +1,386 @@
+[
+    {
+        "id": "birth",
+        "tag": "lifechanging",
+        "description": "event.birth.desc",
+        "titleKey": "event.birth.title",
+        "rarity": "special",
+        "minAge": 0,
+        "maxAge": 0,
+        "unique": true,
+        "choices": [
+            {
+                "id": "start",
+                "text": "event.birth.choice.start",
+                "statChanges": {
+                    "happiness": 5
+                }
+            }
+        ]
+    },
+    {
+        "id": "event_lottery_win",
+        "tag": "major_positive",
+        "description": "event_lottery_win.desc",
+        "rarity": "rare",
+        "minAge": 18,
+        "maxAge": 90,
+        "choices": [
+            {
+                "text": "event_lottery_win.choice.0",
+                "statChanges": {
+                    "money": 100000,
+                    "happiness": 20
+                },
+                "probability": 1,
+                "followupEventId": null
+            }
+        ]
+    },
+    {
+        "id": "event_viral_video",
+        "tag": "major_positive",
+        "description": "event_viral_video.desc",
+        "rarity": "common",
+        "minAge": 10,
+        "maxAge": 40,
+        "choices": [
+            {
+                "text": "event_viral_video.choice.0",
+                "statChanges": {
+                    "money": 5000,
+                    "happiness": 5
+                },
+                "probability": 1
+            },
+            {
+                "text": "event_viral_video.choice.1",
+                "statChanges": {
+                    "stress": -5
+                },
+                "probability": 1
+            }
+        ]
+    },
+    {
+        "id": "event_inheritance",
+        "tag": "major_positive",
+        "description": "event_inheritance.desc",
+        "rarity": "rare",
+        "minAge": 25,
+        "maxAge": 60,
+        "choices": [
+            {
+                "text": "event_inheritance.choice.0",
+                "statChanges": {
+                    "money": 25000,
+                    "happiness": 5
+                },
+                "probability": 1
+            }
+        ]
+    },
+    {
+        "id": "event_chronic_illness",
+        "tag": "major_negative",
+        "description": "event_chronic_illness.desc",
+        "rarity": "uncommon",
+        "minAge": 30,
+        "maxAge": 80,
+        "choices": [
+            {
+                "text": "event_chronic_illness.choice.0",
+                "statChanges": {
+                    "money": -10000,
+                    "health": 10
+                },
+                "probability": 1
+            },
+            {
+                "text": "event_chronic_illness.choice.1",
+                "statChanges": {
+                    "health": -20,
+                    "happiness": -10
+                },
+                "probability": 1
+            }
+        ]
+    },
+    {
+        "id": "event_scam_victim",
+        "tag": "major_negative",
+        "description": "event_scam_victim.desc",
+        "rarity": "rare",
+        "minAge": 20,
+        "maxAge": 90,
+        "choices": [
+            {
+                "text": "event_scam_victim.choice.0",
+                "statChanges": {
+                    "money": -1000,
+                    "stress": 20
+                },
+                "probability": 0.3,
+                "followupEventId": "event_scam_recovery"
+            },
+            {
+                "text": "event_scam_victim.choice.1",
+                "statChanges": {
+                    "money": -5000,
+                    "happiness": -20
+                },
+                "probability": 1
+            }
+        ]
+    },
+    {
+        "id": "event_house_fire",
+        "tag": "major_negative",
+        "description": "event_house_fire.desc",
+        "rarity": "very_rare",
+        "minAge": 18,
+        "maxAge": 100,
+        "choices": [
+            {
+                "text": "event_house_fire.choice.0",
+                "statChanges": {
+                    "money": -20000,
+                    "happiness": -15
+                },
+                "probability": 1
+            }
+        ]
+    },
+    {
+        "id": "event_lost_wallet",
+        "tag": "minor",
+        "description": "event_lost_wallet.desc",
+        "rarity": "common",
+        "minAge": 12,
+        "maxAge": 100,
+        "choices": [
+            {
+                "text": "event_lost_wallet.choice.0",
+                "statChanges": {
+                    "money": -50,
+                    "stress": 5
+                },
+                "probability": 1
+            }
+        ]
+    },
+    {
+        "id": "event_found_pet",
+        "tag": "minor",
+        "description": "event_found_pet.desc",
+        "rarity": "common",
+        "minAge": 5,
+        "maxAge": 80,
+        "choices": [
+            {
+                "text": "event_found_pet.choice.0",
+                "statChanges": {
+                    "happiness": 5,
+                    "money": -100
+                },
+                "probability": 1
+            },
+            {
+                "text": "event_found_pet.choice.1",
+                "statChanges": {
+                    "happiness": -2
+                },
+                "probability": 1
+            }
+        ]
+    },
+    {
+        "id": "event_flat_tire",
+        "tag": "minor",
+        "description": "event_flat_tire.desc",
+        "rarity": "common",
+        "minAge": 18,
+        "maxAge": 80,
+        "choices": [
+            {
+                "text": "event_flat_tire.choice.0",
+                "statChanges": {
+                    "stress": 5,
+                    "health": -1
+                },
+                "probability": 0.8
+            },
+            {
+                "text": "event_flat_tire.choice.1",
+                "statChanges": {
+                    "money": -200
+                },
+                "probability": 1
+            }
+        ]
+    },
+    {
+        "id": "event_rainy_day",
+        "tag": "minor",
+        "description": "event_rainy_day.desc",
+        "rarity": "common",
+        "minAge": 5,
+        "maxAge": 100,
+        "choices": [
+            {
+                "text": "event_rainy_day.choice.0",
+                "statChanges": {
+                    "health": -1
+                },
+                "probability": 1
+            },
+            {
+                "text": "event_rainy_day.choice.1",
+                "statChanges": {
+                    "money": -20
+                },
+                "probability": 1
+            }
+        ]
+    },
+    {
+        "id": "event_book_club",
+        "tag": "minor",
+        "description": "event_book_club.desc",
+        "rarity": "common",
+        "minAge": 20,
+        "maxAge": 90,
+        "choices": [
+            {
+                "text": "event_book_club.choice.0",
+                "statChanges": {
+                    "intelligence": 2,
+                    "social": 2
+                },
+                "probability": 1
+            },
+            {
+                "text": "event_book_club.choice.1",
+                "statChanges": {},
+                "probability": 1
+            }
+        ]
+    },
+    {
+        "id": "event_street_performer",
+        "tag": "minor",
+        "description": "event_street_performer.desc",
+        "rarity": "common",
+        "minAge": 5,
+        "maxAge": 100,
+        "choices": [
+            {
+                "text": "event_street_performer.choice.0",
+                "statChanges": {
+                    "money": -5,
+                    "happiness": 2
+                },
+                "probability": 1
+            },
+            {
+                "text": "event_street_performer.choice.1",
+                "statChanges": {},
+                "probability": 1
+            }
+        ]
+    },
+    {
+        "id": "crisis_bankruptcy_looming",
+        "tag": "crisis",
+        "description": "CRISIS! You are in deep debt. The bank is seizing your assets.",
+        "rarity": "special",
+        "minAge": 18,
+        "maxAge": 100,
+        "unique": false,
+        "choices": [
+            {
+                "text": "Declare Bankruptcy (Lose Assets, Stress +50)",
+                "statChanges": {
+                    "happiness": -30,
+                    "stress": 50
+                },
+                "specialEffect": "bankruptcy_penalty"
+            },
+            {
+                "text": "Apply for Bailout (Watch Ad - Reduce Debt 50%)",
+                "statChanges": {},
+                "adReward": "bailout"
+            }
+        ]
+    },
+    {
+        "id": "crisis_poverty_warning",
+        "tag": "crisis",
+        "description": "WARNING! You are broke. You can barely afford food.",
+        "rarity": "special",
+        "minAge": 18,
+        "maxAge": 100,
+        "unique": false,
+        "choices": [
+            {
+                "text": "Stay Hungry (Happiness -10)",
+                "statChanges": {
+                    "happiness": -10,
+                    "health": -2
+                }
+            },
+            {
+                "text": "Get Emergency Cash (Watch Ad +$1000)",
+                "statChanges": {},
+                "adReward": "emergency_cash"
+            }
+        ]
+    },
+    {
+        "id": "crisis_health_critical",
+        "tag": "crisis",
+        "description": "CRISIS! Your health is failing. You might not survive the year.",
+        "rarity": "special",
+        "minAge": 18,
+        "maxAge": 100,
+        "unique": false,
+        "choices": [
+            {
+                "text": "Accept Fate (Risk Death)",
+                "statChanges": {
+                    "happiness": -20
+                },
+                "specialEffect": "risk_death_high"
+            },
+            {
+                "text": "Experimental Treatment (Watch Ad)",
+                "statChanges": {},
+                "adReward": "health_restore_crisis"
+            }
+        ]
+    },
+    {
+        "id": "crisis_unemployed_desperate",
+        "tag": "crisis",
+        "description": "CRISIS! Savings are gone. You can't find work. Hunger is setting in.",
+        "rarity": "special",
+        "minAge": 18,
+        "maxAge": 65,
+        "unique": false,
+        "choices": [
+            {
+                "text": "Beg on Streets (Health -10, Prestige -10)",
+                "statChanges": {
+                    "health": -10,
+                    "prestige": -10,
+                    "money": 100
+                }
+            },
+            {
+                "text": "Call Headhunter (Watch Ad)",
+                "statChanges": {},
+                "adReward": "guaranteed_job"
+            }
+        ]
+    }
+]

@@ -1,0 +1,756 @@
+/**
+ * Shop UI Styles - Alive Life Simulator
+ * Enhanced shopping experience with tiers and categories
+ */
+
+/* ============================================================================
+   SHOP SCREEN
+   ============================================================================ */
+.shopScreen {
+  padding: 20px;
+  padding-bottom: 100px;
+}
+
+.shopHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.shopBackBtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.shopBackBtn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.shopTitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  flex: 1;
+}
+
+.shopBalance {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background: linear-gradient(135deg, rgba(81, 207, 102, 0.2) 0%, rgba(81, 207, 102, 0.1) 100%);
+  border-radius: 20px;
+  border: 1px solid rgba(81, 207, 102, 0.3);
+}
+
+.shopBalanceIcon {
+  font-size: 16px;
+}
+
+.shopBalanceAmount {
+  font-size: 14px;
+  font-weight: 600;
+  color: #51cf66;
+}
+
+/* ============================================================================
+   SHOP TABS
+   ============================================================================ */
+.shopTabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  scrollbar-width: none;
+}
+
+.shopTabs::-webkit-scrollbar {
+  display: none;
+}
+
+.shopTab {
+  flex: 1;
+  min-width: 70px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.shopTab:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+.shopTab.active {
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.2) 0%, rgba(124, 58, 237, 0.2) 100%);
+  border-color: rgba(0, 212, 255, 0.4);
+  color: #fff;
+}
+
+.shopTabIcon {
+  font-size: 20px;
+}
+
+.shopTabLabel {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.shopTabBadge {
+  font-size: 9px;
+  padding: 2px 6px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  margin-top: 2px;
+}
+
+/* ============================================================================
+   EQUIPPED SUMMARY
+   ============================================================================ */
+.equippedSummary {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow-x: auto;
+}
+
+.equippedSlot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 60px;
+  padding: 8px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.equippedSlot:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.equippedSlot.empty {
+  opacity: 0.5;
+}
+
+.equippedSlotIcon {
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+
+.equippedSlotLabel {
+  font-size: 9px;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.equippedSlotTier {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-top: 4px;
+}
+
+/* ============================================================================
+   STYLE SCORE
+   ============================================================================ */
+.styleScoreCard {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: linear-gradient(135deg, rgba(255, 107, 157, 0.15) 0%, rgba(255, 215, 0, 0.15) 100%);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 107, 157, 0.3);
+  margin-bottom: 20px;
+}
+
+.styleScoreIcon {
+  font-size: 32px;
+}
+
+.styleScoreInfo {
+  flex: 1;
+}
+
+.styleScoreLabel {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 4px;
+}
+
+.styleScoreValue {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.styleScoreBar {
+  width: 80px;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.styleScoreBarFill {
+  height: 100%;
+  background: linear-gradient(90deg, #ff6b9d 0%, #ffd700 100%);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+/* ============================================================================
+   ITEM GRID
+   ============================================================================ */
+.shopItemsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.shopItem {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.shopItem:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.shopItem.owned {
+  border-color: rgba(81, 207, 102, 0.3);
+}
+
+.shopItem.equipped {
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.15) 0%, rgba(124, 58, 237, 0.15) 100%);
+  border-color: rgba(0, 212, 255, 0.4);
+}
+
+.shopItem.locked {
+  opacity: 0.5;
+}
+
+.shopItemTierBadge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 3px 8px;
+  border-radius: 10px;
+  font-size: 9px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.shopItemTierBadge.basic {
+  background: rgba(156, 163, 175, 0.3);
+  color: #9ca3af;
+}
+
+.shopItemTierBadge.standard {
+  background: rgba(96, 165, 250, 0.3);
+  color: #60a5fa;
+}
+
+.shopItemTierBadge.premium {
+  background: rgba(167, 139, 250, 0.3);
+  color: #a78bfa;
+}
+
+.shopItemTierBadge.luxury {
+  background: rgba(251, 191, 36, 0.3);
+  color: #fbbf24;
+}
+
+.shopItemTierBadge.elite {
+  background: rgba(244, 114, 182, 0.3);
+  color: #f472b6;
+}
+
+.shopItemIcon {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.shopItemName {
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.shopItemDesc {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 8px;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.shopItemEffects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 10px;
+}
+
+.shopItemEffect {
+  padding: 2px 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.shopItemEffect.positive {
+  background: rgba(81, 207, 102, 0.2);
+  color: #51cf66;
+}
+
+.shopItemEffect.negative {
+  background: rgba(255, 107, 107, 0.2);
+  color: #ff6b6b;
+}
+
+.shopItemFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.shopItemPrice {
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffd700;
+}
+
+.shopItemPrice.free {
+  color: #51cf66;
+}
+
+.shopItemStatus {
+  font-size: 10px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.shopItemStatus.owned {
+  background: rgba(81, 207, 102, 0.2);
+  color: #51cf66;
+}
+
+.shopItemStatus.equipped {
+  background: rgba(0, 212, 255, 0.2);
+  color: #00d4ff;
+}
+
+/* ============================================================================
+   SUBSCRIPTION ITEMS
+   ============================================================================ */
+.shopSubItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 12px;
+  transition: all 0.2s ease;
+}
+
+.shopSubItem:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.shopSubItem.active {
+  background: linear-gradient(135deg, rgba(81, 207, 102, 0.15) 0%, rgba(81, 207, 102, 0.05) 100%);
+  border-color: rgba(81, 207, 102, 0.3);
+}
+
+.shopSubIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.shopSubInfo {
+  flex: 1;
+}
+
+.shopSubName {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 2px;
+}
+
+.shopSubDesc {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 4px;
+}
+
+.shopSubEffects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.shopSubCost {
+  text-align: right;
+}
+
+.shopSubPrice {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffd700;
+}
+
+.shopSubPeriod {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.shopSubToggle {
+  width: 50px;
+  height: 28px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.shopSubToggle.active {
+  background: #51cf66;
+}
+
+.shopSubToggle::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #fff;
+  transition: all 0.2s ease;
+}
+
+.shopSubToggle.active::after {
+  left: 25px;
+}
+
+/* ============================================================================
+   ITEM DETAIL MODAL
+   ============================================================================ */
+.shopItemModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  animation: fadeIn 0.2s ease;
+}
+
+.shopItemModalContent {
+  background: var(--bg-card, rgba(25, 25, 40, 0.98));
+  border-radius: 20px;
+  padding: 24px;
+  max-width: 360px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.shopItemModalHeader {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.shopItemModalIcon {
+  font-size: 48px;
+}
+
+.shopItemModalInfo {
+  flex: 1;
+}
+
+.shopItemModalName {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.shopItemModalTier {
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.shopItemModalDesc {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.shopItemModalSection {
+  margin-bottom: 16px;
+}
+
+.shopItemModalSectionTitle {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.shopItemModalEffects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.shopItemModalEffect {
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.shopItemModalUnlocks {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.shopItemModalUnlock {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: rgba(124, 58, 237, 0.15);
+  border-radius: 8px;
+  font-size: 12px;
+  color: #a78bfa;
+}
+
+.shopItemModalActions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.shopItemModalBtn {
+  flex: 1;
+  padding: 14px 20px;
+  border-radius: 12px;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.shopItemModalBtn.primary {
+  background: linear-gradient(135deg, #00d4ff 0%, #7c3aed 100%);
+  color: #fff;
+}
+
+.shopItemModalBtn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 212, 255, 0.4);
+}
+
+.shopItemModalBtn.primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.shopItemModalBtn.secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.shopItemModalBtn.secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.shopItemModalClose {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* ============================================================================
+   CATEGORY SECTIONS
+   ============================================================================ */
+.shopCategorySection {
+  margin-bottom: 24px;
+}
+
+.shopCategoryTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.shopCategoryTitle::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ============================================================================
+   RESPONSIVE
+   ============================================================================ */
+@media (max-width: 400px) {
+  .shopItemsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .shopTabs {
+    gap: 6px;
+  }
+
+  .shopTab {
+    padding: 10px 12px;
+    min-width: 60px;
+  }
+
+  .shopTabIcon {
+    font-size: 18px;
+  }
+
+  .equippedSummary {
+    padding: 12px;
+    gap: 6px;
+  }
+
+  .equippedSlot {
+    min-width: 50px;
+    padding: 6px;
+  }
+
+  .equippedSlotIcon {
+    font-size: 20px;
+  }
+}
+
+/* ============================================================================
+   ANIMATIONS
+   ============================================================================ */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.shopItem {
+  animation: slideUp 0.3s ease;
+}
+
+.shopItem:nth-child(2) { animation-delay: 0.05s; }
+.shopItem:nth-child(3) { animation-delay: 0.1s; }
+.shopItem:nth-child(4) { animation-delay: 0.15s; }
+.shopItem:nth-child(5) { animation-delay: 0.2s; }
+.shopItem:nth-child(6) { animation-delay: 0.25s; }

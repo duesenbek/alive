@@ -1,0 +1,185 @@
+{
+    "meta": {
+        "version": "1.1",
+        "tone": "realistic_harsh",
+        "description": "Asset definitions with updated economy balance."
+    },
+    "vehicles": [
+        {
+            "id": "transport_1",
+            "name": "1990 Hatchback",
+            "type": "hatchback",
+            "class": "cheap",
+            "price": 4500,
+            "maintenance": 1200
+        },
+        {
+            "id": "transport_2",
+            "name": "Rusty Compact",
+            "type": "hatchback",
+            "class": "cheap",
+            "price": 5500,
+            "maintenance": 1100
+        },
+        {
+            "id": "transport_3",
+            "name": "City Beater",
+            "type": "hatchback",
+            "class": "cheap",
+            "price": 6800,
+            "maintenance": 900
+        },
+        {
+            "id": "transport_4",
+            "name": "Economy Hatch",
+            "type": "hatchback",
+            "class": "cheap",
+            "price": 8200,
+            "maintenance": 700
+        },
+        {
+            "id": "transport_5",
+            "name": "Reliable Commuter",
+            "type": "hatchback",
+            "class": "cheap",
+            "price": 9500,
+            "maintenance": 600
+        },
+        {
+            "id": "transport_21",
+            "name": "Modern Sedan",
+            "type": "sedan",
+            "class": "middle",
+            "price": 24000,
+            "maintenance": 1500
+        },
+        {
+            "id": "transport_22",
+            "name": "Executive Saloon",
+            "type": "sedan",
+            "class": "middle",
+            "price": 32000,
+            "maintenance": 2200
+        },
+        {
+            "id": "transport_46",
+            "name": "Luxury Sedan",
+            "type": "sedan",
+            "class": "premium",
+            "price": 75000,
+            "maintenance": 4500
+        },
+        {
+            "id": "transport_51",
+            "name": "Luxury SUV",
+            "type": "suv",
+            "class": "premium",
+            "price": 88000,
+            "maintenance": 5200
+        },
+        {
+            "id": "transport_71",
+            "name": "Entry Supercar",
+            "type": "sport",
+            "class": "rich",
+            "price": 185000,
+            "maintenance": 12000
+        },
+        {
+            "id": "transport_99",
+            "name": "Private Jet",
+            "type": "aircraft",
+            "class": "rich",
+            "price": 12500000,
+            "maintenance": 850000
+        }
+    ],
+    "real_estate": [
+        {
+            "id": "building_1",
+            "name": "Squatter's Shack",
+            "class": "poor",
+            "price": 45000,
+            "rent": 0
+        },
+        {
+            "id": "building_2",
+            "name": "Basement Studio",
+            "class": "poor",
+            "price": 65000,
+            "rent": 0
+        },
+        {
+            "id": "building_10",
+            "name": "Starter Home",
+            "class": "poor",
+            "price": 180000,
+            "rent": 0
+        },
+        {
+            "id": "building_16",
+            "name": "Suburban House",
+            "class": "middle",
+            "price": 350000,
+            "rent": 0
+        },
+        {
+            "id": "building_24",
+            "name": "Downtown Condo",
+            "class": "middle",
+            "price": 550000,
+            "rent": 0
+        },
+        {
+            "id": "building_31",
+            "name": "Luxury Apartment",
+            "class": "rich",
+            "price": 1200000,
+            "rent": 0
+        },
+        {
+            "id": "building_40",
+            "name": "Oceanfront Villa",
+            "class": "rich",
+            "price": 8500000,
+            "rent": 0
+        },
+        {
+            "id": "building_50",
+            "name": "The Citadel",
+            "class": "rich",
+            "price": 250000000,
+            "rent": 0
+        }
+    ],
+    "pets": [
+        {
+            "id": "pets_1",
+            "breed": "Golden Retriever",
+            "type": "dog",
+            "cost": 1500,
+            "annual_cost": 1800
+        },
+        {
+            "id": "pets_3",
+            "breed": "Labrador",
+            "type": "dog",
+            "cost": 1200,
+            "annual_cost": 1600
+        },
+        {
+            "id": "pets_7",
+            "breed": "Persian Cat",
+            "type": "cat",
+            "cost": 950,
+            "annual_cost": 1100
+        },
+        {
+            "id": "pets_15",
+            "breed": "Goldfish",
+            "type": "fish",
+            "cost": 25,
+            "annual_cost": 150
+        }
+    ]
+}

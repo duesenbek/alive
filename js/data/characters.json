@@ -1,0 +1,821 @@
+[
+  {
+    "id": "char_1",
+    "ageRange": "child",
+    "gender": "M",
+    "wealthTier": "poor",
+    "image": "assets/characters/char_1.webp"
+  },
+  {
+    "id": "char_2",
+    "ageRange": "child",
+    "gender": "F",
+    "wealthTier": "poor",
+    "image": "assets/characters/char_2.webp"
+  },
+  {
+    "id": "char_3",
+    "ageRange": "child",
+    "gender": "M",
+    "wealthTier": "medium",
+    "image": "assets/characters/char_3.webp"
+  },
+  {
+    "id": "char_4",
+    "ageRange": "child",
+    "gender": "F",
+    "wealthTier": "medium",
+    "image": "assets/characters/char_4.webp"
+  },
+  {
+    "id": "char_5",
+    "ageRange": "child",
+    "gender": "M",
+    "wealthTier": "rich",
+    "image": "assets/characters/char_5.webp"
+  },
+  {
+    "id": "char_6",
+    "ageRange": "child",
+    "gender": "F",
+    "wealthTier": "rich",
+    "image": "assets/characters/char_6.webp"
+  },
+  {
+    "id": "char_7",
+    "ageRange": "teen",
+    "gender": "M",
+    "wealthTier": "poor",
+    "image": "assets/characters/char_7.webp"
+  },
+  {
+    "id": "char_8",
+    "ageRange": "teen",
+    "gender": "F",
+    "wealthTier": "poor",
+    "image": "assets/characters/char_8.webp"
+  },
+  {
+    "id": "char_9",
+    "ageRange": "teen",
+    "gender": "M",
+    "wealthTier": "medium",
+    "image": "assets/characters/char_9.webp"
+  },
+  {
+    "id": "char_10",
+    "ageRange": "teen",
+    "gender": "F",
+    "wealthTier": "medium",
+    "image": "assets/characters/char_10.webp"
+  },
+  {
+    "id": "char_11",
+    "ageRange": "teen",
+    "gender": "M",
+    "wealthTier": "rich",
+    "image": "assets/characters/char_11.webp"
+  },
+  {
+    "id": "char_12",
+    "ageRange": "teen",
+    "gender": "F",
+    "wealthTier": "rich",
+    "image": "assets/characters/char_12.webp"
+  },
+  {
+    "id": "char_13",
+    "ageRange": "young_adult",
+    "gender": "M",
+    "wealthTier": "poor",
+    "image": "assets/characters/char_13.webp"
+  },
+  {
+    "id": "char_14",
+    "ageRange": "young_adult",
+    "gender": "F",
+    "wealthTier": "poor",
+    "image": "assets/characters/char_14.webp"
+  },
+  {
+    "id": "char_15",
+    "ageRange": "young_adult",
+    "gender": "M",
+    "wealthTier": "medium",
+    "image": "assets/characters/char_15.webp"
+  },
+  {
+    "id": "char_16",
+    "ageRange": "young_adult",
+    "gender": "F",
+    "wealthTier": "medium",
+    "image": "assets/characters/char_16.webp"
+  },
+  {
+    "id": "char_17",
+    "ageRange": "young_adult",
+    "gender": "M",
+    "wealthTier": "rich",
+    "image": "assets/characters/char_17.webp"
+  },
+  {
+    "id": "char_18",
+    "ageRange": "young_adult",
+    "gender": "F",
+    "wealthTier": "rich",
+    "image": "assets/characters/char_18.webp"
+  },
+  {
+    "id": "char_19",
+    "ageRange": "young_adult",
+    "gender": "M",
+    "wealthTier": "elite",
+    "image": "assets/characters/char_19.webp"
+  },
+  {
+    "id": "char_20",
+    "ageRange": "young_adult",
+    "gender": "F",
+    "wealthTier": "elite",
+    "image": "assets/characters/char_20.webp"
+  },
+  {
+    "id": "char_21",
+    "ageRange": "adult",
+    "gender": "M",
+    "wealthTier": "poor",
+    "image": "assets/characters/char_21.webp"
+  },
+  {
+    "id": "char_22",
+    "ageRange": "adult",
+    "gender": "F",
+    "wealthTier": "poor",
+    "image": "assets/characters/char_22.webp"
+  },
+  {
+    "id": "char_23",
+    "ageRange": "adult",
+    "gender": "M",
+    "wealthTier": "medium",
+    "image": "assets/characters/char_23.webp"
+  },
+  {
+    "id": "char_24",
+    "ageRange": "adult",
+    "gender": "F",
+    "wealthTier": "medium",
+    "image": "assets/characters/char_24.webp"
+  },
+  {
+    "id": "char_25",
+    "ageRange": "adult",
+    "gender": "M",
+    "wealthTier": "rich",
+    "image": "assets/characters/char_25.webp"
+  },
+  {
+    "id": "char_26",
+    "ageRange": "adult",
+    "gender": "F",
+    "wealthTier": "rich",
+    "image": "assets/characters/char_26.webp"
+  },
+  {
+    "id": "char_27",
+    "ageRange": "adult",
+    "gender": "M",
+    "wealthTier": "elite",
+    "image": "assets/characters/char_27.webp"
+  },
+  {
+    "id": "char_28",
+    "ageRange": "adult",
+    "gender": "F",
+    "wealthTier": "elite",
+    "image": "assets/characters/char_28.webp"
+  },
+  {
+    "id": "char_29",
+    "ageRange": "middle_age",
+    "gender": "M",
+    "wealthTier": "poor",
+    "image": "assets/characters/char_29.webp"
+  },
+  {
+    "id": "char_30",
+    "ageRange": "middle_age",
+    "gender": "F",
+    "wealthTier": "poor",
+    "image": "assets/characters/char_30.webp"
+  },
+  {
+    "id": "char_31",
+    "ageRange": "middle_age",
+    "gender": "M",
+    "wealthTier": "medium",
+    "image": "assets/characters/char_31.webp"
+  },
+  {
+    "id": "char_32",
+    "ageRange": "middle_age",
+    "gender": "F",
+    "wealthTier": "medium",
+    "image": "assets/characters/char_32.webp"
+  },
+  {
+    "id": "char_33",
+    "ageRange": "middle_age",
+    "gender": "M",
+    "wealthTier": "rich",
+    "image": "assets/characters/char_33.webp"
+  },
+  {
+    "id": "char_34",
+    "ageRange": "middle_age",
+    "gender": "F",
+    "wealthTier": "rich",
+    "image": "assets/characters/char_34.webp"
+  },
+  {
+    "id": "char_35",
+    "ageRange": "middle_age",
+    "gender": "M",
+    "wealthTier": "elite",
+    "image": "assets/characters/char_35.webp"
+  },
+  {
+    "id": "char_36",
+    "ageRange": "middle_age",
+    "gender": "F",
+    "wealthTier": "elite",
+    "image": "assets/characters/char_36.webp"
+  },
+  {
+    "id": "char_37",
+    "ageRange": "senior",
+    "gender": "M",
+    "wealthTier": "poor",
+    "image": "assets/characters/char_37.webp"
+  },
+  {
+    "id": "char_38",
+    "ageRange": "senior",
+    "gender": "F",
+    "wealthTier": "poor",
+    "image": "assets/characters/char_38.webp"
+  },
+  {
+    "id": "char_39",
+    "ageRange": "senior",
+    "gender": "M",
+    "wealthTier": "medium",
+    "image": "assets/characters/char_39.webp"
+  },
+  {
+    "id": "char_40",
+    "ageRange": "senior",
+    "gender": "F",
+    "wealthTier": "medium",
+    "image": "assets/characters/char_40.webp"
+  },
+  {
+    "id": "char_41",
+    "ageRange": "senior",
+    "gender": "M",
+    "wealthTier": "rich",
+    "image": "assets/characters/char_41.webp"
+  },
+  {
+    "id": "char_42",
+    "ageRange": "senior",
+    "gender": "F",
+    "wealthTier": "rich",
+    "image": "assets/characters/char_42.webp"
+  },
+  {
+    "id": "char_43",
+    "ageRange": "senior",
+    "gender": "M",
+    "wealthTier": "elite",
+    "image": "assets/characters/char_43.webp"
+  },
+  {
+    "id": "char_44",
+    "ageRange": "senior",
+    "gender": "F",
+    "wealthTier": "elite",
+    "image": "assets/characters/char_44.webp"
+  },
+  {
+    "id": "char_45",
+    "ageRange": "elderly",
+    "gender": "M",
+    "wealthTier": "poor",
+    "image": "assets/characters/char_45.webp"
+  },
+  {
+    "id": "char_46",
+    "ageRange": "elderly",
+    "gender": "F",
+    "wealthTier": "poor",
+    "image": "assets/characters/char_46.webp"
+  },
+  {
+    "id": "char_47",
+    "ageRange": "elderly",
+    "gender": "M",
+    "wealthTier": "medium",
+    "image": "assets/characters/char_47.webp"
+  },
+  {
+    "id": "char_48",
+    "ageRange": "elderly",
+    "gender": "F",
+    "wealthTier": "medium",
+    "image": "assets/characters/char_48.webp"
+  },
+  {
+    "id": "char_49",
+    "ageRange": "elderly",
+    "gender": "M",
+    "wealthTier": "rich",
+    "image": "assets/characters/char_49.webp"
+  },
+  {
+    "id": "char_50",
+    "ageRange": "elderly",
+    "gender": "F",
+    "wealthTier": "rich",
+    "image": "assets/characters/char_50.webp"
+  },
+  {
+    "id": "char_51",
+    "ageRange": "elderly",
+    "gender": "M",
+    "wealthTier": "elite",
+    "image": "assets/characters/char_51.webp"
+  },
+  {
+    "id": "char_52",
+    "ageRange": "elderly",
+    "gender": "F",
+    "wealthTier": "elite",
+    "image": "assets/characters/char_52.webp"
+  },
+  {
+    "id": "char_53",
+    "ageRange": "young_adult",
+    "gender": "M",
+    "wealthTier": "poor",
+    "image": "assets/characters/char_53.webp"
+  },
+  {
+    "id": "char_54",
+    "ageRange": "young_adult",
+    "gender": "F",
+    "wealthTier": "poor",
+    "image": "assets/characters/char_54.webp"
+  },
+  {
+    "id": "char_55",
+    "ageRange": "young_adult",
+    "gender": "M",
+    "wealthTier": "medium",
+    "image": "assets/characters/char_55.webp"
+  },
+  {
+    "id": "char_56",
+    "ageRange": "young_adult",
+    "gender": "F",
+    "wealthTier": "medium",
+    "image": "assets/characters/char_56.webp"
+  },
+  {
+    "id": "char_57",
+    "ageRange": "adult",
+    "gender": "M",
+    "wealthTier": "poor",
+    "image": "assets/characters/char_57.webp"
+  },
+  {
+    "id": "char_58",
+    "ageRange": "adult",
+    "gender": "F",
+    "wealthTier": "poor",
+    "image": "assets/characters/char_58.webp"
+  },
+  {
+    "id": "char_59",
+    "ageRange": "adult",
+    "gender": "M",
+    "wealthTier": "medium",
+    "image": "assets/characters/char_59.webp"
+  },
+  {
+    "id": "char_60",
+    "ageRange": "adult",
+    "gender": "F",
+    "wealthTier": "medium",
+    "image": "assets/characters/char_60.webp"
+  },
+  {
+    "id": "char_61",
+    "ageRange": "adult",
+    "gender": "M",
+    "wealthTier": "rich",
+    "image": "assets/characters/char_61.webp"
+  },
+  {
+    "id": "char_62",
+    "ageRange": "adult",
+    "gender": "F",
+    "wealthTier": "rich",
+    "image": "assets/characters/char_62.webp"
+  },
+  {
+    "id": "char_63",
+    "ageRange": "middle_age",
+    "gender": "M",
+    "wealthTier": "poor",
+    "image": "assets/characters/char_63.webp"
+  },
+  {
+    "id": "char_64",
+    "ageRange": "middle_age",
+    "gender": "F",
+    "wealthTier": "poor",
+    "image": "assets/characters/char_64.webp"
+  },
+  {
+    "id": "char_65",
+    "ageRange": "baby",
+    "gender": "M",
+    "wealthTier": "poor",
+    "image": "assets/characters/char_65.webp"
+  },
+  {
+    "id": "char_66",
+    "ageRange": "baby",
+    "gender": "F",
+    "wealthTier": "poor",
+    "image": "assets/characters/char_66.webp"
+  },
+  {
+    "id": "char_67",
+    "ageRange": "baby",
+    "gender": "M",
+    "wealthTier": "medium",
+    "image": "assets/characters/char_67.webp"
+  },
+  {
+    "id": "char_68",
+    "ageRange": "baby",
+    "gender": "F",
+    "wealthTier": "medium",
+    "image": "assets/characters/char_68.webp"
+  },
+  {
+    "id": "char_69",
+    "ageRange": "baby",
+    "gender": "M",
+    "wealthTier": "rich",
+    "image": "assets/characters/char_69.webp"
+  },
+  {
+    "id": "char_70",
+    "ageRange": "baby",
+    "gender": "F",
+    "wealthTier": "rich",
+    "image": "assets/characters/char_70.webp"
+  },
+  {
+    "id": "char_71",
+    "ageRange": "toddler",
+    "gender": "M",
+    "wealthTier": "poor",
+    "image": "assets/characters/char_71.webp"
+  },
+  {
+    "id": "char_72",
+    "ageRange": "toddler",
+    "gender": "F",
+    "wealthTier": "poor",
+    "image": "assets/characters/char_72.webp"
+  },
+  {
+    "id": "char_73",
+    "ageRange": "toddler",
+    "gender": "M",
+    "wealthTier": "medium",
+    "image": "assets/characters/char_73.webp"
+  },
+  {
+    "id": "char_74",
+    "ageRange": "toddler",
+    "gender": "F",
+    "wealthTier": "medium",
+    "image": "assets/characters/char_74.webp"
+  },
+  {
+    "id": "char_75",
+    "ageRange": "toddler",
+    "gender": "M",
+    "wealthTier": "rich",
+    "image": "assets/characters/char_75.webp"
+  },
+  {
+    "id": "char_76",
+    "ageRange": "toddler",
+    "gender": "F",
+    "wealthTier": "rich",
+    "image": "assets/characters/char_76.webp"
+  },
+  {
+    "id": "char_77",
+    "ageRange": "young_adult",
+    "gender": "M",
+    "wealthTier": "rich",
+    "image": "assets/characters/char_77.webp"
+  },
+  {
+    "id": "char_78",
+    "ageRange": "young_adult",
+    "gender": "F",
+    "wealthTier": "rich",
+    "image": "assets/characters/char_78.webp"
+  },
+  {
+    "id": "char_79",
+    "ageRange": "adult",
+    "gender": "M",
+    "wealthTier": "elite",
+    "image": "assets/characters/char_79.webp"
+  },
+  {
+    "id": "char_80",
+    "ageRange": "adult",
+    "gender": "F",
+    "wealthTier": "elite",
+    "image": "assets/characters/char_80.webp"
+  },
+  {
+    "id": "char_81",
+    "ageRange": "middle_age",
+    "gender": "M",
+    "wealthTier": "medium",
+    "image": "assets/characters/char_81.webp"
+  },
+  {
+    "id": "char_82",
+    "ageRange": "middle_age",
+    "gender": "F",
+    "wealthTier": "medium",
+    "image": "assets/characters/char_82.webp"
+  },
+  {
+    "id": "char_83",
+    "ageRange": "middle_age",
+    "gender": "M",
+    "wealthTier": "rich",
+    "image": "assets/characters/char_83.webp"
+  },
+  {
+    "id": "char_84",
+    "ageRange": "middle_age",
+    "gender": "F",
+    "wealthTier": "rich",
+    "image": "assets/characters/char_84.webp"
+  },
+  {
+    "id": "char_85",
+    "ageRange": "senior",
+    "gender": "M",
+    "wealthTier": "medium",
+    "image": "assets/characters/char_85.webp"
+  },
+  {
+    "id": "char_86",
+    "ageRange": "senior",
+    "gender": "F",
+    "wealthTier": "medium",
+    "image": "assets/characters/char_86.webp"
+  },
+  {
+    "id": "char_87",
+    "ageRange": "senior",
+    "gender": "M",
+    "wealthTier": "rich",
+    "image": "assets/characters/char_87.webp"
+  },
+  {
+    "id": "char_88",
+    "ageRange": "senior",
+    "gender": "F",
+    "wealthTier": "rich",
+    "image": "assets/characters/char_88.webp"
+  },
+  {
+    "id": "char_89",
+    "ageRange": "elderly",
+    "gender": "M",
+    "wealthTier": "medium",
+    "image": "assets/characters/char_89.webp"
+  },
+  {
+    "id": "char_90",
+    "ageRange": "elderly",
+    "gender": "F",
+    "wealthTier": "medium",
+    "image": "assets/characters/char_90.webp"
+  },
+  {
+    "id": "char_91",
+    "ageRange": "child",
+    "gender": "M",
+    "wealthTier": "elite",
+    "image": "assets/characters/char_91.webp"
+  },
+  {
+    "id": "char_92",
+    "ageRange": "child",
+    "gender": "F",
+    "wealthTier": "elite",
+    "image": "assets/characters/char_92.webp"
+  },
+  {
+    "id": "char_93",
+    "ageRange": "teen",
+    "gender": "M",
+    "wealthTier": "elite",
+    "image": "assets/characters/char_93.webp"
+  },
+  {
+    "id": "char_94",
+    "ageRange": "teen",
+    "gender": "F",
+    "wealthTier": "elite",
+    "image": "assets/characters/char_94.webp"
+  },
+  {
+    "id": "char_95",
+    "ageRange": "young_adult",
+    "gender": "M",
+    "wealthTier": "medium",
+    "image": "assets/characters/char_95.webp"
+  },
+  {
+    "id": "char_96",
+    "ageRange": "young_adult",
+    "gender": "F",
+    "wealthTier": "medium",
+    "image": "assets/characters/char_96.webp"
+  },
+  {
+    "id": "char_97",
+    "ageRange": "adult",
+    "gender": "M",
+    "wealthTier": "medium",
+    "image": "assets/characters/char_97.webp"
+  },
+  {
+    "id": "char_98",
+    "ageRange": "adult",
+    "gender": "F",
+    "wealthTier": "medium",
+    "image": "assets/characters/char_98.webp"
+  },
+  {
+    "id": "char_99",
+    "ageRange": "middle_age",
+    "gender": "M",
+    "wealthTier": "elite",
+    "image": "assets/characters/char_99.webp"
+  },
+  {
+    "id": "char_100",
+    "ageRange": "middle_age",
+    "gender": "F",
+    "wealthTier": "elite",
+    "image": "assets/characters/char_100.webp"
+  },
+  {
+    "id": "char_101",
+    "ageRange": "senior",
+    "gender": "M",
+    "wealthTier": "elite",
+    "image": "assets/characters/char_101.webp"
+  },
+  {
+    "id": "char_102",
+    "ageRange": "senior",
+    "gender": "F",
+    "wealthTier": "elite",
+    "image": "assets/characters/char_102.webp"
+  },
+  {
+    "id": "char_103",
+    "ageRange": "elderly",
+    "gender": "M",
+    "wealthTier": "rich",
+    "image": "assets/characters/char_103.webp"
+  },
+  {
+    "id": "char_104",
+    "ageRange": "elderly",
+    "gender": "F",
+    "wealthTier": "rich",
+    "image": "assets/characters/char_104.webp"
+  },
+  {
+    "id": "char_105",
+    "ageRange": "elderly",
+    "gender": "M",
+    "wealthTier": "elite",
+    "image": "assets/characters/char_105.webp"
+  },
+  {
+    "id": "char_106",
+    "ageRange": "elderly",
+    "gender": "F",
+    "wealthTier": "elite",
+    "image": "assets/characters/char_106.webp"
+  },
+  {
+    "id": "char_107",
+    "ageRange": "young_adult",
+    "gender": "M",
+    "wealthTier": "elite",
+    "image": "assets/characters/char_107.webp"
+  },
+  {
+    "id": "char_108",
+    "ageRange": "young_adult",
+    "gender": "F",
+    "wealthTier": "elite",
+    "image": "assets/characters/char_108.webp"
+  },
+  {
+    "id": "char_109",
+    "ageRange": "adult",
+    "gender": "M",
+    "wealthTier": "poor",
+    "image": "assets/characters/char_109.webp"
+  },
+  {
+    "id": "char_110",
+    "ageRange": "adult",
+    "gender": "F",
+    "wealthTier": "poor",
+    "image": "assets/characters/char_110.webp"
+  },
+  {
+    "id": "char_111",
+    "ageRange": "middle_age",
+    "gender": "M",
+    "wealthTier": "poor",
+    "image": "assets/characters/char_111.webp"
+  },
+  {
+    "id": "char_112",
+    "ageRange": "middle_age",
+    "gender": "F",
+    "wealthTier": "poor",
+    "image": "assets/characters/char_112.webp"
+  },
+  {
+    "id": "char_113",
+    "ageRange": "senior",
+    "gender": "M",
+    "wealthTier": "poor",
+    "image": "assets/characters/char_113.webp"
+  },
+  {
+    "id": "char_114",
+    "ageRange": "senior",
+    "gender": "F",
+    "wealthTier": "poor",
+    "image": "assets/characters/char_114.webp"
+  },
+  {
+    "id": "char_115",
+    "ageRange": "elderly",
+    "gender": "M",
+    "wealthTier": "poor",
+    "image": "assets/characters/char_115.webp"
+  },
+  {
+    "id": "char_116",
+    "ageRange": "elderly",
+    "gender": "F",
+    "wealthTier": "poor",
+    "image": "assets/characters/char_116.webp"
+  },
+  {
+    "id": "char_117",
+    "ageRange": "teen",
+    "gender": "M",
+    "wealthTier": "medium",
+    "image": "assets/characters/char_117.webp"
+  }
+]

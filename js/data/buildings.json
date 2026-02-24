@@ -1,0 +1,632 @@
+[
+  {
+    "id": "vehicle_1",
+    "name": "Studio Apartment",
+    "tier": "budget",
+    "price": 80000,
+    "rent": 600,
+    "maintenanceCost": 100,
+    "happinessBonus": 2,
+    "image": "assets/buildings/vehicle_1.webp"
+  },
+  {
+    "id": "vehicle_2",
+    "name": "Basement Suite",
+    "tier": "budget",
+    "price": 60000,
+    "rent": 450,
+    "maintenanceCost": 80,
+    "happinessBonus": 1,
+    "image": "assets/buildings/vehicle_2.webp"
+  },
+  {
+    "id": "vehicle_3",
+    "name": "Small Apartment",
+    "tier": "economy",
+    "price": 120000,
+    "rent": 900,
+    "maintenanceCost": 150,
+    "happinessBonus": 4,
+    "image": "assets/buildings/vehicle_3.webp"
+  },
+  {
+    "id": "vehicle_4",
+    "name": "1BR Apartment",
+    "tier": "economy",
+    "price": 150000,
+    "rent": 1100,
+    "maintenanceCost": 180,
+    "happinessBonus": 5,
+    "image": "assets/buildings/vehicle_4.webp"
+  },
+  {
+    "id": "vehicle_5",
+    "name": "2BR Apartment",
+    "tier": "standard",
+    "price": 200000,
+    "rent": 1400,
+    "maintenanceCost": 250,
+    "happinessBonus": 7,
+    "image": "assets/buildings/vehicle_5.webp"
+  },
+  {
+    "id": "vehicle_6",
+    "name": "Modern Flat",
+    "tier": "standard",
+    "price": 250000,
+    "rent": 1700,
+    "maintenanceCost": 300,
+    "happinessBonus": 9,
+    "image": "assets/buildings/vehicle_6.webp"
+  },
+  {
+    "id": "vehicle_7",
+    "name": "Loft Apartment",
+    "tier": "standard",
+    "price": 280000,
+    "rent": 1900,
+    "maintenanceCost": 320,
+    "happinessBonus": 10,
+    "image": "assets/buildings/vehicle_7.webp"
+  },
+  {
+    "id": "vehicle_8",
+    "name": "Duplex",
+    "tier": "family",
+    "price": 320000,
+    "rent": 2100,
+    "maintenanceCost": 400,
+    "happinessBonus": 11,
+    "image": "assets/buildings/vehicle_8.webp"
+  },
+  {
+    "id": "vehicle_9",
+    "name": "Townhouse",
+    "tier": "family",
+    "price": 380000,
+    "rent": 2400,
+    "maintenanceCost": 450,
+    "happinessBonus": 13,
+    "image": "assets/buildings/vehicle_9.webp"
+  },
+  {
+    "id": "vehicle_10",
+    "name": "Starter Home",
+    "tier": "family",
+    "price": 350000,
+    "rent": 2200,
+    "maintenanceCost": 420,
+    "happinessBonus": 12,
+    "image": "assets/buildings/vehicle_10.webp"
+  },
+  {
+    "id": "vehicle_11",
+    "name": "Family House",
+    "tier": "family",
+    "price": 450000,
+    "rent": 2800,
+    "maintenanceCost": 550,
+    "happinessBonus": 15,
+    "image": "assets/buildings/vehicle_11.webp"
+  },
+  {
+    "id": "vehicle_12",
+    "name": "Suburban Home",
+    "tier": "comfortable",
+    "price": 500000,
+    "rent": 3100,
+    "maintenanceCost": 600,
+    "happinessBonus": 17,
+    "image": "assets/buildings/vehicle_12.webp"
+  },
+  {
+    "id": "vehicle_13",
+    "name": "Modern House",
+    "tier": "comfortable",
+    "price": 600000,
+    "rent": 3600,
+    "maintenanceCost": 720,
+    "happinessBonus": 20,
+    "image": "assets/buildings/vehicle_13.webp"
+  },
+  {
+    "id": "vehicle_14",
+    "name": "Ranch Home",
+    "tier": "comfortable",
+    "price": 550000,
+    "rent": 3300,
+    "maintenanceCost": 660,
+    "happinessBonus": 18,
+    "image": "assets/buildings/vehicle_14.webp"
+  },
+  {
+    "id": "vehicle_15",
+    "name": "Colonial House",
+    "tier": "upscale",
+    "price": 750000,
+    "rent": 4200,
+    "maintenanceCost": 900,
+    "happinessBonus": 24,
+    "image": "assets/buildings/vehicle_15.webp"
+  },
+  {
+    "id": "vehicle_16",
+    "name": "Victorian House",
+    "tier": "upscale",
+    "price": 850000,
+    "rent": 4800,
+    "maintenanceCost": 1000,
+    "happinessBonus": 27,
+    "image": "assets/buildings/vehicle_16.webp"
+  },
+  {
+    "id": "vehicle_17",
+    "name": "Mediterranean Villa",
+    "tier": "upscale",
+    "price": 950000,
+    "rent": 5500,
+    "maintenanceCost": 1150,
+    "happinessBonus": 30,
+    "image": "assets/buildings/vehicle_17.webp"
+  },
+  {
+    "id": "vehicle_18",
+    "name": "Luxury Condo",
+    "tier": "luxury",
+    "price": 1200000,
+    "rent": 6500,
+    "maintenanceCost": 1400,
+    "happinessBonus": 35,
+    "image": "assets/buildings/vehicle_18.webp"
+  },
+  {
+    "id": "vehicle_19",
+    "name": "Penthouse",
+    "tier": "luxury",
+    "price": 2000000,
+    "rent": 10000,
+    "maintenanceCost": 2200,
+    "happinessBonus": 45,
+    "image": "assets/buildings/vehicle_19.webp"
+  },
+  {
+    "id": "vehicle_20",
+    "name": "Luxury House",
+    "tier": "luxury",
+    "price": 1500000,
+    "rent": 8000,
+    "maintenanceCost": 1800,
+    "happinessBonus": 40,
+    "image": "assets/buildings/vehicle_20.webp"
+  },
+  {
+    "id": "vehicle_21",
+    "name": "Executive Home",
+    "tier": "luxury",
+    "price": 1800000,
+    "rent": 9500,
+    "maintenanceCost": 2000,
+    "happinessBonus": 43,
+    "image": "assets/buildings/vehicle_21.webp"
+  },
+  {
+    "id": "vehicle_22",
+    "name": "Mansion",
+    "tier": "elite",
+    "price": 3500000,
+    "rent": 15000,
+    "maintenanceCost": 4000,
+    "happinessBonus": 55,
+    "image": "assets/buildings/vehicle_22.webp"
+  },
+  {
+    "id": "vehicle_23",
+    "name": "Estate",
+    "tier": "elite",
+    "price": 5000000,
+    "rent": 20000,
+    "maintenanceCost": 5500,
+    "happinessBonus": 65,
+    "image": "assets/buildings/vehicle_23.webp"
+  },
+  {
+    "id": "vehicle_24",
+    "name": "Manor House",
+    "tier": "elite",
+    "price": 4000000,
+    "rent": 17000,
+    "maintenanceCost": 4500,
+    "happinessBonus": 58,
+    "image": "assets/buildings/vehicle_24.webp"
+  },
+  {
+    "id": "vehicle_25",
+    "name": "Castle",
+    "tier": "ultra",
+    "price": 8000000,
+    "rent": 30000,
+    "maintenanceCost": 8500,
+    "happinessBonus": 75,
+    "image": "assets/buildings/vehicle_25.webp"
+  },
+  {
+    "id": "vehicle_26",
+    "name": "Private Island Villa",
+    "tier": "ultra",
+    "price": 15000000,
+    "rent": 50000,
+    "maintenanceCost": 15000,
+    "happinessBonus": 90,
+    "image": "assets/buildings/vehicle_26.webp"
+  },
+  {
+    "id": "vehicle_27",
+    "name": "Mega Mansion",
+    "tier": "ultra",
+    "price": 10000000,
+    "rent": 40000,
+    "maintenanceCost": 10000,
+    "happinessBonus": 80,
+    "image": "assets/buildings/vehicle_27.webp"
+  },
+  {
+    "id": "vehicle_28",
+    "name": "Beachfront Property",
+    "tier": "luxury",
+    "price": 2500000,
+    "rent": 12000,
+    "maintenanceCost": 2800,
+    "happinessBonus": 50,
+    "image": "assets/buildings/vehicle_28.webp"
+  },
+  {
+    "id": "vehicle_29",
+    "name": "Mountain Retreat",
+    "tier": "upscale",
+    "price": 900000,
+    "rent": 5000,
+    "maintenanceCost": 1100,
+    "happinessBonus": 35,
+    "image": "assets/buildings/vehicle_29.webp"
+  },
+  {
+    "id": "vehicle_30",
+    "name": "Lakefront Home",
+    "tier": "upscale",
+    "price": 1100000,
+    "rent": 6000,
+    "maintenanceCost": 1300,
+    "happinessBonus": 38,
+    "image": "assets/buildings/vehicle_30.webp"
+  },
+  {
+    "id": "vehicle_31",
+    "name": "Farmhouse",
+    "tier": "comfortable",
+    "price": 400000,
+    "rent": 2500,
+    "maintenanceCost": 500,
+    "happinessBonus": 22,
+    "image": "assets/buildings/vehicle_31.webp"
+  },
+  {
+    "id": "vehicle_32",
+    "name": "Country Home",
+    "tier": "comfortable",
+    "price": 480000,
+    "rent": 2900,
+    "maintenanceCost": 580,
+    "happinessBonus": 25,
+    "image": "assets/buildings/vehicle_32.webp"
+  },
+  {
+    "id": "vehicle_33",
+    "name": "Urban Loft",
+    "tier": "standard",
+    "price": 300000,
+    "rent": 2000,
+    "maintenanceCost": 350,
+    "happinessBonus": 11,
+    "image": "assets/buildings/vehicle_33.webp"
+  },
+  {
+    "id": "vehicle_34",
+    "name": "City Apartment",
+    "tier": "standard",
+    "price": 270000,
+    "rent": 1800,
+    "maintenanceCost": 320,
+    "happinessBonus": 10,
+    "image": "assets/buildings/vehicle_34.webp"
+  },
+  {
+    "id": "vehicle_35",
+    "name": "High-Rise Condo",
+    "tier": "upscale",
+    "price": 700000,
+    "rent": 4000,
+    "maintenanceCost": 850,
+    "happinessBonus": 28,
+    "image": "assets/buildings/vehicle_35.webp"
+  },
+  {
+    "id": "vehicle_36",
+    "name": "Sky Villa",
+    "tier": "luxury",
+    "price": 2200000,
+    "rent": 11000,
+    "maintenanceCost": 2400,
+    "happinessBonus": 48,
+    "image": "assets/buildings/vehicle_36.webp"
+  },
+  {
+    "id": "vehicle_37",
+    "name": "Minimalist Home",
+    "tier": "comfortable",
+    "price": 420000,
+    "rent": 2600,
+    "maintenanceCost": 480,
+    "happinessBonus": 18,
+    "image": "assets/buildings/vehicle_37.webp"
+  },
+  {
+    "id": "vehicle_38",
+    "name": "Smart Home",
+    "tier": "comfortable",
+    "price": 550000,
+    "rent": 3400,
+    "maintenanceCost": 650,
+    "happinessBonus": 22,
+    "image": "assets/buildings/vehicle_38.webp"
+  },
+  {
+    "id": "vehicle_39",
+    "name": "Eco House",
+    "tier": "upscale",
+    "price": 650000,
+    "rent": 3800,
+    "maintenanceCost": 500,
+    "happinessBonus": 30,
+    "image": "assets/buildings/vehicle_39.webp"
+  },
+  {
+    "id": "vehicle_40",
+    "name": "Sustainable Villa",
+    "tier": "luxury",
+    "price": 1300000,
+    "rent": 7000,
+    "maintenanceCost": 800,
+    "happinessBonus": 42,
+    "image": "assets/buildings/vehicle_40.webp"
+  },
+  {
+    "id": "vehicle_41",
+    "name": "Shared Room",
+    "tier": "budget",
+    "price": 0,
+    "rent": 300,
+    "maintenanceCost": 0,
+    "happinessBonus": -2,
+    "image": "assets/buildings/vehicle_41.webp"
+  },
+  {
+    "id": "vehicle_42",
+    "name": "Hostel Bunk",
+    "tier": "budget",
+    "price": 0,
+    "rent": 200,
+    "maintenanceCost": 0,
+    "happinessBonus": -5,
+    "image": "assets/buildings/vehicle_42.webp"
+  },
+  {
+    "id": "vehicle_43",
+    "name": "Mobile Home",
+    "tier": "budget",
+    "price": 35000,
+    "rent": 350,
+    "maintenanceCost": 150,
+    "happinessBonus": 0,
+    "image": "assets/buildings/vehicle_43.webp"
+  },
+  {
+    "id": "vehicle_44",
+    "name": "Trailer Park",
+    "tier": "budget",
+    "price": 25000,
+    "rent": 250,
+    "maintenanceCost": 180,
+    "happinessBonus": -3,
+    "image": "assets/buildings/vehicle_44.webp"
+  },
+  {
+    "id": "vehicle_45",
+    "name": "Tiny House",
+    "tier": "economy",
+    "price": 75000,
+    "rent": 550,
+    "maintenanceCost": 90,
+    "happinessBonus": 5,
+    "image": "assets/buildings/vehicle_45.webp"
+  },
+  {
+    "id": "vehicle_46",
+    "name": "Micro Apartment",
+    "tier": "economy",
+    "price": 95000,
+    "rent": 700,
+    "maintenanceCost": 110,
+    "happinessBonus": 3,
+    "image": "assets/buildings/vehicle_46.webp"
+  },
+  {
+    "id": "vehicle_47",
+    "name": "Converted Warehouse",
+    "tier": "standard",
+    "price": 350000,
+    "rent": 2200,
+    "maintenanceCost": 400,
+    "happinessBonus": 14,
+    "image": "assets/buildings/vehicle_47.webp"
+  },
+  {
+    "id": "vehicle_48",
+    "name": "Artist's Studio",
+    "tier": "standard",
+    "price": 220000,
+    "rent": 1500,
+    "maintenanceCost": 260,
+    "happinessBonus": 12,
+    "image": "assets/buildings/vehicle_48.webp"
+  },
+  {
+    "id": "vehicle_49",
+    "name": "Garden Apartment",
+    "tier": "family",
+    "price": 300000,
+    "rent": 2000,
+    "maintenanceCost": 380,
+    "happinessBonus": 14,
+    "image": "assets/buildings/vehicle_49.webp"
+  },
+  {
+    "id": "vehicle_50",
+    "name": "Bungalow",
+    "tier": "family",
+    "price": 380000,
+    "rent": 2400,
+    "maintenanceCost": 450,
+    "happinessBonus": 16,
+    "image": "assets/buildings/vehicle_50.webp"
+  },
+  {
+    "id": "vehicle_51",
+    "name": "Split-Level Home",
+    "tier": "comfortable",
+    "price": 420000,
+    "rent": 2700,
+    "maintenanceCost": 500,
+    "happinessBonus": 17,
+    "image": "assets/buildings/vehicle_51.webp"
+  },
+  {
+    "id": "vehicle_52",
+    "name": "Craftsman Home",
+    "tier": "comfortable",
+    "price": 480000,
+    "rent": 3000,
+    "maintenanceCost": 560,
+    "happinessBonus": 19,
+    "image": "assets/buildings/vehicle_52.webp"
+  },
+  {
+    "id": "vehicle_53",
+    "name": "Tudor House",
+    "tier": "upscale",
+    "price": 750000,
+    "rent": 4300,
+    "maintenanceCost": 900,
+    "happinessBonus": 26,
+    "image": "assets/buildings/vehicle_53.webp"
+  },
+  {
+    "id": "vehicle_54",
+    "name": "French Country Home",
+    "tier": "upscale",
+    "price": 820000,
+    "rent": 4600,
+    "maintenanceCost": 980,
+    "happinessBonus": 28,
+    "image": "assets/buildings/vehicle_54.webp"
+  },
+  {
+    "id": "vehicle_55",
+    "name": "Modern Mansion",
+    "tier": "elite",
+    "price": 4500000,
+    "rent": 18000,
+    "maintenanceCost": 5000,
+    "happinessBonus": 60,
+    "image": "assets/buildings/vehicle_55.webp"
+  },
+  {
+    "id": "vehicle_56",
+    "name": "Vineyard Estate",
+    "tier": "elite",
+    "price": 6000000,
+    "rent": 25000,
+    "maintenanceCost": 6500,
+    "happinessBonus": 68,
+    "image": "assets/buildings/vehicle_56.webp"
+  },
+  {
+    "id": "vehicle_57",
+    "name": "Royal Palace",
+    "tier": "ultra",
+    "price": 20000000,
+    "rent": 80000,
+    "maintenanceCost": 20000,
+    "happinessBonus": 95,
+    "image": "assets/buildings/vehicle_57.webp"
+  },
+  {
+    "id": "vehicle_58",
+    "name": "Ski Chalet",
+    "tier": "luxury",
+    "price": 1800000,
+    "rent": 9000,
+    "maintenanceCost": 2100,
+    "happinessBonus": 42,
+    "image": "assets/buildings/vehicle_58.webp"
+  },
+  {
+    "id": "vehicle_59",
+    "name": "Desert Oasis",
+    "tier": "luxury",
+    "price": 1600000,
+    "rent": 8500,
+    "maintenanceCost": 1900,
+    "happinessBonus": 40,
+    "image": "assets/buildings/vehicle_59.webp"
+  },
+  {
+    "id": "vehicle_60",
+    "name": "Tropical Villa",
+    "tier": "luxury",
+    "price": 2100000,
+    "rent": 10500,
+    "maintenanceCost": 2300,
+    "happinessBonus": 46,
+    "image": "assets/buildings/vehicle_60.webp"
+  },
+  {
+    "id": "vehicle_61",
+    "name": "Urban Penthouse",
+    "tier": "elite",
+    "price": 3000000,
+    "rent": 14000,
+    "maintenanceCost": 3500,
+    "happinessBonus": 52,
+    "image": "assets/buildings/vehicle_61.webp"
+  },
+  {
+    "id": "vehicle_62",
+    "name": "Oceanfront Mansion",
+    "tier": "ultra",
+    "price": 12000000,
+    "rent": 45000,
+    "maintenanceCost": 12000,
+    "happinessBonus": 85,
+    "image": "assets/buildings/vehicle_62.webp"
+  },
+  {
+    "id": "vehicle_63",
+    "name": "Historic Manor",
+    "tier": "elite",
+    "price": 5500000,
+    "rent": 22000,
+    "maintenanceCost": 7000,
+    "happinessBonus": 62,
+    "image": "assets/buildings/vehicle_63.webp"
+  }
+]

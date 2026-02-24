@@ -1,0 +1,65 @@
+/* Family Row Styles */
+.familyRow {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding: 10px 0;
+    margin-top: 10px;
+    /* Hide scrollbar */
+    scrollbar-width: none;
+}
+
+.familyRow::-webkit-scrollbar {
+    display: none;
+}
+
+.familyMember {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 60px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px;
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.memberEmoji {
+    font-size: 2em;
+    line-height: 1.2;
+}
+
+.memberName {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 80px;
+    margin-top: 4px;
+}
+
+.memberRel {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.relationshipBar {
+    width: 100%;
+    height: 4px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+    margin-top: 6px;
+    overflow: hidden;
+}
+
+.relationshipFill {
+    height: 100%;
+    background: #fa5252;
+    border-radius: 2px;
+}

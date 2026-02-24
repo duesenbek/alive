@@ -1,0 +1,162 @@
+/* ============================================================================
+   BIRTH CINEMATIC
+   ============================================================================ */
+.birthScreen {
+    justify-content: center;
+    background: #000;
+    color: #fff;
+    transition: background 2s ease;
+}
+
+.birthScreen.bg-gradient {
+    background: var(--gradient-main);
+}
+
+.birthText {
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-align: center;
+    animation: textFade 2.5s ease forwards;
+}
+
+.birthWelcome {
+    font-size: 18px;
+    color: var(--accent-primary);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease;
+}
+
+.birthEmoji {
+    font-size: 80px;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.4));
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    overflow: hidden;
+    background: rgba(0,0,0,0.06);
+}
+.birthEmoji img, .birthPortrait { width: 100%; height: 100%; object-fit: cover; }
+.birthEmoji .characterIconFallback { font-size: 64px; color: var(--accent-primary); }
+
+.birthName {
+    font-size: 40px;
+    font-weight: 800;
+    background: var(--gradient-warm);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 40px;
+}
+
+.birthStats {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.birthStatRow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-full);
+    font-size: 18px;
+    font-weight: 600;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 1s ease forwards;
+}
+
+.fade-slow {
+    animation: fadeIn 3s ease forwards;
+}
+
+.scale-in {
+    animation: scaleIn 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.slide-up {
+    animation: slideUp 1s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+.fade-in-delayed {
+    opacity: 0;
+    animation: fadeIn 1s ease 1s forwards;
+}
+
+@keyframes textFade {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    20% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    80% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes popIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

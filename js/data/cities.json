@@ -1,0 +1,722 @@
+[
+  {
+    "id": "city_1",
+    "name": "Almaty",
+    "country": "kz",
+    "tier": "affordable",
+    "costOfLiving": 800,
+    "jobMarket": 0.7,
+    "happinessModifier": 5,
+    "image": "assets/cities/city_1.webp"
+  },
+  {
+    "id": "city_2",
+    "name": "Astana",
+    "country": "kz",
+    "tier": "affordable",
+    "costOfLiving": 900,
+    "jobMarket": 0.8,
+    "happinessModifier": 3,
+    "image": "assets/cities/city_2.webp"
+  },
+  {
+    "id": "city_3",
+    "name": "Moscow",
+    "country": "ru",
+    "tier": "moderate",
+    "costOfLiving": 1500,
+    "jobMarket": 0.85,
+    "happinessModifier": 8,
+    "image": "assets/cities/city_3.webp"
+  },
+  {
+    "id": "city_4",
+    "name": "Saint Petersburg",
+    "country": "ru",
+    "tier": "moderate",
+    "costOfLiving": 1200,
+    "jobMarket": 0.75,
+    "happinessModifier": 10,
+    "image": "assets/cities/city_4.webp"
+  },
+  {
+    "id": "city_5",
+    "name": "Dubai",
+    "country": "ae",
+    "tier": "expensive",
+    "costOfLiving": 3500,
+    "jobMarket": 0.9,
+    "happinessModifier": 25,
+    "image": "assets/cities/city_5.webp"
+  },
+  {
+    "id": "city_6",
+    "name": "Abu Dhabi",
+    "country": "ae",
+    "tier": "expensive",
+    "costOfLiving": 3200,
+    "jobMarket": 0.85,
+    "happinessModifier": 22,
+    "image": "assets/cities/city_6.webp"
+  },
+  {
+    "id": "city_7",
+    "name": "New York",
+    "country": "us",
+    "tier": "luxury",
+    "costOfLiving": 4500,
+    "jobMarket": 0.95,
+    "happinessModifier": 30,
+    "image": "assets/cities/city_7.webp"
+  },
+  {
+    "id": "city_8",
+    "name": "Los Angeles",
+    "country": "us",
+    "tier": "luxury",
+    "costOfLiving": 4000,
+    "jobMarket": 0.88,
+    "happinessModifier": 28,
+    "image": "assets/cities/city_8.webp"
+  },
+  {
+    "id": "city_9",
+    "name": "San Francisco",
+    "country": "us",
+    "tier": "luxury",
+    "costOfLiving": 5000,
+    "jobMarket": 0.92,
+    "happinessModifier": 25,
+    "image": "assets/cities/city_9.webp"
+  },
+  {
+    "id": "city_10",
+    "name": "Miami",
+    "country": "us",
+    "tier": "expensive",
+    "costOfLiving": 3000,
+    "jobMarket": 0.8,
+    "happinessModifier": 28,
+    "image": "assets/cities/city_10.webp"
+  },
+  {
+    "id": "city_11",
+    "name": "London",
+    "country": "uk",
+    "tier": "luxury",
+    "costOfLiving": 4200,
+    "jobMarket": 0.9,
+    "happinessModifier": 22,
+    "image": "assets/cities/city_11.webp"
+  },
+  {
+    "id": "city_12",
+    "name": "Paris",
+    "country": "fr",
+    "tier": "expensive",
+    "costOfLiving": 3500,
+    "jobMarket": 0.82,
+    "happinessModifier": 28,
+    "image": "assets/cities/city_12.webp"
+  },
+  {
+    "id": "city_13",
+    "name": "Tokyo",
+    "country": "jp",
+    "tier": "expensive",
+    "costOfLiving": 3800,
+    "jobMarket": 0.88,
+    "happinessModifier": 20,
+    "image": "assets/cities/city_13.webp"
+  },
+  {
+    "id": "city_14",
+    "name": "Singapore",
+    "country": "sg",
+    "tier": "expensive",
+    "costOfLiving": 3600,
+    "jobMarket": 0.92,
+    "happinessModifier": 18,
+    "image": "assets/cities/city_14.webp"
+  },
+  {
+    "id": "city_15",
+    "name": "Hong Kong",
+    "country": "hk",
+    "tier": "luxury",
+    "costOfLiving": 4500,
+    "jobMarket": 0.88,
+    "happinessModifier": 15,
+    "image": "assets/cities/city_15.webp"
+  },
+  {
+    "id": "city_16",
+    "name": "Bangkok",
+    "country": "th",
+    "tier": "affordable",
+    "costOfLiving": 700,
+    "jobMarket": 0.65,
+    "happinessModifier": 18,
+    "image": "assets/cities/city_16.webp"
+  },
+  {
+    "id": "city_17",
+    "name": "Istanbul",
+    "country": "tr",
+    "tier": "moderate",
+    "costOfLiving": 1000,
+    "jobMarket": 0.7,
+    "happinessModifier": 15,
+    "image": "assets/cities/city_17.webp"
+  },
+  {
+    "id": "city_18",
+    "name": "Berlin",
+    "country": "de",
+    "tier": "moderate",
+    "costOfLiving": 1800,
+    "jobMarket": 0.85,
+    "happinessModifier": 15,
+    "image": "assets/cities/city_18.webp"
+  },
+  {
+    "id": "city_19",
+    "name": "Munich",
+    "country": "de",
+    "tier": "expensive",
+    "costOfLiving": 2500,
+    "jobMarket": 0.9,
+    "happinessModifier": 18,
+    "image": "assets/cities/city_19.webp"
+  },
+  {
+    "id": "city_20",
+    "name": "Sydney",
+    "country": "au",
+    "tier": "expensive",
+    "costOfLiving": 3000,
+    "jobMarket": 0.85,
+    "happinessModifier": 25,
+    "image": "assets/cities/city_20.webp"
+  },
+  {
+    "id": "city_21",
+    "name": "Melbourne",
+    "country": "au",
+    "tier": "expensive",
+    "costOfLiving": 2800,
+    "jobMarket": 0.82,
+    "happinessModifier": 27,
+    "image": "assets/cities/city_21.webp"
+  },
+  {
+    "id": "city_22",
+    "name": "Toronto",
+    "country": "ca",
+    "tier": "expensive",
+    "costOfLiving": 2600,
+    "jobMarket": 0.85,
+    "happinessModifier": 20,
+    "image": "assets/cities/city_22.webp"
+  },
+  {
+    "id": "city_23",
+    "name": "Vancouver",
+    "country": "ca",
+    "tier": "expensive",
+    "costOfLiving": 2800,
+    "jobMarket": 0.8,
+    "happinessModifier": 28,
+    "image": "assets/cities/city_23.webp"
+  },
+  {
+    "id": "city_24",
+    "name": "Seoul",
+    "country": "kr",
+    "tier": "moderate",
+    "costOfLiving": 1800,
+    "jobMarket": 0.88,
+    "happinessModifier": 12,
+    "image": "assets/cities/city_24.webp"
+  },
+  {
+    "id": "city_25",
+    "name": "Shanghai",
+    "country": "cn",
+    "tier": "moderate",
+    "costOfLiving": 1600,
+    "jobMarket": 0.9,
+    "happinessModifier": 10,
+    "image": "assets/cities/city_25.webp"
+  },
+  {
+    "id": "city_26",
+    "name": "Beijing",
+    "country": "cn",
+    "tier": "moderate",
+    "costOfLiving": 1500,
+    "jobMarket": 0.88,
+    "happinessModifier": 8,
+    "image": "assets/cities/city_26.webp"
+  },
+  {
+    "id": "city_27",
+    "name": "Mumbai",
+    "country": "in",
+    "tier": "affordable",
+    "costOfLiving": 600,
+    "jobMarket": 0.75,
+    "happinessModifier": 5,
+    "image": "assets/cities/city_27.webp"
+  },
+  {
+    "id": "city_28",
+    "name": "Delhi",
+    "country": "in",
+    "tier": "affordable",
+    "costOfLiving": 550,
+    "jobMarket": 0.72,
+    "happinessModifier": 3,
+    "image": "assets/cities/city_28.webp"
+  },
+  {
+    "id": "city_29",
+    "name": "Rio de Janeiro",
+    "country": "br",
+    "tier": "moderate",
+    "costOfLiving": 1100,
+    "jobMarket": 0.6,
+    "happinessModifier": 25,
+    "image": "assets/cities/city_29.webp"
+  },
+  {
+    "id": "city_30",
+    "name": "São Paulo",
+    "country": "br",
+    "tier": "moderate",
+    "costOfLiving": 1300,
+    "jobMarket": 0.75,
+    "happinessModifier": 12,
+    "image": "assets/cities/city_30.webp"
+  },
+  {
+    "id": "city_31",
+    "name": "Mexico City",
+    "country": "mx",
+    "tier": "affordable",
+    "costOfLiving": 900,
+    "jobMarket": 0.7,
+    "happinessModifier": 15,
+    "image": "assets/cities/city_31.webp"
+  },
+  {
+    "id": "city_32",
+    "name": "Buenos Aires",
+    "country": "ar",
+    "tier": "affordable",
+    "costOfLiving": 700,
+    "jobMarket": 0.55,
+    "happinessModifier": 20,
+    "image": "assets/cities/city_32.webp"
+  },
+  {
+    "id": "city_33",
+    "name": "Rome",
+    "country": "it",
+    "tier": "moderate",
+    "costOfLiving": 1800,
+    "jobMarket": 0.65,
+    "happinessModifier": 28,
+    "image": "assets/cities/city_33.webp"
+  },
+  {
+    "id": "city_34",
+    "name": "Milan",
+    "country": "it",
+    "tier": "expensive",
+    "costOfLiving": 2400,
+    "jobMarket": 0.8,
+    "happinessModifier": 22,
+    "image": "assets/cities/city_34.webp"
+  },
+  {
+    "id": "city_35",
+    "name": "Madrid",
+    "country": "es",
+    "tier": "moderate",
+    "costOfLiving": 1500,
+    "jobMarket": 0.7,
+    "happinessModifier": 25,
+    "image": "assets/cities/city_35.webp"
+  },
+  {
+    "id": "city_36",
+    "name": "Barcelona",
+    "country": "es",
+    "tier": "moderate",
+    "costOfLiving": 1600,
+    "jobMarket": 0.68,
+    "happinessModifier": 30,
+    "image": "assets/cities/city_36.webp"
+  },
+  {
+    "id": "city_37",
+    "name": "Amsterdam",
+    "country": "nl",
+    "tier": "expensive",
+    "costOfLiving": 2500,
+    "jobMarket": 0.85,
+    "happinessModifier": 28,
+    "image": "assets/cities/city_37.webp"
+  },
+  {
+    "id": "city_38",
+    "name": "Zurich",
+    "country": "ch",
+    "tier": "luxury",
+    "costOfLiving": 5500,
+    "jobMarket": 0.88,
+    "happinessModifier": 22,
+    "image": "assets/cities/city_38.webp"
+  },
+  {
+    "id": "city_39",
+    "name": "Geneva",
+    "country": "ch",
+    "tier": "luxury",
+    "costOfLiving": 5200,
+    "jobMarket": 0.85,
+    "happinessModifier": 25,
+    "image": "assets/cities/city_39.webp"
+  },
+  {
+    "id": "city_40",
+    "name": "Vienna",
+    "country": "at",
+    "tier": "moderate",
+    "costOfLiving": 1800,
+    "jobMarket": 0.8,
+    "happinessModifier": 30,
+    "image": "assets/cities/city_40.webp"
+  },
+  {
+    "id": "city_41",
+    "name": "Prague",
+    "country": "cz",
+    "tier": "affordable",
+    "costOfLiving": 1100,
+    "jobMarket": 0.75,
+    "happinessModifier": 25,
+    "image": "assets/cities/city_41.webp"
+  },
+  {
+    "id": "city_42",
+    "name": "Warsaw",
+    "country": "pl",
+    "tier": "affordable",
+    "costOfLiving": 1000,
+    "jobMarket": 0.78,
+    "happinessModifier": 15,
+    "image": "assets/cities/city_42.webp"
+  },
+  {
+    "id": "city_43",
+    "name": "Stockholm",
+    "country": "se",
+    "tier": "expensive",
+    "costOfLiving": 2800,
+    "jobMarket": 0.85,
+    "happinessModifier": 25,
+    "image": "assets/cities/city_43.webp"
+  },
+  {
+    "id": "city_44",
+    "name": "Oslo",
+    "country": "no",
+    "tier": "expensive",
+    "costOfLiving": 3200,
+    "jobMarket": 0.82,
+    "happinessModifier": 28,
+    "image": "assets/cities/city_44.webp"
+  },
+  {
+    "id": "city_45",
+    "name": "Copenhagen",
+    "country": "dk",
+    "tier": "expensive",
+    "costOfLiving": 2600,
+    "jobMarket": 0.8,
+    "happinessModifier": 30,
+    "image": "assets/cities/city_45.webp"
+  },
+  {
+    "id": "city_46",
+    "name": "Helsinki",
+    "country": "fi",
+    "tier": "moderate",
+    "costOfLiving": 2000,
+    "jobMarket": 0.78,
+    "happinessModifier": 28,
+    "image": "assets/cities/city_46.webp"
+  },
+  {
+    "id": "city_47",
+    "name": "Dublin",
+    "country": "ie",
+    "tier": "expensive",
+    "costOfLiving": 2800,
+    "jobMarket": 0.88,
+    "happinessModifier": 22,
+    "image": "assets/cities/city_47.webp"
+  },
+  {
+    "id": "city_48",
+    "name": "Lisbon",
+    "country": "pt",
+    "tier": "moderate",
+    "costOfLiving": 1400,
+    "jobMarket": 0.65,
+    "happinessModifier": 28,
+    "image": "assets/cities/city_48.webp"
+  },
+  {
+    "id": "city_49",
+    "name": "Athens",
+    "country": "gr",
+    "tier": "affordable",
+    "costOfLiving": 1000,
+    "jobMarket": 0.5,
+    "happinessModifier": 25,
+    "image": "assets/cities/city_49.webp"
+  },
+  {
+    "id": "city_50",
+    "name": "Cairo",
+    "country": "eg",
+    "tier": "affordable",
+    "costOfLiving": 500,
+    "jobMarket": 0.55,
+    "happinessModifier": 10,
+    "image": "assets/cities/city_50.webp"
+  },
+  {
+    "id": "city_51",
+    "name": "Cape Town",
+    "country": "za",
+    "tier": "affordable",
+    "costOfLiving": 800,
+    "jobMarket": 0.6,
+    "happinessModifier": 22,
+    "image": "assets/cities/city_51.webp"
+  },
+  {
+    "id": "city_52",
+    "name": "Johannesburg",
+    "country": "za",
+    "tier": "affordable",
+    "costOfLiving": 750,
+    "jobMarket": 0.65,
+    "happinessModifier": 12,
+    "image": "assets/cities/city_52.webp"
+  },
+  {
+    "id": "city_53",
+    "name": "Lagos",
+    "country": "ng",
+    "tier": "affordable",
+    "costOfLiving": 600,
+    "jobMarket": 0.5,
+    "happinessModifier": 8,
+    "image": "assets/cities/city_53.webp"
+  },
+  {
+    "id": "city_54",
+    "name": "Nairobi",
+    "country": "ke",
+    "tier": "affordable",
+    "costOfLiving": 550,
+    "jobMarket": 0.55,
+    "happinessModifier": 10,
+    "image": "assets/cities/city_54.webp"
+  },
+  {
+    "id": "city_55",
+    "name": "Tel Aviv",
+    "country": "il",
+    "tier": "expensive",
+    "costOfLiving": 2800,
+    "jobMarket": 0.88,
+    "happinessModifier": 18,
+    "image": "assets/cities/city_55.webp"
+  },
+  {
+    "id": "city_56",
+    "name": "Jakarta",
+    "country": "id",
+    "tier": "affordable",
+    "costOfLiving": 650,
+    "jobMarket": 0.65,
+    "happinessModifier": 10,
+    "image": "assets/cities/city_56.webp"
+  },
+  {
+    "id": "city_57",
+    "name": "Kuala Lumpur",
+    "country": "my",
+    "tier": "affordable",
+    "costOfLiving": 800,
+    "jobMarket": 0.72,
+    "happinessModifier": 15,
+    "image": "assets/cities/city_57.webp"
+  },
+  {
+    "id": "city_58",
+    "name": "Ho Chi Minh City",
+    "country": "vn",
+    "tier": "affordable",
+    "costOfLiving": 500,
+    "jobMarket": 0.68,
+    "happinessModifier": 15,
+    "image": "assets/cities/city_58.webp"
+  },
+  {
+    "id": "city_59",
+    "name": "Manila",
+    "country": "ph",
+    "tier": "affordable",
+    "costOfLiving": 550,
+    "jobMarket": 0.6,
+    "happinessModifier": 12,
+    "image": "assets/cities/city_59.webp"
+  },
+  {
+    "id": "city_60",
+    "name": "Riyadh",
+    "country": "sa",
+    "tier": "moderate",
+    "costOfLiving": 1500,
+    "jobMarket": 0.75,
+    "happinessModifier": 8,
+    "image": "assets/cities/city_60.webp"
+  },
+  {
+    "id": "city_61",
+    "name": "Doha",
+    "country": "qa",
+    "tier": "expensive",
+    "costOfLiving": 2800,
+    "jobMarket": 0.82,
+    "happinessModifier": 15,
+    "image": "assets/cities/city_61.webp"
+  },
+  {
+    "id": "city_62",
+    "name": "Kuwait City",
+    "country": "kw",
+    "tier": "moderate",
+    "costOfLiving": 1800,
+    "jobMarket": 0.75,
+    "happinessModifier": 10,
+    "image": "assets/cities/city_62.webp"
+  },
+  {
+    "id": "city_63",
+    "name": "Chicago",
+    "country": "us",
+    "tier": "expensive",
+    "costOfLiving": 2500,
+    "jobMarket": 0.85,
+    "happinessModifier": 18,
+    "image": "assets/cities/city_63.webp"
+  },
+  {
+    "id": "city_64",
+    "name": "Houston",
+    "country": "us",
+    "tier": "moderate",
+    "costOfLiving": 1800,
+    "jobMarket": 0.82,
+    "happinessModifier": 15,
+    "image": "assets/cities/city_64.webp"
+  },
+  {
+    "id": "city_65",
+    "name": "Dallas",
+    "country": "us",
+    "tier": "moderate",
+    "costOfLiving": 1600,
+    "jobMarket": 0.8,
+    "happinessModifier": 14,
+    "image": "assets/cities/city_65.webp"
+  },
+  {
+    "id": "city_66",
+    "name": "Seattle",
+    "country": "us",
+    "tier": "expensive",
+    "costOfLiving": 3000,
+    "jobMarket": 0.9,
+    "happinessModifier": 22,
+    "image": "assets/cities/city_66.webp"
+  },
+  {
+    "id": "city_67",
+    "name": "Boston",
+    "country": "us",
+    "tier": "expensive",
+    "costOfLiving": 3200,
+    "jobMarket": 0.88,
+    "happinessModifier": 20,
+    "image": "assets/cities/city_67.webp"
+  },
+  {
+    "id": "city_68",
+    "name": "Osaka",
+    "country": "jp",
+    "tier": "moderate",
+    "costOfLiving": 2200,
+    "jobMarket": 0.82,
+    "happinessModifier": 22,
+    "image": "assets/cities/city_68.webp"
+  },
+  {
+    "id": "city_69",
+    "name": "Kyoto",
+    "country": "jp",
+    "tier": "moderate",
+    "costOfLiving": 1800,
+    "jobMarket": 0.7,
+    "happinessModifier": 30,
+    "image": "assets/cities/city_69.webp"
+  },
+  {
+    "id": "city_70",
+    "name": "Shenzhen",
+    "country": "cn",
+    "tier": "moderate",
+    "costOfLiving": 1400,
+    "jobMarket": 0.88,
+    "happinessModifier": 8,
+    "image": "assets/cities/city_70.webp"
+  },
+  {
+    "id": "city_71",
+    "name": "Guangzhou",
+    "country": "cn",
+    "tier": "moderate",
+    "costOfLiving": 1200,
+    "jobMarket": 0.85,
+    "happinessModifier": 10,
+    "image": "assets/cities/city_71.webp"
+  },
+  {
+    "id": "city_72",
+    "name": "Monaco",
+    "country": "mc",
+    "tier": "luxury",
+    "costOfLiving": 8000,
+    "jobMarket": 0.7,
+    "happinessModifier": 35,
+    "image": "assets/cities/city_72.webp"
+  }
+]

@@ -1,0 +1,893 @@
+[
+    {
+        "id": "transport_1",
+        "name": "Bicycle",
+        "tier": "basic",
+        "price": 200,
+        "happinessBonus": 2,
+        "maintenanceCost": 10,
+        "image": "assets/transport/transport_1.webp"
+    },
+    {
+        "id": "transport_2",
+        "name": "Old Scooter",
+        "tier": "basic",
+        "price": 800,
+        "happinessBonus": 3,
+        "maintenanceCost": 30,
+        "image": "assets/transport/transport_2.webp"
+    },
+    {
+        "id": "transport_3",
+        "name": "Used Sedan",
+        "tier": "economy",
+        "price": 5000,
+        "happinessBonus": 5,
+        "maintenanceCost": 80,
+        "image": "assets/transport/transport_3.webp"
+    },
+    {
+        "id": "transport_4",
+        "name": "Compact Car",
+        "tier": "economy",
+        "price": 8000,
+        "happinessBonus": 6,
+        "maintenanceCost": 100,
+        "image": "assets/transport/transport_4.webp"
+    },
+    {
+        "id": "transport_5",
+        "name": "Sedan",
+        "tier": "standard",
+        "price": 15000,
+        "happinessBonus": 8,
+        "maintenanceCost": 150,
+        "image": "assets/transport/transport_5.webp"
+    },
+    {
+        "id": "transport_6",
+        "name": "SUV",
+        "tier": "standard",
+        "price": 25000,
+        "happinessBonus": 10,
+        "maintenanceCost": 200,
+        "image": "assets/transport/transport_6.webp"
+    },
+    {
+        "id": "transport_7",
+        "name": "Pickup Truck",
+        "tier": "standard",
+        "price": 28000,
+        "happinessBonus": 9,
+        "maintenanceCost": 220,
+        "image": "assets/transport/transport_7.webp"
+    },
+    {
+        "id": "transport_8",
+        "name": "Crossover",
+        "tier": "standard",
+        "price": 30000,
+        "happinessBonus": 10,
+        "maintenanceCost": 230,
+        "image": "assets/transport/transport_8.webp"
+    },
+    {
+        "id": "transport_9",
+        "name": "Sports Coupe",
+        "tier": "premium",
+        "price": 45000,
+        "happinessBonus": 15,
+        "maintenanceCost": 350,
+        "image": "assets/transport/transport_9.webp"
+    },
+    {
+        "id": "transport_10",
+        "name": "Luxury Sedan",
+        "tier": "premium",
+        "price": 55000,
+        "happinessBonus": 18,
+        "maintenanceCost": 400,
+        "image": "assets/transport/transport_10.webp"
+    },
+    {
+        "id": "transport_11",
+        "name": "Executive Car",
+        "tier": "premium",
+        "price": 65000,
+        "happinessBonus": 20,
+        "maintenanceCost": 450,
+        "image": "assets/transport/transport_11.webp"
+    },
+    {
+        "id": "transport_12",
+        "name": "Muscle Car",
+        "tier": "premium",
+        "price": 50000,
+        "happinessBonus": 16,
+        "maintenanceCost": 380,
+        "image": "assets/transport/transport_12.webp"
+    },
+    {
+        "id": "transport_13",
+        "name": "Electric Vehicle",
+        "tier": "premium",
+        "price": 48000,
+        "happinessBonus": 14,
+        "maintenanceCost": 200,
+        "image": "assets/transport/transport_13.webp"
+    },
+    {
+        "id": "transport_14",
+        "name": "Hybrid SUV",
+        "tier": "premium",
+        "price": 52000,
+        "happinessBonus": 15,
+        "maintenanceCost": 250,
+        "image": "assets/transport/transport_14.webp"
+    },
+    {
+        "id": "transport_15",
+        "name": "Convertible",
+        "tier": "luxury",
+        "price": 75000,
+        "happinessBonus": 22,
+        "maintenanceCost": 500,
+        "image": "assets/transport/transport_15.webp"
+    },
+    {
+        "id": "transport_16",
+        "name": "German Luxury",
+        "tier": "luxury",
+        "price": 85000,
+        "happinessBonus": 25,
+        "maintenanceCost": 600,
+        "image": "assets/transport/transport_16.webp"
+    },
+    {
+        "id": "transport_17",
+        "name": "Italian Luxury",
+        "tier": "luxury",
+        "price": 95000,
+        "happinessBonus": 28,
+        "maintenanceCost": 700,
+        "image": "assets/transport/transport_17.webp"
+    },
+    {
+        "id": "transport_18",
+        "name": "British Luxury",
+        "tier": "luxury",
+        "price": 110000,
+        "happinessBonus": 30,
+        "maintenanceCost": 800,
+        "image": "assets/transport/transport_18.webp"
+    },
+    {
+        "id": "transport_19",
+        "name": "Luxury SUV",
+        "tier": "luxury",
+        "price": 90000,
+        "happinessBonus": 26,
+        "maintenanceCost": 650,
+        "image": "assets/transport/transport_19.webp"
+    },
+    {
+        "id": "transport_20",
+        "name": "Performance Sedan",
+        "tier": "luxury",
+        "price": 100000,
+        "happinessBonus": 28,
+        "maintenanceCost": 720,
+        "image": "assets/transport/transport_20.webp"
+    },
+    {
+        "id": "transport_21",
+        "name": "Supercar Entry",
+        "tier": "exotic",
+        "price": 150000,
+        "happinessBonus": 35,
+        "maintenanceCost": 1200,
+        "image": "assets/transport/transport_21.webp"
+    },
+    {
+        "id": "transport_22",
+        "name": "Italian Supercar",
+        "tier": "exotic",
+        "price": 250000,
+        "happinessBonus": 45,
+        "maintenanceCost": 2000,
+        "image": "assets/transport/transport_22.webp"
+    },
+    {
+        "id": "transport_23",
+        "name": "German Supercar",
+        "tier": "exotic",
+        "price": 220000,
+        "happinessBonus": 42,
+        "maintenanceCost": 1800,
+        "image": "assets/transport/transport_23.webp"
+    },
+    {
+        "id": "transport_24",
+        "name": "British Supercar",
+        "tier": "exotic",
+        "price": 280000,
+        "happinessBonus": 48,
+        "maintenanceCost": 2200,
+        "image": "assets/transport/transport_24.webp"
+    },
+    {
+        "id": "transport_25",
+        "name": "Japanese Supercar",
+        "tier": "exotic",
+        "price": 180000,
+        "happinessBonus": 38,
+        "maintenanceCost": 1400,
+        "image": "assets/transport/transport_25.webp"
+    },
+    {
+        "id": "transport_26",
+        "name": "American Supercar",
+        "tier": "exotic",
+        "price": 200000,
+        "happinessBonus": 40,
+        "maintenanceCost": 1600,
+        "image": "assets/transport/transport_26.webp"
+    },
+    {
+        "id": "transport_27",
+        "name": "Hypercar",
+        "tier": "hypercar",
+        "price": 500000,
+        "happinessBonus": 60,
+        "maintenanceCost": 4000,
+        "image": "assets/transport/transport_27.webp"
+    },
+    {
+        "id": "transport_28",
+        "name": "Italian Hypercar",
+        "tier": "hypercar",
+        "price": 750000,
+        "happinessBonus": 70,
+        "maintenanceCost": 5500,
+        "image": "assets/transport/transport_28.webp"
+    },
+    {
+        "id": "transport_29",
+        "name": "German Hypercar",
+        "tier": "hypercar",
+        "price": 800000,
+        "happinessBonus": 72,
+        "maintenanceCost": 6000,
+        "image": "assets/transport/transport_29.webp"
+    },
+    {
+        "id": "transport_30",
+        "name": "British Hypercar",
+        "tier": "hypercar",
+        "price": 900000,
+        "happinessBonus": 75,
+        "maintenanceCost": 6500,
+        "image": "assets/transport/transport_30.webp"
+    },
+    {
+        "id": "transport_31",
+        "name": "Limited Edition Hypercar",
+        "tier": "hypercar",
+        "price": 1500000,
+        "happinessBonus": 85,
+        "maintenanceCost": 10000,
+        "image": "assets/transport/transport_31.webp"
+    },
+    {
+        "id": "transport_32",
+        "name": "Electric Hypercar",
+        "tier": "hypercar",
+        "price": 1200000,
+        "happinessBonus": 80,
+        "maintenanceCost": 7000,
+        "image": "assets/transport/transport_32.webp"
+    },
+    {
+        "id": "transport_33",
+        "name": "Classic Sports Car",
+        "tier": "classic",
+        "price": 120000,
+        "happinessBonus": 32,
+        "maintenanceCost": 1500,
+        "image": "assets/transport/transport_33.webp"
+    },
+    {
+        "id": "transport_34",
+        "name": "Vintage Roadster",
+        "tier": "classic",
+        "price": 180000,
+        "happinessBonus": 38,
+        "maintenanceCost": 2000,
+        "image": "assets/transport/transport_34.webp"
+    },
+    {
+        "id": "transport_35",
+        "name": "Classic Muscle",
+        "tier": "classic",
+        "price": 95000,
+        "happinessBonus": 28,
+        "maintenanceCost": 1200,
+        "image": "assets/transport/transport_35.webp"
+    },
+    {
+        "id": "transport_36",
+        "name": "Vintage Luxury",
+        "tier": "classic",
+        "price": 250000,
+        "happinessBonus": 45,
+        "maintenanceCost": 3000,
+        "image": "assets/transport/transport_36.webp"
+    },
+    {
+        "id": "transport_37",
+        "name": "Racing Motorcycle",
+        "tier": "motorcycle",
+        "price": 18000,
+        "happinessBonus": 12,
+        "maintenanceCost": 150,
+        "image": "assets/transport/transport_37.webp"
+    },
+    {
+        "id": "transport_38",
+        "name": "Cruiser Motorcycle",
+        "tier": "motorcycle",
+        "price": 22000,
+        "happinessBonus": 14,
+        "maintenanceCost": 180,
+        "image": "assets/transport/transport_38.webp"
+    },
+    {
+        "id": "transport_39",
+        "name": "Adventure Motorcycle",
+        "tier": "motorcycle",
+        "price": 16000,
+        "happinessBonus": 11,
+        "maintenanceCost": 140,
+        "image": "assets/transport/transport_39.webp"
+    },
+    {
+        "id": "transport_40",
+        "name": "Superbike",
+        "tier": "motorcycle",
+        "price": 35000,
+        "happinessBonus": 20,
+        "maintenanceCost": 280,
+        "image": "assets/transport/transport_40.webp"
+    },
+    {
+        "id": "transport_41",
+        "name": "Minivan",
+        "tier": "family",
+        "price": 35000,
+        "happinessBonus": 8,
+        "maintenanceCost": 250,
+        "image": "assets/transport/transport_41.webp"
+    },
+    {
+        "id": "transport_42",
+        "name": "Family SUV",
+        "tier": "family",
+        "price": 42000,
+        "happinessBonus": 10,
+        "maintenanceCost": 300,
+        "image": "assets/transport/transport_42.webp"
+    },
+    {
+        "id": "transport_43",
+        "name": "Station Wagon",
+        "tier": "family",
+        "price": 32000,
+        "happinessBonus": 7,
+        "maintenanceCost": 220,
+        "image": "assets/transport/transport_43.webp"
+    },
+    {
+        "id": "transport_44",
+        "name": "Off-Road Vehicle",
+        "tier": "utility",
+        "price": 48000,
+        "happinessBonus": 12,
+        "maintenanceCost": 380,
+        "image": "assets/transport/transport_44.webp"
+    },
+    {
+        "id": "transport_45",
+        "name": "Work Truck",
+        "tier": "utility",
+        "price": 38000,
+        "happinessBonus": 6,
+        "maintenanceCost": 300,
+        "image": "assets/transport/transport_45.webp"
+    },
+    {
+        "id": "transport_46",
+        "name": "Van",
+        "tier": "utility",
+        "price": 28000,
+        "happinessBonus": 4,
+        "maintenanceCost": 200,
+        "image": "assets/transport/transport_46.webp"
+    },
+    {
+        "id": "transport_47",
+        "name": "Entry Sports Car",
+        "tier": "sports",
+        "price": 38000,
+        "happinessBonus": 14,
+        "maintenanceCost": 300,
+        "image": "assets/transport/transport_47.webp"
+    },
+    {
+        "id": "transport_48",
+        "name": "Mid-Size Sports",
+        "tier": "sports",
+        "price": 55000,
+        "happinessBonus": 18,
+        "maintenanceCost": 420,
+        "image": "assets/transport/transport_48.webp"
+    },
+    {
+        "id": "transport_49",
+        "name": "GT Coupe",
+        "tier": "sports",
+        "price": 72000,
+        "happinessBonus": 22,
+        "maintenanceCost": 550,
+        "image": "assets/transport/transport_49.webp"
+    },
+    {
+        "id": "transport_50",
+        "name": "Roadster",
+        "tier": "sports",
+        "price": 65000,
+        "happinessBonus": 20,
+        "maintenanceCost": 480,
+        "image": "assets/transport/transport_50.webp"
+    },
+    {
+        "id": "transport_51",
+        "name": "Hot Hatch",
+        "tier": "sports",
+        "price": 32000,
+        "happinessBonus": 12,
+        "maintenanceCost": 240,
+        "image": "assets/transport/transport_51.webp"
+    },
+    {
+        "id": "transport_52",
+        "name": "Compact Luxury",
+        "tier": "premium",
+        "price": 42000,
+        "happinessBonus": 13,
+        "maintenanceCost": 320,
+        "image": "assets/transport/transport_52.webp"
+    },
+    {
+        "id": "transport_53",
+        "name": "Midsize Luxury",
+        "tier": "premium",
+        "price": 58000,
+        "happinessBonus": 17,
+        "maintenanceCost": 420,
+        "image": "assets/transport/transport_53.webp"
+    },
+    {
+        "id": "transport_54",
+        "name": "Full-Size Luxury",
+        "tier": "luxury",
+        "price": 78000,
+        "happinessBonus": 24,
+        "maintenanceCost": 560,
+        "image": "assets/transport/transport_54.webp"
+    },
+    {
+        "id": "transport_55",
+        "name": "Luxury Coupe",
+        "tier": "luxury",
+        "price": 88000,
+        "happinessBonus": 26,
+        "maintenanceCost": 640,
+        "image": "assets/transport/transport_55.webp"
+    },
+    {
+        "id": "transport_56",
+        "name": "Performance SUV",
+        "tier": "luxury",
+        "price": 95000,
+        "happinessBonus": 27,
+        "maintenanceCost": 700,
+        "image": "assets/transport/transport_56.webp"
+    },
+    {
+        "id": "transport_57",
+        "name": "Ultra Luxury Sedan",
+        "tier": "ultra",
+        "price": 180000,
+        "happinessBonus": 40,
+        "maintenanceCost": 1200,
+        "image": "assets/transport/transport_57.webp"
+    },
+    {
+        "id": "transport_58",
+        "name": "Ultra Luxury SUV",
+        "tier": "ultra",
+        "price": 200000,
+        "happinessBonus": 42,
+        "maintenanceCost": 1400,
+        "image": "assets/transport/transport_58.webp"
+    },
+    {
+        "id": "transport_59",
+        "name": "Armored Luxury",
+        "tier": "ultra",
+        "price": 350000,
+        "happinessBonus": 35,
+        "maintenanceCost": 2500,
+        "image": "assets/transport/transport_59.webp"
+    },
+    {
+        "id": "transport_60",
+        "name": "Limousine",
+        "tier": "ultra",
+        "price": 150000,
+        "happinessBonus": 38,
+        "maintenanceCost": 1000,
+        "image": "assets/transport/transport_60.webp"
+    },
+    {
+        "id": "transport_61",
+        "name": "Electric Luxury",
+        "tier": "premium",
+        "price": 85000,
+        "happinessBonus": 22,
+        "maintenanceCost": 350,
+        "image": "assets/transport/transport_61.webp"
+    },
+    {
+        "id": "transport_62",
+        "name": "Electric SUV",
+        "tier": "premium",
+        "price": 75000,
+        "happinessBonus": 18,
+        "maintenanceCost": 280,
+        "image": "assets/transport/transport_62.webp"
+    },
+    {
+        "id": "transport_63",
+        "name": "Electric Sports",
+        "tier": "luxury",
+        "price": 120000,
+        "happinessBonus": 32,
+        "maintenanceCost": 450,
+        "image": "assets/transport/transport_63.webp"
+    },
+    {
+        "id": "transport_64",
+        "name": "Economy Hatchback",
+        "tier": "economy",
+        "price": 12000,
+        "happinessBonus": 5,
+        "maintenanceCost": 90,
+        "image": "assets/transport/transport_64.webp"
+    },
+    {
+        "id": "transport_65",
+        "name": "City Car",
+        "tier": "economy",
+        "price": 10000,
+        "happinessBonus": 4,
+        "maintenanceCost": 70,
+        "image": "assets/transport/transport_65.webp"
+    },
+    {
+        "id": "transport_66",
+        "name": "Budget Sedan",
+        "tier": "economy",
+        "price": 14000,
+        "happinessBonus": 6,
+        "maintenanceCost": 110,
+        "image": "assets/transport/transport_66.webp"
+    },
+    {
+        "id": "transport_67",
+        "name": "Subcompact",
+        "tier": "basic",
+        "price": 6000,
+        "happinessBonus": 3,
+        "maintenanceCost": 50,
+        "image": "assets/transport/transport_67.webp"
+    },
+    {
+        "id": "transport_68",
+        "name": "Used Compact",
+        "tier": "basic",
+        "price": 4000,
+        "happinessBonus": 3,
+        "maintenanceCost": 60,
+        "image": "assets/transport/transport_68.webp"
+    },
+    {
+        "id": "transport_69",
+        "name": "Old Pickup",
+        "tier": "basic",
+        "price": 7000,
+        "happinessBonus": 4,
+        "maintenanceCost": 80,
+        "image": "assets/transport/transport_69.webp"
+    },
+    {
+        "id": "transport_70",
+        "name": "Luxury Convertible",
+        "tier": "luxury",
+        "price": 105000,
+        "happinessBonus": 30,
+        "maintenanceCost": 780,
+        "image": "assets/transport/transport_70.webp"
+    },
+    {
+        "id": "transport_71",
+        "name": "Grand Tourer",
+        "tier": "luxury",
+        "price": 135000,
+        "happinessBonus": 34,
+        "maintenanceCost": 950,
+        "image": "assets/transport/transport_71.webp"
+    },
+    {
+        "id": "transport_72",
+        "name": "Luxury Wagon",
+        "tier": "luxury",
+        "price": 82000,
+        "happinessBonus": 23,
+        "maintenanceCost": 580,
+        "image": "assets/transport/transport_72.webp"
+    },
+    {
+        "id": "transport_73",
+        "name": "Executive SUV",
+        "tier": "ultra",
+        "price": 160000,
+        "happinessBonus": 36,
+        "maintenanceCost": 1100,
+        "image": "assets/transport/transport_73.webp"
+    },
+    {
+        "id": "transport_74",
+        "name": "Flagship Sedan",
+        "tier": "ultra",
+        "price": 220000,
+        "happinessBonus": 44,
+        "maintenanceCost": 1500,
+        "image": "assets/transport/transport_74.webp"
+    },
+    {
+        "id": "transport_75",
+        "name": "Super SUV",
+        "tier": "exotic",
+        "price": 320000,
+        "happinessBonus": 52,
+        "maintenanceCost": 2400,
+        "image": "assets/transport/transport_75.webp"
+    },
+    {
+        "id": "transport_76",
+        "name": "Track Car",
+        "tier": "exotic",
+        "price": 280000,
+        "happinessBonus": 50,
+        "maintenanceCost": 2200,
+        "image": "assets/transport/transport_76.webp"
+    },
+    {
+        "id": "transport_77",
+        "name": "Open Top Supercar",
+        "tier": "exotic",
+        "price": 350000,
+        "happinessBonus": 55,
+        "maintenanceCost": 2800,
+        "image": "assets/transport/transport_77.webp"
+    },
+    {
+        "id": "transport_78",
+        "name": "Collector's Edition",
+        "tier": "hypercar",
+        "price": 2000000,
+        "happinessBonus": 90,
+        "maintenanceCost": 15000,
+        "image": "assets/transport/transport_78.webp"
+    },
+    {
+        "id": "transport_79",
+        "name": "Racing Hypercar",
+        "tier": "hypercar",
+        "price": 1800000,
+        "happinessBonus": 88,
+        "maintenanceCost": 12000,
+        "image": "assets/transport/transport_79.webp"
+    },
+    {
+        "id": "transport_80",
+        "name": "Vintage Ferrari",
+        "tier": "classic",
+        "price": 500000,
+        "happinessBonus": 65,
+        "maintenanceCost": 5000,
+        "image": "assets/transport/transport_80.webp"
+    },
+    {
+        "id": "transport_81",
+        "name": "Vintage Porsche",
+        "tier": "classic",
+        "price": 350000,
+        "happinessBonus": 55,
+        "maintenanceCost": 4000,
+        "image": "assets/transport/transport_81.webp"
+    },
+    {
+        "id": "transport_82",
+        "name": "Vintage Aston Martin",
+        "tier": "classic",
+        "price": 450000,
+        "happinessBonus": 60,
+        "maintenanceCost": 4500,
+        "image": "assets/transport/transport_82.webp"
+    },
+    {
+        "id": "transport_83",
+        "name": "Sport Bike",
+        "tier": "motorcycle",
+        "price": 12000,
+        "happinessBonus": 10,
+        "maintenanceCost": 100,
+        "image": "assets/transport/transport_83.webp"
+    },
+    {
+        "id": "transport_84",
+        "name": "Custom Chopper",
+        "tier": "motorcycle",
+        "price": 45000,
+        "happinessBonus": 25,
+        "maintenanceCost": 350,
+        "image": "assets/transport/transport_84.webp"
+    },
+    {
+        "id": "transport_85",
+        "name": "Electric Motorcycle",
+        "tier": "motorcycle",
+        "price": 20000,
+        "happinessBonus": 13,
+        "maintenanceCost": 80,
+        "image": "assets/transport/transport_85.webp"
+    },
+    {
+        "id": "transport_86",
+        "name": "Touring Bike",
+        "tier": "motorcycle",
+        "price": 28000,
+        "happinessBonus": 16,
+        "maintenanceCost": 200,
+        "image": "assets/transport/transport_86.webp"
+    },
+    {
+        "id": "transport_87",
+        "name": "Executive Van",
+        "tier": "ultra",
+        "price": 120000,
+        "happinessBonus": 28,
+        "maintenanceCost": 800,
+        "image": "assets/transport/transport_87.webp"
+    },
+    {
+        "id": "transport_88",
+        "name": "Luxury RV",
+        "tier": "ultra",
+        "price": 250000,
+        "happinessBonus": 35,
+        "maintenanceCost": 1800,
+        "image": "assets/transport/transport_88.webp"
+    },
+    {
+        "id": "transport_89",
+        "name": "Camper Van",
+        "tier": "family",
+        "price": 55000,
+        "happinessBonus": 12,
+        "maintenanceCost": 400,
+        "image": "assets/transport/transport_89.webp"
+    },
+    {
+        "id": "transport_90",
+        "name": "Small RV",
+        "tier": "family",
+        "price": 80000,
+        "happinessBonus": 15,
+        "maintenanceCost": 550,
+        "image": "assets/transport/transport_90.webp"
+    },
+    {
+        "id": "transport_91",
+        "name": "E-Scooter",
+        "tier": "basic",
+        "price": 500,
+        "happinessBonus": 2,
+        "maintenanceCost": 15,
+        "image": "assets/transport/transport_91.webp"
+    },
+    {
+        "id": "transport_92",
+        "name": "E-Bike",
+        "tier": "basic",
+        "price": 2500,
+        "happinessBonus": 4,
+        "maintenanceCost": 25,
+        "image": "assets/transport/transport_92.webp"
+    },
+    {
+        "id": "transport_93",
+        "name": "Moped",
+        "tier": "basic",
+        "price": 1500,
+        "happinessBonus": 3,
+        "maintenanceCost": 40,
+        "image": "assets/transport/transport_93.webp"
+    },
+    {
+        "id": "transport_94",
+        "name": "Quad Bike",
+        "tier": "utility",
+        "price": 8000,
+        "happinessBonus": 8,
+        "maintenanceCost": 120,
+        "image": "assets/transport/transport_94.webp"
+    },
+    {
+        "id": "transport_95",
+        "name": "Jet Ski",
+        "tier": "sports",
+        "price": 15000,
+        "happinessBonus": 15,
+        "maintenanceCost": 200,
+        "image": "assets/transport/transport_95.webp"
+    },
+    {
+        "id": "transport_96",
+        "name": "Small Boat",
+        "tier": "sports",
+        "price": 35000,
+        "happinessBonus": 18,
+        "maintenanceCost": 400,
+        "image": "assets/transport/transport_96.webp"
+    },
+    {
+        "id": "transport_97",
+        "name": "Yacht",
+        "tier": "ultra",
+        "price": 500000,
+        "happinessBonus": 50,
+        "maintenanceCost": 5000,
+        "image": "assets/transport/transport_97.webp"
+    },
+    {
+        "id": "transport_98",
+        "name": "Private Plane",
+        "tier": "ultra",
+        "price": 2000000,
+        "happinessBonus": 80,
+        "maintenanceCost": 20000,
+        "image": "assets/transport/transport_98.webp"
+    },
+    {
+        "id": "transport_99",
+        "name": "Helicopter",
+        "tier": "ultra",
+        "price": 800000,
+        "happinessBonus": 60,
+        "maintenanceCost": 8000,
+        "image": "assets/transport/transport_99.webp"
+    }
+]

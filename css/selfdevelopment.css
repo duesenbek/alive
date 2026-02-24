@@ -1,0 +1,882 @@
+/**
+ * Self-Development UI Styles - Alive Life Simulator
+ * Education, Career, Business, and Investing track panels
+ */
+
+/* ============================================================================
+   SELF-DEVELOPMENT SCREEN
+   ============================================================================ */
+.selfDevScreen {
+  padding: 20px;
+  padding-bottom: 100px;
+}
+
+.selfDevHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.selfDevBackBtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.selfDevBackBtn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.selfDevTitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* Tab Navigation */
+.selfDevTabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  scrollbar-width: none;
+}
+
+.selfDevTabs::-webkit-scrollbar {
+  display: none;
+}
+
+.selfDevTab {
+  flex: 1;
+  min-width: 80px;
+  padding: 12px 16px;
+  background: rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  color: var(--text-primary);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.selfDevTab:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--text-primary);
+}
+
+.selfDevTab.active {
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.2) 0%, rgba(124, 58, 237, 0.2) 100%);
+  border-color: rgba(0, 212, 255, 0.4);
+  color: var(--text-primary);
+}
+
+.selfDevTabIcon {
+  font-size: 20px;
+}
+
+.selfDevTabLabel {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ============================================================================
+   PROGRESS PATH VISUALIZATION
+   ============================================================================ */
+.progressPath {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 24px;
+}
+
+.progressStep {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  position: relative;
+}
+
+.progressStepIndicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 40px;
+}
+
+.progressStepDot {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.progressStepDot.completed {
+  background: linear-gradient(135deg, #51cf66 0%, #2f9e44 100%);
+  border-color: #51cf66;
+}
+
+.progressStepDot.current {
+  background: linear-gradient(135deg, #00d4ff 0%, #7c3aed 100%);
+  border-color: #00d4ff;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+  animation: pulse 2s infinite;
+}
+
+.progressStepDot.locked {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.progressStepLine {
+  width: 2px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.15);
+  margin-top: 4px;
+}
+
+.progressStepLine.completed {
+  background: linear-gradient(180deg, #51cf66 0%, #51cf66 100%);
+}
+
+.progressStepLine.active {
+  background: linear-gradient(180deg, #00d4ff 0%, rgba(255, 255, 255, 0.15) 100%);
+}
+
+.progressStepContent {
+  flex: 1;
+  padding-bottom: 24px;
+}
+
+.progressStepTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.progressStepTitle.locked {
+  color: var(--text-secondary);
+}
+
+.progressStepDesc {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.progressStepMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.progressStepBadge {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.progressStepBadge.cost {
+  background: rgba(255, 107, 107, 0.2);
+  color: #ff6b6b;
+}
+
+.progressStepBadge.time {
+  background: rgba(0, 212, 255, 0.2);
+  color: #00d4ff;
+}
+
+.progressStepBadge.boost {
+  background: rgba(81, 207, 102, 0.2);
+  color: #51cf66;
+}
+
+/* ============================================================================
+   CURRENT STATUS CARD
+   ============================================================================ */
+.statusCard {
+  background: var(--bg-card);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.statusCardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.statusCardTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.statusCardValue {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.statusCardProgress {
+  height: 8px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.statusCardProgressFill {
+  height: 100%;
+  background: linear-gradient(90deg, #00d4ff 0%, #7c3aed 100%);
+  border-radius: 4px;
+  transition: width 0.5s ease;
+}
+
+.statusCardMeta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+/* ============================================================================
+   CAREER PATH VISUALIZATION
+   ============================================================================ */
+.careerPath {
+  display: flex;
+  overflow-x: auto;
+  gap: 0;
+  padding: 20px 0;
+  margin-bottom: 24px;
+  scrollbar-width: none;
+}
+
+.careerPath::-webkit-scrollbar {
+  display: none;
+}
+
+.careerLevel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 80px;
+  position: relative;
+}
+
+.careerLevelConnector {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  width: 100%;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.15);
+  z-index: 0;
+}
+
+.careerLevelConnector.completed {
+  background: linear-gradient(90deg, #51cf66 0%, #51cf66 100%);
+}
+
+.careerLevelConnector.active {
+  background: linear-gradient(90deg, #51cf66 0%, #00d4ff 100%);
+}
+
+.careerLevelDot {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.careerLevelDot.completed {
+  background: linear-gradient(135deg, #51cf66 0%, #2f9e44 100%);
+  border-color: #51cf66;
+}
+
+.careerLevelDot.current {
+  background: linear-gradient(135deg, #00d4ff 0%, #7c3aed 100%);
+  border-color: #00d4ff;
+  box-shadow: 0 0 25px rgba(0, 212, 255, 0.6);
+  transform: scale(1.15);
+}
+
+.careerLevelDot.locked {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.15);
+  opacity: 0.5;
+}
+
+.careerLevelLabel {
+  margin-top: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  max-width: 70px;
+}
+
+.careerLevelLabel.current {
+  color: #00d4ff;
+}
+
+.careerLevelSalary {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 2px;
+}
+
+/* ============================================================================
+   BUSINESS STATE VISUALIZATION
+   ============================================================================ */
+.businessStateFlow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.businessState {
+  flex: 1;
+  min-width: 100px;
+  padding: 16px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.businessState.current {
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.15) 0%, rgba(124, 58, 237, 0.15) 100%);
+  border-color: rgba(0, 212, 255, 0.4);
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+}
+
+.businessState.completed {
+  background: rgba(81, 207, 102, 0.1);
+  border-color: rgba(81, 207, 102, 0.3);
+}
+
+.businessState.failed {
+  background: rgba(255, 107, 107, 0.1);
+  border-color: rgba(255, 107, 107, 0.3);
+}
+
+.businessStateIcon {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.businessStateName {
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.businessStateRevenue {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* ============================================================================
+   PORTFOLIO VIEW
+   ============================================================================ */
+.portfolioSummary {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.portfolioStat {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+}
+
+.portfolioStatValue {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.portfolioStatValue.positive {
+  color: #51cf66;
+}
+
+.portfolioStatValue.negative {
+  color: #ff6b6b;
+}
+
+.portfolioStatLabel {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.portfolioHoldings {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.portfolioHolding {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.holdingIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.2) 0%, rgba(124, 58, 237, 0.2) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.holdingInfo {
+  flex: 1;
+}
+
+.holdingName {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 2px;
+}
+
+.holdingAllocation {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.holdingValue {
+  text-align: right;
+}
+
+.holdingAmount {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.holdingReturn {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.holdingReturn.positive {
+  color: #51cf66;
+}
+
+.holdingReturn.negative {
+  color: #ff6b6b;
+}
+
+/* Risk Meter */
+.riskMeter {
+  margin-bottom: 24px;
+}
+
+.riskMeterLabel {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.riskMeterBar {
+  height: 8px;
+  background: linear-gradient(90deg, #51cf66 0%, #ffd700 50%, #ff6b6b 100%);
+  border-radius: 4px;
+  position: relative;
+}
+
+.riskMeterIndicator {
+  position: absolute;
+  top: -4px;
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transform: translateX(-50%);
+  transition: left 0.3s ease;
+}
+
+/* Diversification Score */
+.diversificationScore {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.diversificationCircle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #00d4ff var(--score, 0%),
+    rgba(255, 255, 255, 0.1) var(--score, 0%)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.diversificationCircle::before {
+  content: '';
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  background: var(--bg-card);
+  border-radius: 50%;
+}
+
+.diversificationValue {
+  position: relative;
+  z-index: 1;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.diversificationInfo {
+  flex: 1;
+}
+
+.diversificationTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.diversificationDesc {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* ============================================================================
+   ACTION BUTTONS
+   ============================================================================ */
+.selfDevActions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.selfDevActionBtn {
+  width: 100%;
+  padding: 16px 20px;
+  border-radius: 12px;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.2s ease;
+}
+
+.selfDevActionBtn.primary {
+  background: linear-gradient(135deg, #00d4ff 0%, #7c3aed 100%);
+  color: #fff;
+}
+
+.selfDevActionBtn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 212, 255, 0.4);
+}
+
+.selfDevActionBtn.secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.selfDevActionBtn.secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.selfDevActionBtn.danger {
+  background: rgba(255, 107, 107, 0.2);
+  color: #ff6b6b;
+  border: 1px solid rgba(255, 107, 107, 0.3);
+}
+
+.selfDevActionBtn.danger:hover {
+  background: rgba(255, 107, 107, 0.3);
+}
+
+.selfDevActionBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.selfDevActionBtnCost {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+/* ============================================================================
+   INVESTMENT OPTIONS
+   ============================================================================ */
+.investOptions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.investOption {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.investOption:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.investOption.selected {
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.15) 0%, rgba(124, 58, 237, 0.15) 100%);
+  border-color: rgba(0, 212, 255, 0.4);
+}
+
+.investOptionIcon {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.investOptionName {
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.investOptionReturn {
+  font-size: 11px;
+  color: #51cf66;
+  margin-bottom: 2px;
+}
+
+.investOptionRisk {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* ============================================================================
+   BUSINESS TYPE SELECTION
+   ============================================================================ */
+.businessTypes {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.businessType {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.businessType:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.businessType.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.businessTypeIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(255, 107, 157, 0.2) 0%, rgba(255, 215, 0, 0.2) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+.businessTypeInfo {
+  flex: 1;
+}
+
+.businessTypeName {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 2px;
+}
+
+.businessTypeReq {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.businessTypeCost {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffd700;
+}
+
+/* ============================================================================
+   EMPTY STATE
+   ============================================================================ */
+.selfDevEmpty {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.selfDevEmptyIcon {
+  font-size: 48px;
+  margin-bottom: 16px;
+  opacity: 0.5;
+}
+
+.selfDevEmptyTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.selfDevEmptyDesc {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 24px;
+}
+
+/* ============================================================================
+   ANIMATIONS
+   ============================================================================ */
+@keyframes progressPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(0, 212, 255, 0.7);
+  }
+}
+
+.progressStepDot.current,
+.careerLevelDot.current {
+  animation: progressPulse 2s infinite;
+}
+
+/* ============================================================================
+   RESPONSIVE
+   ============================================================================ */
+@media (max-width: 400px) {
+  .selfDevTabs {
+    gap: 6px;
+  }
+
+  .selfDevTab {
+    padding: 10px 12px;
+    min-width: 70px;
+  }
+
+  .selfDevTabIcon {
+    font-size: 18px;
+  }
+
+  .selfDevTabLabel {
+    font-size: 10px;
+  }
+
+  .portfolioSummary {
+    grid-template-columns: 1fr;
+  }
+
+  .investOptions {
+    grid-template-columns: 1fr;
+  }
+
+  .careerLevelDot {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  .careerLevel {
+    min-width: 60px;
+  }
+}

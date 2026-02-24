@@ -1,0 +1,58 @@
+/* ============================================================================
+   DYNAMIC BACKGROUNDS (Wealth & Stage)
+   ============================================================================ */
+
+/* Base background transition */
+.gameScreen {
+    background-size: cover;
+    background-position: center;
+    transition: background 1s ease;
+}
+
+/* Wealth Tiers Backgrounds */
+
+/* Broke: Desaturated, cold, slightly gritty */
+.gameScreen[data-wealth="broke"] {
+    background: radial-gradient(circle at center, #2c3e50 0%, #000000 100%);
+}
+
+/* Poor: Muted earth tones, basic */
+.gameScreen[data-wealth="poor"] {
+    background: radial-gradient(circle at center, #5d4037 0%, #1a1a1a 100%);
+}
+
+/* Comfortable: Clean, pleasant blue/green mix */
+.gameScreen[data-wealth="comfortable"] {
+    background: radial-gradient(circle at center, #1a2980 0%, #26d0ce 100%);
+    background-blend-mode: overlay;
+}
+
+/* Wealthy: Richer blues and purples */
+.gameScreen[data-wealth="wealthy"] {
+    background: radial-gradient(circle at top right, #00d4ff 0%, #090979 50%, #020024 100%);
+}
+
+/* Rich: Gold and deep colors */
+.gameScreen[data-wealth="rich"] {
+    background: radial-gradient(circle at top, #ffd700 0%, #8b4513 100%);
+}
+
+/* Elite: Premium purple/pink/gold gradients */
+.gameScreen[data-wealth="elite"] {
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255, 107, 157, 0.4) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 215, 0, 0.4) 0%, transparent 50%),
+        linear-gradient(135deg, #2b1055 0%, #7597de 100%);
+    background-blend-mode: screen, screen, normal;
+    animation: elitePulse 10s infinite alternate;
+}
+
+@keyframes elitePulse {
+    0% {
+        background-size: 100% 100%;
+    }
+
+    100% {
+        background-size: 110% 110%;
+    }
+}

@@ -1,0 +1,67 @@
+/* ============================================================================
+   LIFE GOALS SCREEN
+   ============================================================================ */
+.goalsScreen {
+    justify-content: flex-start;
+    overflow-y: auto;
+    padding-top: 40px;
+}
+
+.screenHeader {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.screenHeader h1 {
+    font-size: 28px;
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.goalsList {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.goalItem {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-md);
+    transition: all 0.3s ease;
+}
+
+.goalItem:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.goalItem.done {
+    background: rgba(81, 207, 102, 0.1);
+    border-color: var(--accent-green);
+    box-shadow: 0 0 15px rgba(81, 207, 102, 0.1);
+}
+
+.goalCheck {
+    font-size: 24px;
+    min-width: 32px;
+}
+
+.goalLabel {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.goalItem.done .goalLabel {
+    color: #fff;
+}
