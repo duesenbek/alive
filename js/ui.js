@@ -3527,7 +3527,12 @@
         nextBtn.style.position = "relative";
         nextBtn.style.boxShadow = "0 0 0 4px #ffcc00";
         nextBtn.onclick = () => {
-          this.game.money += 100;
+          if (!this.game?.player) return;
+
+          this.game.player.money += 100;
+          this.game.player.recalculateEconomy?.();
+          this.game.player.updateNetWorth?.();
+
           this.game.onboardingStep = 1; // Always go to 1 next
           this.render();
         };
