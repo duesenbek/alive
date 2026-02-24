@@ -3376,13 +3376,12 @@
           if (nextBtn.disabled || this.game.isProcessingYear) return;
 
           nextBtn.disabled = true;
-          this.game.isProcessingYear = true;
 
           try {
             this.game.nextYear();
           } catch (e) {
             console.error("Year progression error:", e);
-            this.game.isProcessingYear = false;
+            nextBtn.disabled = false;
           }
           this.render();
         };
@@ -3527,7 +3526,10 @@
         nextBtn.style.position = "relative";
         nextBtn.style.boxShadow = "0 0 0 4px #ffcc00";
         nextBtn.onclick = () => {
-          this.game.money += 100;
+          if (!this.game?.player) return;
+          this.game.player.money += 100;
+          this.game.player.updateNetWorth?.();
+          this.game.player.recalculateEconomy?.();
           this.game.onboardingStep = 1; // Always go to 1 next
           this.render();
         };
@@ -3565,6 +3567,8 @@
         nextBtn.style.position = "relative";
         nextBtn.style.boxShadow = "0 0 0 4px #00e0ff";
         nextBtn.onclick = () => {
+          if (nextBtn.disabled || this.game?.isProcessingYear) return;
+          nextBtn.disabled = true;
           this.game.completeOnboarding();
           this.game.nextYear();
           this.render();
