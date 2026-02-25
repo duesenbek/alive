@@ -76,30 +76,8 @@
       this._adRewardInProgress = false;
     }
 
-    startNewLife(parentStats = null) {
-      if (!this.player) {
-        this.player = new Alive.Player();
-      }
-      this.player.reset();
-      this.resetLifeStats();
-      this.failCause = null;
-
-      // Reset processing flags on new life
-      this.isProcessingYear = false;
-      this._adRewardInProgress = false;
-
-      // Check if tutorial is needed
-      if (!this.bestResults.tutorialComplete) {
-        this.isOnboarding = true;
-        this.onboardingStep = 0;
-      }
-
-      // Analytics: Life Start
-      if (Alive.Analytics) {
-        // Defer slightly to ensure player props are set? No, they are set in reset()
-        Alive.Analytics.trackLifeStart(this.player);
-      }
-    }
+    // NOTE: startNewLife is defined once in the GAME LIFECYCLE section below.
+    // Do NOT re-define it here — see ~line 602.
 
     completeOnboarding() {
       this.isOnboarding = false;
@@ -149,25 +127,8 @@
       }
     }
 
-    /**
-     * Revive the player after death
-     */
-    revivePlayer() {
-      if (!this.ended || !this.player) return;
-
-      console.log("Player revived!");
-      this.ended = false;
-      this.failCause = null;
-
-      // Penalty/Reset
-      this.player.health = 50;
-      this.player.happiness = 50;
-      // Undo the last year progression effectively? Or just continue?
-      // Simple logic: just unset ended flag and ensure stats are non-fatal.
-
-      Alive.ui?.showGame(); // Return to game screen
-      Alive.ui?.showToast("✨ You have been given a second chance!");
-    }
+    // NOTE: revivePlayer is defined once in the AD INTEGRATION section below.
+    // Do NOT re-define it here — see ~line 423.
 
     getStartingMoneyForWealthTier(familyWealthTier) {
       switch (familyWealthTier) {
@@ -599,7 +560,23 @@
     // GAME LIFECYCLE
     // ==========================================================================
 
+    /**
+     * Start a new life — SINGLE SOURCE OF TRUTH.
+     * Merges logic from both original definitions:
+     *   - V1: onboarding, processing-flag resets, analytics
+     *   - V2: config-driven player creation, economy, achievements
+     *
+     * @param {object} [config]
+     * @param {object} [config.playerState]  — full player state (legacy mode)
+     * @param {string} [config.gender]
+     * @param {string} [config.name]
+     * @param {string} [config.countryId]
+     * @param {string} [config.cityId]
+     * @param {string} [config.familyWealthTier]
+     * @returns {object} player instance
+     */
     startNewLife(config = {}) {
+      // --- Player creation (from V2) ---
       if (config.playerState) {
         const state = { ...config.playerState, age: config.playerState.age || 0 };
         this.player = new Alive.Player(state);
@@ -620,6 +597,7 @@
         this.player.recalculateEconomy();
       }
 
+      // --- Game state reset (from V2) ---
       this.ended = false;
       this.currentYear = this.startYear;
       this.seenEventIds = [];
@@ -632,17 +610,30 @@
       // Reset gems for new life (keep some)
       this.incomeBoostYearsLeft = 0;
 
+      // --- Processing-flag resets (from V1, was lost) ---
+      this.isProcessingYear = false;
+      this._adRewardInProgress = false;
+
       this.resetLifeStats();
 
-      // Birth cinematic handles birth in UI - no need to set birth event
+      // --- Reset fail cause (from both V1 & V2) ---
+      this.failCause = null;
 
-      // Achievement tracking
+      // --- Onboarding check (from V1, was lost) ---
+      if (!this.bestResults.tutorialComplete) {
+        this.isOnboarding = true;
+        this.onboardingStep = 0;
+      }
+
+      // --- Achievement tracking (from V2) ---
       if (Alive.achievements?.onNewLifeStarted) {
         Alive.achievements.onNewLifeStarted();
       }
 
-      // Reset fail cause for new life
-      this.failCause = null;
+      // --- Analytics (from V1, was lost) ---
+      if (Alive.Analytics) {
+        Alive.Analytics.trackLifeStart(this.player);
+      }
 
       this.emitUpdate();
       return this.player;

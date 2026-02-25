@@ -13,6 +13,13 @@
             this.lastInterstitialTime = 0;
             this.interstitialCooldown = 180 * 1000; // 3 minutes
             this.isProcessing = false; // Lock for async operations
+
+            // Pick up deferred entitlement from storage.load() if it ran before us
+            if (Alive._pendingSupportPack) {
+                this.hasSupportPack = true;
+                delete Alive._pendingSupportPack;
+                console.log("Monetization: Restored Support Pack from saved entitlement");
+            }
         }
 
         /**

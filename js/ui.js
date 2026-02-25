@@ -1146,13 +1146,14 @@
       richBtn.onclick = () => this.showRichList();
       tertiaryRow.appendChild(richBtn);
 
-      const hasSupport = Alive.Monetization && Alive.Monetization.hasSupportPack;
+      const monetizationInstance = this.game?.monetization || window.aliveGame?.monetization;
+      const hasSupport = monetizationInstance && monetizationInstance.hasSupportPack;
       const supportBtn = el("button", "gameBtn gameBtnTertiary" + (hasSupport ? " gameBtnActive" : ""));
       supportBtn.innerHTML = `<i class="ph ph-heart-straight${hasSupport ? "-fill" : ""}"></i> ${hasSupport ? t("iap.btn.active") : t("iap.supportPack.title")}`;
       supportBtn.onclick = () => {
         if (hasSupport) alert(t("iap.thanks"));
-        else if (Alive.Monetization) {
-          Alive.Monetization.buySupportPack().then(() => {
+        else if (monetizationInstance) {
+          monetizationInstance.buySupportPack().then(() => {
             this.rootEl.innerHTML = "";
             this.renderMenu();
           });
@@ -1278,7 +1279,7 @@
       supportRow.style.alignItems = "stretch";
       supportRow.style.gap = "12px";
 
-      const hasSupport = Alive.Monetization && Alive.Monetization.hasSupportPack;
+      const hasSupport = (this.game?.monetization || window.aliveGame?.monetization)?.hasSupportPack;
 
       if (hasSupport) {
         supportRow.innerHTML = `<div style="color: #4ade80; font-weight: bold; width: 100%; text-align: center;"><i class="ph ph-heart-straight-fill"></i> ${t("iap.btn.active")}</div>`;
@@ -1301,8 +1302,9 @@
         buyBtn.style.background = "linear-gradient(135deg, #ec4899 0%, #db2777 100%)";
         buyBtn.style.border = "none";
         buyBtn.onclick = () => {
-          if (Alive.Monetization) {
-            Alive.Monetization.buySupportPack().then(() => {
+          const monet = this.game?.monetization || window.aliveGame?.monetization;
+          if (monet) {
+            monet.buySupportPack().then(() => {
               modal.remove();
               this.showSettingsModal();
             });
@@ -1321,8 +1323,9 @@
       restoreBtn.style.cursor = "pointer";
       restoreBtn.style.textDecoration = "underline";
       restoreBtn.onclick = () => {
-        if (Alive.Monetization) {
-          Alive.Monetization.checkEntitlements().then(() => {
+        const monet = this.game?.monetization || window.aliveGame?.monetization;
+        if (monet) {
+          monet.checkEntitlements().then(() => {
             modal.remove();
             this.showSettingsModal();
           });

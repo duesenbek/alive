@@ -4,7 +4,11 @@
   "description": "",
   "main": "build.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test/smoke.test.js && node test_game_lifecycle.js && node test_support_pack.js && node check_integrity.js",
+    "test:smoke": "node test/smoke.test.js",
+    "test:lifecycle": "node test_game_lifecycle.js",
+    "test:iap": "node test_support_pack.js",
+    "test:integrity": "node check_integrity.js"
   },
   "keywords": [],
   "author": "",

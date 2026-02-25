@@ -103,7 +103,11 @@
       timestamp: Date.now(),
       state: state,
       flags: {
-        hasSupportPack: Alive.Monetization ? Alive.Monetization.hasSupportPack : false
+        // Read from the monetization INSTANCE, not the class constructor.
+        // window.aliveGame.monetization is the live instance created in main.js.
+        hasSupportPack: (global.aliveGame && global.aliveGame.monetization)
+          ? global.aliveGame.monetization.hasSupportPack
+          : false
       }
     };
 
@@ -177,8 +181,15 @@
       return null;
     }
 
-    if (data.flags && data.flags.hasSupportPack && Alive.Monetization) {
-      Alive.Monetization.hasSupportPack = true;
+    if (data.flags && data.flags.hasSupportPack) {
+      // Restore to the monetization INSTANCE (the single source of truth).
+      // At load-time the instance may not exist yet, so also set a deferred flag
+      // that main.js / Monetization.init() can pick up.
+      if (global.aliveGame && global.aliveGame.monetization) {
+        global.aliveGame.monetization.hasSupportPack = true;
+      }
+      // Fallback: store on namespace so init() can pick it up if instance is created later
+      Alive._pendingSupportPack = true;
     }
 
     return data.state;
