@@ -314,7 +314,9 @@ section("6. Year Progression — nextYear()");
     Alive.needs = Alive.needs || {};
     Alive.stats = Alive.stats || {};
     Alive.achievements = Alive.achievements || { onNewLifeStarted() { } };
-    Alive.Analytics = Alive.Analytics || { trackLifeStart() { } };
+    Alive.Analytics = Alive.Analytics || { trackLifeStart() { }, trackLifeEnd() { } };
+    Alive.ui = Alive.ui || { showToast() { }, renderMainMenu() { }, showScreen() { } };
+    Alive.sound = Alive.sound || {};
 
     const p = g.startNewLife({ name: "YearTest", familyWealthTier: "medium" });
     const initialAge = p.age;

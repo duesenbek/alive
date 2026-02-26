@@ -301,7 +301,7 @@
     _applyAdReward(type) {
       // Prevent duplicate reward applications - guard at entry
       const now = Date.now();
-      if (this._adRewardInProgress || (this._lastAdRewardTime && now - this._lastAdRewardTime < 1000)) return;
+      if (this._adRewardInProgress || (this._lastAdRewardTime && now - this._lastAdRewardTime < 5000)) return;
       this._adRewardInProgress = true;
       this._lastAdRewardTime = now;
 
@@ -374,8 +374,8 @@
       }
       this.emitUpdate();
 
-      // Reset flag only at end to prevent duplicate rewards from rapid ad callbacks
-      this._adRewardInProgress = false;
+      // Defer flag reset to prevent duplicate rewards from rapid ad callbacks
+      setTimeout(() => { this._adRewardInProgress = false; }, 500);
     }
 
     /**
@@ -862,6 +862,13 @@
             }
           }
         }
+      }
+
+      // 2. Early death catch: abort if the year's actions killed the player
+      if (!this.isAlive() || this.ended) {
+        this.endGame();
+        this.isProcessingYear = false;
+        return;
       }
 
       // If we have something in queue but no active event, set it active

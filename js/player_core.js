@@ -504,6 +504,18 @@
       // Note: age is incremented by game.nextYear() - do NOT increment here (prevents double increment)
       this.recalculateEconomy();
 
+      // Immediate bankruptcy guard: if money is deeply negative, trigger game over
+      // Only for adults (children are supported by family)
+      if (this.age >= 18 && this.money < -10000 && global.aliveGame && !global.aliveGame.ended) {
+        if (global.aliveGame.failCause !== undefined) {
+          global.aliveGame.failCause = 'bankruptcy';
+        }
+        if (typeof global.aliveGame.endGame === 'function') {
+          global.aliveGame.endGame();
+        }
+        return {};
+      }
+
       // Real estate appreciation based on market modifiers
       if (this.housing && typeof this.housing === 'object') {
         const appreciation = (marketModifiers.realestate || 0) + 0.03; // Base 3% growth + market

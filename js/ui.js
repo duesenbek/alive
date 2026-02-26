@@ -3205,8 +3205,11 @@
           unlockAge = 6;
           btn.innerHTML = `<i class="ph ${link.icon}"></i> <span>${link.label}</span> <i class="ph ph-lock-key" style="margin-left:auto; opacity:0.5; font-size:14px;"></i>`;
           btn.onclick = () => {
-            let unlockReason = t("ui.selfdevUnlockReason") || "You are too young for self-improvement.";
-            this.showToast(icon("education") + " " + unlockReason + " Unlocks at age " + unlockAge + ".");
+            const yearsLeft = unlockAge - p.age;
+            const msg = yearsLeft === 1
+              ? `📚 ${link.label} unlocks next year when you turn ${unlockAge}!`
+              : `📚 ${link.label} unlocks at age ${unlockAge} (${yearsLeft} years left). You're still too young for school!`;
+            this.showToast(msg);
             if (navigator.vibrate) navigator.vibrate(50);
           };
         } else if (link.id === "selfdev" && p.age < 18) {
@@ -3218,7 +3221,11 @@
           unlockAge = 12;
           btn.innerHTML = `<i class="ph ${link.icon}"></i> <span>${link.label}</span> <i class="ph ph-lock-key" style="margin-left:auto; opacity:0.5; font-size:14px;"></i>`;
           btn.onclick = () => {
-            this.showToast(icon("shop") + " Shop unlocks at age " + unlockAge + " - Almost there!");
+            const yearsLeft = unlockAge - p.age;
+            const msg = yearsLeft === 1
+              ? `🛒 ${link.label} unlocks next year when you turn ${unlockAge}!`
+              : `🛒 ${link.label} unlocks at age ${unlockAge} (${yearsLeft} years left). Kids can't shop alone yet!`;
+            this.showToast(msg);
             if (navigator.vibrate) navigator.vibrate(50);
           };
         } else {
