@@ -1,0 +1,160 @@
+
+????????? 1. JSON Data Files ??? Loading & Integrity ?????????
+  ??? cities.json is valid JSON
+  ??? cities.json has ???5 entries
+  ??? cities.json[0] has required fields [id, name, country]
+  ??? events.json is valid JSON
+  ??? events.json has ???1 entries
+  ??? events.json[0] has required fields [id]
+  ??? buildings.json is valid JSON
+  ??? buildings.json has ???1 entries
+  ??? buildings.json[0] has required fields [id]
+  ??? characters.json is valid JSON
+  ??? characters.json has ???1 entries
+  ??? game_assets.json is valid JSON
+  ??? game_assets.json is a valid object
+  ??? items.json is valid JSON
+  ??? items.json has ???1 entries
+  ??? transports.json is valid JSON
+  ??? transports.json has ???1 entries
+
+????????? 2. Strings / i18n Data ?????????
+  ??? strings.js exists
+  ??? Alive.strings loaded
+  ??? English strings present
+  ??? Russian strings present
+  ??? EN has ???100 string keys (got 1066)
+  ??? RU has ???100 string keys (got 1013)
+  ??? EN has key "ui.gameTitle"
+  ??? EN has key "ui.newLife"
+  ??? EN has key "ui.continue"
+  ??? EN has key "ui.nextYear"
+  ??? EN has key "ui.age"
+  ??? EN has key "ui.health"
+
+????????? 3. Core Module Loading ?????????
+  ??? player_core.js loaded
+  ??? game.js loaded
+  ??? storage.js loaded
+  ??? monetization.js loaded
+  ??? Alive.Player available
+  ??? Alive.Player.createNew available
+  ??? Alive.Game available
+  ??? Alive.storage available
+  ??? Alive.storage.save is function
+  ??? Alive.storage.load is function
+  ??? Alive.Monetization available
+
+????????? 4. Game Initialization ?????????
+  ??? new Game() succeeds
+  ??? game.player is null before startNewLife
+  ??? game.ended is false
+  ??? game.phase is 'event'
+  ??? game.currentYear is 2000
+  ??? game.bestResults exists
+  ??? game.lifeStats exists
+
+????????? 5. startNewLife ??? Player Creation ?????????
+  ??? startNewLife returns player
+  ??? player.name = 'SmokeTestPlayer'
+  ??? player.gender = 'M'
+  ??? player.age = 0
+  ??? player.alive = true
+  ??? player.health in [0,100]
+  ??? player.happiness in [0,100]
+  ??? player.money > 0 (medium tier)
+  ??? game.ended = false after start
+  ??? game.failCause = null
+  ??? game.isProcessingYear = false
+  ??? game._adRewardInProgress = false
+  ??? game.seenEventIds is empty array
+  ??? game.eventQueue is empty array
+  ??? Wealth tier "poor": money 100 in [50, 500]
+  ??? Wealth tier "medium": money 2500 in [1000, 5000]
+  ??? Wealth tier "rich": money 15000 in [10000, 50000]
+  ??? Wealth tier "elite": money 100000 in [50000, 500000]
+
+????????? 6. Year Progression ??? nextYear() ?????????
+  ??? Age incremented by 1
+  ??? currentYear incremented by 1
+  ??? isProcessingYear reset to false after nextYear
+  ??? Player still alive after 1 year
+  ??? game.ended still false after 1 year
+  ??? annualIncome is a number
+  ??? annualExpenses is a number
+  ??? health still in [0,100]
+  ??? happiness still in [0,100]
+  ??? stress still in [0,100]
+  ??? nextYear is no-op when isProcessingYear=true
+
+????????? 7. Save ??? Load Roundtrip ?????????
+node : 
+<anonymous_script>:1465
+??????:1 ????:1
++ node 
+test/smoke.test.js 
+2>&1 | Out-File 
+-Encoding ASCII 
+smoke_verify2 ...
++ ~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~
+    + CategoryInfo     
+         : NotSpecifi  
+  ed: (<anonymous_sc   
+ ript>:1465:String)    
+ [], RemoteExcepti    
+on
+    + FullyQualifiedEr 
+   rorId : NativeComm  
+  andError
+ 
+        Alive.Analytics
+.trackLifeEnd(this.play
+er, this.failCause || 
+"unknown");
+                       
+ ^
+
+TypeError: Alive.Analyt
+ics.trackLifeEnd is 
+not a function
+    at Game.endGame 
+(eval at <anonymous> (C
+:\Users\Bekzat\Desktop\
+alive\test\smoke.test.j
+s:216:9), 
+<anonymous>:1465:25)
+    at Game.nextYear 
+(eval at <anonymous> (C
+:\Users\Bekzat\Desktop\
+alive\test\smoke.test.j
+s:216:9), 
+<anonymous>:754:14)
+    at C:\Users\Bekzat\
+Desktop\alive\test\smok
+e.test.js:382:12
+    at 
+Object.<anonymous> (C:\
+Users\Bekzat\Desktop\al
+ive\test\smoke.test.js:
+438:3)
+    at Module._compile 
+(node:internal/modules/
+cjs/loader:1706:14)
+    at Object..js (node
+:internal/modules/cjs/l
+oader:1839:10)
+    at Module.load (nod
+e:internal/modules/cjs/
+loader:1441:32)
+    at Function._load (
+node:internal/modules/c
+js/loader:1263:12)
+    at TracingChannel.t
+raceSync (node:diagnost
+ics_channel:328:14)
+    at wrapModuleLoad (
+node:internal/modules/c
+js/loader:237:24)
+
+Node.js v22.21.1
