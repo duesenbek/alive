@@ -74,6 +74,13 @@
 
       // Ad reward progress tracking
       this._adRewardInProgress = false;
+
+      // === NEW: Director-driven systems ===
+      // Dynamic Event Director
+      this.director = Alive.director || (Alive.EventDirector ? new Alive.EventDirector() : null);
+
+      // Load meta-progression from localStorage
+      if (Alive.meta?.load) Alive.meta.load();
     }
 
     // NOTE: startNewLife is defined once in the GAME LIFECYCLE section below.
@@ -630,9 +637,30 @@
         Alive.achievements.onNewLifeStarted();
       }
 
+      // === NEW: Director + Goals + Meta + Arcs reset ===
+      // Reset director
+      if (this.director?.reset) this.director.reset();
+
+      // Reset event arcs
+      if (Alive.eventArcs?.reset) Alive.eventArcs.reset();
+
+      // Assign mid-term goals
+      if (Alive.goals?.assignGoals && this.player) {
+        Alive.goals.assignGoals(this.player);
+      }
+
+      // Apply meta-progression perks and roll starting trait
+      if (Alive.meta && this.player) {
+        if (Alive.meta.applyPerks) Alive.meta.applyPerks(this.player);
+        if (Alive.meta.rollStartingTrait) {
+          this.player._startingTrait = Alive.meta.rollStartingTrait(this.player);
+        }
+      }
+
       // --- Analytics (from V1, was lost) ---
       if (Alive.Analytics) {
         Alive.Analytics.trackLifeStart(this.player);
+        if (Alive.Analytics.trackSessionStart) Alive.Analytics.trackSessionStart();
       }
 
       this.emitUpdate();
@@ -812,7 +840,6 @@
       if (Alive.stats?.checkStatThresholds) {
         const thresholdEvents = Alive.stats.checkStatThresholds(this.player);
         thresholdEvents.forEach(event => {
-          // Map threshold events to existing event IDs
           if (event.type === 'health_crisis') {
             this.eventQueue.push('needs_health_crisis');
           } else if (event.type === 'depression') {
@@ -824,16 +851,13 @@
       }
 
       // Check for needs crises and queue crisis events
-      // Prioritize critical crises - higher chance when multiple stats are critical
       if (Alive.needs?.getCrisisEvents) {
         const crisisEvents = Alive.needs.getCrisisEvents(this.player);
         if (crisisEvents.length > 0) {
-          // Increase chance based on number of critical stats
           const crisisChance = Math.min(0.9, 0.3 + (crisisEvents.length * 0.2));
           if (Math.random() < crisisChance) {
-            // Trigger the most severe crisis
             const crisis = crisisEvents[0];
-            this.eventQueue.unshift(crisis.eventId); // Use unshift to prioritize
+            this.eventQueue.unshift(crisis.eventId);
           }
         }
       }
@@ -841,30 +865,73 @@
       // Scripted events
       this.checkScriptedEvents();
 
-      // Check for controlled events (quality-focused, 4-8 per life)
-      if (Alive.controlledEvents?.selectEvent) {
-        const controlledEvent = Alive.controlledEvents.selectEvent(this.player);
-        if (controlledEvent) {
-          this.queueControlledEvent(controlledEvent);
-        }
-      }
-
-      // 3. New JSON Event Engine (Random Events) - BitLife style: 50% chance per year
-      if (!this.activeEvent && this.eventQueue.length === 0) {
-        if (Alive.events && Alive.events.getRandomEvent) {
-          const eventChance = 0.5; // Higher frequency for more engaging gameplay
-          if (Math.random() < eventChance) {
-            const randomEvent = Alive.events.getRandomEvent(this.player, [], this.seenEventIds);
-            if (randomEvent) {
-              this.activeEvent = randomEvent;
-              this.seenEventIds.push(randomEvent.id);
-              this.lifeStats.eventsExperienced++;
+      // === NEW: Evaluate mid-term goals ===
+      if (Alive.goals?.evaluateGoals) {
+        const goalResults = Alive.goals.evaluateGoals(this.player);
+        if (goalResults && goalResults.length > 0) {
+          const lang = Alive.i18n?.currentLang || 'en';
+          for (const result of goalResults) {
+            const desc = result.goal.description?.[lang] || result.goal.description?.en || result.goal.id;
+            if (result.type === 'achieved') {
+              Alive.ui?.showToast('🎯 Goal Achieved: ' + desc);
+            } else {
+              Alive.ui?.showToast('❌ Goal Failed: ' + desc);
             }
           }
         }
       }
 
-      // 2. Early death catch: abort if the year's actions killed the player
+      // === NEW: Director-driven event selection ===
+      // The director replaces the old flat-random event rolling with
+      // tension-aware, phase-driven, weighted selection.
+      if (this.director?.evaluateYear && !this.activeEvent && this.eventQueue.length === 0) {
+        const directorResults = this.director.evaluateYear(this.player, this);
+        for (const result of directorResults) {
+          if (result.event) {
+            if (result.source === 'controlled') {
+              this.queueControlledEvent(result.event);
+            } else if (result.source === 'arc') {
+              // Arc events get displayed directly as active event
+              this.activeEvent = result.event;
+              this.lifeStats.eventsExperienced++;
+              this.seenEventIds.push(result.event.id);
+            } else {
+              // JSON events
+              const normalized = Alive.events?.normalizeEvent?.(result.event) || result.event;
+              this.activeEvent = normalized;
+              this.seenEventIds.push(normalized.id);
+              this.lifeStats.eventsExperienced++;
+            }
+            break; // One director event per year
+          }
+        }
+      }
+
+      // Fallback: if no director available, use legacy controlled + random events
+      if (!this.director && !this.activeEvent && this.eventQueue.length === 0) {
+        // Legacy controlled events
+        if (Alive.controlledEvents?.selectEvent) {
+          const controlledEvent = Alive.controlledEvents.selectEvent(this.player);
+          if (controlledEvent) {
+            this.queueControlledEvent(controlledEvent);
+          }
+        }
+        // Legacy random events
+        if (!this.activeEvent && this.eventQueue.length === 0) {
+          if (Alive.events && Alive.events.getRandomEvent) {
+            if (Math.random() < 0.5) {
+              const randomEvent = Alive.events.getRandomEvent(this.player, [], this.seenEventIds);
+              if (randomEvent) {
+                this.activeEvent = randomEvent;
+                this.seenEventIds.push(randomEvent.id);
+                this.lifeStats.eventsExperienced++;
+              }
+            }
+          }
+        }
+      }
+
+      // Early death catch: abort if the year's actions killed the player
       if (!this.isAlive() || this.ended) {
         this.endGame();
         this.isProcessingYear = false;
@@ -874,12 +941,17 @@
       // If we have something in queue but no active event, set it active
       if (!this.activeEvent && this.eventQueue.length > 0) {
         const nextId = this.eventQueue.shift();
-        let ev = Alive.events.getEventById(nextId);
+        let ev = Alive.events?.getEventById?.(nextId);
         if (ev) {
           this.activeEvent = ev;
           this.seenEventIds.push(ev.id);
           this.lifeStats.eventsExperienced++;
         }
+      }
+
+      // Telemetry: track year depth
+      if (Alive.Analytics?.trackYearAdvance) {
+        Alive.Analytics.trackYearAdvance(this.player);
       }
 
       // Defer reset to prevent race: queued duplicate clicks still see flag=true
@@ -1463,6 +1535,30 @@
       // Analytics: Life End
       if (Alive.Analytics && this.player) {
         Alive.Analytics.trackLifeEnd(this.player, this.failCause || "unknown");
+      }
+
+      // === NEW: Telemetry hooks ===
+      if (Alive.Analytics && this.player) {
+        if (Alive.Analytics.trackLifeDepth) Alive.Analytics.trackLifeDepth(this.player);
+        if (Alive.Analytics.trackEventDiversity) Alive.Analytics.trackEventDiversity(this.seenEventIds);
+        if (Alive.Analytics.trackGoalCompletion && Alive.goals) Alive.Analytics.trackGoalCompletion(Alive.goals);
+      }
+
+      // === NEW: Meta-progression — award Legacy Points ===
+      if (Alive.meta?.processLifeEnd && this.player) {
+        const completedArcs = Alive.eventArcs?.completedArcIds?.length || 0;
+        const lpEarned = Alive.meta.processLifeEnd(
+          this.player,
+          Alive.goals,
+          this.seenEventIds,
+          completedArcs
+        );
+        // Store LP earned for death summary
+        this._lastLPEarned = lpEarned;
+
+        if (Alive.Analytics?.trackMetaProgression) {
+          Alive.Analytics.trackMetaProgression(lpEarned, Alive.meta.unlockedPerks);
+        }
       }
 
       // Emotional Polish: Flash failure and sound

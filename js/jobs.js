@@ -28,7 +28,7 @@
     {
       id: "unemployed",
       nameKey: "job.unemployed",
-      name: { en: "Unemployed", ru: "�����������" },
+      name: { en: "Unemployed", ru: "Unemployed" },
       minEducationLevel: EDUCATION_LEVELS.NONE,
       minIntelligence: 0,
       minAttractiveness: 0,
@@ -43,7 +43,7 @@
     {
       id: "janitor",
       nameKey: "job.janitor",
-      name: { en: "Janitor", ru: "�������" },
+      name: { en: "Janitor", ru: "Уборщик" },
       minEducationLevel: EDUCATION_LEVELS.NONE,
       minIntelligence: 0,
       minAttractiveness: 0,
@@ -58,7 +58,7 @@
     {
       id: "fastFoodWorker",
       nameKey: "job.fastFoodWorker",
-      name: { en: "Fast Food Worker", ru: "�������� ��������" },
+      name: { en: "Fast Food Worker", ru: "Работник фастфуда" },
       minEducationLevel: EDUCATION_LEVELS.NONE,
       minIntelligence: 10,
       minAttractiveness: 0,
@@ -73,7 +73,7 @@
     {
       id: "retailWorker",
       nameKey: "job.retailWorker",
-      name: { en: "Retail Worker", ru: "��������" },
+      name: { en: "Retail Worker", ru: "Продавец" },
       minEducationLevel: EDUCATION_LEVELS.NONE,
       minIntelligence: 20,
       minAttractiveness: 20,
@@ -88,7 +88,7 @@
     {
       id: "securityGuard",
       nameKey: "job.securityGuard",
-      name: { en: "Security Guard", ru: "��������" },
+      name: { en: "Security Guard", ru: "Охранник" },
       minEducationLevel: EDUCATION_LEVELS.HIGH_SCHOOL,
       minIntelligence: 20,
       minAttractiveness: 0,
@@ -103,7 +103,7 @@
     {
       id: "deliveryDriver",
       nameKey: "job.deliveryDriver",
-      name: { en: "Delivery Driver", ru: "������" },
+      name: { en: "Delivery Driver", ru: "Курьер" },
       minEducationLevel: EDUCATION_LEVELS.NONE,
       minIntelligence: 10,
       minAttractiveness: 0,
@@ -123,7 +123,7 @@
     {
       id: "officeClerk",
       nameKey: "job.officeClerk",
-      name: { en: "Office Clerk", ru: "������� �����" },
+      name: { en: "Office Clerk", ru: "Office Clerk" },
       minEducationLevel: EDUCATION_LEVELS.HIGH_SCHOOL,
       minIntelligence: 40,
       minAttractiveness: 0,
@@ -138,7 +138,7 @@
     {
       id: "salesManager",
       nameKey: "job.marketingManager", // Reusing key
-      name: { en: "Sales Manager", ru: "�������� �� ��������" },
+      name: { en: "Sales Manager", ru: "Sales Manager" },
       minEducationLevel: EDUCATION_LEVELS.HIGH_SCHOOL,
       minIntelligence: 50,
       minAttractiveness: 40,
@@ -153,7 +153,7 @@
     {
       id: "teacher",
       nameKey: "job.teacher",
-      name: { en: "Teacher", ru: "�������" },
+      name: { en: "Teacher", ru: "Учитель" },
       minEducationLevel: EDUCATION_LEVELS.UNIVERSITY,
       minIntelligence: 50,
       minAttractiveness: 0,
@@ -168,7 +168,7 @@
     {
       id: "nurse",
       nameKey: "job.nurse",
-      name: { en: "Nurse", ru: "���������" },
+      name: { en: "Nurse", ru: "Медсестра" },
       minEducationLevel: EDUCATION_LEVELS.UNIVERSITY,
       minIntelligence: 45,
       minAttractiveness: 0,
@@ -183,7 +183,7 @@
     {
       id: "mechanic",
       nameKey: "job.mechanic",
-      name: { en: "Mechanic", ru: "�������" },
+      name: { en: "Mechanic", ru: "Механик" },
       minEducationLevel: EDUCATION_LEVELS.HIGH_SCHOOL,
       minIntelligence: 30,
       minAttractiveness: 0,
@@ -198,7 +198,7 @@
     {
       id: "accountant",
       nameKey: "job.accountant",
-      name: { en: "Accountant", ru: "���������" },
+      name: { en: "Accountant", ru: "Бухгалтер" },
       minEducationLevel: EDUCATION_LEVELS.UNIVERSITY,
       minIntelligence: 60,
       minAttractiveness: 0,
@@ -213,7 +213,7 @@
     {
       id: "programmer",
       nameKey: "job.programmer",
-      name: { en: "Programmer", ru: "�����������" },
+      name: { en: "Programmer", ru: "Программист" },
       minEducationLevel: EDUCATION_LEVELS.UNIVERSITY,
       minIntelligence: 70,
       minAttractiveness: 0,
@@ -231,7 +231,7 @@
     {
       id: "engineer",
       nameKey: "job.engineer",
-      name: { en: "Engineer", ru: "�������" },
+      name: { en: "Engineer", ru: "Инженер" },
       minEducationLevel: EDUCATION_LEVELS.UNIVERSITY,
       minIntelligence: 65,
       minAttractiveness: 0,
@@ -251,7 +251,7 @@
     {
       id: "lawyer",
       nameKey: "job.lawyer",
-      name: { en: "Corporate Lawyer", ru: "������������� �����" },
+      name: { en: "Corporate Lawyer", ru: "Corporate Lawyer" },
       minEducationLevel: EDUCATION_LEVELS.UNIVERSITY,
       minIntelligence: 75,
       minAttractiveness: 0,
@@ -269,7 +269,7 @@
     {
       id: "investmentBanker",
       nameKey: "job.cfo", // Reusing closest
-      name: { en: "Investment Banker", ru: "�������������� ������" },
+      name: { en: "Investment Banker", ru: "Investment Banker" },
       minEducationLevel: EDUCATION_LEVELS.UNIVERSITY,
       minIntelligence: 80,
       minAttractiveness: 50,
@@ -287,7 +287,7 @@
     {
       id: "surgeon",
       nameKey: "job.doctor",
-      name: { en: "Surgeon", ru: "������" },
+      name: { en: "Surgeon", ru: "Surgeon" },
       minEducationLevel: EDUCATION_LEVELS.UNIVERSITY,
       minIntelligence: 85,
       minAttractiveness: 0,
@@ -305,7 +305,7 @@
     {
       id: "ceo",
       nameKey: "job.ceo",
-      name: { en: "CEO", ru: "����������� ��������" },
+      name: { en: "CEO", ru: "Генеральный директор" },
       minEducationLevel: EDUCATION_LEVELS.UNIVERSITY,
       minIntelligence: 80,
       minAttractiveness: 60,
@@ -323,7 +323,7 @@
     {
       id: "influencer",
       nameKey: "job.influencer",
-      name: { en: "Influencer", ru: "����������" },
+      name: { en: "Influencer", ru: "Блогер" },
       minEducationLevel: EDUCATION_LEVELS.NONE,
       minIntelligence: 40,
       minAttractiveness: 80,
@@ -341,7 +341,7 @@
     {
       id: "model",
       nameKey: "job.model",
-      name: { en: "Supermodel", ru: "�����������" },
+      name: { en: "Supermodel", ru: "Supermodel" },
       minEducationLevel: EDUCATION_LEVELS.NONE,
       minIntelligence: 20,
       minAttractiveness: 90,

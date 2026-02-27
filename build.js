@@ -19,6 +19,10 @@ const JS_FILES = [
     'js/assets/characters.js',
     'js/countries.js',
     'js/player_core.js',
+    'js/director.js',
+    'js/event_arcs.js',
+    'js/goals.js',
+    'js/meta_progression.js',
     'js/game.js',
     'js/relationships.js',
     'js/shop.js',
@@ -34,7 +38,6 @@ const JS_FILES = [
     'js/needs.js',
     'js/consequences.js',
     'js/achievements.js',
-    'js/game.js',
     'js/ui.js',
     'js/monetization.js',
     'js/main.js'

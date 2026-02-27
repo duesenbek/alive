@@ -120,7 +120,7 @@
     {
       id: "almaty",
       nameKey: "city.almaty",
-      name: { en: "Almaty, Kazakhstan", ru: "������, ���������" },
+      name: { en: "Almaty, Kazakhstan", ru: "Almaty, Kazakhstan" },
       costOfLivingMultiplier: 0.7,
       colorTheme: "#8B6914",
       populationVibe: "Mountain city with modern growth",
@@ -139,7 +139,7 @@
     {
       id: "dubai",
       nameKey: "city.dubai",
-      name: { en: "Dubai, UAE", ru: "�����, ���" },
+      name: { en: "Dubai, UAE", ru: "Dubai, UAE" },
       costOfLivingMultiplier: 1.5,
       colorTheme: "#D4AF37",
       populationVibe: "Ultra-modern desert metropolis",
@@ -159,7 +159,7 @@
     {
       id: "newYork",
       nameKey: "city.newYork",
-      name: { en: "New York, USA", ru: "���-����, ���" },
+      name: { en: "New York, USA", ru: "New York, USA" },
       costOfLivingMultiplier: 1.4,
       colorTheme: "#4A90A4",
       populationVibe: "Fast-paced financial capital",
@@ -180,7 +180,7 @@
     {
       id: "tokyo",
       nameKey: "city.tokyo",
-      name: { en: "Tokyo, Japan", ru: "�����, ������" },
+      name: { en: "Tokyo, Japan", ru: "Tokyo, Japan" },
       costOfLivingMultiplier: 1.25,
       colorTheme: "#E91E63",
       populationVibe: "Cutting-edge technology meets traditions",
@@ -201,7 +201,7 @@
     {
       id: "paris",
       nameKey: "city.paris",
-      name: { en: "Paris, France", ru: "�����, �������" },
+      name: { en: "Paris, France", ru: "Paris, France" },
       costOfLivingMultiplier: 1.35,
       colorTheme: "#FFB6C1",
       populationVibe: "Romantic capital of art, fashion",
@@ -222,7 +222,7 @@
     {
       id: "london",
       nameKey: "city.london",
-      name: { en: "London, UK", ru: "������, ��������������" },
+      name: { en: "London, UK", ru: "London, UK" },
       costOfLivingMultiplier: 1.4,
       colorTheme: "#708090",
       populationVibe: "Historic grandeur meets modern finance",
@@ -243,7 +243,7 @@
     {
       id: "singapore",
       nameKey: "city.singapore",
-      name: { en: "Singapore", ru: "��������" },
+      name: { en: "Singapore", ru: "Сингапур" },
       costOfLivingMultiplier: 1.3,
       colorTheme: "#00CED1",
       populationVibe: "Clean, efficient city-state",
@@ -264,7 +264,7 @@
     {
       id: "hongKong",
       nameKey: "city.hongKong",
-      name: { en: "Hong Kong", ru: "�������" },
+      name: { en: "Hong Kong", ru: "Гонконг" },
       costOfLivingMultiplier: 1.35,
       colorTheme: "#4169E1",
       populationVibe: "Dense vertical city",
@@ -285,7 +285,7 @@
     {
       id: "bangkok",
       nameKey: "city.bangkok",
-      name: { en: "Bangkok, Thailand", ru: "�������, �������" },
+      name: { en: "Bangkok, Thailand", ru: "Bangkok, Thailand" },
       costOfLivingMultiplier: 0.8,
       colorTheme: "#FF8C00",
       populationVibe: "Colorful temples and nightlife",
@@ -305,7 +305,7 @@
     {
       id: "moscow",
       nameKey: "city.moscow",
-      name: { en: "Moscow, Russia", ru: "������, ������" },
+      name: { en: "Moscow, Russia", ru: "Moscow, Russia" },
       costOfLivingMultiplier: 1.0,
       colorTheme: "#B22222",
       populationVibe: "Grand architecture",

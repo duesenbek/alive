@@ -1334,7 +1334,7 @@
       modal.appendChild(restoreBtn);
 
       // Close button
-      const closeBtn = el("button", "settingsCloseBtn", "�?�");
+      const closeBtn = el("button", "settingsCloseBtn", "✕");
       closeBtn.onclick = () => overlay.remove();
       modal.appendChild(closeBtn);
 
@@ -1398,7 +1398,7 @@
       const maxStyleScore = 30; // 6 slots * 5 max tier
       const styleCard = el("div", "styleScoreCard");
       styleCard.innerHTML = `
-        <div class="styleScoreIcon">�?�</div>
+        <div class="styleScoreIcon">✕</div>
         <div class="styleScoreInfo">
           <div class="styleScoreLabel">${t("shop.style_score")}</div>
           <div class="styleScoreValue">${styleScore}</div>
@@ -1461,7 +1461,7 @@
         if (!effects) return [];
         const badges = [];
         const prefix = isYearly ? "/yr " : "";
-        if (effects.attractivenessDelta) badges.push({ text: `${prefix}�?�+${effects.attractivenessDelta}`, positive: effects.attractivenessDelta > 0 });
+        if (effects.attractivenessDelta) badges.push({ text: `${prefix}✕+${effects.attractivenessDelta}`, positive: effects.attractivenessDelta > 0 });
         if (effects.happinessDelta) badges.push({ text: `${prefix}😊+${effects.happinessDelta}`, positive: effects.happinessDelta > 0 });
         if (effects.healthDelta) badges.push({ text: `${prefix}❤️+${effects.healthDelta}`, positive: effects.healthDelta > 0 });
         if (effects.intelligenceDelta) badges.push({ text: `${prefix}🧠+${effects.intelligenceDelta}`, positive: effects.intelligenceDelta > 0 });
@@ -1595,7 +1595,7 @@
             } else if (owned && item.slot && !equipped) {
               Alive.shop?.equipItem?.(p, item.id);
               Alive.storage?.save(this.game.getState());
-              this.showToast(`�?� ${t("shop.equipped")} ${t(nameKey)}`);
+              this.showToast(`✕ ${t("shop.equipped")} ${t(nameKey)}`);
               this.render();
 
             } else if (!owned && !canBuyItem) {
@@ -1694,7 +1694,7 @@
           if (Alive.actions?.applyAction) {
             Alive.actions.applyAction(actionId, { player: p, game: this.game });
             const title = t("action." + actionId + ".title");
-            this.showToast("�?� " + title);
+            this.showToast("✕ " + title);
 
           }
           Alive.storage?.save(this.game.getState());
@@ -1815,7 +1815,7 @@
       }
 
       const familyActions = el("div", "eventChoices");
-      const callBtn = el("button", "choiceBtn", "�? " + t("action.call_family.title"));
+      const callBtn = el("button", "choiceBtn", "❓ " + t("action.call_family.title"));
       callBtn.onclick = () => runAction("call_family");
       familyActions.appendChild(callBtn);
 
@@ -2015,7 +2015,7 @@
         cooking: "👨‍🍳",
         gaming: "🎮",
         photography: "📷",
-        writing: "�?�️"
+        writing: "✕️"
 
       };
 
@@ -2091,11 +2091,11 @@
       effectsCard.style.fontSize = "12px";
 
       const effects = [];
-      if ((p.sportsSkill || 0) >= 30) effects.push("�?� " + t("skills.bonus.health"));
-      if ((p.businessSkill || 0) >= 30) effects.push("�?� " + t("skills.bonus.business"));
-      if ((p.investingSkill || 0) >= 30) effects.push("�?� " + t("skills.bonus.investing"));
-      if ((p.careerSkill || 0) >= 30) effects.push("�?� " + t("skills.bonus.career"));
-      if ((p.socialSkill || 0) >= 30) effects.push("�?� " + t("skills.bonus.social"));
+      if ((p.sportsSkill || 0) >= 30) effects.push("✕ " + t("skills.bonus.health"));
+      if ((p.businessSkill || 0) >= 30) effects.push("✕ " + t("skills.bonus.business"));
+      if ((p.investingSkill || 0) >= 30) effects.push("✕ " + t("skills.bonus.investing"));
+      if ((p.careerSkill || 0) >= 30) effects.push("✕ " + t("skills.bonus.career"));
+      if ((p.socialSkill || 0) >= 30) effects.push("✕ " + t("skills.bonus.social"));
 
       if (effects.length > 0) {
         effectsCard.innerHTML = effects.map(e => `<div style="margin-bottom: 6px; color: #51cf66;">${e}</div>`).join("");
@@ -2521,7 +2521,7 @@
       `;
       modal.appendChild(header);
 
-      const closeBtn = el("button", "choiceBtn", "�?� " + t("assets.close"));
+      const closeBtn = el("button", "choiceBtn", "✕ " + t("assets.close"));
       closeBtn.onclick = () => {
         this.assetsOpen = false;
         if (containerEl) this.hideOverlay();
@@ -3621,7 +3621,7 @@
       goals.forEach(g => {
         const item = el("div", "goalItem " + (g.done ? "done" : ""));
         item.innerHTML = `
-          <div class="goalCheck">${g.done ? "�?�" : "�?"}</div>
+          <div class="goalCheck">${g.done ? "✕" : "❌"}</div>
           <div class="goalLabel">${t(g.label)}</div>
         `;
         list.appendChild(item);
@@ -3651,7 +3651,7 @@
       // Event header with emoji
       const header = el("div", "eventHeader");
       header.innerHTML = `
-        <div class="eventEmoji">�?</div>
+        <div class="eventEmoji">❓</div>
         <h2 class="eventTitle">${t(event.titleKey, replacements)}</h2>
       `;
       modal.appendChild(header);
@@ -3861,8 +3861,7 @@
         unlocked.slice(0, 8).forEach((id) => {
           const a = all.find((x) => x.id === id);
           if (!a) return;
-          const lang = getLang();
-          const name = a.name?.[lang] || a.name?.en || id;
+          const name = a.nameKey ? t(a.nameKey) : (a.name?.[lang] || a.name?.en || id);
           const b = el("div", "statusBadge");
           b.title = name;
           b.innerHTML = `<span class="badgeEmoji">${icon("trophy")}</span><span class="badgeText">${name}</span>`;
@@ -4066,8 +4065,8 @@
           const card = el("div", "achieveCard" + (unlocked ? " unlocked" : " locked"));
 
           const lang = Alive.i18n?.getLanguage() || "en";
-          const name = ach.name[lang] || ach.name.en || ach.id;
-          const desc = ach.description[lang] || ach.description.en || "";
+          const name = ach.nameKey ? t(ach.nameKey) : (ach.name?.[lang] || ach.name?.en || ach.id);
+          const desc = ach.descKey ? t(ach.descKey) : (ach.description?.[lang] || ach.description?.en || "");
 
           card.innerHTML = `
             <div class="achieveIcon">${unlocked ? ach.icon : "🔒"}</div>
@@ -4120,7 +4119,7 @@
 
     showAchievementToast(achievement) {
       const lang = Alive.i18n?.getLanguage() || "en";
-      const name = achievement.name[lang] || achievement.name.en || achievement.id;
+      const name = achievement.nameKey ? t(achievement.nameKey) : (achievement.name?.[lang] || achievement.name?.en || achievement.id);
 
       if (Alive.sound && typeof Alive.sound.playSuccess === 'function') {
         Alive.sound.playSuccess();
@@ -4364,7 +4363,7 @@
 
         const indicator = el("div", "progressStepIndicator");
         const dot = el("div", "progressStepDot" + (isCompleted ? " completed" : isCurrent ? " current" : " locked"));
-        dot.textContent = isCompleted ? "�?�" : (index + 1);
+        dot.textContent = isCompleted ? "✕" : (index + 1);
         indicator.appendChild(dot);
 
         if (index < stages.length - 1) {
@@ -4484,7 +4483,7 @@
         }
 
         const dot = el("div", "careerLevelDot" + (isCompleted ? " completed" : isCurrent ? " current" : " locked"));
-        dot.textContent = isCompleted ? "�?�" : (index + 1);
+        dot.textContent = isCompleted ? "✕" : (index + 1);
         levelEl.appendChild(dot);
 
         const label = el("div", "careerLevelLabel" + (isCurrent ? " current" : ""), t(level.nameKey));
@@ -4605,7 +4604,7 @@
 
         const types = el("div", "businessTypes");
         const icons = {
-          freelance: "💻", ecommerce: "🛒", consulting: "📋", restaurant: "�?️",
+          freelance: "💻", ecommerce: "🛒", consulting: "📋", restaurant: "🍽️",
           tech_startup: "🚀", real_estate: "🏠", franchise: "🏪", saas: "☁️"
 
         };
@@ -4760,7 +4759,7 @@
 
         const holdings = el("div", "portfolioHoldings");
         const holdingIcons = {
-          savings: "🏦", bonds: "�?", index_funds: "📊", stocks: "📈",
+          savings: "🏦", bonds: "📜", index_funds: "📊", stocks: "📈",
           real_estate: "🏠", crypto: "🪙", startups: "🚀"
 
         };

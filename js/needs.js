@@ -13,7 +13,7 @@
         ENERGY: {
             id: "energy",
             icon: "⚡",
-            label: { en: "Energy", ru: "�������" },
+            nameKey: "needs.energy",
             baseDecay: -8,
             color: "#ffd43b",
             crisisThreshold: 20
@@ -21,7 +21,7 @@
         SOCIAL: {
             id: "social",
             icon: "👥",
-            label: { en: "Social", ru: "�������" },
+            nameKey: "needs.social",
             baseDecay: -5,
             color: "#ff6b9d",
             crisisThreshold: 20
@@ -29,7 +29,7 @@
         COMFORT: {
             id: "comfort",
             icon: "🛋️",
-            label: { en: "Comfort", ru: "�������" },
+            nameKey: "needs.comfort",
             baseDecay: -3,
             color: "#845ef7",
             crisisThreshold: 20
@@ -37,7 +37,7 @@
         HEALTH: {
             id: "health",
             icon: "❤️",
-            label: { en: "Health", ru: "��������" },
+            nameKey: "needs.health",
             baseDecay: -2,
             color: "#ff5252",
             crisisThreshold: 25
@@ -45,7 +45,7 @@
         FUN: {
             id: "fun",
             icon: "🎮",
-            label: { en: "Fun", ru: "�����������" },
+            nameKey: "needs.fun",
             baseDecay: -6,
             color: "#4ade80",
             crisisThreshold: 20
@@ -59,10 +59,10 @@
     // ============================================================================
 
     const NEED_STATUS = {
-        CRITICAL: { id: "critical", threshold: 20, label: { en: "Critical!", ru: "��������!" }, cssClass: "critical" },
-        LOW: { id: "low", threshold: 40, label: { en: "Low", ru: "�����" }, cssClass: "low" },
-        NORMAL: { id: "normal", threshold: 70, label: { en: "OK", ru: "�����" }, cssClass: "normal" },
-        HIGH: { id: "high", threshold: 100, label: { en: "Great", ru: "�������" }, cssClass: "high" }
+        CRITICAL: { id: "critical", threshold: 20, nameKey: "needs.status.critical", cssClass: "critical" },
+        LOW: { id: "low", threshold: 40, nameKey: "needs.status.low", cssClass: "low" },
+        NORMAL: { id: "normal", threshold: 70, nameKey: "needs.status.normal", cssClass: "normal" },
+        HIGH: { id: "high", threshold: 100, nameKey: "needs.status.high", cssClass: "high" }
     };
 
     // ============================================================================
@@ -70,16 +70,16 @@
     // ============================================================================
 
     const AILMENTS = {
-        HIGH_BP: { id: "high_bp", label: { en: "High Blood Pressure", ru: "Высокое давление" }, healthDecay: -5, costPerYear: 500 },
-        DEPRESSION: { id: "depression", label: { en: "Depression", ru: "Депрессия" }, funDecay: -5, socialDecay: -5, costPerYear: 1000 },
-        ARTHRITIS: { id: "arthritis", label: { en: "Arthritis", ru: "Артрит" }, comfortDecay: -4, energyDecay: -3, costPerYear: 300 },
-        DIABETES: { id: "diabetes", label: { en: "Diabetes", ru: "Диабет" }, healthDecay: -8, costPerYear: 1500 }
+        HIGH_BP: { id: "high_bp", nameKey: "ailment.high_bp", healthDecay: -5, costPerYear: 500 },
+        DEPRESSION: { id: "depression", nameKey: "ailment.depression", funDecay: -5, socialDecay: -5, costPerYear: 1000 },
+        ARTHRITIS: { id: "arthritis", nameKey: "ailment.arthritis", comfortDecay: -4, energyDecay: -3, costPerYear: 300 },
+        DIABETES: { id: "diabetes", nameKey: "ailment.diabetes", healthDecay: -8, costPerYear: 1500 }
     };
 
     const DIETS = {
-        JUNK_FOOD: { id: "junk_food", label: { en: "Junk Food", ru: "Фастфуд" }, costModifier: 0.5, healthModifier: -5, energyModifier: -2 },
-        BALANCED: { id: "balanced", label: { en: "Balanced", ru: "Сбалансированная" }, costModifier: 1.0, healthModifier: 0, energyModifier: 0 },
-        ORGANIC: { id: "organic", label: { en: "Organic", ru: "Органическая" }, costModifier: 2.5, healthModifier: 5, energyModifier: 3 }
+        JUNK_FOOD: { id: "junk_food", nameKey: "diet.junk_food", costModifier: 0.5, healthModifier: -5, energyModifier: -2 },
+        BALANCED: { id: "balanced", nameKey: "diet.balanced", costModifier: 1.0, healthModifier: 0, energyModifier: 0 },
+        ORGANIC: { id: "organic", nameKey: "diet.organic", costModifier: 2.5, healthModifier: 5, energyModifier: 3 }
     };
 
     // ============================================================================
@@ -404,10 +404,10 @@
                 id: id,
                 value: value,
                 icon: need.icon,
-                label: need.label,
+                label: need.nameKey,
                 color: need.color,
                 status: status.id,
-                statusLabel: status.label,
+                statusLabel: status.nameKey,
                 isCritical: value < need.crisisThreshold
             };
         });
@@ -450,99 +450,6 @@
             lowCount: 0
         };
     }
-
-    // ============================================================================
-    // I18N PATCHES
-    // ============================================================================
-
-    (function patchNeedsI18n() {
-        const i18n = Alive.i18n;
-        if (!i18n || !i18n.texts) return;
-        const en = (i18n.texts.en = i18n.texts.en || {});
-        const ru = (i18n.texts.ru = i18n.texts.ru || {});
-
-        Object.assign(en, {
-            // Need labels
-            "needs.energy": "Energy",
-            "needs.social": "Social",
-            "needs.comfort": "Comfort",
-            "needs.health": "Health",
-            "needs.fun": "Fun",
-
-            // Status labels
-            "needs.status.critical": "Critical!",
-            "needs.status.low": "Low",
-            "needs.status.normal": "OK",
-            "needs.status.high": "Great",
-
-            // Crisis events
-            "event.exhaustion.title": "Exhaustion Crisis ??",
-            "event.exhaustion.desc": "You're completely drained. Your body is shutting down from lack of rest.",
-            "event.exhaustion.choice.hospital": "Go to hospital (-$500)",
-            "event.exhaustion.choice.collapse": "Push through (risky)",
-
-            "event.depression.title": "Feeling Isolated ??",
-            "event.depression.desc": "The loneliness is overwhelming. You need to connect with someone.",
-            "event.depression.choice.therapy": "See therapist (-$200)",
-            "event.depression.choice.reachout": "Reach out to old friend",
-
-            "event.burnout.title": "Complete Burnout ??",
-            "event.burnout.desc": "Your life quality has crashed. You can't take it anymore.",
-            "event.burnout.choice.vacation": "Take emergency vacation (-$1000)",
-            "event.burnout.choice.quit": "Quit job",
-
-            "event.health_crisis.title": "Health Emergency ??",
-            "event.health_crisis.desc": "Your health has deteriorated critically. Immediate action needed.",
-            "event.health_crisis.choice.hospital": "Emergency room (-$2000)",
-            "event.health_crisis.choice.ignore": "Ignore (dangerous)",
-
-            "event.boredom.title": "Life Crisis ??",
-            "event.boredom.desc": "Your life has become unbearably monotonous. You need excitement.",
-            "event.boredom.choice.adventure": "Do something crazy",
-            "event.boredom.choice.hobby": "Find a new hobby"
-        });
-
-        Object.assign(ru, {
-            // Need labels
-            "needs.energy": "�������",
-            "needs.social": "�������",
-            "needs.comfort": "�������",
-            "needs.health": "��������",
-            "needs.fun": "�����������",
-
-            // Status labels
-            "needs.status.critical": "��������!",
-            "needs.status.low": "�����",
-            "needs.status.normal": "�����",
-            "needs.status.high": "�������",
-
-            // Crisis events
-            "event.exhaustion.title": "������ ��������� ??",
-            "event.exhaustion.desc": "�� ��������� ��������. ���� ���� ���������� �� ��������.",
-            "event.exhaustion.choice.hospital": "� �������� (-$500)",
-            "event.exhaustion.choice.collapse": "���������� (����������)",
-
-            "event.depression.title": "����������� ??",
-            "event.depression.desc": "����������� �����. ��� ����� � ���-�� ���������.",
-            "event.depression.choice.therapy": "� ��������� (-$200)",
-            "event.depression.choice.reachout": "��������� ������� �����",
-
-            "event.burnout.title": "������ ��������� ??",
-            "event.burnout.desc": "�������� ����� �������. ������ ����������.",
-            "event.burnout.choice.vacation": "������� ������ (-$1000)",
-            "event.burnout.choice.quit": "���������",
-
-            "event.health_crisis.title": "�������� �� ��������� ??",
-            "event.health_crisis.desc": "�������� ���������� ����������. ����� ������� ����.",
-            "event.health_crisis.choice.hospital": "������ ������ (-$2000)",
-            "event.health_crisis.choice.ignore": "������������ (������)",
-
-            "event.boredom.title": "������ ����� ??",
-            "event.boredom.desc": "����� ����� ���������� ������������. ����� ������.",
-            "event.boredom.choice.adventure": "������� ���-�� ��������",
-            "event.boredom.choice.hobby": "����� �����"
-        });
-    })();
 
     // ============================================================================
     // EXPORT

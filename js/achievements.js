@@ -24,6 +24,11 @@
 
   function tLocal(localized) {
     if (!localized) return "";
+    // If it's a string (i18n key), use Alive.i18n
+    if (typeof localized === "string") {
+      if (Alive.i18n && Alive.i18n.t) return Alive.i18n.t(localized);
+      return localized;
+    }
     const lang = getLang();
     return localized[lang] || localized.en || "";
   }
@@ -81,40 +86,40 @@
     {
       id: "age_50",
       icon: "🏆",
-      name: { en: "Half Century", ru: "�������" },
-      description: { en: "Reach age 50", ru: "������ �� 50 ���" },
+      nameKey: "ach.age_50.name",
+      descKey: "ach.age_50.desc",
       category: "age",
       check: ({ player }) => player && player.age >= 50
     },
     {
       id: "age_70",
       icon: "🏆",
-      name: { en: "Golden Years", ru: "������� ����" },
-      description: { en: "Reach age 70", ru: "������ �� 70 ���" },
+      nameKey: "ach.age_70.name",
+      descKey: "ach.age_70.desc",
       category: "age",
       check: ({ player }) => player && player.age >= 70
     },
     {
       id: "age_80",
       icon: "🏆",
-      name: { en: "Long Life", ru: "������ �����" },
-      description: { en: "Reach age 80", ru: "������ �� 80 ���" },
+      nameKey: "ach.age_80.name",
+      descKey: "ach.age_80.desc",
       category: "age",
       check: ({ player }) => player && player.age >= 80
     },
     {
       id: "age_90",
       icon: "🏆",
-      name: { en: "Living Legend", ru: "����� �������" },
-      description: { en: "Reach age 90", ru: "������ �� 90 ���" },
+      nameKey: "ach.age_90.name",
+      descKey: "ach.age_90.desc",
       category: "age",
       check: ({ player }) => player && player.age >= 90
     },
     {
       id: "age_100",
       icon: "🏆",
-      name: { en: "Centenarian", ru: "���������" },
-      description: { en: "Reach age 100", ru: "������ �� 100 ���" },
+      nameKey: "ach.age_100.name",
+      descKey: "ach.age_100.desc",
       category: "age",
       rarity: "legendary",
       check: ({ player }) => player && player.age >= 100
@@ -126,40 +131,40 @@
     {
       id: "networth_10k",
       icon: "🏆",
-      name: { en: "Getting Started", ru: "������" },
-      description: { en: "Reach net worth $10,000", ru: "������� �������� $10,000" },
+      nameKey: "ach.networth_10k.name",
+      descKey: "ach.networth_10k.desc",
       category: "wealth",
       check: ({ player }) => player && (player.netWorth || 0) >= 10000
     },
     {
       id: "networth_50k",
       icon: "🏆",
-      name: { en: "Comfortable", ru: "������������" },
-      description: { en: "Reach net worth $50,000", ru: "������� �������� $50,000" },
+      nameKey: "ach.networth_50k.name",
+      descKey: "ach.networth_50k.desc",
       category: "wealth",
       check: ({ player }) => player && (player.netWorth || 0) >= 50000
     },
     {
       id: "networth_100k",
       icon: "🏆",
-      name: { en: "Well Off", ru: "��� �������" },
-      description: { en: "Reach net worth $100,000", ru: "������� �������� $100,000" },
+      nameKey: "ach.networth_100k.name",
+      descKey: "ach.networth_100k.desc",
       category: "wealth",
       check: ({ player }) => player && (player.netWorth || 0) >= 100000
     },
     {
       id: "networth_500k",
       icon: "🏆",
-      name: { en: "Half Millionaire", ru: "�������������" },
-      description: { en: "Reach net worth $500,000", ru: "������� �������� $500,000" },
+      nameKey: "ach.networth_500k.name",
+      descKey: "ach.networth_500k.desc",
       category: "wealth",
       check: ({ player }) => player && (player.netWorth || 0) >= 500000
     },
     {
       id: "networth_1m",
       icon: "🏆",
-      name: { en: "Millionaire", ru: "���������" },
-      description: { en: "Reach net worth $1,000,000", ru: "������� �������� $1,000,000" },
+      nameKey: "ach.networth_1m.name",
+      descKey: "ach.networth_1m.desc",
       category: "wealth",
       unlocks: ["crypto"],
       check: ({ player }) => player && (player.netWorth || 0) >= 1000000
@@ -167,8 +172,8 @@
     {
       id: "networth_10m",
       icon: "🏆",
-      name: { en: "Multi-Millionaire", ru: "���������������" },
-      description: { en: "Reach net worth $10,000,000", ru: "������� �������� $10,000,000" },
+      nameKey: "ach.networth_10m.name",
+      descKey: "ach.networth_10m.desc",
       category: "wealth",
       rarity: "epic",
       check: ({ player }) => player && (player.netWorth || 0) >= 10000000
@@ -180,32 +185,32 @@
     {
       id: "first_job",
       icon: "🏆",
-      name: { en: "Employed", ru: "������������" },
-      description: { en: "Get your first job", ru: "�������� ������ ������" },
+      nameKey: "ach.first_job.name",
+      descKey: "ach.first_job.desc",
       category: "career",
       check: ({ player }) => player && player.job && player.job !== "unemployed"
     },
     {
       id: "job_programmer",
       icon: "🏆",
-      name: { en: "Code Master", ru: "������ ����" },
-      description: { en: "Work as a programmer", ru: "�������� �������������" },
+      nameKey: "ach.job_programmer.name",
+      descKey: "ach.job_programmer.desc",
       category: "career",
       check: ({ player }) => player && player.job === "programmer"
     },
     {
       id: "job_doctor",
       icon: "🏆",
-      name: { en: "Healer", ru: "��������" },
-      description: { en: "Work as a doctor", ru: "�������� ������" },
+      nameKey: "ach.job_doctor.name",
+      descKey: "ach.job_doctor.desc",
       category: "career",
       check: ({ player }) => player && player.job === "doctor"
     },
     {
       id: "job_ceo",
       icon: "🏆",
-      name: { en: "Top Executive", ru: "���-��������" },
-      description: { en: "Become a CEO", ru: "����� CEO" },
+      nameKey: "ach.job_ceo.name",
+      descKey: "ach.job_ceo.desc",
       category: "career",
       rarity: "rare",
       check: ({ player }) => player && player.job === "ceo"
@@ -213,48 +218,48 @@
     {
       id: "job_entrepreneur",
       icon: "🏆",
-      name: { en: "Business Owner", ru: "�������� �������" },
-      description: { en: "Become an entrepreneur", ru: "����� ����������������" },
+      nameKey: "ach.job_entrepreneur.name",
+      descKey: "ach.job_entrepreneur.desc",
       category: "career",
       check: ({ player }) => player && player.job === "entrepreneur"
     },
     {
       id: "job_artist",
       icon: "🏆",
-      name: { en: "Creative Soul", ru: "���������� ����" },
-      description: { en: "Work as an artist", ru: "�������� ����������" },
+      nameKey: "ach.job_artist.name",
+      descKey: "ach.job_artist.desc",
       category: "career",
       check: ({ player }) => player && player.job === "artist"
     },
     {
       id: "job_actor",
       icon: "🏆",
-      name: { en: "Performer", ru: "����" },
-      description: { en: "Work as an actor", ru: "�������� ������" },
+      nameKey: "ach.job_actor.name",
+      descKey: "ach.job_actor.desc",
       category: "career",
       check: ({ player }) => player && player.job === "actor"
     },
     {
       id: "career_10_years",
       icon: "?",
-      name: { en: "Dedicated Worker", ru: "��������� ��������" },
-      description: { en: "Work 10 years total", ru: "���������� 10 ���" },
+      nameKey: "ach.career_10_years.name",
+      descKey: "ach.career_10_years.desc",
       category: "career",
       check: ({ player }) => player && (player.totalYearsWorked || 0) >= 10
     },
     {
       id: "career_30_years",
       icon: "🏆",
-      name: { en: "Career Professional", ru: "������������" },
-      description: { en: "Work 30 years total", ru: "���������� 30 ���" },
+      nameKey: "ach.career_30_years.name",
+      descKey: "ach.career_30_years.desc",
       category: "career",
       check: ({ player }) => player && (player.totalYearsWorked || 0) >= 30
     },
     {
       id: "jobs_5_different",
       icon: "🏆",
-      name: { en: "Jack of All Trades", ru: "������ �� ��� ����" },
-      description: { en: "Hold 5 different jobs", ru: "����������� 5 ������ �����" },
+      nameKey: "ach.jobs_5_different.name",
+      descKey: "ach.jobs_5_different.desc",
       category: "career",
       check: ({ player }) => player && safeArray(player.jobsHeld).length >= 5
     },
@@ -265,32 +270,32 @@
     {
       id: "first_relationship",
       icon: "🏆",
-      name: { en: "Dating", ru: "��������" },
-      description: { en: "Start a relationship", ru: "������ ���������" },
+      nameKey: "ach.first_relationship.name",
+      descKey: "ach.first_relationship.desc",
       category: "family",
       check: ({ player }) => player && player.marriageStatus !== "single"
     },
     {
       id: "married",
       icon: "🏆",
-      name: { en: "Just Married", ru: "���������" },
-      description: { en: "Get married", ru: "�������� � ����" },
+      nameKey: "ach.married.name",
+      descKey: "ach.married.desc",
       category: "family",
       check: ({ player }) => player && player.marriageStatus === "married"
     },
     {
       id: "married_25_years",
       icon: "🏆",
-      name: { en: "Silver Anniversary", ru: "���������� �������" },
-      description: { en: "Stay married 25 years", ru: "������� � ����� 25 ���" },
+      nameKey: "ach.married_25_years.name",
+      descKey: "ach.married_25_years.desc",
       category: "family",
       check: ({ player }) => player && (player.marriedYears || 0) >= 25
     },
     {
       id: "married_50_years",
       icon: "🏆",
-      name: { en: "Golden Anniversary", ru: "������� �������" },
-      description: { en: "Stay married 50 years", ru: "������� � ����� 50 ���" },
+      nameKey: "ach.married_50_years.name",
+      descKey: "ach.married_50_years.desc",
       category: "family",
       rarity: "legendary",
       check: ({ player }) => player && (player.marriedYears || 0) >= 50
@@ -298,32 +303,32 @@
     {
       id: "divorced",
       icon: "🏆",
-      name: { en: "Moving On", ru: "����� �����" },
-      description: { en: "Get divorced", ru: "����������" },
+      nameKey: "ach.divorced.name",
+      descKey: "ach.divorced.desc",
       category: "family",
       check: ({ player }) => player && player.marriageStatus === "divorced"
     },
     {
       id: "first_child",
       icon: "🏆",
-      name: { en: "Parent", ru: "��������" },
-      description: { en: "Have a child", ru: "������ ������" },
+      nameKey: "ach.first_child.name",
+      descKey: "ach.first_child.desc",
       category: "family",
       check: ({ player }) => player && (player.totalChildrenHad || 0) >= 1
     },
     {
       id: "children_3",
       icon: "???????????",
-      name: { en: "Growing Family", ru: "������� �����" },
-      description: { en: "Have 3 children", ru: "����� 3 �����" },
+      nameKey: "ach.children_3.name",
+      descKey: "ach.children_3.desc",
       category: "family",
       check: ({ player }) => player && (player.totalChildrenHad || 0) >= 3
     },
     {
       id: "children_5",
       icon: "🏆",
-      name: { en: "Full House", ru: "������ ���" },
-      description: { en: "Have 5 children", ru: "����� 5 �����" },
+      nameKey: "ach.children_5.name",
+      descKey: "ach.children_5.desc",
       category: "family",
       unlocks: ["daycare_events"],
       check: ({ player }) => player && (player.totalChildrenHad || 0) >= 5
@@ -335,16 +340,16 @@
     {
       id: "moved_city",
       icon: "🏆",
-      name: { en: "Relocated", ru: "�������" },
-      description: { en: "Move to a new city", ru: "��������� � ������ �����" },
+      nameKey: "ach.moved_city.name",
+      descKey: "ach.moved_city.desc",
       category: "travel",
       check: ({ player }) => player && safeArray(player.citiesVisited).length >= 2
     },
     {
       id: "cities_3",
       icon: "🏆",
-      name: { en: "World Traveler", ru: "��������������" },
-      description: { en: "Live in 3 different cities", ru: "���� � 3 ������ �������" },
+      nameKey: "ach.cities_3.name",
+      descKey: "ach.cities_3.desc",
       category: "travel",
       unlocks: ["prestige_mode"],
       check: ({ player }) => player && safeArray(player.citiesVisited).length >= 3
@@ -352,16 +357,16 @@
     {
       id: "cities_5",
       icon: "???",
-      name: { en: "Globetrotter", ru: "�����������" },
-      description: { en: "Live in 5 different cities", ru: "���� � 5 ������ �������" },
+      nameKey: "ach.cities_5.name",
+      descKey: "ach.cities_5.desc",
       category: "travel",
       check: ({ player }) => player && safeArray(player.citiesVisited).length >= 5
     },
     {
       id: "cities_all",
       icon: "🏆",
-      name: { en: "Citizen of the World", ru: "��������� ����" },
-      description: { en: "Live in all 10 cities", ru: "���� �� ���� 10 �������" },
+      nameKey: "ach.cities_all.name",
+      descKey: "ach.cities_all.desc",
       category: "travel",
       rarity: "legendary",
       check: ({ player }) => player && safeArray(player.citiesVisited).length >= 10
@@ -373,32 +378,32 @@
     {
       id: "high_school",
       icon: "🏆",
-      name: { en: "Graduate", ru: "���������" },
-      description: { en: "Graduate high school", ru: "�������� �����" },
+      nameKey: "ach.high_school.name",
+      descKey: "ach.high_school.desc",
       category: "education",
       check: ({ player }) => player && (player.educationLevel || 0) >= 1
     },
     {
       id: "university",
       icon: "🏆",
-      name: { en: "Degree Holder", ru: "������" },
-      description: { en: "Graduate university", ru: "�������� �����������" },
+      nameKey: "ach.university.name",
+      descKey: "ach.university.desc",
       category: "education",
       check: ({ player }) => player && (player.educationLevel || 0) >= 2
     },
     {
       id: "intelligence_80",
       icon: "🏆",
-      name: { en: "Smart", ru: "�����" },
-      description: { en: "Reach 80 intelligence", ru: "������� ���������� 80" },
+      nameKey: "ach.intelligence_80.name",
+      descKey: "ach.intelligence_80.desc",
       category: "education",
       check: ({ player }) => player && (player.intelligence || 0) >= 80
     },
     {
       id: "intelligence_95",
       icon: "🏆",
-      name: { en: "Genius", ru: "�����" },
-      description: { en: "Reach 95 intelligence", ru: "������� ���������� 95" },
+      nameKey: "ach.intelligence_95.name",
+      descKey: "ach.intelligence_95.desc",
       category: "education",
       rarity: "rare",
       check: ({ player }) => player && (player.intelligence || 0) >= 95
@@ -410,32 +415,32 @@
     {
       id: "health_90",
       icon: "🏆",
-      name: { en: "Peak Condition", ru: "�������� �����" },
-      description: { en: "Reach 90 health", ru: "������� �������� 90" },
+      nameKey: "ach.health_90.name",
+      descKey: "ach.health_90.desc",
       category: "stats",
       check: ({ player }) => player && (player.health || 0) >= 90
     },
     {
       id: "happiness_90",
       icon: "🏆",
-      name: { en: "True Happiness", ru: "�������� �������" },
-      description: { en: "Reach 90 happiness", ru: "������� ������� 90" },
+      nameKey: "ach.happiness_90.name",
+      descKey: "ach.happiness_90.desc",
       category: "stats",
       check: ({ player }) => player && (player.happiness || 0) >= 90
     },
     {
       id: "attractiveness_90",
       icon: "?",
-      name: { en: "Head Turner", ru: "��������" },
-      description: { en: "Reach 90 attractiveness", ru: "������� ����������������� 90" },
+      nameKey: "ach.attractiveness_90.name",
+      descKey: "ach.attractiveness_90.desc",
       category: "stats",
       check: ({ player }) => player && (player.attractiveness || 0) >= 90
     },
     {
       id: "all_stats_70",
       icon: "?",
-      name: { en: "Well Rounded", ru: "��������������" },
-      description: { en: "All stats above 70", ru: "��� �������������� ���� 70" },
+      nameKey: "ach.all_stats_70.name",
+      descKey: "ach.all_stats_70.desc",
       category: "stats",
       check: ({ player }) => player &&
         (player.health || 0) >= 70 &&
@@ -450,16 +455,16 @@
     {
       id: "first_investment",
       icon: "🏆",
-      name: { en: "Investor", ru: "��������" },
-      description: { en: "Make your first investment", ru: "������� ������ ����������" },
+      nameKey: "ach.first_investment.name",
+      descKey: "ach.first_investment.desc",
       category: "investment",
       check: ({ player }) => player && safeArray(player.investments).length > 0
     },
     {
       id: "diverse_portfolio",
       icon: "🏆",
-      name: { en: "Diversified", ru: "��������������" },
-      description: { en: "Invest in 3+ different types", ru: "������������� � 3+ ����" },
+      nameKey: "ach.diverse_portfolio.name",
+      descKey: "ach.diverse_portfolio.desc",
       category: "investment",
       check: ({ player }) => {
         if (!player) return false;
@@ -470,8 +475,8 @@
     {
       id: "crypto_investor",
       icon: "?",
-      name: { en: "Crypto Enthusiast", ru: "���������������" },
-      description: { en: "Invest in cryptocurrency", ru: "������������� � ������������" },
+      nameKey: "ach.crypto_investor.name",
+      descKey: "ach.crypto_investor.desc",
       category: "investment",
       check: ({ player }) => {
         if (!player) return false;
@@ -481,8 +486,8 @@
     {
       id: "real_estate_investor",
       icon: "???",
-      name: { en: "Real Estate Mogul", ru: "������ ������������" },
-      description: { en: "Invest in real estate", ru: "������������� � ������������" },
+      nameKey: "ach.real_estate_investor.name",
+      descKey: "ach.real_estate_investor.desc",
       category: "investment",
       check: ({ player }) => {
         if (!player) return false;
@@ -496,8 +501,8 @@
     {
       id: "rags_to_riches",
       icon: "🏆",
-      name: { en: "Rags to Riches", ru: "�� ����� � �����" },
-      description: { en: "Go from $0 to $100,000", ru: "����� �� $0 �� $100,000" },
+      nameKey: "ach.rags_to_riches.name",
+      descKey: "ach.rags_to_riches.desc",
       category: "special",
       rarity: "epic",
       check: ({ player, game }) => {
@@ -511,8 +516,8 @@
     {
       id: "survivor",
       icon: "???",
-      name: { en: "Survivor", ru: "��������" },
-      description: { en: "Recover from health below 20", ru: "������ ��� �������� ���� 20" },
+      nameKey: "ach.survivor.name",
+      descKey: "ach.survivor.desc",
       category: "special",
       check: ({ player }) => {
         if (!player) return false;
@@ -523,8 +528,8 @@
     {
       id: "bounce_back",
       icon: "???",
-      name: { en: "Bounce Back", ru: "�����������" },
-      description: { en: "Recover from minimal happiness", ru: "������������ ������� � ����" },
+      nameKey: "ach.bounce_back.name",
+      descKey: "ach.bounce_back.desc",
       category: "special",
       check: ({ player }) => {
         if (!player) return false;
@@ -537,8 +542,8 @@
     {
       id: "completionist",
       icon: "🏆",
-      name: { en: "Completionist", ru: "������������" },
-      description: { en: "Unlock 40 achievements", ru: "������� 40 ����������" },
+      nameKey: "ach.completionist.name",
+      descKey: "ach.completionist.desc",
       category: "special",
       rarity: "legendary",
       check: () => safeArray(progression.unlockedAchievementIds).length >= 40
@@ -546,16 +551,16 @@
     {
       id: "lives_5",
       icon: "🏆",
-      name: { en: "Reincarnation", ru: "������������" },
-      description: { en: "Play 5 lives", ru: "������� 5 ������" },
+      nameKey: "ach.lives_5.name",
+      descKey: "ach.lives_5.desc",
       category: "special",
       check: () => (progression.totalLivesPlayed || 0) >= 5
     },
     {
       id: "lives_20",
       icon: "🏆",
-      name: { en: "Eternal Player", ru: "������ �����" },
-      description: { en: "Play 20 lives", ru: "������� 20 ������" },
+      nameKey: "ach.lives_20.name",
+      descKey: "ach.lives_20.desc",
       category: "special",
       check: () => (progression.totalLivesPlayed || 0) >= 20
     }

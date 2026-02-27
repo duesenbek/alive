@@ -859,7 +859,44 @@
         canApplyForJob,
 
         // Processing
-        processYearlyConsequences
+        processYearlyConsequences,
+
+        // === NEW: Cumulative scores for director ===
+
+        /**
+         * Get cumulative behavioral tendency scores.
+         * Used by the EventDirector to bias event selection.
+         */
+        getCumulativeScores: function (player) {
+            ensureConsequenceState(player);
+            return player._cumulativeScores || {
+                career_ambition: 0,
+                risk_tolerance: 0,
+                family_focus: 0,
+                health_consciousness: 0
+            };
+        },
+
+        /**
+         * Record a choice that affects cumulative behavioral scores.
+         * @param {object} player
+         * @param {string} category - 'career_ambition'|'risk_tolerance'|'family_focus'|'health_consciousness'
+         * @param {number} delta - how much to adjust (positive or negative)
+         */
+        recordCumulativeChoice: function (player, category, delta) {
+            ensureConsequenceState(player);
+            if (!player._cumulativeScores) {
+                player._cumulativeScores = {
+                    career_ambition: 0,
+                    risk_tolerance: 0,
+                    family_focus: 0,
+                    health_consciousness: 0
+                };
+            }
+            if (typeof player._cumulativeScores[category] === 'number') {
+                player._cumulativeScores[category] += delta;
+            }
+        }
     };
 
 })(window);
