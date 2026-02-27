@@ -91,3 +91,13 @@ if (Math.random() < riskChance) {
 | **Fixed Costs** | 60% of Income | 90% of Income | 120% of Income |
 | **Random Shock** | $500 - $1k | $5k - $20k | $50k - $200k |
 | **Primary Risk** | Eviction | Debt Spiral | Organ Failure |
+
+## 5. Playstyles & Balance
+
+To ensure diverse gameplay, three primary distinct playstyles have been balanced to yield similar lifetime net value (~$500k-$1M by age 60) with different risk properties.
+
+| Playstyle | Peak Income/yr | Risk Level | Happiness | Stress | Key Trade-off / Mechanics |
+|:---|---:|:---|:---|:---|:---|
+| **Career** | $120k-$360k (C-level) | Medium | Low (work stress) | High (60-80) | Burns health, requires continuous education to progress |
+| **Social** | $30k-$80k (referrals+content) | Low | High | Low (20-40) | Very slow ramp, strict income ceiling, high maintenance cost |
+| **Investor** | $50k-$500k (compound returns) | Very High | Neutral | Medium (40-60) | Can lose completely to market crashes, requires starting capital |

@@ -8,7 +8,10 @@
     "test:smoke": "node test/smoke.test.js",
     "test:lifecycle": "node test_game_lifecycle.js",
     "test:iap": "node test_support_pack.js",
-    "test:integrity": "node check_integrity.js"
+    "test:integrity": "node check_integrity.js",
+    "test:visual": "playwright test",
+    "test:visual:update": "playwright test --update-snapshots",
+    "ci": "npm run test && npm run test:visual"
   },
   "keywords": [],
   "author": "",
@@ -16,5 +19,10 @@
   "type": "commonjs",
   "dependencies": {
     "terser": "^5.44.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "http-server": "^14.1.1",
+    "jsdom": "^28.1.0"
   }
 }

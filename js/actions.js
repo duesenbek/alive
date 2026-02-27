@@ -11,6 +11,42 @@
     return Math.min(max, Math.max(min, n));
   }
 
+    function diminishingReturn(baseGain, currentSkill, timesUsed) {
+    if (baseGain <= 0) return baseGain;
+    const skill = clamp(currentSkill || 0, 0, 100);
+    const uses = Math.max(0, timesUsed || 0);
+    const skillFactor = 1 - (skill / 130);
+    const usageFactor = 1 / (1 + uses * 0.05);
+    return Math.max(1, Math.round(baseGain * Math.max(0.15, skillFactor * usageFactor)));
+  }
+
+  function getUsageCount(player, actionId) {
+    if (!player) return 0;
+    player.actionUsageCounts = player.actionUsageCounts || {};
+    return player.actionUsageCounts[actionId] || 0;
+  }
+
+  function incrementUsage(player, actionId) {
+    if (!player) return;
+    player.actionUsageCounts = player.actionUsageCounts || {};
+    player.actionUsageCounts[actionId] = (player.actionUsageCounts[actionId] || 0) + 1;
+  }
+
+  function getSocialIncome(player) {
+    if (!player) return 0;
+    const socialSkill = clamp(player.socialSkill || 0, 0, 100);
+    const followers = Math.max(0, Math.floor(Number(player.followers) || 0));
+    let income = 0;
+    if (socialSkill >= 60) {
+      income += Math.round(500 + (socialSkill - 60) * 37.5);
+    }
+    if (followers >= 10000) {
+      const tier = Math.min(followers / 10000, 10);
+      income += Math.round(tier * 2400);
+    }
+    return income;
+  }
+
   function getActionMaxCount(player) {
     if (!player) return 1;
     return player.age >= 14 ? 2 : 1;
@@ -141,105 +177,96 @@
     });
 
     Object.assign(ru, {
-      "action.practice_hobby.title": "���������� �����",
-      "action.practice_hobby.desc": "����������� ������� ����� � ��������� �����.",
-      "action.browse_houses.title": "�������� �����",
-      "action.browse_houses.desc": "����������, ����� ����� �� ������ ���������.",
-      "action.browse_cars.title": "�������� ������",
-      "action.browse_cars.desc": "�������� ������, ��������� � ����� ������.",
-      "action.call_family.title": "��������� �����",
-      "action.call_family.desc": "��������� ��������� ��� �������/������.",
-      "action.visit_family.title": "��������� �����",
-      "action.visit_family.desc": "��������� ����� � ������ �����.",
-      "action.hangout_friends.title": "����������� � ��������",
-      "action.hangout_friends.desc": "������������� ���������� ����� � �������� ������.",
-      "action.make_friends.title": "������� ������",
-      "action.make_friends.desc": "������������� � ������ ������ � ��������� ���� �������.",
-      "action.adopt_pet.title": "������� �������",
-      "action.adopt_pet.desc": "������� �������� �������, �� ������� �������� ������ ���.",
-      "action.adopt_dog.title": "������� ������",
-      "action.adopt_dog.desc": "������ ����. ������ ������� �������� � �����.",
-      "action.adopt_cat.title": "������� �����",
-      "action.adopt_cat.desc": "�������� ����. ����� ����������, �� �������.",
-      "action.walk_dog.title": "�������� � �������",
-      "action.walk_dog.desc": "������������ � �������.",
-      "action.play_with_pet.title": "�������� � ��������",
-      "action.play_with_pet.desc": "��������� � �������� � �������� �����.",
-
-      // Skill-building actions
-      "action.gym_workout.title": "���������� � ����",
-      "action.gym_workout.desc": "��������� � ��������� �����.",
-      "action.join_sports_team.title": "�������� � �������",
-      "action.join_sports_team.desc": "�������������� � ���������� �������.",
-      "action.marathon_training.title": "���������� � ��������",
-      "action.marathon_training.desc": "������������ ��� ��������. ����� ����� ������ 30+.",
-
-      "action.read_business_books.title": "������ ������-�����",
-      "action.read_business_books.desc": "������� � �������� ����������������.",
-      "action.business_seminar.title": "������-�������",
-      "action.business_seminar.desc": "���������� � �������� �� ������-�����������.",
-      "action.network_events.title": "����������",
-      "action.network_events.desc": "������� ���������������� �����.",
-      "action.side_project.title": "��������� ������",
-      "action.side_project.desc": "�������� ��� ������-�����.",
-
-      "action.study_investing.title": "������� ����������",
-      "action.study_investing.desc": "�������� ����� � ��������� ��������������.",
-      "action.follow_markets.title": "������� �� �������",
-      "action.follow_markets.desc": "����������� ����� � ������.",
-      "action.paper_trading.title": "�������� ��������",
-      "action.paper_trading.desc": "�������� �������� ��� �������� �����.",
-      "action.investment_course.title": "���� ��������������",
-      "action.investment_course.desc": "������ ���������������� ����.",
-
-      "action.professional_dev.title": "���������������� ��������",
-      "action.professional_dev.desc": "�������� ������� ������ � ������.",
-      "action.get_certification.title": "�������� ����������",
-      "action.get_certification.desc": "�������� ���������������� ����������.",
-      "action.mentor_junior.title": "��������������",
-      "action.mentor_junior.desc": "������ �������� ������� �����.",
-      "action.work_overtime.title": "�������� �����������",
-      "action.work_overtime.desc": "�������� ������ �� �������������� ������.",
-
-      "action.join_club.title": "�������� � ����",
-      "action.join_club.desc": "�������������� � ����������� �����.",
-      "action.public_speaking.title": "��������� �����������",
-      "action.public_speaking.desc": "������������ ����������� ����� ��������.",
-      "action.volunteer_work.title": "�����������",
-      "action.volunteer_work.desc": "�������� ������ � ����������� ���� ������.",
-      "action.host_party.title": "�������� ���������",
-      "action.host_party.desc": "������������ ��������� ��� ������.",
-
-      "action.learn_music.title": "������� ������",
-      "action.learn_music.desc": "������������ ���� �� �����������.",
-      "action.learn_art.title": "������� ���������",
-      "action.learn_art.desc": "�������� ���� ����� ���������.",
-      "action.learn_coding.title": "������� ����������������",
-      "action.learn_coding.desc": "��������� ��������� � ����������.",
-      "action.learn_cooking.title": "������� ��������",
-      "action.learn_cooking.desc": "������� ���������� ���������.",
-      "action.learn_gaming.title": "������ � ����",
-      "action.learn_gaming.desc": "������������ � ������������.",
-      "action.learn_photography.title": "������� ����������",
-      "action.learn_photography.desc": "����������� �������� �������.",
-      "action.learn_writing.title": "������� ������",
-      "action.learn_writing.desc": "������ ������� ��� ������.",
-
-      // Needs-focused actions
-      "action.take_vacation.title": "������",
-      "action.take_vacation.desc": "��������� �� ����� � ������������ ����.",
-      "action.see_therapist.title": "��������",
-      "action.see_therapist.desc": "���������� � �������������� � ����������� ��������.",
-      "action.take_nap.title": "����������",
-      "action.take_nap.desc": "��������� � ������������ �������.",
-      "action.go_shopping.title": "������",
-      "action.go_shopping.desc": "������ ���� ��� �������� � ����������.",
-      "action.stay_home_relax.title": "����� ����",
-      "action.stay_home_relax.desc": "������������ ��������� ������ ����.",
-      "action.throw_party.title": "�������� ���������",
-      "action.throw_party.desc": "���������� ������ ��� �������.",
-      "action.spa_day.title": "���-����",
-      "action.spa_day.desc": "���������� ���� �����������."
+      "action.practice_hobby.title": "Практиковать хобби",
+      "action.practice_hobby.desc": "Практикуйте главное хобби и улучшайте навык.",
+      "action.browse_houses.title": "Смотреть жильё",
+      "action.browse_houses.desc": "Посмотрите, какое жильё вы можете позволить.",
+      "action.browse_cars.title": "Смотреть машины",
+      "action.browse_cars.desc": "Сравните машины, доступные в вашем городе.",
+      "action.call_family.title": "Позвонить семье",
+      "action.call_family.desc": "Позвоните родителям или братьям/сёстрам.",
+      "action.visit_family.title": "Навестить семью",
+      "action.visit_family.desc": "Проведите время с вашей семьёй.",
+      "action.hangout_friends.title": "Встретиться с друзьями",
+      "action.hangout_friends.desc": "Восстановите социальную жизнь и укрепите дружбу.",
+      "action.make_friends.title": "Завести друзей",
+      "action.make_friends.desc": "Познакомьтесь с новыми людьми и расширьте круг общения.",
+      "action.adopt_pet.title": "Завести питомца",
+      "action.adopt_pet.desc": "Заведите домашнего питомца, но будьте готовы к тратам каждый год.",
+      "action.adopt_dog.title": "Завести собаку",
+      "action.adopt_dog.desc": "Верный друг. Собаки требуют прогулок и ухода.",
+      "action.adopt_cat.title": "Завести кота",
+      "action.adopt_cat.desc": "Пушистый друг. Коты независимы, но ласковы.",
+      "action.walk_dog.title": "Погулять с собакой",
+      "action.walk_dog.desc": "Прогуляйтесь с собакой.",
+      "action.play_with_pet.title": "Поиграть с питомцем",
+      "action.play_with_pet.desc": "Поиграйте с питомцем и укрепите связь.",
+      "action.gym_workout.title": "Тренировка в зале",
+      "action.gym_workout.desc": "Занимайтесь и улучшайте форму.",
+      "action.join_sports_team.title": "Вступить в команду",
+      "action.join_sports_team.desc": "Присоединитесь к спортивной команде.",
+      "action.marathon_training.title": "Подготовка к марафону",
+      "action.marathon_training.desc": "Подготовьтесь для марафона. Нужен навык спорта 30+.",
+      "action.read_business_books.title": "Читать бизнес-книги",
+      "action.read_business_books.desc": "Учитесь у успешных предпринимателей.",
+      "action.business_seminar.title": "Бизнес-семинар",
+      "action.business_seminar.desc": "Нетворкинг и обучение на бизнес-мероприятии.",
+      "action.network_events.title": "Нетворкинг",
+      "action.network_events.desc": "Стройте профессиональные связи.",
+      "action.side_project.title": "Побочный проект",
+      "action.side_project.desc": "Работайте над бизнес-идеей.",
+      "action.study_investing.title": "Изучать инвестиции",
+      "action.study_investing.desc": "Изучайте рынки и стратегии инвестирования.",
+      "action.follow_markets.title": "Следить за рынками",
+      "action.follow_markets.desc": "Отслеживайте акции и тренды.",
+      "action.paper_trading.title": "Бумажная торговля",
+      "action.paper_trading.desc": "Практика торговли без реальных денег.",
+      "action.investment_course.title": "Курс инвестирования",
+      "action.investment_course.desc": "Пройти профессиональный курс.",
+      "action.professional_dev.title": "Профессиональное развитие",
+      "action.professional_dev.desc": "Улучшите рабочие навыки и знания.",
+      "action.get_certification.title": "Получить сертификат",
+      "action.get_certification.desc": "Получите профессиональный сертификат.",
+      "action.mentor_junior.title": "Наставничество",
+      "action.mentor_junior.desc": "Помогите коллеге расти карьерно.",
+      "action.work_overtime.title": "Работать сверхурочно",
+      "action.work_overtime.desc": "Работайте больше за дополнительную плату.",
+      "action.join_club.title": "Вступить в клуб",
+      "action.join_club.desc": "Присоединитесь к социальному клубу.",
+      "action.public_speaking.title": "Публичное выступление",
+      "action.public_speaking.desc": "Практикуйте выступления перед публикой.",
+      "action.volunteer_work.title": "Волонтёрство",
+      "action.volunteer_work.desc": "Помогайте другим и чувствуйте себя хорошо.",
+      "action.host_party.title": "Устроить вечеринку",
+      "action.host_party.desc": "Организуйте вечеринку для друзей.",
+      "action.learn_music.title": "Учиться музыке",
+      "action.learn_music.desc": "Практикуйте игру на инструменте.",
+      "action.learn_art.title": "Учиться рисованию",
+      "action.learn_art.desc": "Выразите себя через искусство.",
+      "action.learn_coding.title": "Учиться программированию",
+      "action.learn_coding.desc": "Создавайте программы и приложения.",
+      "action.learn_cooking.title": "Учиться готовить",
+      "action.learn_cooking.desc": "Освойте кулинарное искусство.",
+      "action.learn_gaming.title": "Играть в игры",
+      "action.learn_gaming.desc": "Расслабьтесь и развлекитесь.",
+      "action.learn_photography.title": "Учиться фотографии",
+      "action.learn_photography.desc": "Запечатлейте красивые моменты.",
+      "action.learn_writing.title": "Учиться письму",
+      "action.learn_writing.desc": "Пишите рассказы или статьи.",
+      "action.take_vacation.title": "Отпуск",
+      "action.take_vacation.desc": "Отдохните от всего и восстановите силы.",
+      "action.see_therapist.title": "Терапевт",
+      "action.see_therapist.desc": "Поговорите с профессионалом о психическом здоровье.",
+      "action.take_nap.title": "Вздремнуть",
+      "action.take_nap.desc": "Отдохните и восстановите энергию.",
+      "action.go_shopping.title": "Шопинг",
+      "action.go_shopping.desc": "Купите вещи для комфорта и настроения.",
+      "action.stay_home_relax.title": "Отдых дома",
+      "action.stay_home_relax.desc": "Насладитесь комфортом своего дома.",
+      "action.throw_party.title": "Устроить вечеринку",
+      "action.throw_party.desc": "Пригласите друзей для общения.",
+      "action.spa_day.title": "Спа-день",
+      "action.spa_day.desc": "Побалуйте себе расслаблением."
     });
   }
 

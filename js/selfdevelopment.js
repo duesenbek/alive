@@ -77,7 +77,7 @@
       cost: 0,
       years: 0,
       opensJobFamilies: ["service", "entry"],
-      description: { en: "No formal education", ru: "Áåç îáðàçîâàíèÿ" }
+      description: { en: "No formal education", ru: "No formal education" }
     },
     COMMUNITY_COLLEGE: {
       id: "community",
@@ -87,7 +87,7 @@
       years: 2,
       minAge: 18,
       opensJobFamilies: ["service", "admin", "some-white"],
-      description: { en: "Associate's degree. Mid-tier jobs.", ru: "Ñðåäíåå. Îáû÷íûå ðàáîòû." }
+      description: { en: "Associate's degree. Mid-tier jobs.", ru: "Associate's degree. Mid-tier jobs." }
     },
     TRADE_SCHOOL: {
       id: "trade",
@@ -98,7 +98,7 @@
       minAge: 18,
       tradesOnly: true,
       opensJobFamilies: ["blue_collar"],
-      description: { en: "Trade certification. Stable blue-collar careers.", ru: "Ðàáî÷àÿ ñïåöèàëüíîñòü." }
+      description: { en: "Trade certification. Stable blue-collar careers.", ru: "Trade certification. Stable blue-collar careers." }
     },
     BOOTCAMP: {
       id: "bootcamp",
@@ -110,7 +110,7 @@
       techOnly: true,
       opensJobFamilies: ["tech"],
       maxTier: 4, // Can reach Lead but not Manager+
-      description: { en: "Tech skills fast track. Developer jobs.", ru: "Áûñòðûé ïóòü â IT." }
+      description: { en: "Tech skills fast track. Developer jobs.", ru: "Tech skills fast track. Developer jobs." }
     },
     UNIVERSITY: {
       id: "university",
@@ -120,7 +120,7 @@
       years: 4,
       minAge: 18,
       opensJobFamilies: ["white_collar", "tech", "creative", "all"],
-      description: { en: "Bachelor's degree. Wide career options.", ru: "Âûñøåå. Øèðîêèå âîçìîæíîñòè." }
+      description: { en: "Bachelor's degree. Wide career options.", ru: "Bachelor's degree. Wide career options." }
     },
     MASTERS: {
       id: "masters",
@@ -131,7 +131,7 @@
       minAge: 22,
       requiresPrevious: "university",
       opensJobFamilies: ["white_collar", "executive"],
-      description: { en: "Advanced degree. Management track.", ru: "Ìàãèñòðàòóðà." }
+      description: { en: "Advanced degree. Management track.", ru: "Advanced degree. Management track." }
     },
     PHD: {
       id: "phd",
@@ -142,7 +142,7 @@
       minAge: 24,
       requiresPrevious: "masters",
       opensJobFamilies: ["academic", "research"],
-      description: { en: "Doctorate. Research & academia.", ru: "Äîêòîðñêàÿ ñòåïåíü." }
+      description: { en: "Doctorate. Research & academia.", ru: "Doctorate. Research & academia." }
     }
   };
 
@@ -158,7 +158,7 @@
       tiers: ["worker", "supervisor", "manager", "regional", "director"],
       salaryMultipliers: [1.0, 1.3, 1.7, 2.2, 3.0],
       requiredEducation: ["none", "community"],
-      example: { en: "Retail, Restaurant, Customer Service", ru: "Ïðîäàæè, Ðåñòîðàíû" }
+      example: { en: "Retail, Restaurant, Customer Service", ru: "Retail, Restaurant, Customer Service" }
     },
     BLUE_COLLAR: {
       id: "blue_collar",
@@ -168,7 +168,7 @@
       salaryMultipliers: [0.8, 1.2, 1.8, 3.0],
       requiredEducation: ["trade", "community"],
       requiresSkill: "trade",
-      example: { en: "Electrician, Plumber, Mechanic", ru: "Ýëåêòðèê, Ñàíòåõíèê" }
+      example: { en: "Electrician, Plumber, Mechanic", ru: "Electrician, Plumber, Mechanic" }
     },
     TECH: {
       id: "tech",
@@ -179,7 +179,7 @@
       requiredEducation: ["bootcamp", "university", "community"],
       requiresSkill: "programming",
       bootcampMaxTier: 4, // Lead
-      example: { en: "Developer, Designer, Data Analyst", ru: "Ðàçðàáîò÷èê, Äèçàéíåð" }
+      example: { en: "Developer, Designer, Data Analyst", ru: "Developer, Designer, Data Analyst" }
     },
     WHITE_COLLAR: {
       id: "white_collar",
@@ -189,7 +189,7 @@
       salaryMultipliers: [0.7, 1.0, 1.4, 2.0, 3.0, 4.5, 7.0],
       requiredEducation: ["university", "masters"],
       requiresSkill: "management",
-      example: { en: "Accountant, Lawyer, Consultant", ru: "Áóõãàëòåð, Þðèñò" }
+      example: { en: "Accountant, Lawyer, Consultant", ru: "Accountant, Lawyer, Consultant" }
     },
     CREATIVE: {
       id: "creative",
@@ -199,7 +199,7 @@
       salaryMultipliers: [0.6, 0.9, 1.3, 1.8, 2.5],
       requiredEducation: ["none", "bootcamp", "university"],
       requiresSkill: "creative",
-      example: { en: "Writer, Artist, Musician", ru: "Ïèñàòåëü, Õóäîæíèê" }
+      example: { en: "Writer, Artist, Musician", ru: "Writer, Artist, Musician" }
     },
     MEDICAL: {
       id: "medical",
@@ -209,7 +209,7 @@
       salaryMultipliers: [0.8, 1.5, 2.2, 3.0, 4.0],
       requiredEducation: ["university", "masters"],
       requiresSkill: "medical",
-      example: { en: "Doctor, Nurse, Surgeon", ru: "Âðà÷, Ìåäñåñòðà" }
+      example: { en: "Doctor, Nurse, Surgeon", ru: "Doctor, Nurse, Surgeon" }
     }
   };
 
@@ -731,7 +731,7 @@
 
     switch (business.state) {
       case "launch":
-        if (performanceScore > 0.6) {
+        if (performanceScore > 0.7 && business.yearsActive >= 2) {
           newState = "breakeven";
         } else if (performanceScore < 0.3) {
           newState = "struggling";
@@ -786,7 +786,17 @@
 
     // Calculate annual revenue
     const annualRevenue = business.monthlyRevenue * 12;
-    const expenses = Math.round(annualRevenue * 0.6); // 60% expenses
+    let expenseMultiplier = 0.6;
+    if (newState === 'profitable' || newState === 'scaling') {
+      expenseMultiplier += 0.25;
+      business.employees = Math.floor(annualRevenue / 60000) || 3;
+    } else if (newState === 'growth') {
+      expenseMultiplier += 0.15;
+      business.employees = Math.floor(annualRevenue / 50000) || 1;
+    } else {
+      business.employees = 0;
+    }
+    const expenses = Math.round(annualRevenue * expenseMultiplier);
     const profit = annualRevenue - expenses;
 
     business.totalRevenue += annualRevenue;
@@ -1256,96 +1266,87 @@
     });
 
     Object.assign(ru, {
-      // Education
-      "edu.none": "Áåç îáðàçîâàíèÿ",
-      "edu.elementary": "Íà÷àëüíàÿ øêîëà",
-      "edu.middle_school": "Ñðåäíÿÿ øêîëà",
-      "edu.high_school": "Ñòàðøàÿ øêîëà",
-      "edu.university": "Óíèâåðñèòåò",
-      "edu.masters": "Ìàãèñòðàòóðà",
-      "edu.phd": "Äîêòîðàíòóðà",
-      "edu.certification": "Ïðîôåññèîíàëüíûé ñåðòèôèêàò",
-      "edu.enroll": "Ïîñòóïèòü",
-      "edu.graduate": "Âûïóñòèòüñÿ",
-      "edu.dropout": "Áðîñèòü ó÷¸áó",
-      "edu.gpa": "Ñðåäíèé áàëë",
-      "edu.years_remaining": "Îñòàëîñü {years} ëåò",
-      "edu.scholarship": "Ñòèïåíäèÿ ïîëó÷åíà!",
-      "edu.exam_passed": "Ýêçàìåí ñäàí!",
-      "edu.exam_failed": "Ýêçàìåí ïðîâàëåí",
-
-      // Career Levels
-      "career.level.intern": "Ñòàæ¸ð",
-      "career.level.junior": "Ìëàäøèé ñïåöèàëèñò",
-      "career.level.mid": "Ñïåöèàëèñò",
-      "career.level.senior": "Ñòàðøèé ñïåöèàëèñò",
-      "career.level.lead": "Òèìëèä",
-      "career.level.manager": "Ìåíåäæåð",
-      "career.level.director": "Äèðåêòîð",
-      "career.level.vp": "Âèöå-ïðåçèäåíò",
-      "career.level.clevel": "Òîï-ìåíåäæåð",
-      "career.promotion": "Ïîâûøåíèå!",
-      "career.path_to_top": "Ïóòü íàâåðõ",
-      "career.years_at_level": "{years} ëåò íà ýòîé ïîçèöèè",
-      "career.promotion_chance": "{chance}% øàíñ ïîâûøåíèÿ",
-
-      // Business
-      "business.state.idea": "Èäåÿ",
-      "business.state.launch": "Çàïóñê",
-      "business.state.struggling": "Òðóäíîñòè",
-      "business.state.breakeven": "Îêóïàåìîñòü",
-      "business.state.growth": "Ðîñò",
-      "business.state.profitable": "Ïðèáûëüíîñòü",
-      "business.state.scaling": "Ìàñøòàáèðîâàíèå",
-      "business.state.exit": "Ïðîäàí",
-      "business.state.failed": "Ïðîâàë",
-      "business.type.freelance": "Ôðèëàíñ",
-      "business.type.ecommerce": "Èíòåðíåò-ìàãàçèí",
-      "business.type.consulting": "Êîíñàëòèíã",
-      "business.type.restaurant": "Ðåñòîðàí",
-      "business.type.tech_startup": "IT-ñòàðòàï",
-      "business.type.real_estate": "Àãåíòñòâî íåäâèæèìîñòè",
-      "business.type.franchise": "Ôðàíøèçà",
-      "business.type.saas": "SaaS-êîìïàíèÿ",
-      "business.start": "Íà÷àòü áèçíåñ",
-      "business.valuation": "Îöåíêà",
-      "business.monthly_revenue": "Ìåñÿ÷íàÿ âûðó÷êà",
-      "business.investor_offer": "Ïðåäëîæåíèå èíâåñòîðà: {amount}",
-      "business.exit_opportunity": "Âîçìîæíîñòü ïðîäàæè: {amount}",
-      "business.partner_conflict": "Êîíôëèêò ñ ïàðòí¸ðîì!",
-      "business.market_change": "Èçìåíåíèå ðûíêà",
-
-      // Investing
-      "invest.type.savings": "Ñáåðåãàòåëüíûé ñ÷¸ò",
-      "invest.type.bonds": "Ãîñ. îáëèãàöèè",
-      "invest.type.index_funds": "Èíäåêñíûå ôîíäû",
-      "invest.type.stocks": "Àêöèè",
-      "invest.type.real_estate": "Íåäâèæèìîñòü",
-      "invest.type.crypto": "Êðèïòîâàëþòà",
-      "invest.type.startups": "Èíâåñòèöèè â ñòàðòàïû",
-      "invest.portfolio": "Ïîðòôåëü",
-      "invest.total_value": "Îáùàÿ ñòîèìîñòü",
-      "invest.total_return": "Îáùàÿ äîõîäíîñòü",
-      "invest.risk_level": "Óðîâåíü ðèñêà",
-      "invest.diversification": "Äèâåðñèôèêàöèÿ",
-      "invest.buy": "Èíâåñòèðîâàòü",
-      "invest.sell": "Ïðîäàòü",
-      "invest.risk.low": "Íèçêèé ðèñê",
-      "invest.risk.moderate": "Óìåðåííûé ðèñê",
-      "invest.risk.high": "Âûñîêèé ðèñê",
-      "invest.risk.very_high": "Î÷åíü âûñîêèé ðèñê",
-
-      // Self Development UI
-      "selfdev.title": "Ñàìîðàçâèòèå",
-      "selfdev.education": "Îáðàçîâàíèå",
-      "selfdev.career": "Êàðüåðà",
-      "selfdev.business": "Áèçíåñ",
-      "selfdev.investing": "Èíâåñòèöèè",
-      "selfdev.current_stage": "Òåêóùèé ýòàï",
-      "selfdev.next_steps": "Ñëåäóþùèå øàãè",
-      "selfdev.progress": "Ïðîãðåññ",
-      "selfdev.requirements": "Òðåáîâàíèÿ",
-      "selfdev.cost": "Ñòîèìîñòü"
+      "edu.none": "Ð‘ÐµÐ· Ð¾Ð±Ñ€Ð°Ð·Ð¾Ð²Ð°Ð½Ð¸Ñ",
+      "edu.elementary": "ÐÐ°Ñ‡Ð°Ð»ÑŒÐ½Ð°Ñ ÑˆÐºÐ¾Ð»Ð°",
+      "edu.middle_school": "Ð¡Ñ€ÐµÐ´Ð½ÑÑ ÑˆÐºÐ¾Ð»Ð°",
+      "edu.high_school": "Ð¡Ñ‚Ð°Ñ€ÑˆÐ°Ñ ÑˆÐºÐ¾Ð»Ð°",
+      "edu.university": "Ð£Ð½Ð¸Ð²ÐµÑ€ÑÐ¸Ñ‚ÐµÑ‚",
+      "edu.masters": "ÐœÐ°Ð³Ð¸ÑÑ‚Ñ€Ð°Ñ‚ÑƒÑ€Ð°",
+      "edu.phd": "Ð”Ð¾ÐºÑ‚Ð¾Ñ€Ð°Ð½Ñ‚ÑƒÑ€Ð°",
+      "edu.certification": "Ð¡ÐµÑ€Ñ‚Ð¸Ñ„Ð¸ÐºÐ°Ñ†Ð¸Ñ",
+      "edu.enroll": "ÐŸÐ¾ÑÑ‚ÑƒÐ¿Ð¸Ñ‚ÑŒ",
+      "edu.graduate": "Ð’Ñ‹Ð¿ÑƒÑÐº",
+      "edu.dropout": "ÐžÑ‚Ñ‡Ð¸ÑÐ»ÐµÐ½Ð¸Ðµ",
+      "edu.gpa": "Ð¡Ñ€ÐµÐ´Ð½Ð¸Ð¹ Ð±Ð°Ð»Ð»",
+      "edu.years_remaining": "ÐžÑÑ‚Ð°Ð»Ð¾ÑÑŒ Ð»ÐµÑ‚",
+      "edu.scholarship": "Ð¡Ñ‚Ð¸Ð¿ÐµÐ½Ð´Ð¸Ñ",
+      "edu.exam_passed": "Ð­ÐºÐ·Ð°Ð¼ÐµÐ½ ÑÐ´Ð°Ð½",
+      "edu.exam_failed": "Ð­ÐºÐ·Ð°Ð¼ÐµÐ½ Ð½Ðµ ÑÐ´Ð°Ð½",
+      "career.level.intern": "Ð¡Ñ‚Ð°Ð¶Ñ‘Ñ€",
+      "career.level.junior": "ÐœÐ»Ð°Ð´ÑˆÐ¸Ð¹ ÑÐ¿ÐµÑ†Ð¸Ð°Ð»Ð¸ÑÑ‚",
+      "career.level.mid": "Ð¡Ð¿ÐµÑ†Ð¸Ð°Ð»Ð¸ÑÑ‚",
+      "career.level.senior": "Ð¡Ñ‚Ð°Ñ€ÑˆÐ¸Ð¹ ÑÐ¿ÐµÑ†Ð¸Ð°Ð»Ð¸ÑÑ‚",
+      "career.level.lead": "Ð ÑƒÐºÐ¾Ð²Ð¾Ð´Ð¸Ñ‚ÐµÐ»ÑŒ Ð³Ñ€ÑƒÐ¿Ð¿Ñ‹",
+      "career.level.manager": "ÐœÐµÐ½ÐµÐ´Ð¶ÐµÑ€",
+      "career.level.director": "Ð”Ð¸Ñ€ÐµÐºÑ‚Ð¾Ñ€",
+      "career.level.vp": "Ð’Ð¸Ñ†Ðµ-Ð¿Ñ€ÐµÐ·Ð¸Ð´ÐµÐ½Ñ‚",
+      "career.level.clevel": "Ð¢Ð¾Ð¿-Ð¼ÐµÐ½ÐµÐ´Ð¶ÐµÑ€",
+      "career.promotion": "ÐŸÐ¾Ð²Ñ‹ÑˆÐµÐ½Ð¸Ðµ",
+      "career.path_to_top": "ÐŸÑƒÑ‚ÑŒ Ðº Ð²ÐµÑ€ÑˆÐ¸Ð½Ðµ",
+      "career.years_at_level": "Ð›ÐµÑ‚ Ð½Ð° ÑƒÑ€Ð¾Ð²Ð½Ðµ",
+      "career.promotion_chance": "Ð¨Ð°Ð½Ñ Ð¿Ð¾Ð²Ñ‹ÑˆÐµÐ½Ð¸Ñ",
+      "business.state.idea": "Ð˜Ð´ÐµÑ",
+      "business.state.launch": "Ð—Ð°Ð¿ÑƒÑÐº",
+      "business.state.struggling": "Ð¢Ñ€ÑƒÐ´Ð½Ð¾ÑÑ‚Ð¸",
+      "business.state.breakeven": "Ð‘ÐµÐ·ÑƒÐ±Ñ‹Ñ‚Ð¾Ñ‡Ð½Ð¾ÑÑ‚ÑŒ",
+      "business.state.growth": "Ð Ð¾ÑÑ‚",
+      "business.state.profitable": "ÐŸÑ€Ð¸Ð±Ñ‹Ð»ÑŒÐ½Ð¾ÑÑ‚ÑŒ",
+      "business.state.scaling": "ÐœÐ°ÑÑˆÑ‚Ð°Ð±Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð¸Ðµ",
+      "business.state.exit": "Ð’Ñ‹Ñ…Ð¾Ð´",
+      "business.state.failed": "ÐŸÑ€Ð¾Ð²Ð°Ð»",
+      "business.type.freelance": "Ð¤Ñ€Ð¸Ð»Ð°Ð½Ñ",
+      "business.type.ecommerce": "Ð­Ð»ÐµÐºÑ‚Ñ€Ð¾Ð½Ð½Ð°Ñ ÐºÐ¾Ð¼Ð¼ÐµÑ€Ñ†Ð¸Ñ",
+      "business.type.consulting": "ÐšÐ¾Ð½ÑÐ°Ð»Ñ‚Ð¸Ð½Ð³",
+      "business.type.restaurant": "Ð ÐµÑÑ‚Ð¾Ñ€Ð°Ð½",
+      "business.type.tech_startup": "Ð¢ÐµÑ…Ð½Ð¾-ÑÑ‚Ð°Ñ€Ñ‚Ð°Ð¿",
+      "business.type.real_estate": "ÐÐµÐ´Ð²Ð¸Ð¶Ð¸Ð¼Ð¾ÑÑ‚ÑŒ",
+      "business.type.franchise": "Ð¤Ñ€Ð°Ð½ÑˆÐ¸Ð·Ð°",
+      "business.type.saas": "SaaS",
+      "business.start": "ÐÐ°Ñ‡Ð°Ñ‚ÑŒ Ð±Ð¸Ð·Ð½ÐµÑ",
+      "business.valuation": "ÐžÑ†ÐµÐ½ÐºÐ°",
+      "business.monthly_revenue": "ÐœÐµÑÑÑ‡Ð½Ñ‹Ð¹ Ð´Ð¾Ñ…Ð¾Ð´",
+      "business.investor_offer": "ÐŸÑ€ÐµÐ´Ð»Ð¾Ð¶ÐµÐ½Ð¸Ðµ Ð¸Ð½Ð²ÐµÑÑ‚Ð¾Ñ€Ð°",
+      "business.exit_opportunity": "Ð’Ð¾Ð·Ð¼Ð¾Ð¶Ð½Ð¾ÑÑ‚ÑŒ Ð²Ñ‹Ñ…Ð¾Ð´Ð°",
+      "business.partner_conflict": "ÐšÐ¾Ð½Ñ„Ð»Ð¸ÐºÑ‚ Ñ Ð¿Ð°Ñ€Ñ‚Ð½Ñ‘Ñ€Ð¾Ð¼",
+      "business.market_change": "Ð˜Ð·Ð¼ÐµÐ½ÐµÐ½Ð¸Ðµ Ñ€Ñ‹Ð½ÐºÐ°",
+      "invest.type.savings": "Ð’ÐºÐ»Ð°Ð´Ñ‹",
+      "invest.type.bonds": "ÐžÐ±Ð»Ð¸Ð³Ð°Ñ†Ð¸Ð¸",
+      "invest.type.index_funds": "Ð˜Ð½Ð´ÐµÐºÑÐ½Ñ‹Ðµ Ñ„Ð¾Ð½Ð´Ñ‹",
+      "invest.type.stocks": "ÐÐºÑ†Ð¸Ð¸",
+      "invest.type.real_estate": "ÐÐµÐ´Ð²Ð¸Ð¶Ð¸Ð¼Ð¾ÑÑ‚ÑŒ",
+      "invest.type.crypto": "ÐšÑ€Ð¸Ð¿Ñ‚Ð¾Ð²Ð°Ð»ÑŽÑ‚Ð°",
+      "invest.type.startups": "Ð¡Ñ‚Ð°Ñ€Ñ‚Ð°Ð¿Ñ‹",
+      "invest.portfolio": "ÐŸÐ¾Ñ€Ñ‚Ñ„ÐµÐ»ÑŒ",
+      "invest.total_value": "ÐžÐ±Ñ‰Ð°Ñ ÑÑ‚Ð¾Ð¸Ð¼Ð¾ÑÑ‚ÑŒ",
+      "invest.total_return": "ÐžÐ±Ñ‰Ð°Ñ Ð´Ð¾Ñ…Ð¾Ð´Ð½Ð¾ÑÑ‚ÑŒ",
+      "invest.risk_level": "Ð£Ñ€Ð¾Ð²ÐµÐ½ÑŒ Ñ€Ð¸ÑÐºÐ°",
+      "invest.diversification": "Ð”Ð¸Ð²ÐµÑ€ÑÐ¸Ñ„Ð¸ÐºÐ°Ñ†Ð¸Ñ",
+      "invest.buy": "ÐšÑƒÐ¿Ð¸Ñ‚ÑŒ",
+      "invest.sell": "ÐŸÑ€Ð¾Ð´Ð°Ñ‚ÑŒ",
+      "invest.risk.low": "ÐÐ¸Ð·ÐºÐ¸Ð¹",
+      "invest.risk.moderate": "Ð£Ð¼ÐµÑ€ÐµÐ½Ð½Ñ‹Ð¹",
+      "invest.risk.high": "Ð’Ñ‹ÑÐ¾ÐºÐ¸Ð¹",
+      "invest.risk.very_high": "ÐžÑ‡ÐµÐ½ÑŒ Ð²Ñ‹ÑÐ¾ÐºÐ¸Ð¹",
+      "selfdev.title": "Ð¡Ð°Ð¼Ð¾Ñ€Ð°Ð·Ð²Ð¸Ñ‚Ð¸Ðµ",
+      "selfdev.education": "ÐžÐ±Ñ€Ð°Ð·Ð¾Ð²Ð°Ð½Ð¸Ðµ",
+      "selfdev.career": "ÐšÐ°Ñ€ÑŒÐµÑ€Ð°",
+      "selfdev.business": "Ð‘Ð¸Ð·Ð½ÐµÑ",
+      "selfdev.investing": "Ð˜Ð½Ð²ÐµÑÑ‚Ð¸Ñ†Ð¸Ð¸",
+      "selfdev.current_stage": "Ð¢ÐµÐºÑƒÑ‰Ð¸Ð¹ ÑÑ‚Ð°Ð¿",
+      "selfdev.next_steps": "Ð¡Ð»ÐµÐ´ÑƒÑŽÑ‰Ð¸Ðµ ÑˆÐ°Ð³Ð¸",
+      "selfdev.progress": "ÐŸÑ€Ð¾Ð³Ñ€ÐµÑÑ",
+      "selfdev.requirements": "Ð¢Ñ€ÐµÐ±Ð¾Ð²Ð°Ð½Ð¸Ñ",
+      "selfdev.cost": "Ð¡Ñ‚Ð¾Ð¸Ð¼Ð¾ÑÑ‚ÑŒ"
     });
   }
 
