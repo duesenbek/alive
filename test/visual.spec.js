@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test');
 
-test.describe('ALIVE Visual Regression Suite', () => {
+test.describe('ALive Visual Regression Suite', () => {
 
     test('Title Screen Render', async ({ page }) => {
         // Navigate to the index page locally
