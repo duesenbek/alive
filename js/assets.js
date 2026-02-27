@@ -61,7 +61,7 @@
 
         async preloadCriticalAssets(onProgress) {
             const critical = [
-                'assets/banner.png', // Still loading PNG until user converts
+                'assets/banner/banner.png', // Fixed path to actual location
                 'assets/characters/char_1.webp' // Preload at least one char
             ];
 
