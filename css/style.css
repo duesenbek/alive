@@ -139,7 +139,7 @@ body {
   color: var(--text-primary);
   text-shadow: 3px 3px 0 rgba(255, 107, 53, 0.3);
   line-height: 1.1;
-  -webkit-text-stroke: 1px rgba(0,0,0,0.08);
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.08);
 }
 
 .menuGameTagline {
@@ -297,8 +297,14 @@ body {
   min-height: var(--touch-min);
 }
 
-.menuBtnIcon { font-size: 24px; }
-.menuBtnText { font-size: 16px; font-weight: 700; }
+.menuBtnIcon {
+  font-size: 24px;
+}
+
+.menuBtnText {
+  font-size: 16px;
+  font-weight: 700;
+}
 
 .menuBtnPrimary {
   background: var(--gradient-accent);
@@ -659,7 +665,8 @@ body.light-theme .settingsCloseBtn:hover {
   font-size: 16px;
 }
 
-.textInput:focus, .selectInput:focus {
+.textInput:focus,
+.selectInput:focus {
   border-color: var(--accent-primary);
 }
 
@@ -946,7 +953,7 @@ body.light-theme .settingsCloseBtn:hover {
   background: var(--bg-card);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-xl);
-  padding: 28px;
+  padding: clamp(16px, 5vw, 28px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -956,8 +963,8 @@ body.light-theme .settingsCloseBtn:hover {
 
 .characterPortrait {
   position: relative;
-  width: 100px;
-  height: 100px;
+  width: clamp(70px, 20vw, 100px);
+  aspect-ratio: 1;
   background: linear-gradient(135deg, rgba(0, 212, 255, 0.2) 0%, rgba(124, 58, 237, 0.2) 100%);
   border-radius: 50%;
   display: flex;
@@ -1299,6 +1306,7 @@ body.light-theme .settingsCloseBtn:hover {
   transition: all 0.2s;
   border: 2px solid transparent;
 }
+
 .quickActionBtn:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -1548,15 +1556,20 @@ body.light-theme .settingsCloseBtn:hover {
   justify-content: center;
   border-radius: 50%;
   overflow: hidden;
-  background: rgba(0,0,0,0.06);
+  background: rgba(0, 0, 0, 0.06);
 }
+
 .memorialPortrait img,
 .memorialPortraitImg {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.memorialPortrait .characterIconFallback { font-size: 48px; color: var(--accent-primary); }
+
+.memorialPortrait .characterIconFallback {
+  font-size: 48px;
+  color: var(--accent-primary);
+}
 
 .memorialName {
   font-size: 24px;
@@ -1574,8 +1587,8 @@ body.light-theme .settingsCloseBtn:hover {
 
 .summaryStats {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  gap: 8px;
   width: 100%;
   max-width: 400px;
 }
@@ -2597,7 +2610,9 @@ body.light-theme .settingsCloseBtn:hover {
   cursor: pointer;
   transition: all 0.2s;
 }
-.headerHamburger:hover, .headerHamburger:active {
+
+.headerHamburger:hover,
+.headerHamburger:active {
   background: rgba(255, 107, 53, 0.2);
   color: var(--accent-primary);
 }
@@ -2650,63 +2665,233 @@ body.light-theme .settingsCloseBtn:hover {
 }
 
 /* BitLife-style Dashboard */
-.bitlifeContent { padding-top: 8px; }
+.bitlifeContent {
+  padding-top: 8px;
+}
+
 .bitlifeDashboard {
   background: var(--bg-card);
-  border: 3px solid rgba(0,0,0,0.08);
+  border: 3px solid rgba(0, 0, 0, 0.08);
   border-radius: var(--radius-xl);
   padding: 20px;
   margin-bottom: 20px;
-  box-shadow: 0 6px 0 rgba(0,0,0,0.08);
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.08);
 }
+
 .bitlifeChar {
   display: flex;
   align-items: center;
   gap: 16px;
   margin-bottom: 16px;
 }
-.bitlifePortrait { line-height: 1; }
-.bitlifePortraitImg { width: 64px; height: 64px; display: flex; align-items: center; justify-content: center; border-radius: 50%; overflow: hidden; background: rgba(0,0,0,0.06); }
-.bitlifePortraitImg img { width: 100%; height: 100%; object-fit: cover; }
-.bitlifePortraitImg .characterIconFallback { font-size: 36px; color: var(--accent-primary); }
-.bitlifeStatIcon { display: inline-flex; font-size: 14px; color: var(--text-secondary); }
-.characterPortrait, .characterPortrait img { border-radius: 50%; object-fit: cover; }
-.characterIconFallback { display: inline-flex; color: var(--accent-primary); }
-.hudPortrait { width: 32px; height: 32px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; overflow: hidden; }
-.hudPortrait img { width: 100%; height: 100%; object-fit: cover; }
-.hudPortrait .characterIconFallback { font-size: 20px; }
-.hud-icon { font-size: 14px; margin-right: 4px; opacity: 0.9; }
-.bitlifeCharInfo { flex: 1; }
-.bitlifeName { font-size: 20px; font-weight: 700; color: var(--text-primary); }
-.bitlifeAge { font-size: 14px; color: var(--text-secondary); }
-.bitlifeJob { font-size: 13px; color: var(--accent-primary); }
-.bitlifePartner { font-size: 12px; color: var(--accent-secondary); margin-top: 4px; }
-.bitlifeStatsRow { display: flex; flex-direction: column; gap: 8px; }
+
+.bitlifePortrait {
+  line-height: 1;
+}
+
+.bitlifePortraitImg {
+  width: clamp(48px, 12vw, 64px);
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.bitlifePortraitImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.bitlifePortraitImg .characterIconFallback {
+  font-size: 36px;
+  color: var(--accent-primary);
+}
+
+.bitlifeStatIcon {
+  display: inline-flex;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.characterPortrait,
+.characterPortrait img {
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  width: 100%;
+  height: 100%;
+}
+
+.characterIconFallback {
+  display: inline-flex;
+  color: var(--accent-primary);
+}
+
+.hudPortrait {
+  width: clamp(28px, 6vw, 32px);
+  aspect-ratio: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.hudPortrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.hudPortrait .characterIconFallback {
+  font-size: 20px;
+}
+
+.hud-icon {
+  font-size: 14px;
+  margin-right: 4px;
+  opacity: 0.9;
+}
+
+.bitlifeCharInfo {
+  flex: 1;
+}
+
+.bitlifeName {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.bitlifeAge {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.bitlifeJob {
+  font-size: 13px;
+  color: var(--accent-primary);
+}
+
+.bitlifePartner {
+  font-size: 12px;
+  color: var(--accent-secondary);
+  margin-top: 4px;
+}
+
+.bitlifeStatsRow {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
 .bitlifeStat {
   display: flex;
   align-items: center;
   gap: 8px;
   font-size: 12px;
 }
+
 .bitlifeBar {
   flex: 1;
   height: 8px;
-  background: rgba(0,0,0,0.08);
+  background: rgba(0, 0, 0, 0.08);
   border-radius: var(--radius-full);
   overflow: hidden;
 }
-.bitlifeBar > div { height: 100%; border-radius: inherit; transition: width 0.3s ease; }
-.bitlifeYearSummary { text-align: center; padding: 16px 0; }
-.bitlifeYearTitle { font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: var(--accent-primary); font-weight: 700; margin-bottom: 8px; }
-.bitlifeYearDesc { font-size: 16px; line-height: 1.6; color: var(--text-secondary); margin-bottom: 12px; }
-.bitlifeYearMoney { font-size: 15px; font-weight: 700; color: var(--accent-green); margin-bottom: 12px; }
-.bitlifeRisks { background: rgba(255,94,94,0.1); color: #ff5e5e; padding: 8px; border-radius: 8px; display: inline-block; font-weight: 700; font-size: 14px; margin-bottom: 16px; }
-.bitlifeAgeSection { margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(0,0,0,0.05); }
-.bitlifeAgePrompt { font-size: 13px; color: var(--text-secondary); margin-bottom: 12px; font-weight: 500; }
-.bitlifeAgeHint { font-size: 11px; color: var(--muted); margin-top: 8px; font-style: italic; }
-.bitlifeActivitiesTitle { font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: var(--accent-primary); font-weight: 700; margin-bottom: 8px; text-align: center; }
-.bitlifeActivityBtn { background: rgba(255,107,53,0.12); border-color: rgba(255,107,53,0.4); color: var(--accent-primary); }
-.bitlifeAdBtn { background: rgba(91,163,255,0.15); border-color: rgba(91,163,255,0.5); color: #5ba3ff; }
+
+.bitlifeBar>div {
+  height: 100%;
+  border-radius: inherit;
+  transition: width 0.3s ease;
+}
+
+.bitlifeYearSummary {
+  text-align: center;
+  padding: 16px 0;
+}
+
+.bitlifeYearTitle {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--accent-primary);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.bitlifeYearDesc {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+.bitlifeYearMoney {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--accent-green);
+  margin-bottom: 12px;
+}
+
+.bitlifeRisks {
+  background: rgba(255, 94, 94, 0.1);
+  color: #ff5e5e;
+  padding: 8px;
+  border-radius: 8px;
+  display: inline-block;
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.bitlifeAgeSection {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.bitlifeAgePrompt {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.bitlifeAgeHint {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 8px;
+  font-style: italic;
+}
+
+.bitlifeActivitiesTitle {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--accent-primary);
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.bitlifeActivityBtn {
+  background: rgba(255, 107, 53, 0.12);
+  border-color: rgba(255, 107, 53, 0.4);
+  color: var(--accent-primary);
+}
+
+.bitlifeAdBtn {
+  background: rgba(91, 163, 255, 0.15);
+  border-color: rgba(91, 163, 255, 0.5);
+  color: #5ba3ff;
+}
 
 /* Event Cards */
 .eventLog {
@@ -2916,7 +3101,7 @@ body.light-theme .settingsCloseBtn:hover {
 
 .hamburgerDivider {
   height: 1px;
-  background: rgba(0,0,0,0.08);
+  background: rgba(0, 0, 0, 0.08);
   margin: 16px 0;
 }
 
@@ -3030,14 +3215,15 @@ body.light-theme .settingsCloseBtn:hover {
   top: 0;
   left: 0;
   right: 0;
-  height: 60px;
+  height: clamp(52px, 12vw, 60px);
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(12px);
   z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 16px;
+  padding: 0 clamp(8px, 3vw, 16px);
+  gap: 4px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease;
@@ -3049,23 +3235,25 @@ body.light-theme .settingsCloseBtn:hover {
 
 .hud-left {
   display: flex;
-  gap: 12px;
+  gap: clamp(4px, 2vw, 12px);
   align-items: center;
 }
 
-.hud-widget, .hud-item {
+.hud-widget,
+.hud-item {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: clamp(4px, 1vw, 8px);
   font-weight: 700;
-  font-size: 15px;
-  padding: 6px 12px;
+  font-size: clamp(12px, 3.5vw, 15px);
+  padding: 6px clamp(6px, 2vw, 12px);
   background: rgba(255, 255, 255, 0.9);
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
-#hud-emoji, .hud-emoji {
+#hud-emoji,
+.hud-emoji {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -3075,14 +3263,21 @@ body.light-theme .settingsCloseBtn:hover {
   overflow: hidden;
   font-size: 20px;
 }
-#hud-emoji img, #hud-emoji .characterPortrait, #hud-emoji .hudPortrait {
+
+#hud-emoji img,
+#hud-emoji .characterPortrait,
+#hud-emoji .hudPortrait {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-#hud-emoji .characterIconFallback { font-size: 20px; }
 
-.hud-money, .hud-widget.hud-money {
+#hud-emoji .characterIconFallback {
+  font-size: 20px;
+}
+
+.hud-money,
+.hud-widget.hud-money {
   color: var(--accent-green);
   font-family: 'Nunito', monospace;
   font-size: 15px;
