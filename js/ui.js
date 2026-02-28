@@ -26,10 +26,7 @@
     const lastEvent = String(summary.lastEventId || "");
     if (lastEvent.includes("accident") || lastEvent.includes("disaster") || lastEvent.includes("injury")) {
       return "summary.cause.accident";
-
     }
-    if (summary.age >= 85) return "summary.cause.old_age";
-    if ((summary.health ?? 100) < 25) return "summary.cause.poor_health";
     return "summary.cause.unknown";
   }
 
@@ -91,8 +88,7 @@
     if (worth < 1000000) {
       const need = 1000000 - worth;
       if (need > 0 && need <= 250000) {
-        misses.push(`${icon("dollar")} ${formatMoney(need)} ${t("ui.money")} ${t("ui.to")} $1M`);
-
+        misses.push(`${icon("dollar")} ${formatMoney(need)} ${t("ui.money")} ${t("ui.to")} ${t("ui.oneMillionShort")}`);
       }
 
     }
@@ -110,8 +106,7 @@
     if (summary.lastJob !== "ceo") {
       const eligible = summary.lastJob && summary.lastJob !== "unemployed";
       if (eligible && (Number(summary.intelligence) || 0) >= 75) {
-        misses.push(`👔 ${t("ui.almost")} CEO`);
-
+        misses.push(`👔 ${t("ui.almost")} ${t("job.ceo")}`);
       }
 
     }
@@ -176,11 +171,11 @@
     if (!Number.isFinite(n)) return "$0";
     const abs = Math.abs(n);
     const sign = n < 0 ? "-" : "";
-    if (abs >= 1000000000000) return sign + "$" + (abs / 1000000000000).toFixed(1) + "T";
-    if (abs >= 1000000000) return sign + "$" + (abs / 1000000000).toFixed(1) + "B";
-    if (abs >= 1000000) return sign + "$" + (abs / 1000000).toFixed(1) + "M";
-    if (abs >= 1000) return sign + "$" + (abs / 1000).toFixed(1) + "K";
-    return sign + "$" + abs.toLocaleString();
+    if (abs >= 1000000000000) return sign + t("ui.currency.symbol") + (abs / 1000000000000).toFixed(1) + t("ui.currency.trillionShort");
+    if (abs >= 1000000000) return sign + t("ui.currency.symbol") + (abs / 1000000000).toFixed(1) + t("ui.currency.billionShort");
+    if (abs >= 1000000) return sign + t("ui.currency.symbol") + (abs / 1000000).toFixed(1) + t("ui.currency.millionShort");
+    if (abs >= 1000) return sign + t("ui.currency.symbol") + (abs / 1000).toFixed(1) + t("ui.currency.thousandShort");
+    return sign + t("ui.currency.symbol") + abs.toLocaleString();
   }
 
   function clamp(value, min, max) {
@@ -227,33 +222,49 @@
   function getHouseVisual(housingId, cityId) {
     // If it's a legacy string like "apartment", handle gracefully
     if (housingId === "apartment") return { emoji: "🏬", imageUrl: "" };
-    if (!Alive.Assets || !Alive.Assets.getBuildingById) return { emoji: "🏠", imageUrl: "" };
 
-    const b = Alive.Assets.getBuildingById(housingId);
-    if (!b) return { emoji: "🏠", imageUrl: "" };
+    // Resolve image via unified AssetResolver facade
+    const imageUrl = Alive.AssetResolver
+      ? Alive.AssetResolver.resolveBuildingImage(housingId)
+      : "";
+
+    // Data lookup for emoji (still goes through Assets directly)
+    const b = Alive.Assets && Alive.Assets.getBuildingById
+      ? Alive.Assets.getBuildingById(housingId)
+      : null;
 
     let emoji = "🏠";
-    if (b.class === "poor") emoji = "🏚️";
-    else if (b.class === "middle") emoji = "🏠";
-    else if (b.class === "rich") emoji = "🏰";
-    else if (b.category === "commercial") emoji = "🏢";
+    if (b) {
+      if (b.class === "poor") emoji = "🏚️";
+      else if (b.class === "middle") emoji = "🏠";
+      else if (b.class === "rich") emoji = "🏰";
+      else if (b.category === "commercial") emoji = "🏢";
+    }
 
-    return { emoji, imageUrl: b.image || "" };
+    return { emoji, imageUrl };
   }
 
   function getCarVisual(carId, cityId) {
     if (!carId) return { emoji: "🚶" };
-    if (!Alive.Assets || !Alive.Assets.getVehicleById) return { emoji: "🚗", imageUrl: "" };
 
-    const v = Alive.Assets.getVehicleById(carId);
-    if (!v) return { emoji: "🚗", imageUrl: "" };
+    // Resolve image via unified AssetResolver facade
+    const imageUrl = Alive.AssetResolver
+      ? Alive.AssetResolver.resolveTransportImage(carId)
+      : "";
+
+    // Data lookup for emoji (still goes through Assets directly)
+    const v = Alive.Assets && Alive.Assets.getVehicleById
+      ? Alive.Assets.getVehicleById(carId)
+      : null;
 
     let emoji = "🚗";
-    if (v.type === "sport") emoji = "🏎️";
-    else if (v.type === "suv") emoji = "🚙";
-    else if (v.type === "ev") emoji = "🔋";
+    if (v) {
+      if (v.type === "sport") emoji = "🏎️";
+      else if (v.type === "suv") emoji = "🚙";
+      else if (v.type === "ev") emoji = "🔋";
+    }
 
-    return { emoji, imageUrl: v.image || "" };
+    return { emoji, imageUrl };
   }
 
   function renderMiniProgressRow(label, value, color) {
@@ -271,7 +282,7 @@
 
   function getCountryAwareRandomName(countryId, gender) {
     if (Alive.names?.getFullName) return Alive.names.getFullName(countryId, gender);
-    return gender === "F" ? "Emma" : "Alex";
+    return gender === "F" ? t("create.defaultName.female") : t("create.defaultName.male");
   }
 
   // ============================================================================
@@ -324,7 +335,8 @@
       education: "ph-graduation-cap", job: "ph-briefcase", partner: "ph-heart", warning: "ph-warning",
       game: "ph-game-controller", heart: "ph-heart", smiley: "ph-smiley", lightning: "ph-lightning",
       dollar: "ph-currency-dollar", baby: "ph-baby", user: "ph-user-circle", megaphone: "ph-megaphone",
-      pet: "ph-paw-print", house: "ph-house", car: "ph-car", lock: "ph-lock-key", sparkle: "ph-sparkle", shop: "ph-shopping-bag"
+      pet: "ph-paw-print", house: "ph-house", car: "ph-car", lock: "ph-lock-key", sparkle: "ph-sparkle", shop: "ph-shopping-bag",
+      intelligence: "ph-brain", cart: "ph-shopping-cart"
     };
     const cls = map[name] || "ph-circle";
     return `<i class="ph ${cls}" aria-hidden="true"></i>`;
@@ -332,9 +344,11 @@
 
   /** Character portrait: cartoon asset image or Phosphor fallback */
   function getCharacterPortrait(player, className) {
-    if (Alive.Assets && Alive.Assets.getCharacterImageForPlayer) {
-      const url = Alive.Assets.getCharacterImageForPlayer(player);
-      if (url) return `<img src="${url}" alt="" class="${className || 'characterPortrait'}" />`;
+    if (Alive.AssetResolver) {
+      const url = Alive.AssetResolver.resolveCharacterImage(player);
+      if (url && url !== Alive.AssetResolver.FALLBACK_IMAGE) {
+        return `<img src="${url}" alt="" class="characterPortraitImg ${className || 'characterPortrait'}" />`;
+      }
     }
     const age = player && player.age != null ? player.age : 0;
     const iconClass = age < 3 ? "ph-baby" : "ph-user-circle";
@@ -342,16 +356,14 @@
   }
 
   function getCharacterVisual(player) {
-    const age = player.age;
-    const gender = player.gender;
-    const hp = player.health || 50;
-
-    // Use new character assets if available
+    // Resolve via unified AssetResolver facade
     let imageUrl = "";
-    if (Alive.Assets && Alive.Assets.getCharacterImageForPlayer) {
-      imageUrl = Alive.Assets.getCharacterImageForPlayer(player);
+    if (Alive.AssetResolver) {
+      imageUrl = Alive.AssetResolver.resolveCharacterImage(player);
     } else {
       // Fallback to legacy path pattern
+      const gender = player.gender || "M";
+      const age = player.age || 0;
       imageUrl = player.portraitUrl || `assets/characters/${gender.toLowerCase()}_${getAgeTier(age).id}.png`;
     }
 
@@ -771,7 +783,14 @@
           this.renderBirthCinematic();
           break;
         case "game":
-          if (this.hudEl) this.hudEl.classList.remove("hidden");
+          if (this.hudEl) {
+            if (this.game && this.game.isOnboarding) {
+              this.hudEl.classList.add("hidden");
+            } else {
+              this.hudEl.classList.remove("hidden");
+              this.renderHUD();
+            }
+          }
           this.renderGame();
           // Onboarding check removed - was causing errors
           break;
@@ -1098,6 +1117,7 @@
 
       // Primary: Start New Life - big hero button
       const newLifeBtn = el("button", "gameBtn gameBtnHero");
+      newLifeBtn.setAttribute("aria-label", "Start New Life");
       newLifeBtn.innerHTML = `
         <span class="gameBtnEmoji">🌟</span>
         <span class="gameBtnLabel">${t("ui.newLife")}</span>
@@ -1111,6 +1131,7 @@
 
       const hasSave = Alive.storage?.hasSave();
       const continueBtn = el("button", "gameBtn gameBtnSecondary" + (hasSave ? "" : " gameBtnDisabled"));
+      continueBtn.setAttribute("aria-label", "Continue saved game");
       continueBtn.innerHTML = `
         <span class="gameBtnIcon"><i class="ph ph-play-circle"></i></span>
         <span>${t("ui.continue")}</span>
@@ -1129,6 +1150,7 @@
       secondaryRow.appendChild(continueBtn);
 
       const albumBtn = el("button", "gameBtn gameBtnSecondary");
+      albumBtn.setAttribute("aria-label", "Life Album");
       albumBtn.innerHTML = `
         <span class="gameBtnIcon"><i class="ph ph-book-bookmark"></i></span>
         <span>${t("ui.lifeAlbum")}</span>
@@ -1142,6 +1164,7 @@
       const tertiaryRow = el("div", "menuGameRow menuGameRowSmall");
 
       const richBtn = el("button", "gameBtn gameBtnTertiary");
+      richBtn.setAttribute("aria-label", "Rich List");
       richBtn.innerHTML = `<i class="ph ph-crown"></i> ${t("ui.richList")}`;
       richBtn.onclick = () => this.showRichList();
       tertiaryRow.appendChild(richBtn);
@@ -1154,14 +1177,14 @@
         if (hasSupport) alert(t("iap.thanks"));
         else if (monetizationInstance) {
           monetizationInstance.buySupportPack().then(() => {
-            this.rootEl.innerHTML = "";
-            this.renderMenu();
-          });
+            this.render();
+          }).catch(e => console.warn("Purchase failed/cancelled:", e));
         }
       };
       tertiaryRow.appendChild(supportBtn);
 
       const settingsBtn = el("button", "gameBtn gameBtnTertiary");
+      settingsBtn.setAttribute("aria-label", "Settings");
       settingsBtn.innerHTML = `<i class="ph ph-gear"></i> ${t("ui.settings")}`;
       settingsBtn.onclick = () => this.showSettingsModal();
       tertiaryRow.appendChild(settingsBtn);
@@ -1307,7 +1330,8 @@
             monet.buySupportPack().then(() => {
               modal.remove();
               this.showSettingsModal();
-            });
+              this.render();
+            }).catch(e => console.warn("Purchase failed/cancelled:", e));
           }
         };
         supportRow.appendChild(buyBtn);
@@ -1335,6 +1359,7 @@
 
       // Close button
       const closeBtn = el("button", "settingsCloseBtn", "✕");
+      closeBtn.setAttribute("aria-label", "Close settings");
       closeBtn.onclick = () => overlay.remove();
       modal.appendChild(closeBtn);
 
@@ -1461,15 +1486,15 @@
         if (!effects) return [];
         const badges = [];
         const prefix = isYearly ? "/yr " : "";
-        if (effects.attractivenessDelta) badges.push({ text: `${prefix}✕+${effects.attractivenessDelta}`, positive: effects.attractivenessDelta > 0 });
-        if (effects.happinessDelta) badges.push({ text: `${prefix}😊+${effects.happinessDelta}`, positive: effects.happinessDelta > 0 });
-        if (effects.healthDelta) badges.push({ text: `${prefix}❤️+${effects.healthDelta}`, positive: effects.healthDelta > 0 });
-        if (effects.intelligenceDelta) badges.push({ text: `${prefix}🧠+${effects.intelligenceDelta}`, positive: effects.intelligenceDelta > 0 });
-        if (effects.socialSkillDelta) badges.push({ text: `${prefix}🤝+${effects.socialSkillDelta}`, positive: effects.socialSkillDelta > 0 });
-        if (effects.careerSkillDelta) badges.push({ text: `${prefix}💼+${effects.careerSkillDelta}`, positive: effects.careerSkillDelta > 0 });
-        if (effects.businessSkillDelta) badges.push({ text: `${prefix}📊+${effects.businessSkillDelta}`, positive: effects.businessSkillDelta > 0 });
-        if (effects.sportsSkillDelta) badges.push({ text: `${prefix}🏃+${effects.sportsSkillDelta}`, positive: effects.sportsSkillDelta > 0 });
-        if (effects.stressDelta) badges.push({ text: `${prefix}😰${effects.stressDelta}`, positive: effects.stressDelta < 0 });
+        if (effects.attractivenessDelta) badges.push({ text: `${prefix}${icon("sparkle")}+${effects.attractivenessDelta}`, positive: effects.attractivenessDelta > 0 });
+        if (effects.happinessDelta) badges.push({ text: `${prefix}${icon("happiness")}+${effects.happinessDelta}`, positive: effects.happinessDelta > 0 });
+        if (effects.healthDelta) badges.push({ text: `${prefix}${icon("health")}+${effects.healthDelta}`, positive: effects.healthDelta > 0 });
+        if (effects.intelligenceDelta) badges.push({ text: `${prefix}${icon("intelligence")}+${effects.intelligenceDelta}`, positive: effects.intelligenceDelta > 0 });
+        if (effects.socialSkillDelta) badges.push({ text: `${prefix}${icon("users")}+${effects.socialSkillDelta}`, positive: effects.socialSkillDelta > 0 });
+        if (effects.careerSkillDelta) badges.push({ text: `${prefix}${icon("job")}+${effects.careerSkillDelta}`, positive: effects.careerSkillDelta > 0 });
+        if (effects.businessSkillDelta) badges.push({ text: `${prefix}${icon("chart")}+${effects.businessSkillDelta}`, positive: effects.businessSkillDelta > 0 });
+        if (effects.sportsSkillDelta) badges.push({ text: `${prefix}${icon("activity")}+${effects.sportsSkillDelta}`, positive: effects.sportsSkillDelta > 0 });
+        if (effects.stressDelta) badges.push({ text: `${prefix}${icon("warning")}${effects.stressDelta}`, positive: effects.stressDelta < 0 });
         return badges;
 
       };
@@ -1815,7 +1840,7 @@
       }
 
       const familyActions = el("div", "eventChoices");
-      const callBtn = el("button", "choiceBtn", "❓ " + t("action.call_family.title"));
+      const callBtn = el("button", "choiceBtn", "📞 " + t("action.call_family.title"));
       callBtn.onclick = () => runAction("call_family");
       familyActions.appendChild(callBtn);
 
@@ -2580,7 +2605,7 @@
           <div style="font-size:14px; color:var(--text-secondary);">${t("assets.noBuildings") || "No buildings available in this city"}</div>
         </div>`;
         houseSection.appendChild(emptyMsg);
-        return overlay;
+        return target;
       }
 
       availableBuildings.forEach((b) => {
@@ -2665,7 +2690,7 @@
           <div style="font-size:14px; color:var(--text-secondary);">${t("assets.noVehicles") || "No vehicles available in this city"}</div>
         </div>`;
         carSection.appendChild(emptyMsg);
-        return overlay;
+        return target;
       }
 
       availableVehicles.forEach((v) => {
@@ -2964,13 +2989,14 @@
         <div class="previewStats">
           <div class="previewStat">${icon("health")} ${preview.health}</div>
           <div class="previewStat">${icon("happiness")} ${preview.happiness}</div>
-          <div class="previewStat">🧠 ${preview.intelligence}</div>
+          <div class="previewStat">${icon("intelligence")} ${preview.intelligence}</div>
           <div class="previewStat">${icon("sparkle")} ${preview.attractiveness}</div>
         </div>
       `;
       card.appendChild(previewCard);
 
       const startBtn = el("button", "gameBtn gameBtnHero gameBtnStart", t("create.start"));
+      startBtn.setAttribute("aria-label", "Begin Life");
       startBtn.onclick = () => {
         if (!this.game) return;
         try {
@@ -3207,8 +3233,8 @@
           btn.onclick = () => {
             const yearsLeft = unlockAge - p.age;
             const msg = yearsLeft === 1
-              ? `📚 ${link.label} unlocks next year when you turn ${unlockAge}!`
-              : `📚 ${link.label} unlocks at age ${unlockAge} (${yearsLeft} years left). You're still too young for school!`;
+              ? `${icon("education")} ${link.label} unlocks next year when you turn ${unlockAge}!`
+              : `${icon("education")} ${link.label} unlocks at age ${unlockAge} (${yearsLeft} years left). You're still too young for school!`;
             this.showToast(msg);
             if (navigator.vibrate) navigator.vibrate(50);
           };
@@ -3223,8 +3249,8 @@
           btn.onclick = () => {
             const yearsLeft = unlockAge - p.age;
             const msg = yearsLeft === 1
-              ? `🛒 ${link.label} unlocks next year when you turn ${unlockAge}!`
-              : `🛒 ${link.label} unlocks at age ${unlockAge} (${yearsLeft} years left). Kids can't shop alone yet!`;
+              ? `${icon("cart")} ${link.label} unlocks next year when you turn ${unlockAge}!`
+              : `${icon("cart")} ${link.label} unlocks at age ${unlockAge} (${yearsLeft} years left). Kids can't shop alone yet!`;
             this.showToast(msg);
             if (navigator.vibrate) navigator.vibrate(50);
           };
@@ -3528,7 +3554,7 @@
       content.appendChild(card);
       screen.appendChild(content);
 
-      const actionBar = el("div", "universalActionBar");
+      const actionBar = el("div", "onboardingActionBar");
       const overlay = el("div", "onboardingOverlay");
 
       if (step === 0) {
@@ -3537,7 +3563,7 @@
         nextBtn.style.position = "relative";
         nextBtn.style.boxShadow = "0 0 0 4px #ffcc00";
         nextBtn.onclick = () => {
-          this.game.money += 100;
+          this.game.player.money += 100;
           this.game.onboardingStep = 1; // Always go to 1 next
           this.render();
         };
@@ -3651,7 +3677,7 @@
       // Event header with emoji
       const header = el("div", "eventHeader");
       header.innerHTML = `
-        <div class="eventEmoji">❓</div>
+        <div class="eventEmoji">${event.icon || "🔔"}</div>
         <h2 class="eventTitle">${t(event.titleKey, replacements)}</h2>
       `;
       modal.appendChild(header);
@@ -4388,7 +4414,7 @@
           meta.appendChild(costBadge);
 
         }
-        const boostBadge = el("span", "progressStepBadge boost", `+${2 + Math.floor(stage.level / 2)} 🧠`);
+        const boostBadge = el("span", "progressStepBadge boost", `+${2 + Math.floor(stage.level / 2)} ${icon("intelligence")}`);
         meta.appendChild(boostBadge);
         content.appendChild(meta);
 

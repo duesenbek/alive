@@ -644,6 +644,9 @@
       // Reset event arcs
       if (Alive.eventArcs?.reset) Alive.eventArcs.reset();
 
+      // Reset telemetry
+      if (Alive.telemetry?.reset) Alive.telemetry.reset();
+
       // Assign mid-term goals
       if (Alive.goals?.assignGoals && this.player) {
         Alive.goals.assignGoals(this.player);
@@ -874,6 +877,11 @@
             const desc = result.goal.description?.[lang] || result.goal.description?.en || result.goal.id;
             if (result.type === 'achieved') {
               Alive.ui?.showToast('🎯 Goal Achieved: ' + desc);
+
+              // Reward loops: Goal Achievement Bonus
+              this.player.happiness = Math.min(100, this.player.happiness + 5);
+              if (Alive.economy) Alive.economy.addGems(1, 'goal_achieved');
+              else this.addGems(1);
             } else {
               Alive.ui?.showToast('❌ Goal Failed: ' + desc);
             }
@@ -952,6 +960,19 @@
       // Telemetry: track year depth
       if (Alive.Analytics?.trackYearAdvance) {
         Alive.Analytics.trackYearAdvance(this.player);
+      }
+      if (Alive.telemetry) {
+        Alive.telemetry.recordYear(this.player, this.director);
+      }
+
+      // Decade milestones
+      if (this.player && this.player.age > 0 && this.player.age % 10 === 0 && this.player.age <= 80) {
+        Alive.ui?.showToast(`🎂 Happy ${this.player.age}th Birthday!`);
+        if (this.player.age === 20) Alive.ui?.showToast('🌟 Welcome to adulthood! Goals unlocked.');
+        if (this.player.age === 30) Alive.ui?.showToast('⏱️ The decisive decade begins.');
+        if (this.player.age === 40) Alive.ui?.showToast('🏔️ Midlife milestone reached.');
+        if (this.player.age === 50) Alive.ui?.showToast('🎯 Half a century! Keep going.');
+        if (this.player.age === 60) Alive.ui?.showToast('🌅 The golden years approach.');
       }
 
       // Defer reset to prevent race: queued duplicate clicks still see flag=true
@@ -1542,6 +1563,9 @@
         if (Alive.Analytics.trackLifeDepth) Alive.Analytics.trackLifeDepth(this.player);
         if (Alive.Analytics.trackEventDiversity) Alive.Analytics.trackEventDiversity(this.seenEventIds);
         if (Alive.Analytics.trackGoalCompletion && Alive.goals) Alive.Analytics.trackGoalCompletion(Alive.goals);
+      }
+      if (Alive.telemetry) {
+        Alive.telemetry.printReport();
       }
 
       // === NEW: Meta-progression — award Legacy Points ===

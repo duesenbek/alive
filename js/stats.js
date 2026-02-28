@@ -350,6 +350,11 @@
                 burnout: results.lives.filter(l => l.failState === 'burnout').length,
                 old_age: results.lives.filter(l => l.failState === 'old_age').length
             },
+            telemetry: {
+                avgEventsPerLife: Math.round(results.lives.reduce((s, l) => s + (l.events || 0), 0) / numLives * 10) / 10,
+                avgDiversity: Math.round(results.lives.reduce((s, l) => s + (l.diversity || 0), 0) / numLives * 100) / 100,
+                avgMaxDrought: Math.round(results.lives.reduce((s, l) => s + (l.maxDrought || 0), 0) / numLives * 10) / 10
+            },
             meanEndStats: {
                 health: Math.round(results.lives.reduce((s, l) => s + l.endStats.health, 0) / numLives),
                 money: Math.round(results.lives.reduce((s, l) => s + l.endStats.money, 0) / numLives),
@@ -362,6 +367,9 @@
         console.log(`Lives simulated: ${numLives}`);
         console.log(`Average lifespan: ${results.summary.avgLifespan} years`);
         console.log(`Fail rate (premature death): ${results.summary.failRate}%`);
+        console.log(`Average events per life: ${results.summary.telemetry.avgEventsPerLife}`);
+        console.log(`Average event diversity: ${results.summary.telemetry.avgDiversity} (1.0 = perfect)`);
+        console.log(`Average max drought: ${results.summary.telemetry.avgMaxDrought} years`);
         console.log('End causes:', results.summary.failCauses);
         console.log('Mean end stats:', results.summary.meanEndStats);
 
@@ -392,9 +400,46 @@
         let failState = null;
         const maxAge = 110;
 
+        // Director setup for simulation
+        let director = null;
+        let totalEvents = 0;
+        let uniqueEvents = new Set();
+        let eventGaps = [];
+        let lastEventAge = 0;
+
+        if (Alive.EventDirector) {
+            director = new Alive.EventDirector();
+            director.tension = 30; // Initialize
+        }
+
         // Simulate years
         while (player.age < maxAge && !failState) {
             player.age++;
+
+            // Director evaluation
+            if (director) {
+                const results = director.evaluateYear(player, {
+                    eventQueue: [],
+                    activeEvent: null,
+                    queueControlledEvent: (ev) => { }
+                });
+                for (const res of results) {
+                    if (res.event) {
+                        totalEvents++;
+                        uniqueEvents.add(res.event.id || res.event);
+                        if (totalEvents > 1) {
+                            eventGaps.push(player.age - lastEventAge);
+                        }
+                        lastEventAge = player.age;
+
+                        // Tell director we saw it so tension/repeats calculate properly
+                        if (director._recordEvent) {
+                            director._recordEvent(res.event.tag || 'minor_positive', res.event.id, player.age);
+                        }
+                        break;
+                    }
+                }
+            }
 
             // Random action effects
             simulateYearActions(player);
@@ -435,9 +480,16 @@
             failState = 'old_age';
         }
 
+        const maxDrought = eventGaps.length > 0 ? Math.max(...eventGaps) : player.age;
+        const diversity = totalEvents > 0 ? uniqueEvents.size / totalEvents : 0;
+
         return {
             age: player.age,
             failState,
+            events: totalEvents,
+            uniqueEvents: uniqueEvents.size,
+            maxDrought: maxDrought,
+            diversity: Math.round(diversity * 100) / 100,
             endStats: {
                 health: player.health,
                 money: player.money,

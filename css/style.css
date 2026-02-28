@@ -62,6 +62,55 @@
   touch-action: manipulation;
 }
 
+/* ============================================================================
+   ACCESSIBILITY: Focus-visible ring for keyboard navigation
+   ============================================================================ */
+button:focus-visible,
+[role="button"]:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+.btn:focus-visible,
+.gameBtn:focus-visible,
+.gameBtnHero:focus-visible,
+.gameBtnSecondary:focus-visible,
+.gameBtnTertiary:focus-visible,
+.menuBtn:focus-visible,
+.choiceBtn:focus-visible,
+.quickActionBtn:focus-visible,
+.shopTab:focus-visible,
+.shopItem:focus-visible,
+.segBtn:focus-visible,
+.langToggle:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(255, 107, 53, 0.2);
+}
+
+/* Remove default outline (replaced by focus-visible above) */
+button:focus:not(:focus-visible),
+a:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ============================================================================
+   SHARED BUTTON BASE
+   ============================================================================ */
+button,
+[role="button"] {
+  font-family: inherit;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+button:disabled,
+[role="button"][aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 html,
 body {
   font-family: var(--font-primary);
@@ -771,8 +820,7 @@ body.light-theme .settingsCloseBtn:hover {
   background: var(--gradient-accent);
   border: none;
   color: #fff;
-  box-shadow: var(--shadow-glow);
-  box-shadow: 0 8px 20px rgba(0, 212, 255, 0.3);
+  box-shadow: var(--shadow-glow), 0 8px 20px rgba(0, 212, 255, 0.3);
   font-weight: 800;
   letter-spacing: 0.5px;
   margin-top: 10px;
@@ -1449,6 +1497,17 @@ body.light-theme .settingsCloseBtn:hover {
   background-clip: text;
 }
 
+.cardDesc {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  margin-top: 4px;
+}
+
 .eventDesc {
   font-size: 15px;
   color: var(--text-secondary);
@@ -2102,6 +2161,118 @@ body.light-theme .settingsCloseBtn:hover {
   }
 }
 
+/* Extra-small devices (320px) */
+@media (max-width: 340px) {
+  .menuGameLogo {
+    font-size: 36px;
+  }
+
+  .menuGameTagline {
+    font-size: 13px;
+  }
+
+  .gameBtnHero {
+    padding: 20px 16px;
+    min-height: 80px;
+  }
+
+  .gameBtnHero .gameBtnLabel {
+    font-size: 17px;
+  }
+
+  .gameBtnHero .gameBtnSub {
+    font-size: 11px;
+  }
+
+  .gameBtnSecondary,
+  .gameBtnTertiary {
+    padding: 12px 10px;
+    font-size: 13px;
+  }
+
+  .characterCard {
+    padding: 14px;
+  }
+
+  .characterName {
+    font-size: 20px;
+  }
+
+  .characterPortrait {
+    width: 60px;
+  }
+
+  .portraitEmoji {
+    font-size: 40px;
+  }
+
+  .agePill {
+    font-size: 11px;
+    height: 24px;
+  }
+
+  .createCard {
+    padding: 16px;
+    gap: 14px;
+  }
+
+  .createTitle {
+    font-size: 22px;
+  }
+
+  .eventModal {
+    padding: 20px;
+  }
+
+  .eventTitle {
+    font-size: 18px;
+  }
+
+  .eventDesc {
+    font-size: 13px;
+  }
+
+  .choiceBtn {
+    padding: 14px 16px;
+    font-size: 14px;
+  }
+
+  .summaryTitle {
+    font-size: 22px;
+  }
+
+  .summaryEmoji {
+    font-size: 44px;
+  }
+
+  .summaryStats {
+    gap: 6px;
+  }
+
+  .memorialName {
+    font-size: 20px;
+  }
+
+  .memorial {
+    padding: 16px;
+  }
+
+  .statusBadge {
+    padding: 4px 8px;
+    font-size: 10px;
+  }
+
+  .miniStat {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .quickActionBtn {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+}
+
 /* ============================================================================
    SAFE AREA
    ============================================================================ */
@@ -2719,7 +2890,8 @@ body.light-theme .settingsCloseBtn:hover {
 }
 
 .characterPortrait,
-.characterPortrait img {
+.characterPortrait img,
+.characterPortraitImg {
   border-radius: 50%;
   object-fit: cover;
   object-position: center top;
@@ -2924,6 +3096,25 @@ body.light-theme .settingsCloseBtn:hover {
   z-index: 90;
 }
 
+.onboardingActionBar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 16px;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 1000;
+  pointer-events: none;
+  /* Let clicks pass except on buttons */
+}
+
+.onboardingActionBar>* {
+  pointer-events: auto;
+}
+
 /* Casual: larger, friendlier buttons */
 .primaryActionBtn {
   width: 100%;
@@ -3006,6 +3197,17 @@ body.light-theme .settingsCloseBtn:hover {
   border: 2px solid rgba(0, 0, 0, 0.06);
   border-radius: 16px;
   box-shadow: var(--shadow-sm);
+}
+
+.cardTitle {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 
 .sidebarGameTitle {
@@ -3134,13 +3336,12 @@ body.light-theme .settingsCloseBtn:hover {
 
   .desktopSidebar {
     display: flex !important;
+    flex-direction: column;
     width: 300px;
     background: var(--bg-card);
     border-right: 1px solid rgba(0, 0, 0, 0.06);
     padding: 20px;
     overflow-y: auto;
-    display: flex !important;
-    flex-direction: column;
     gap: 20px;
   }
 
@@ -3151,6 +3352,15 @@ body.light-theme .settingsCloseBtn:hover {
   }
 
   .universalActionBar {
+    left: 300px;
+    width: calc(100% - 300px);
+    padding: 24px;
+    max-width: 800px;
+    margin: 0 auto;
+    background: transparent;
+  }
+
+  .onboardingActionBar {
     left: 300px;
     width: calc(100% - 300px);
     padding: 24px;
@@ -3188,7 +3398,7 @@ body.light-theme .settingsCloseBtn:hover {
   padding: 16px;
   border-radius: var(--radius-lg);
   border: 1px solid var(--accent-gold);
-  color: #fff;
+  color: var(--text-primary);
   font-weight: 600;
   pointer-events: none;
   z-index: 1001;
@@ -3538,4 +3748,19 @@ body.light-theme .settingsCloseBtn:hover {
 
 .pop-text {
   animation: text-pop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* ============================================================================
+   REDUCED MOTION
+   ============================================================================ */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

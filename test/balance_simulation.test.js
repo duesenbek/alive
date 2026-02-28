@@ -12,7 +12,8 @@ global.localStorage = {
     _store: memStore,
     getItem(k) { return memStore[k] || null; },
     setItem(k, v) { memStore[k] = String(v); },
-    removeItem(k) { delete memStore[k]; }
+    removeItem(k) { delete memStore[k]; },
+    clear() { for (let key in memStore) delete memStore[key]; }
 };
 
 global.window = global;
@@ -45,7 +46,15 @@ global.addEventListener = function (type, fn) {
 
 global.alert = function () { };
 global.confirm = function () { return false; };
-global.fetch = function () { return Promise.reject("No fetch in tests"); };
+global.fetch = function (url) {
+    if (url === 'js/data/events.json') {
+        return Promise.resolve({
+            ok: true,
+            json: () => Promise.resolve(global.Alive.data['events.json'] || [])
+        });
+    }
+    return Promise.reject("No fetch in tests");
+};
 global.setTimeout = function (fn) { fn(); return 1; };
 global.clearTimeout = function () { };
 global.setInterval = function () { return 1; };
@@ -126,6 +135,10 @@ try {
 }
 
 function createTestPlayer(playstyle) {
+    // Clear mock storage to prevent state leakage
+    if (global.localStorage && global.localStorage.clear) {
+        global.localStorage.clear();
+    }
     try {
         game.startNewLife({
             gender: "M",

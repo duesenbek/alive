@@ -79,6 +79,7 @@
                     this.isProcessing = false;
                     return Promise.resolve(true);
                 }
+                this.isProcessing = false;
                 return Promise.reject("Payments not initialized");
             }
 

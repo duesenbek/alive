@@ -1,19 +1,27 @@
 /**
  * Assets Module - Alive Life Simulator
- * Maps game entities to visual assets (WebP)
+ * Core asset utilities: cache, hashing, preloading.
+ *
+ * NOTE: getBuildingById and getVehicleById are provided by
+ *       buildings.js and vehicles.js respectively.
+ *       getCharacterImageForPlayer is provided by assets/characters.js.
+ *       This module only provides shared utilities used by those modules.
  */
 (function (global) {
     const Alive = (global.Alive = global.Alive || {});
 
-    const Assets = {
-        // Cache for consistency
+    const Assets = Alive.Assets || {
+        // Deterministic asset cache
         cache: {},
 
+        /**
+         * Return a deterministic index for a (type, id) pair.
+         * Used by sub-modules (characters, etc.) to assign stable images.
+         */
         getRandomAsset(type, id, count) {
             const key = `${type}_${id}`;
             if (this.cache[key]) return this.cache[key];
 
-            // Simple hash to keep inconsistent assignments consistent across sessions for same ID
             let hash = 0;
             const str = String(id);
             for (let i = 0; i < str.length; i++) {
@@ -26,43 +34,13 @@
             return index;
         },
 
-        getCharacterImageForPlayer(player) {
-            // 117 char files. char_1.webp to char_117.webp
-            // We'll try to map broadly by gender/age if we knew the content, 
-            // but simpler to just hash the name for consistency for now.
-            // Ideally we'd separate m/f specific ranges, but without seeing them, 
-            // we'll assume a mix. Let's try to be consistent by name.
-
-            // If we assume a split: 1-60 Male, 61-117 Female? Or random?
-            // "Correctly arrange" implies logic. 
-            // Let's assume they are just a pool for now.
-
-            const index = this.getRandomAsset('char', player.name + player.gender, 117);
-            return `assets/characters/char_${index}.webp`;
-        },
-
-        getBuildingById(buildingId) {
-            if (!buildingId) return null;
-            // 63 building files (named vehicle_X.webp?!) in assets/buildings
-            // Assuming they are buildings despite the name
-            const index = this.getRandomAsset('building', buildingId, 63);
-            return {
-                image: `assets/buildings/vehicle_${index}.webp`
-            };
-        },
-
-        getVehicleById(vehicleId) {
-            // 99 transport files.
-            const index = this.getRandomAsset('transport', vehicleId, 99);
-            return {
-                image: `assets/transport/transport_${index}.webp`
-            };
-        },
-
+        /**
+         * Preload critical assets (banner, first character) for fast first paint.
+         */
         async preloadCriticalAssets(onProgress) {
             const critical = [
-                'assets/banner/banner.png', // Fixed path to actual location
-                'assets/characters/char_1.webp' // Preload at least one char
+                'assets/banner/banner.png',
+                'assets/characters/char_1.webp'
             ];
 
             let loaded = 0;
@@ -75,13 +53,36 @@
                         if (onProgress) onProgress(loaded / critical.length);
                         resolve();
                     };
-                    img.onerror = () => resolve(); // Ignore errors
+                    img.onerror = () => {
+                        loaded++;
+                        if (onProgress) onProgress(loaded / critical.length);
+                        console.warn(`[Assets] Failed to preload: ${src}`);
+                        resolve();
+                    };
                 });
             });
 
             await Promise.all(promises);
         }
     };
+
+    // Ensure cache exists even if Assets was already partially initialised
+    if (!Assets.cache) Assets.cache = {};
+    if (!Assets.getRandomAsset) {
+        Assets.getRandomAsset = function (type, id, count) {
+            const key = `${type}_${id}`;
+            if (this.cache[key]) return this.cache[key];
+            let hash = 0;
+            const str = String(id);
+            for (let i = 0; i < str.length; i++) {
+                hash = ((hash << 5) - hash) + str.charCodeAt(i);
+                hash |= 0;
+            }
+            const index = (Math.abs(hash) % count) + 1;
+            this.cache[key] = index;
+            return index;
+        };
+    }
 
     Alive.Assets = Assets;
 

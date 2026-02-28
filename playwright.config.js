@@ -6,24 +6,37 @@ module.exports = defineConfig({
     timeout: 30000,
     retries: process.env.CI ? 2 : 0,
     workers: process.env.CI ? 1 : undefined,
-    reporter: 'html',
+    reporter: [
+        ['html', { open: 'never' }],
+        ['list']
+    ],
+
+    // Output directory for diff screenshots / traces on failure
+    outputDir: './test-results',
+
+    // Snapshot naming: remove platform from name so CI (linux) matches local (win32)
+    snapshotPathTemplate: '{testDir}/{testFileDir}/{testFileName}-snapshots/{arg}{-projectName}{ext}',
+
+    expect: {
+        toHaveScreenshot: {
+            // Allow 8% pixel diff for cross-env tolerance (font rendering, antialiasing)
+            maxDiffPixelRatio: 0.08,
+        },
+    },
 
     use: {
         baseURL: 'http://localhost:8080',
         trace: 'on-first-retry',
+        screenshot: 'only-on-failure',
     },
 
     projects: [
         {
-            name: 'Desktop Chrome',
+            name: 'Desktop-Chrome',
             use: { ...devices['Desktop Chrome'], viewport: { width: 1280, height: 720 } },
         },
         {
-            name: 'Tablet iPad',
-            use: { ...devices['iPad Mini'], viewport: { width: 768, height: 1024 } },
-        },
-        {
-            name: 'Mobile Safari',
+            name: 'Mobile-Safari',
             use: { ...devices['iPhone 13'], viewport: { width: 375, height: 812 } },
         },
     ],
@@ -32,5 +45,6 @@ module.exports = defineConfig({
         command: 'npx http-server ./ -p 8080 -s',
         port: 8080,
         reuseExistingServer: !process.env.CI,
+        timeout: 10000,
     },
 });

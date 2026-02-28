@@ -776,7 +776,7 @@
     {
       id: "cn",
       nameKey: "country.cn",
-      flag: "????",
+      flag: "🏳️",
       region: REGIONS.ASIA,
       wealthTier: WEALTH_TIERS.HIGH,
       defaultLanguage: "en",
@@ -817,7 +817,7 @@
     {
       id: "in",
       nameKey: "country.in",
-      flag: "????",
+      flag: "🏳️",
       region: REGIONS.ASIA,
       wealthTier: WEALTH_TIERS.MEDIUM,
       defaultLanguage: "en",
@@ -930,7 +930,7 @@
     {
       id: "id",
       nameKey: "country.id",
-      flag: "????",
+      flag: "🏳️",
       region: REGIONS.ASIA,
       wealthTier: WEALTH_TIERS.MEDIUM,
       defaultLanguage: "en",
@@ -1002,7 +1002,7 @@
     {
       id: "ph",
       nameKey: "country.ph",
-      flag: "????",
+      flag: "🏳️",
       region: REGIONS.ASIA,
       wealthTier: WEALTH_TIERS.MEDIUM,
       defaultLanguage: "en",
@@ -1033,7 +1033,7 @@
     {
       id: "pk",
       nameKey: "country.pk",
-      flag: "????",
+      flag: "🏳️",
       region: REGIONS.ASIA,
       wealthTier: WEALTH_TIERS.LOW,
       defaultLanguage: "en",
@@ -1064,7 +1064,7 @@
     {
       id: "bd",
       nameKey: "country.bd",
-      flag: "????",
+      flag: "🏳️",
       region: REGIONS.ASIA,
       wealthTier: WEALTH_TIERS.LOW,
       defaultLanguage: "en",
@@ -1095,7 +1095,7 @@
     {
       id: "lk",
       nameKey: "country.lk",
-      flag: "????",
+      flag: "🏳️",
       region: REGIONS.ASIA,
       wealthTier: WEALTH_TIERS.LOW,
       defaultLanguage: "en",
@@ -1126,7 +1126,7 @@
     {
       id: "np",
       nameKey: "country.np",
-      flag: "????",
+      flag: "🏳️",
       region: REGIONS.ASIA,
       wealthTier: WEALTH_TIERS.LOW,
       defaultLanguage: "en",
@@ -1157,7 +1157,7 @@
     {
       id: "tw",
       nameKey: "country.tw",
-      flag: "????",
+      flag: "🏳️",
       region: REGIONS.ASIA,
       wealthTier: WEALTH_TIERS.VERY_HIGH,
       defaultLanguage: "en",
@@ -1191,7 +1191,7 @@
     {
       id: "ua",
       nameKey: "country.ua",
-      flag: "????",
+      flag: "🏳️",
       region: REGIONS.CIS,
       wealthTier: WEALTH_TIERS.LOW,
       defaultLanguage: "ru",
@@ -1222,7 +1222,7 @@
     {
       id: "by",
       nameKey: "country.by",
-      flag: "????",
+      flag: "🏳️",
       region: REGIONS.CIS,
       wealthTier: WEALTH_TIERS.LOW,
       defaultLanguage: "ru",
@@ -1253,7 +1253,7 @@
     {
       id: "uz",
       nameKey: "country.uz",
-      flag: "????",
+      flag: "🏳️",
       region: REGIONS.CIS,
       wealthTier: WEALTH_TIERS.LOW,
       defaultLanguage: "ru",
@@ -1284,7 +1284,7 @@
     {
       id: "ge",
       nameKey: "country.ge",
-      flag: "????",
+      flag: "🏳️",
       region: REGIONS.CIS,
       wealthTier: WEALTH_TIERS.MEDIUM,
       defaultLanguage: "ru",
@@ -1315,7 +1315,7 @@
     {
       id: "am",
       nameKey: "country.am",
-      flag: "????",
+      flag: "🏳️",
       region: REGIONS.CIS,
       wealthTier: WEALTH_TIERS.LOW,
       defaultLanguage: "ru",
@@ -1346,7 +1346,7 @@
     {
       id: "az",
       nameKey: "country.az",
-      flag: "????",
+      flag: "🏳️",
       region: REGIONS.CIS,
       wealthTier: WEALTH_TIERS.MEDIUM,
       defaultLanguage: "ru",
@@ -1377,7 +1377,7 @@
     {
       id: "kg",
       nameKey: "country.kg",
-      flag: "????",
+      flag: "🏳️",
       region: REGIONS.CIS,
       wealthTier: WEALTH_TIERS.LOW,
       defaultLanguage: "ru",
@@ -1408,7 +1408,7 @@
     {
       id: "md",
       nameKey: "country.md",
-      flag: "????",
+      flag: "🏳️",
       region: REGIONS.CIS,
       wealthTier: WEALTH_TIERS.LOW,
       defaultLanguage: "ru",
@@ -1442,7 +1442,7 @@
     {
       id: "tr",
       nameKey: "country.tr",
-      flag: "????",
+      flag: "🏳️",
       region: REGIONS.MIDDLE_EAST,
       wealthTier: WEALTH_TIERS.MEDIUM,
       defaultLanguage: "en",
@@ -1535,7 +1535,7 @@
     {
       id: "il",
       nameKey: "country.il",
-      flag: "????",
+      flag: "🏳️",
       region: REGIONS.MIDDLE_EAST,
       wealthTier: WEALTH_TIERS.VERY_HIGH,
       defaultLanguage: "en",
@@ -1566,7 +1566,7 @@
     {
       id: "ir",
       nameKey: "country.ir",
-      flag: "????",
+      flag: "🏳️",
       region: REGIONS.MIDDLE_EAST,
       wealthTier: WEALTH_TIERS.MEDIUM,
       defaultLanguage: "en",
@@ -1597,7 +1597,7 @@
     {
       id: "eg",
       nameKey: "country.eg",
-      flag: "????",
+      flag: "🏳️",
       region: REGIONS.AFRICA,
       wealthTier: WEALTH_TIERS.LOW,
       defaultLanguage: "en",
@@ -1659,7 +1659,7 @@
     {
       id: "za",
       nameKey: "country.za",
-      flag: "????",
+      flag: "🏳️",
       region: REGIONS.AFRICA,
       wealthTier: WEALTH_TIERS.MEDIUM,
       defaultLanguage: "en",
@@ -1690,7 +1690,7 @@
     {
       id: "ng",
       nameKey: "country.ng",
-      flag: "????",
+      flag: "🏳️",
       region: REGIONS.AFRICA,
       wealthTier: WEALTH_TIERS.LOW,
       defaultLanguage: "en",

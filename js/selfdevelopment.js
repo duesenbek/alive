@@ -154,7 +154,7 @@
     SERVICE: {
       id: "service",
       nameKey: "job.family.service",
-      icon: "??",
+      icon: "🚀",
       tiers: ["worker", "supervisor", "manager", "regional", "director"],
       salaryMultipliers: [1.0, 1.3, 1.7, 2.2, 3.0],
       requiredEducation: ["none", "community"],
@@ -163,7 +163,7 @@
     BLUE_COLLAR: {
       id: "blue_collar",
       nameKey: "job.family.blue_collar",
-      icon: "??",
+      icon: "🏥",
       tiers: ["apprentice", "journeyman", "master", "owner"],
       salaryMultipliers: [0.8, 1.2, 1.8, 3.0],
       requiredEducation: ["trade", "community"],
@@ -173,7 +173,7 @@
     TECH: {
       id: "tech",
       nameKey: "job.family.tech",
-      icon: "??",
+      icon: "🌟",
       tiers: ["junior", "mid", "senior", "lead", "manager", "director"],
       salaryMultipliers: [0.7, 1.0, 1.4, 1.8, 2.4, 3.5],
       requiredEducation: ["bootcamp", "university", "community"],
@@ -184,7 +184,7 @@
     WHITE_COLLAR: {
       id: "white_collar",
       nameKey: "job.family.white_collar",
-      icon: "??",
+      icon: "🔥",
       tiers: ["junior", "associate", "senior", "manager", "director", "vp", "c_level"],
       salaryMultipliers: [0.7, 1.0, 1.4, 2.0, 3.0, 4.5, 7.0],
       requiredEducation: ["university", "masters"],
@@ -194,7 +194,7 @@
     CREATIVE: {
       id: "creative",
       nameKey: "job.family.creative",
-      icon: "??",
+      icon: "🏆",
       tiers: ["freelance", "studio", "senior", "lead", "director"],
       salaryMultipliers: [0.6, 0.9, 1.3, 1.8, 2.5],
       requiredEducation: ["none", "bootcamp", "university"],
@@ -204,7 +204,7 @@
     MEDICAL: {
       id: "medical",
       nameKey: "job.family.medical",
-      icon: "??",
+      icon: "💡",
       tiers: ["resident", "attending", "senior", "chief", "director"],
       salaryMultipliers: [0.8, 1.5, 2.2, 3.0, 4.0],
       requiredEducation: ["university", "masters"],
@@ -221,49 +221,49 @@
     programming: {
       id: "programming",
       nameKey: "skill.programming",
-      icon: "??",
+      icon: "🚀",
       usedBy: ["tech"],
       trainedBy: ["coding_bootcamp", "computer_science", "self_study"]
     },
     management: {
       id: "management",
       nameKey: "skill.management",
-      icon: "??",
+      icon: "✨",
       usedBy: ["white_collar", "tech", "service"],
       trainedBy: ["mba", "experience", "leadership_course"]
     },
     trade: {
       id: "trade",
       nameKey: "skill.trade",
-      icon: "??",
+      icon: "💪",
       usedBy: ["blue_collar"],
       trainedBy: ["trade_school", "apprenticeship"]
     },
     sales: {
       id: "sales",
       nameKey: "skill.sales",
-      icon: "??",
+      icon: "🚀",
       usedBy: ["service", "white_collar"],
       trainedBy: ["sales_training", "experience"]
     },
     medical: {
       id: "medical",
       nameKey: "skill.medical",
-      icon: "??",
+      icon: "🛠️",
       usedBy: ["medical"],
       trainedBy: ["medical_school", "residency"]
     },
     creative: {
       id: "creative",
       nameKey: "skill.creative",
-      icon: "??",
+      icon: "🚗",
       usedBy: ["creative"],
       trainedBy: ["art_school", "practice", "portfolio"]
     },
     legal: {
       id: "legal",
       nameKey: "skill.legal",
-      icon: "??",
+      icon: "💪",
       usedBy: ["white_collar"],
       trainedBy: ["law_school", "bar_exam"]
     }

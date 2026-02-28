@@ -42,7 +42,8 @@
             this.tension = 30;                 // 0-100, starts moderate
             this.yearsSinceLastEvent = 0;
             this.recentEventTags = [];         // last 5 event tags
-            this.recentEventIds = [];          // last 10 event IDs for anti-repetition
+            this.recentEventIds = [];          // last 15 event IDs for anti-repetition
+            this.recentPolarities = [];        // last 5 event polarities for diversity
             this.eventsThisLife = 0;
             this.maxEventsPerLife = 25;        // generous cap for long lives
             this.calmYearsTarget = 0;         // how many calm years before next event
@@ -154,22 +155,22 @@
                 switch (this.phase) {
                     case 'calm':
                         this.phase = 'building';
-                        this.phaseYearsRemaining = 2 + Math.floor(Math.random() * 2);
+                        this.phaseYearsRemaining = 2 + Math.floor(Math.random() * 2); // 2-3yr
                         this.arcIntensity = 0;
                         break;
                     case 'building':
                         this.phase = 'climax';
-                        this.phaseYearsRemaining = 1 + Math.floor(Math.random() * 2);
+                        this.phaseYearsRemaining = 1 + Math.floor(Math.random() * 2); // 1-2yr
                         this.arcIntensity = Math.min(100, this.arcIntensity + 30);
                         break;
                     case 'climax':
                         this.phase = 'recovery';
-                        this.phaseYearsRemaining = 2 + Math.floor(Math.random() * 3);
+                        this.phaseYearsRemaining = 1 + Math.floor(Math.random() * 2); // 1-2yr (was 2-4)
                         this.arcIntensity = Math.max(0, this.arcIntensity - 40);
                         break;
                     case 'recovery':
                         this.phase = 'calm';
-                        this.phaseYearsRemaining = 1 + Math.floor(Math.random() * 3);
+                        this.phaseYearsRemaining = 1 + Math.floor(Math.random() * 2); // 1-2yr (was 1-3)
                         this.arcIntensity = 0;
                         break;
                 }
@@ -182,17 +183,18 @@
         _calculateEventChance(player) {
             // Base: depends on phase
             const phaseChance = {
-                calm: 0.15,
-                building: 0.35,
-                climax: 0.60,
-                recovery: 0.20
+                calm: 0.20,      // was 0.15
+                building: 0.40,  // was 0.35
+                climax: 0.65,    // was 0.60
+                recovery: 0.25   // was 0.20
             };
             let chance = phaseChance[this.phase] || 0.25;
 
-            // Drought bonus: if no event for a while, increase chance significantly
-            if (this.yearsSinceLastEvent >= 4) chance += 0.25;
-            else if (this.yearsSinceLastEvent >= 3) chance += 0.15;
-            else if (this.yearsSinceLastEvent >= 2) chance += 0.08;
+            // Pity timer: guaranteed event after 5yr drought
+            if (this.yearsSinceLastEvent >= 5) return 0.95;
+            if (this.yearsSinceLastEvent >= 4) chance += 0.30;  // was 0.25
+            else if (this.yearsSinceLastEvent >= 3) chance += 0.20;  // was 0.15
+            else if (this.yearsSinceLastEvent >= 2) chance += 0.10;  // was 0.08
 
             // Too many events recently? Cool down
             if (this.yearsSinceLastEvent === 0) chance *= 0.3;
@@ -205,7 +207,7 @@
             // Cap at max events per life
             if (this.eventsThisLife >= this.maxEventsPerLife) chance = 0;
 
-            return Math.min(0.85, Math.max(0.05, chance));
+            return Math.min(0.90, Math.max(0.05, chance));  // raised cap from 0.85
         }
 
         // =========================================================================
@@ -294,13 +296,17 @@
                     weight *= statWeight;
                 }
 
-                // 6. Anti-repetition: penalize recently-seen tags and IDs
+                // 6. Anti-repetition: penalize recently-seen tags, IDs, and polarities
                 const eventTag = c.event.tag || 'unknown';
                 const recentTagCount = this.recentEventTags.filter(t => t === eventTag).length;
-                if (recentTagCount >= 2) weight *= 0.2;
+                if (recentTagCount >= 2) weight *= 0.15;   // was 0.2
                 else if (recentTagCount === 1) weight *= 0.5;
 
-                if (this.recentEventIds.includes(c.event.id)) weight *= 0.05;
+                if (this.recentEventIds.includes(c.event.id)) weight *= 0.01;  // was 0.05 — near-block
+
+                // Polarity diversity: penalize if 3+ recent events share same polarity
+                const recentSamePolarity = this.recentPolarities.filter(p => p === polarity).length;
+                if (recentSamePolarity >= 3) weight *= 0.3;
 
                 // 7. Cumulative player tendencies (if consequences module available)
                 if (Alive.consequences?.getCumulativeScores) {
@@ -349,14 +355,23 @@
 
             if (eventId) {
                 this.recentEventIds.push(eventId);
-                if (this.recentEventIds.length > 10) this.recentEventIds.shift();
+                if (this.recentEventIds.length > 15) this.recentEventIds.shift();  // was 10
             }
 
-            // Tension adjustment based on event polarity
+            // Track polarity for diversity enforcement
             const polarity = TAG_POLARITY[tag] || 'positive';
-            if (polarity === 'negative') this.tension = Math.min(100, this.tension + 10);
-            else if (polarity === 'positive') this.tension = Math.max(0, this.tension - 8);
-            else this.tension = Math.min(100, this.tension + 5);
+            this.recentPolarities.push(polarity);
+            if (this.recentPolarities.length > 5) this.recentPolarities.shift();
+
+            // Tension adjustment — wider swings for more dramatic arcs
+            if (polarity === 'negative') this.tension = Math.min(100, this.tension + 15);  // was +10
+            else if (polarity === 'positive') this.tension = Math.max(0, this.tension - 12);  // was -8
+            else this.tension = Math.min(100, this.tension + 8);  // was +5
+
+            // Record to telemetry
+            if (Alive.telemetry) {
+                Alive.telemetry.recordEvent(eventId, tag, playerAge);
+            }
         }
 
         // =========================================================================
@@ -368,6 +383,7 @@
                 yearsSinceLastEvent: this.yearsSinceLastEvent,
                 recentEventTags: [...this.recentEventTags],
                 recentEventIds: [...this.recentEventIds],
+                recentPolarities: [...this.recentPolarities],
                 eventsThisLife: this.eventsThisLife,
                 lastEventAge: this.lastEventAge,
                 phase: this.phase,
@@ -382,6 +398,7 @@
             this.yearsSinceLastEvent = state.yearsSinceLastEvent ?? 0;
             this.recentEventTags = state.recentEventTags || [];
             this.recentEventIds = state.recentEventIds || [];
+            this.recentPolarities = state.recentPolarities || [];
             this.eventsThisLife = state.eventsThisLife ?? 0;
             this.lastEventAge = state.lastEventAge ?? -3;
             this.phase = state.phase || 'calm';

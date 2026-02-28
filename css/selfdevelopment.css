@@ -571,10 +571,8 @@
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: conic-gradient(
-    #00d4ff var(--score, 0%),
-    rgba(255, 255, 255, 0.1) var(--score, 0%)
-  );
+  background: conic-gradient(#00d4ff var(--score, 0%),
+      rgba(255, 255, 255, 0.1) var(--score, 0%));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -828,9 +826,12 @@
    ANIMATIONS
    ============================================================================ */
 @keyframes progressPulse {
-  0%, 100% {
+
+  0%,
+  100% {
     box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
   }
+
   50% {
     box-shadow: 0 0 35px rgba(0, 212, 255, 0.7);
   }
@@ -878,5 +879,61 @@
 
   .careerLevel {
     min-width: 60px;
+  }
+}
+
+/* Extra-small devices (320px) */
+@media (max-width: 340px) {
+  .selfDevScreen {
+    padding: 14px;
+  }
+
+  .selfDevTitle {
+    font-size: 20px;
+  }
+
+  .selfDevTab {
+    padding: 8px 10px;
+    min-width: 50px;
+  }
+
+  .selfDevTabIcon {
+    font-size: 16px;
+  }
+
+  .selfDevTabLabel {
+    font-size: 9px;
+  }
+
+  .statusCard {
+    padding: 14px;
+  }
+
+  .statusCardValue {
+    font-size: 20px;
+  }
+
+  .selfDevActionBtn {
+    padding: 12px 16px;
+    font-size: 13px;
+  }
+
+  .investOption {
+    padding: 12px;
+  }
+
+  .investOptionName {
+    font-size: 12px;
+  }
+
+  .businessType {
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .businessTypeIcon {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
   }
 }

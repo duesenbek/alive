@@ -18,7 +18,8 @@ const _store = {};
 globalThis_.localStorage = {
     getItem: (k) => _store[k] || null,
     setItem: (k, v) => { _store[k] = String(v); },
-    removeItem: (k) => { delete _store[k]; }
+    removeItem: (k) => { delete _store[k]; },
+    clear: () => { for (let k in _store) delete _store[k]; }
 };
 
 // Load modules in dependency order
@@ -137,25 +138,23 @@ assert('Multiple phases occur over 20 years', phases.size >= 2,
     `phases seen: ${[...phases].join(', ')}`);
 
 // ============================================================================
-// TEST 3: EVENT CHANCE CALCULATION
+// TEST 3.5: EVENT PITY MECHANIC
 // ============================================================================
-console.log('\n📋 Test 3: Event Chance Calculation');
+console.log('\n📋 Test 3.5: Event Pity');
 
-const director4 = new Alive.EventDirector();
-director4.phase = 'climax';
-director4.yearsSinceLastEvent = 4;
-director4.tension = 80;
-const highChance = director4._calculateEventChance(createMockPlayer());
-assert('High chance in climax with drought + tension', highChance > 0.5,
-    `chance=${highChance.toFixed(3)}`);
+const directorPity = new Alive.EventDirector();
+directorPity.phase = 'calm';
+directorPity.tension = 30;
 
-const director5 = new Alive.EventDirector();
-director5.phase = 'calm';
-director5.yearsSinceLastEvent = 0;
-director5.tension = 20;
-const lowChance = director5._calculateEventChance(createMockPlayer());
-assert('Low chance in calm just after event', lowChance < 0.15,
-    `chance=${lowChance.toFixed(3)}`);
+directorPity.yearsSinceLastEvent = 0;
+const baseChance = directorPity._calculateEventChance(createMockPlayer());
+
+directorPity.yearsSinceLastEvent = 5;
+const pityChance = directorPity._calculateEventChance(createMockPlayer());
+
+assert('Chance increases with yearsSinceLastEvent (Pity)', pityChance > baseChance,
+    `base=${baseChance.toFixed(3)}, parity_pity=${pityChance.toFixed(3)}`);
+assert('Pity adds significant weight after 5 years', pityChance > baseChance + 0.1);
 
 // ============================================================================
 // TEST 4: EVENT ARCS

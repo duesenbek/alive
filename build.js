@@ -20,6 +20,7 @@ const JS_FILES = [
     'js/countries.js',
     'js/player_core.js',
     'js/director.js',
+    'js/telemetry.js',
     'js/event_arcs.js',
     'js/goals.js',
     'js/meta_progression.js',

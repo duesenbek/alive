@@ -1,0 +1,5059 @@
+[
+  {
+    "file": "js\\actions.js",
+    "issues": [
+      {
+        "line": 180,
+        "text": "\"action.practice_hobby.title\": \"Практиковать хобби\","
+      },
+      {
+        "line": 181,
+        "text": "\"action.practice_hobby.desc\": \"Практикуйте главное хобби и улучшайте навык.\","
+      },
+      {
+        "line": 182,
+        "text": "\"action.browse_houses.title\": \"Смотреть жильё\","
+      },
+      {
+        "line": 183,
+        "text": "\"action.browse_houses.desc\": \"Посмотрите, какое жильё вы можете позволить.\","
+      },
+      {
+        "line": 184,
+        "text": "\"action.browse_cars.title\": \"Смотреть машины\","
+      },
+      {
+        "line": 185,
+        "text": "\"action.browse_cars.desc\": \"Сравните машины, доступные в вашем городе.\","
+      },
+      {
+        "line": 186,
+        "text": "\"action.call_family.title\": \"Позвонить семье\","
+      },
+      {
+        "line": 187,
+        "text": "\"action.call_family.desc\": \"Позвоните родителям или братьям/сёстрам.\","
+      },
+      {
+        "line": 188,
+        "text": "\"action.visit_family.title\": \"Навестить семью\","
+      },
+      {
+        "line": 189,
+        "text": "\"action.visit_family.desc\": \"Проведите время с вашей семьёй.\","
+      },
+      {
+        "line": 190,
+        "text": "\"action.hangout_friends.title\": \"Встретиться с друзьями\","
+      },
+      {
+        "line": 191,
+        "text": "\"action.hangout_friends.desc\": \"Восстановите социальную жизнь и укрепите дружбу.\","
+      },
+      {
+        "line": 192,
+        "text": "\"action.make_friends.title\": \"Завести друзей\","
+      },
+      {
+        "line": 193,
+        "text": "\"action.make_friends.desc\": \"Познакомьтесь с новыми людьми и расширьте круг общения.\","
+      },
+      {
+        "line": 194,
+        "text": "\"action.adopt_pet.title\": \"Завести питомца\","
+      },
+      {
+        "line": 195,
+        "text": "\"action.adopt_pet.desc\": \"Заведите домашнего питомца, но будьте готовы к тратам каждый год.\","
+      },
+      {
+        "line": 196,
+        "text": "\"action.adopt_dog.title\": \"Завести собаку\","
+      },
+      {
+        "line": 197,
+        "text": "\"action.adopt_dog.desc\": \"Верный друг. Собаки требуют прогулок и ухода.\","
+      },
+      {
+        "line": 198,
+        "text": "\"action.adopt_cat.title\": \"Завести кота\","
+      },
+      {
+        "line": 199,
+        "text": "\"action.adopt_cat.desc\": \"Пушистый друг. Коты независимы, но ласковы.\","
+      },
+      {
+        "line": 200,
+        "text": "\"action.walk_dog.title\": \"Погулять с собакой\","
+      },
+      {
+        "line": 201,
+        "text": "\"action.walk_dog.desc\": \"Прогуляйтесь с собакой.\","
+      },
+      {
+        "line": 202,
+        "text": "\"action.play_with_pet.title\": \"Поиграть с питомцем\","
+      },
+      {
+        "line": 203,
+        "text": "\"action.play_with_pet.desc\": \"Поиграйте с питомцем и укрепите связь.\","
+      },
+      {
+        "line": 204,
+        "text": "\"action.gym_workout.title\": \"Тренировка в зале\","
+      },
+      {
+        "line": 205,
+        "text": "\"action.gym_workout.desc\": \"Занимайтесь и улучшайте форму.\","
+      },
+      {
+        "line": 206,
+        "text": "\"action.join_sports_team.title\": \"Вступить в команду\","
+      },
+      {
+        "line": 207,
+        "text": "\"action.join_sports_team.desc\": \"Присоединитесь к спортивной команде.\","
+      },
+      {
+        "line": 208,
+        "text": "\"action.marathon_training.title\": \"Подготовка к марафону\","
+      },
+      {
+        "line": 209,
+        "text": "\"action.marathon_training.desc\": \"Подготовьтесь для марафона. Нужен навык спорта 30+.\","
+      },
+      {
+        "line": 210,
+        "text": "\"action.read_business_books.title\": \"Читать бизнес-книги\","
+      },
+      {
+        "line": 211,
+        "text": "\"action.read_business_books.desc\": \"Учитесь у успешных предпринимателей.\","
+      },
+      {
+        "line": 212,
+        "text": "\"action.business_seminar.title\": \"Бизнес-семинар\","
+      },
+      {
+        "line": 213,
+        "text": "\"action.business_seminar.desc\": \"Нетворкинг и обучение на бизнес-мероприятии.\","
+      },
+      {
+        "line": 214,
+        "text": "\"action.network_events.title\": \"Нетворкинг\","
+      },
+      {
+        "line": 215,
+        "text": "\"action.network_events.desc\": \"Стройте профессиональные связи.\","
+      },
+      {
+        "line": 216,
+        "text": "\"action.side_project.title\": \"Побочный проект\","
+      },
+      {
+        "line": 217,
+        "text": "\"action.side_project.desc\": \"Работайте над бизнес-идеей.\","
+      },
+      {
+        "line": 218,
+        "text": "\"action.study_investing.title\": \"Изучать инвестиции\","
+      },
+      {
+        "line": 219,
+        "text": "\"action.study_investing.desc\": \"Изучайте рынки и стратегии инвестирования.\","
+      },
+      {
+        "line": 220,
+        "text": "\"action.follow_markets.title\": \"Следить за рынками\","
+      },
+      {
+        "line": 221,
+        "text": "\"action.follow_markets.desc\": \"Отслеживайте акции и тренды.\","
+      },
+      {
+        "line": 222,
+        "text": "\"action.paper_trading.title\": \"Бумажная торговля\","
+      },
+      {
+        "line": 223,
+        "text": "\"action.paper_trading.desc\": \"Практика торговли без реальных денег.\","
+      },
+      {
+        "line": 224,
+        "text": "\"action.investment_course.title\": \"Курс инвестирования\","
+      },
+      {
+        "line": 225,
+        "text": "\"action.investment_course.desc\": \"Пройти профессиональный курс.\","
+      },
+      {
+        "line": 226,
+        "text": "\"action.professional_dev.title\": \"Профессиональное развитие\","
+      },
+      {
+        "line": 227,
+        "text": "\"action.professional_dev.desc\": \"Улучшите рабочие навыки и знания.\","
+      },
+      {
+        "line": 228,
+        "text": "\"action.get_certification.title\": \"Получить сертификат\","
+      },
+      {
+        "line": 229,
+        "text": "\"action.get_certification.desc\": \"Получите профессиональный сертификат.\","
+      },
+      {
+        "line": 230,
+        "text": "\"action.mentor_junior.title\": \"Наставничество\","
+      },
+      {
+        "line": 231,
+        "text": "\"action.mentor_junior.desc\": \"Помогите коллеге расти карьерно.\","
+      },
+      {
+        "line": 232,
+        "text": "\"action.work_overtime.title\": \"Работать сверхурочно\","
+      },
+      {
+        "line": 233,
+        "text": "\"action.work_overtime.desc\": \"Работайте больше за дополнительную плату.\","
+      },
+      {
+        "line": 234,
+        "text": "\"action.join_club.title\": \"Вступить в клуб\","
+      },
+      {
+        "line": 235,
+        "text": "\"action.join_club.desc\": \"Присоединитесь к социальному клубу.\","
+      },
+      {
+        "line": 236,
+        "text": "\"action.public_speaking.title\": \"Публичное выступление\","
+      },
+      {
+        "line": 237,
+        "text": "\"action.public_speaking.desc\": \"Практикуйте выступления перед публикой.\","
+      },
+      {
+        "line": 238,
+        "text": "\"action.volunteer_work.title\": \"Волонтёрство\","
+      },
+      {
+        "line": 239,
+        "text": "\"action.volunteer_work.desc\": \"Помогайте другим и чувствуйте себя хорошо.\","
+      },
+      {
+        "line": 240,
+        "text": "\"action.host_party.title\": \"Устроить вечеринку\","
+      },
+      {
+        "line": 241,
+        "text": "\"action.host_party.desc\": \"Организуйте вечеринку для друзей.\","
+      },
+      {
+        "line": 242,
+        "text": "\"action.learn_music.title\": \"Учиться музыке\","
+      },
+      {
+        "line": 243,
+        "text": "\"action.learn_music.desc\": \"Практикуйте игру на инструменте.\","
+      },
+      {
+        "line": 244,
+        "text": "\"action.learn_art.title\": \"Учиться рисованию\","
+      },
+      {
+        "line": 245,
+        "text": "\"action.learn_art.desc\": \"Выразите себя через искусство.\","
+      },
+      {
+        "line": 246,
+        "text": "\"action.learn_coding.title\": \"Учиться программированию\","
+      },
+      {
+        "line": 247,
+        "text": "\"action.learn_coding.desc\": \"Создавайте программы и приложения.\","
+      },
+      {
+        "line": 248,
+        "text": "\"action.learn_cooking.title\": \"Учиться готовить\","
+      },
+      {
+        "line": 249,
+        "text": "\"action.learn_cooking.desc\": \"Освойте кулинарное искусство.\","
+      },
+      {
+        "line": 250,
+        "text": "\"action.learn_gaming.title\": \"Играть в игры\","
+      },
+      {
+        "line": 251,
+        "text": "\"action.learn_gaming.desc\": \"Расслабьтесь и развлекитесь.\","
+      },
+      {
+        "line": 252,
+        "text": "\"action.learn_photography.title\": \"Учиться фотографии\","
+      },
+      {
+        "line": 253,
+        "text": "\"action.learn_photography.desc\": \"Запечатлейте красивые моменты.\","
+      },
+      {
+        "line": 254,
+        "text": "\"action.learn_writing.title\": \"Учиться письму\","
+      },
+      {
+        "line": 255,
+        "text": "\"action.learn_writing.desc\": \"Пишите рассказы или статьи.\","
+      },
+      {
+        "line": 256,
+        "text": "\"action.take_vacation.title\": \"Отпуск\","
+      },
+      {
+        "line": 257,
+        "text": "\"action.take_vacation.desc\": \"Отдохните от всего и восстановите силы.\","
+      },
+      {
+        "line": 258,
+        "text": "\"action.see_therapist.title\": \"Терапевт\","
+      },
+      {
+        "line": 259,
+        "text": "\"action.see_therapist.desc\": \"Поговорите с профессионалом о психическом здоровье.\","
+      },
+      {
+        "line": 260,
+        "text": "\"action.take_nap.title\": \"Вздремнуть\","
+      },
+      {
+        "line": 261,
+        "text": "\"action.take_nap.desc\": \"Отдохните и восстановите энергию.\","
+      },
+      {
+        "line": 262,
+        "text": "\"action.go_shopping.title\": \"Шопинг\","
+      },
+      {
+        "line": 263,
+        "text": "\"action.go_shopping.desc\": \"Купите вещи для комфорта и настроения.\","
+      },
+      {
+        "line": 264,
+        "text": "\"action.stay_home_relax.title\": \"Отдых дома\","
+      },
+      {
+        "line": 265,
+        "text": "\"action.stay_home_relax.desc\": \"Насладитесь комфортом своего дома.\","
+      },
+      {
+        "line": 266,
+        "text": "\"action.throw_party.title\": \"Устроить вечеринку\","
+      },
+      {
+        "line": 267,
+        "text": "\"action.throw_party.desc\": \"Пригласите друзей для общения.\","
+      },
+      {
+        "line": 268,
+        "text": "\"action.spa_day.title\": \"Спа-день\","
+      },
+      {
+        "line": 269,
+        "text": "\"action.spa_day.desc\": \"Побалуйте себе расслаблением.\""
+      }
+    ]
+  },
+  {
+    "file": "js\\cities.js",
+    "issues": [
+      {
+        "line": 246,
+        "text": "name: { en: \"Singapore\", ru: \"Сингапур\" },"
+      },
+      {
+        "line": 267,
+        "text": "name: { en: \"Hong Kong\", ru: \"Гонконг\" },"
+      }
+    ]
+  },
+  {
+    "file": "js\\consequences.js",
+    "issues": [
+      {
+        "line": 805,
+        "text": "\"consequence.dropped_out\": \"Бросил учёбу\","
+      },
+      {
+        "line": 806,
+        "text": "\"consequence.fired_once\": \"Уволен с работы\","
+      },
+      {
+        "line": 807,
+        "text": "\"consequence.fired_twice\": \"Уволен несколько раз\","
+      },
+      {
+        "line": 808,
+        "text": "\"consequence.job_hopper\": \"Известен частой сменой работы\","
+      },
+      {
+        "line": 809,
+        "text": "\"consequence.criminal_record\": \"Имеет судимость\","
+      },
+      {
+        "line": 810,
+        "text": "\"consequence.health_neglect\": \"Запустил здоровье\","
+      },
+      {
+        "line": 811,
+        "text": "\"consequence.chronic_condition\": \"Имеет хроническое заболевание\","
+      },
+      {
+        "line": 812,
+        "text": "\"consequence.betrayer\": \"Предал друга\","
+      },
+      {
+        "line": 813,
+        "text": "\"consequence.loyal_friend\": \"Известен как верный друг\","
+      },
+      {
+        "line": 814,
+        "text": "\"consequence.reliable_employee\": \"Надёжный сотрудник\","
+      },
+      {
+        "line": 815,
+        "text": "\"consequence.must_wait\": \"Нужно подождать {years} лет перед подачей\","
+      },
+      {
+        "line": 816,
+        "text": "\"consequence.blocked_job\": \"Эта работа недоступна из-за вашей истории\","
+      },
+      {
+        "line": 817,
+        "text": "\"consequence.salary_reduced\": \"Зарплата снижена на {percent}% из-за истории\""
+      }
+    ]
+  },
+  {
+    "file": "js\\data\\items.json",
+    "issues": [
+      {
+        "line": 6,
+        "text": "\"ru\": \"Эспрессо\""
+      },
+      {
+        "line": 20,
+        "text": "\"ru\": \"Чизбургер\""
+      },
+      {
+        "line": 35,
+        "text": "\"ru\": \"Зеленый салат\""
+      },
+      {
+        "line": 49,
+        "text": "\"ru\": \"Лекарство\""
+      },
+      {
+        "line": 62,
+        "text": "\"ru\": \"Поездка на выходные\""
+      },
+      {
+        "line": 76,
+        "text": "\"ru\": \"Смартфон Pro\""
+      },
+      {
+        "line": 91,
+        "text": "\"ru\": \"Ультрабук\""
+      },
+      {
+        "line": 106,
+        "text": "\"ru\": \"Фитнес-браслет\""
+      },
+      {
+        "line": 120,
+        "text": "\"ru\": \"Золотые часы\""
+      },
+      {
+        "line": 135,
+        "text": "\"ru\": \"Дизайнерская сумка\""
+      },
+      {
+        "line": 150,
+        "text": "\"ru\": \"Бриллиантовое кольцо\""
+      },
+      {
+        "line": 165,
+        "text": "\"ru\": \"Бизнес 101\""
+      },
+      {
+        "line": 178,
+        "text": "\"ru\": \"Кодинг для чайников\""
+      }
+    ]
+  },
+  {
+    "file": "js\\data\\strings.js",
+    "issues": [
+      {
+        "line": 1088,
+        "text": "\"ui.tagline\": \"Твоя жизнь. Твой выбор. Твое наследие.\","
+      },
+      {
+        "line": 1089,
+        "text": "\"ui.newLife\": \"Начать новую жизнь\","
+      },
+      {
+        "line": 1090,
+        "text": "\"ui.continue\": \"Продолжить\","
+      },
+      {
+        "line": 1091,
+        "text": "\"ui.nextYear\": \"Следующий год\","
+      },
+      {
+        "line": 1092,
+        "text": "\"ui.mainMenu\": \"Главное меню\","
+      },
+      {
+        "line": 1093,
+        "text": "\"ui.menu\": \"Меню\","
+      },
+      {
+        "line": 1094,
+        "text": "\"ui.back\": \"Назад\","
+      },
+      {
+        "line": 1095,
+        "text": "\"ui.to\": \"до\","
+      },
+      {
+        "line": 1096,
+        "text": "\"ui.almost\": \"Почти\","
+      },
+      {
+        "line": 1097,
+        "text": "\"ui.just\": \"Ещё\","
+      },
+      {
+        "line": 1098,
+        "text": "\"ui.lifeAlbum\": \"Альбом жизни\","
+      },
+      {
+        "line": 1099,
+        "text": "\"ui.lifeAlbum.sub\": \"Твои прошлые истории\","
+      },
+      {
+        "line": 1100,
+        "text": "\"ui.richList\": \"Список богачей\","
+      },
+      {
+        "line": 1101,
+        "text": "\"ui.richList.sub\": \"Сможешь ли ты попасть сюда?\","
+      },
+      {
+        "line": 1102,
+        "text": "\"ui.settings\": \"Настройки\","
+      },
+      {
+        "line": 1103,
+        "text": "\"settings.language\": \"Язык\","
+      },
+      {
+        "line": 1104,
+        "text": "\"settings.sound\": \"Звуки\","
+      },
+      {
+        "line": 1105,
+        "text": "\"settings.music\": \"Музыка\","
+      },
+      {
+        "line": 1106,
+        "text": "\"settings.theme\": \"Тема\","
+      },
+      {
+        "line": 1107,
+        "text": "\"settings.on\": \"ВКЛ\","
+      },
+      {
+        "line": 1108,
+        "text": "\"settings.off\": \"ВЫКЛ\","
+      },
+      {
+        "line": 1109,
+        "text": "\"ui.playAgain\": \"Играть снова\","
+      },
+      {
+        "line": 1110,
+        "text": "\"ui.liveNextYear\": \"Прожить следующий год\","
+      },
+      {
+        "line": 1111,
+        "text": "\"ui.lifeQuality\": \"Качество жизни\","
+      },
+      {
+        "line": 1112,
+        "text": "\"ui.years\": \"лет\","
+      },
+      {
+        "line": 1113,
+        "text": "\"ui.job\": \"Работа\","
+      },
+      {
+        "line": 1114,
+        "text": "\"create.title\": \"Создание персонажа\","
+      },
+      {
+        "line": 1115,
+        "text": "\"create.gender\": \"Пол\","
+      },
+      {
+        "line": 1116,
+        "text": "\"create.gender.m\": \"Мужской\","
+      },
+      {
+        "line": 1117,
+        "text": "\"create.gender.f\": \"Женский\","
+      },
+      {
+        "line": 1118,
+        "text": "\"create.name\": \"Имя\","
+      },
+      {
+        "line": 1119,
+        "text": "\"create.randomize\": \"Случайно\","
+      },
+      {
+        "line": 1120,
+        "text": "\"create.country\": \"Страна\","
+      },
+      {
+        "line": 1121,
+        "text": "\"create.city\": \"Город\","
+      },
+      {
+        "line": 1122,
+        "text": "\"create.wealth\": \"Богатство семьи\","
+      },
+      {
+        "line": 1123,
+        "text": "\"create.wealth.low\": \"Низкое\","
+      },
+      {
+        "line": 1124,
+        "text": "\"create.wealth.medium\": \"Среднее\","
+      },
+      {
+        "line": 1125,
+        "text": "\"create.wealth.high\": \"Высокое\","
+      },
+      {
+        "line": 1126,
+        "text": "\"create.wealth.very_high\": \"Очень высокое\","
+      },
+      {
+        "line": 1127,
+        "text": "\"create.start\": \"Начать жизнь\","
+      },
+      {
+        "line": 1128,
+        "text": "\"actions.title\": \"Выберите действия\","
+      },
+      {
+        "line": 1129,
+        "text": "\"actions.desc\": \"Выберите 1–2 действия на этот год. Затем произойдут события.\","
+      },
+      {
+        "line": 1130,
+        "text": "\"actions.confirm\": \"Подтвердить\","
+      },
+      {
+        "line": 1131,
+        "text": "\"actions.skip\": \"Пропустить\","
+      },
+      {
+        "line": 1132,
+        "text": "\"action.work_harder.title\": \"Работать усерднее\","
+      },
+      {
+        "line": 1133,
+        "text": "\"action.work_harder.desc\": \"Приложить усилия для дополнительного заработка.\","
+      },
+      {
+        "line": 1134,
+        "text": "\"action.study.title\": \"Учиться\","
+      },
+      {
+        "line": 1135,
+        "text": "\"action.study.desc\": \"Книги, курсы, обучение.\","
+      },
+      {
+        "line": 1136,
+        "text": "\"action.train.title\": \"Тренироваться\","
+      },
+      {
+        "line": 1137,
+        "text": "\"action.train.desc\": \"Спортзал, бег, здоровье.\","
+      },
+      {
+        "line": 1138,
+        "text": "\"action.socialize.title\": \"Общаться\","
+      },
+      {
+        "line": 1139,
+        "text": "\"action.socialize.desc\": \"Друзья, семья, общение.\","
+      },
+      {
+        "line": 1140,
+        "text": "\"action.find_partner.title\": \"Найти партнера\","
+      },
+      {
+        "line": 1141,
+        "text": "\"action.find_partner.desc\": \"Ходить на свидания и искать пару.\","
+      },
+      {
+        "line": 1142,
+        "text": "\"action.post_social.title\": \"Постить в соцсетях\","
+      },
+      {
+        "line": 1143,
+        "text": "\"action.post_social.desc\": \"Растить подписчиков и влияние.\","
+      },
+      {
+        "line": 1144,
+        "text": "\"action.invest_stocks.title\": \"Инвестировать (акции)\","
+      },
+      {
+        "line": 1145,
+        "text": "\"action.invest_stocks.desc\": \"Вложить деньги в акции.\","
+      },
+      {
+        "line": 1146,
+        "text": "\"action.buy_car.title\": \"Купить машину\","
+      },
+      {
+        "line": 1147,
+        "text": "\"action.buy_car.desc\": \"Купить базовый транспорт.\","
+      },
+      {
+        "line": 1148,
+        "text": "\"action.upgrade_housing.title\": \"Улучшить жилье\","
+      },
+      {
+        "line": 1149,
+        "text": "\"action.upgrade_housing.desc\": \"Переехать в лучшее место.\","
+      },
+      {
+        "line": 1150,
+        "text": "\"action.browse_houses.title\": \"Смотреть дома\","
+      },
+      {
+        "line": 1151,
+        "text": "\"action.browse_houses.desc\": \"Посмотреть доступное жилье.\","
+      },
+      {
+        "line": 1152,
+        "text": "\"action.browse_cars.title\": \"Смотреть машины\","
+      },
+      {
+        "line": 1153,
+        "text": "\"action.browse_cars.desc\": \"Сравнить доступные машины.\","
+      },
+      {
+        "line": 1154,
+        "text": "\"action.practice_hobby.title\": \"Заняться хобби\","
+      },
+      {
+        "line": 1155,
+        "text": "\"action.practice_hobby.desc\": \"Практиковать хобби и улучшать навыки.\","
+      },
+      {
+        "line": 1156,
+        "text": "\"action.start_blog.title\": \"Начать блог\","
+      },
+      {
+        "line": 1157,
+        "text": "\"action.start_blog.desc\": \"Начать путь создателя контента.\","
+      },
+      {
+        "line": 1158,
+        "text": "\"action.post_content.title\": \"Опубликовать контент\","
+      },
+      {
+        "line": 1159,
+        "text": "\"action.post_content.desc\": \"Создать и поделиться новым контентом.\","
+      },
+      {
+        "line": 1160,
+        "text": "\"action.weekend_trip.title\": \"Поездка на выходные\","
+      },
+      {
+        "line": 1161,
+        "text": "\"action.weekend_trip.desc\": \"Короткий отдых для восстановления.\","
+      },
+      {
+        "line": 1162,
+        "text": "\"action.serious_study.title\": \"Серьезная учеба\","
+      },
+      {
+        "line": 1163,
+        "text": "\"action.serious_study.desc\": \"Усердно учиться и повышать навыки.\","
+      },
+      {
+        "line": 1164,
+        "text": "\"action.date_search.title\": \"Поиск свиданий\","
+      },
+      {
+        "line": 1165,
+        "text": "\"action.date_search.desc\": \"Активно искать пару в этом году.\","
+      },
+      {
+        "line": 1166,
+        "text": "\"action.propose_marriage.title\": \"Сделать предложение\","
+      },
+      {
+        "line": 1167,
+        "text": "\"action.propose_marriage.desc\": \"Сделать следующий шаг в отношениях.\","
+      },
+      {
+        "line": 1168,
+        "text": "\"action.try_for_child.title\": \"Завести ребенка\","
+      },
+      {
+        "line": 1169,
+        "text": "\"action.try_for_child.desc\": \"Начать или расширить семью.\","
+      },
+      {
+        "line": 1170,
+        "text": "\"action.romantic_date.title\": \"Романтическое свидание\","
+      },
+      {
+        "line": 1171,
+        "text": "\"action.romantic_date.desc\": \"Провести время вместе.\","
+      },
+      {
+        "line": 1172,
+        "text": "\"action.marriage_counseling.title\": \"Семейный психолог\","
+      },
+      {
+        "line": 1173,
+        "text": "\"action.marriage_counseling.desc\": \"Решить проблемы и восстановить доверие.\","
+      },
+      {
+        "line": 1174,
+        "text": "\"action.buy_house.apartment.title\": \"Купить квартиру\","
+      },
+      {
+        "line": 1175,
+        "text": "\"action.buy_house.condo.title\": \"Купить кондо\","
+      },
+      {
+        "line": 1176,
+        "text": "\"action.buy_house.house.title\": \"Купить дом\","
+      },
+      {
+        "line": 1177,
+        "text": "\"action.buy_house.mansion.title\": \"Купить особняк\","
+      },
+      {
+        "line": 1178,
+        "text": "\"action.buy_car.cheap.title\": \"Купить подержанное авто\","
+      },
+      {
+        "line": 1179,
+        "text": "\"action.buy_car.mid.title\": \"Купить седан\","
+      },
+      {
+        "line": 1180,
+        "text": "\"action.buy_car.luxury.title\": \"Купить люкс авто\","
+      },
+      {
+        "line": 1181,
+        "text": "\"action.buy_car.sports.title\": \"Купить спорткар\","
+      },
+      {
+        "line": 1182,
+        "text": "\"actions.browse.houses\": \"Выбрать дом\","
+      },
+      {
+        "line": 1183,
+        "text": "\"actions.browse.cars\": \"Выбрать машину\","
+      },
+      {
+        "line": 1184,
+        "text": "\"actions.browse.back\": \"Назад\","
+      },
+      {
+        "line": 1185,
+        "text": "\"actions.browse.choose\": \"Выбрать\","
+      },
+      {
+        "line": 1186,
+        "text": "\"birth.intro\": \"Новая жизнь начинается...\","
+      },
+      {
+        "line": 1187,
+        "text": "\"birth.city\": \"В городе {city} родился ребенок.\","
+      },
+      {
+        "line": 1188,
+        "text": "\"birth.welcome\": \"ДОБРО ПОЖАЛОВАТЬ В МИР\","
+      },
+      {
+        "line": 1189,
+        "text": "\"birth.start\": \"Начать жизнь\","
+      },
+      {
+        "line": 1190,
+        "text": "\"ui.stage.childhood\": \"Детство\","
+      },
+      {
+        "line": 1191,
+        "text": "\"ui.stage.teen\": \"Подросток\","
+      },
+      {
+        "line": 1192,
+        "text": "\"ui.stage.youngAdult\": \"Молодость\","
+      },
+      {
+        "line": 1193,
+        "text": "\"ui.stage.adult\": \"Взрослый\","
+      },
+      {
+        "line": 1194,
+        "text": "\"ui.stage.senior\": \"Пожилой\","
+      },
+      {
+        "line": 1195,
+        "text": "\"ui.wealth.broke\": \"Банкрот\","
+      },
+      {
+        "line": 1196,
+        "text": "\"ui.wealth.poor\": \"Бедный\","
+      },
+      {
+        "line": 1197,
+        "text": "\"ui.wealth.comfortable\": \"Обеспеченный\","
+      },
+      {
+        "line": 1198,
+        "text": "\"ui.wealth.wealthy\": \"Богатый\","
+      },
+      {
+        "line": 1199,
+        "text": "\"ui.wealth.rich\": \"Очень богатый\","
+      },
+      {
+        "line": 1200,
+        "text": "\"ui.wealth.elite\": \"Элита\","
+      },
+      {
+        "line": 1201,
+        "text": "\"ui.age\": \"Возраст\","
+      },
+      {
+        "line": 1202,
+        "text": "\"ui.health\": \"Здоровье\","
+      },
+      {
+        "line": 1203,
+        "text": "\"ui.happiness\": \"Счастье\","
+      },
+      {
+        "line": 1204,
+        "text": "\"ui.energy\": \"Энергия\","
+      },
+      {
+        "line": 1205,
+        "text": "\"ui.intelligence\": \"Интеллект\","
+      },
+      {
+        "line": 1206,
+        "text": "\"ui.attractiveness\": \"Привлекательность\","
+      },
+      {
+        "line": 1207,
+        "text": "\"ui.stress\": \"Стресс\","
+      },
+      {
+        "line": 1208,
+        "text": "\"ui.money\": \"Деньги\","
+      },
+      {
+        "line": 1209,
+        "text": "\"ui.netWorth\": \"Капитал\","
+      },
+      {
+        "line": 1210,
+        "text": "\"ui.cash\": \"Наличные\","
+      },
+      {
+        "line": 1211,
+        "text": "\"ui.yearlyIncome\": \"Годовой доход\","
+      },
+      {
+        "line": 1212,
+        "text": "\"ui.gems\": \"Кристаллы\","
+      },
+      {
+        "line": 1213,
+        "text": "\"ui.finance\": \"Финансы\","
+      },
+      {
+        "line": 1214,
+        "text": "\"ui.investments\": \"Инвестиции\","
+      },
+      {
+        "line": 1215,
+        "text": "\"ui.family\": \"Семья\","
+      },
+      {
+        "line": 1216,
+        "text": "\"ui.children\": \"Дети\","
+      },
+      {
+        "line": 1217,
+        "text": "\"ui.relationships\": \"Отношения\","
+      },
+      {
+        "line": 1218,
+        "text": "\"ui.shop\": \"Магазин\","
+      },
+      {
+        "line": 1219,
+        "text": "\"ui.achievements\": \"Достижения\","
+      },
+      {
+        "line": 1220,
+        "text": "\"ui.close\": \"Закрыть\","
+      },
+      {
+        "line": 1221,
+        "text": "\"ui.previous_event\": \"Прошлое событие\","
+      },
+      {
+        "line": 1222,
+        "text": "\"ui.free\": \"Бесплатно\","
+      },
+      {
+        "line": 1223,
+        "text": "\"ui.growUp\": \"Подрасти\","
+      },
+      {
+        "line": 1224,
+        "text": "\"ui.liveNextYear\": \"Прожить год\","
+      },
+      {
+        "line": 1225,
+        "text": "\"ui.timePasses\": \"Время идёт, события случаются\","
+      },
+      {
+        "line": 1226,
+        "text": "\"ui.activities\": \"Активности\","
+      },
+      {
+        "line": 1227,
+        "text": "\"ui.watchAdForMoney\": \"Реклама +$5000\","
+      },
+      {
+        "line": 1228,
+        "text": "\"ui.adUnavailable\": \"Реклама недоступна. Попробуйте позже.\","
+      },
+      {
+        "line": 1229,
+        "text": "\"ui.unemployed\": \"Безработный\","
+      },
+      {
+        "line": 1230,
+        "text": "\"ui.education\": \"Образование\","
+      },
+      {
+        "line": 1231,
+        "text": "\"ui.partner\": \"Партнёр\","
+      },
+      {
+        "line": 1232,
+        "text": "\"ui.assets\": \"Имущество\","
+      },
+      {
+        "line": 1233,
+        "text": "\"ui.cityGuide\": \"Гид по городу\","
+      },
+      {
+        "line": 1234,
+        "text": "\"selfdev.title\": \"Саморазвитие\","
+      },
+      {
+        "line": 1235,
+        "text": "\"selfdev.education\": \"Образование\","
+      },
+      {
+        "line": 1236,
+        "text": "\"selfdev.career\": \"Карьера\","
+      },
+      {
+        "line": 1237,
+        "text": "\"selfdev.business\": \"Бизнес\","
+      },
+      {
+        "line": 1238,
+        "text": "\"selfdev.investing\": \"Инвестиции\","
+      },
+      {
+        "line": 1239,
+        "text": "\"selfdev.current_stage\": \"Текущий этап\","
+      },
+      {
+        "line": 1240,
+        "text": "\"selfdev.progress\": \"Прогресс\","
+      },
+      {
+        "line": 1241,
+        "text": "\"selfdev.tooyoung\": \"Вы слишком молоды для образования\","
+      },
+      {
+        "line": 1242,
+        "text": "\"selfdev.tooyoung_desc\": \"Наслаждайтесь детством! Школа с 6 лет.\","
+      },
+      {
+        "line": 1243,
+        "text": "\"selfdev.school\": \"Вы в школе!\","
+      },
+      {
+        "line": 1244,
+        "text": "\"selfdev.school_desc\": \"Учёба — главное. Возможности появятся после выпуска.\","
+      },
+      {
+        "line": 1245,
+        "text": "\"selfdev.adult\": \"Продолжить обучение\","
+      },
+      {
+        "line": 1246,
+        "text": "\"selfdev.adult_desc\": \"Возможности появятся через события.\","
+      },
+      {
+        "line": 1247,
+        "text": "\"shop.title\": \"Магазин\","
+      },
+      {
+        "line": 1248,
+        "text": "\"shop.tab.clothes\": \"Одежда\","
+      },
+      {
+        "line": 1249,
+        "text": "\"shop.tab.tech\": \"Техника\","
+      },
+      {
+        "line": 1250,
+        "text": "\"shop.tab.lifestyle\": \"Стиль жизни\","
+      },
+      {
+        "line": 1251,
+        "text": "\"shop.tab.accessories\": \"Аксессуары\","
+      },
+      {
+        "line": 1252,
+        "text": "\"shop.tab.decor\": \"Декор\","
+      },
+      {
+        "line": 1253,
+        "text": "\"shop.buy\": \"Купить ({price})\","
+      },
+      {
+        "line": 1254,
+        "text": "\"shop.notEnough\": \"Недостаточно денег\","
+      },
+      {
+        "line": 1255,
+        "text": "\"shop.owned\": \"Куплено\","
+      },
+      {
+        "line": 1256,
+        "text": "\"shop.equip\": \"Надеть\","
+      },
+      {
+        "line": 1257,
+        "text": "\"shop.equipped\": \"Надето\","
+      },
+      {
+        "line": 1258,
+        "text": "\"shop.sub.enable\": \"Включить\","
+      },
+      {
+        "line": 1259,
+        "text": "\"shop.sub.disable\": \"Отключить\","
+      },
+      {
+        "line": 1260,
+        "text": "\"shop.annualCost\": \"Ежегодно\","
+      },
+      {
+        "line": 1261,
+        "text": "\"shop.perYear\": \"/год\","
+      },
+      {
+        "line": 1262,
+        "text": "\"shop.free\": \"Бесплатно\","
+      },
+      {
+        "line": 1263,
+        "text": "\"shop.purchased\": \"Куплено\","
+      },
+      {
+        "line": 1264,
+        "text": "\"shop.style_score\": \"Очки стиля\","
+      },
+      {
+        "line": 1265,
+        "text": "\"shop.annual_subscriptions\": \"Годовые подписки\","
+      },
+      {
+        "line": 1266,
+        "text": "\"shop.tier.basic\": \"Базовый\","
+      },
+      {
+        "line": 1267,
+        "text": "\"shop.tier.standard\": \"Стандарт\","
+      },
+      {
+        "line": 1268,
+        "text": "\"shop.tier.premium\": \"Премиум\","
+      },
+      {
+        "line": 1269,
+        "text": "\"shop.tier.luxury\": \"Люкс\","
+      },
+      {
+        "line": 1270,
+        "text": "\"shop.tier.elite\": \"Элита\","
+      },
+      {
+        "line": 1271,
+        "text": "\"shop.item.outfit_basic.name\": \"Базовая одежда\","
+      },
+      {
+        "line": 1272,
+        "text": "\"shop.item.outfit_basic.desc\": \"Просто и практично.\","
+      },
+      {
+        "line": 1273,
+        "text": "\"shop.item.outfit_casual.name\": \"Повседневная одежда\","
+      },
+      {
+        "line": 1274,
+        "text": "\"shop.item.outfit_casual.desc\": \"Расслабленный стиль на каждый день.\","
+      },
+      {
+        "line": 1275,
+        "text": "\"shop.item.outfit_streetwear.name\": \"Уличная мода\","
+      },
+      {
+        "line": 1276,
+        "text": "\"shop.item.outfit_streetwear.desc\": \"Модный городской стиль.\","
+      },
+      {
+        "line": 1277,
+        "text": "\"shop.item.outfit_smart_casual.name\": \"Смарт кэжуал\","
+      },
+      {
+        "line": 1278,
+        "text": "\"shop.item.outfit_smart_casual.desc\": \"Элегантно, но расслабленно.\","
+      },
+      {
+        "line": 1279,
+        "text": "\"shop.item.outfit_business.name\": \"Деловой костюм\","
+      },
+      {
+        "line": 1280,
+        "text": "\"shop.item.outfit_business.desc\": \"Профессиональный вид для карьеры.\","
+      },
+      {
+        "line": 1281,
+        "text": "\"shop.item.outfit_formal.name\": \"Формальная одежда\","
+      },
+      {
+        "line": 1282,
+        "text": "\"shop.item.outfit_formal.desc\": \"Для особых случаев.\","
+      },
+      {
+        "line": 1283,
+        "text": "\"shop.item.outfit_designer.name\": \"Дизайнерская одежда\","
+      },
+      {
+        "line": 1284,
+        "text": "\"shop.item.outfit_designer.desc\": \"Высокая мода.\","
+      },
+      {
+        "line": 1285,
+        "text": "\"shop.item.outfit_luxury.name\": \"Роскошная одежда\","
+      },
+      {
+        "line": 1286,
+        "text": "\"shop.item.outfit_luxury.desc\": \"Статус и уверенность.\","
+      },
+      {
+        "line": 1287,
+        "text": "\"shop.item.outfit_haute_couture.name\": \"От кутюр\","
+      },
+      {
+        "line": 1288,
+        "text": "\"shop.item.outfit_haute_couture.desc\": \"Вершина моды.\","
+      },
+      {
+        "line": 1289,
+        "text": "\"shop.item.shoes_basic.name\": \"Базовая обувь\","
+      },
+      {
+        "line": 1290,
+        "text": "\"shop.item.shoes_basic.desc\": \"Функциональная обувь.\","
+      },
+      {
+        "line": 1291,
+        "text": "\"shop.item.shoes_sneakers.name\": \"Кроссовки\","
+      },
+      {
+        "line": 1292,
+        "text": "\"shop.item.shoes_sneakers.desc\": \"Удобно и стильно.\","
+      },
+      {
+        "line": 1293,
+        "text": "\"shop.item.shoes_leather.name\": \"Кожаные туфли\","
+      },
+      {
+        "line": 1294,
+        "text": "\"shop.item.shoes_leather.desc\": \"Классический вид.\","
+      },
+      {
+        "line": 1295,
+        "text": "\"shop.item.shoes_designer.name\": \"Дизайнерская обувь\","
+      },
+      {
+        "line": 1296,
+        "text": "\"shop.item.shoes_designer.desc\": \"Модная обувь.\","
+      },
+      {
+        "line": 1297,
+        "text": "\"shop.item.shoes_luxury.name\": \"Роскошная обувь\","
+      },
+      {
+        "line": 1298,
+        "text": "\"shop.item.shoes_luxury.desc\": \"Элитное качество.\","
+      },
+      {
+        "line": 1299,
+        "text": "\"shop.item.gadget_phone_basic.name\": \"Простой телефон\","
+      },
+      {
+        "line": 1300,
+        "text": "\"shop.item.gadget_phone_basic.desc\": \"Оставайтесь на связи.\","
+      },
+      {
+        "line": 1301,
+        "text": "\"shop.item.gadget_phone_mid.name\": \"Смартфон\","
+      },
+      {
+        "line": 1302,
+        "text": "\"shop.item.gadget_phone_mid.desc\": \"Для соцсетей.\","
+      },
+      {
+        "line": 1303,
+        "text": "\"shop.item.gadget_phone_premium.name\": \"Премиум телефон\","
+      },
+      {
+        "line": 1304,
+        "text": "\"shop.item.gadget_phone_premium.desc\": \"Для создания контента.\","
+      },
+      {
+        "line": 1305,
+        "text": "\"shop.item.gadget_phone_flagship.name\": \"Флагманский телефон\","
+      },
+      {
+        "line": 1306,
+        "text": "\"shop.item.gadget_phone_flagship.desc\": \"Лучшее из мобильных технологий.\","
+      },
+      {
+        "line": 1307,
+        "text": "\"shop.item.gadget_laptop_basic.name\": \"Базовый ноутбук\","
+      },
+      {
+        "line": 1308,
+        "text": "\"shop.item.gadget_laptop_basic.desc\": \"Для простых задач.\","
+      },
+      {
+        "line": 1309,
+        "text": "\"shop.item.gadget_laptop.name\": \"Ноутбук\","
+      },
+      {
+        "line": 1310,
+        "text": "\"shop.item.gadget_laptop.desc\": \"Работа, учеба, создание.\","
+      },
+      {
+        "line": 1311,
+        "text": "\"shop.item.gadget_laptop_pro.name\": \"Про ноутбук\","
+      },
+      {
+        "line": 1312,
+        "text": "\"shop.item.gadget_laptop_pro.desc\": \"Профессиональная мощь.\","
+      },
+      {
+        "line": 1313,
+        "text": "\"shop.item.gadget_gaming_console.name\": \"Игровая консоль\","
+      },
+      {
+        "line": 1314,
+        "text": "\"shop.item.gadget_gaming_console.desc\": \"Развлечения и отдых.\","
+      },
+      {
+        "line": 1315,
+        "text": "\"shop.item.gadget_gaming_pc.name\": \"Игровой ПК\","
+      },
+      {
+        "line": 1316,
+        "text": "\"shop.item.gadget_gaming_pc.desc\": \"Потенциал для стриминга.\","
+      },
+      {
+        "line": 1317,
+        "text": "\"shop.item.gadget_gaming_setup.name\": \"Геймерское место\","
+      },
+      {
+        "line": 1318,
+        "text": "\"shop.item.gadget_gaming_setup.desc\": \"Стримь как профи.\","
+      },
+      {
+        "line": 1319,
+        "text": "\"shop.item.gadget_tablet.name\": \"Планшет\","
+      },
+      {
+        "line": 1320,
+        "text": "\"shop.item.gadget_tablet.desc\": \"Портативное творчество.\","
+      },
+      {
+        "line": 1321,
+        "text": "\"shop.item.gadget_camera.name\": \"Камера\","
+      },
+      {
+        "line": 1322,
+        "text": "\"shop.item.gadget_camera.desc\": \"Снимайте профессионально.\","
+      },
+      {
+        "line": 1323,
+        "text": "\"shop.item.gadget_drone.name\": \"Дрон\","
+      },
+      {
+        "line": 1324,
+        "text": "\"shop.item.gadget_drone.desc\": \"Аэросъемка.\","
+      },
+      {
+        "line": 1325,
+        "text": "\"shop.item.gadget_vr.name\": \"VR шлем\","
+      },
+      {
+        "line": 1326,
+        "text": "\"shop.item.gadget_vr.desc\": \"Иммерсивный опыт.\","
+      },
+      {
+        "line": 1327,
+        "text": "\"shop.item.gadget_smartwatch.name\": \"Умные часы\","
+      },
+      {
+        "line": 1328,
+        "text": "\"shop.item.gadget_smartwatch.desc\": \"Трекер активности.\","
+      },
+      {
+        "line": 1329,
+        "text": "\"shop.item.accessory_watch_basic.name\": \"Базовые часы\","
+      },
+      {
+        "line": 1330,
+        "text": "\"shop.item.accessory_watch_basic.desc\": \"Простое время.\","
+      },
+      {
+        "line": 1331,
+        "text": "\"shop.item.accessory_watch.name\": \"Часы\","
+      },
+      {
+        "line": 1332,
+        "text": "\"shop.item.accessory_watch.desc\": \"Немного стиля.\","
+      },
+      {
+        "line": 1333,
+        "text": "\"shop.item.accessory_watch_premium.name\": \"Премиум часы\","
+      },
+      {
+        "line": 1334,
+        "text": "\"shop.item.accessory_watch_premium.desc\": \"Качественная работа.\","
+      },
+      {
+        "line": 1335,
+        "text": "\"shop.item.accessory_watch_luxury.name\": \"Люксовые часы\","
+      },
+      {
+        "line": 1336,
+        "text": "\"shop.item.accessory_watch_luxury.desc\": \"Символ статуса.\","
+      },
+      {
+        "line": 1337,
+        "text": "\"shop.item.accessory_watch_elite.name\": \"Элитные часы\","
+      },
+      {
+        "line": 1338,
+        "text": "\"shop.item.accessory_watch_elite.desc\": \"Коллекционный экземпляр.\","
+      },
+      {
+        "line": 1339,
+        "text": "\"shop.item.accessory_jewelry_simple.name\": \"Простые украшения\","
+      },
+      {
+        "line": 1340,
+        "text": "\"shop.item.accessory_jewelry_simple.desc\": \"Тонкая элегантность.\","
+      },
+      {
+        "line": 1341,
+        "text": "\"shop.item.accessory_jewelry.name\": \"Украшения\","
+      },
+      {
+        "line": 1342,
+        "text": "\"shop.item.accessory_jewelry.desc\": \"Блеск, который замечают.\","
+      },
+      {
+        "line": 1343,
+        "text": "\"shop.item.accessory_jewelry_gold.name\": \"Золотые украшения\","
+      },
+      {
+        "line": 1344,
+        "text": "\"shop.item.accessory_jewelry_gold.desc\": \"Классическая роскошь.\","
+      },
+      {
+        "line": 1345,
+        "text": "\"shop.item.accessory_jewelry_diamond.name\": \"Бриллианты\","
+      },
+      {
+        "line": 1346,
+        "text": "\"shop.item.accessory_jewelry_diamond.desc\": \"Яркое заявление.\","
+      },
+      {
+        "line": 1347,
+        "text": "\"shop.item.accessory_jewelry_elite.name\": \"Элитные украшения\","
+      },
+      {
+        "line": 1348,
+        "text": "\"shop.item.accessory_jewelry_elite.desc\": \"Музейные экспонаты.\","
+      },
+      {
+        "line": 1349,
+        "text": "\"shop.item.accessory_bag_basic.name\": \"Рюкзак\","
+      },
+      {
+        "line": 1350,
+        "text": "\"shop.item.accessory_bag_basic.desc\": \"Практично.\","
+      },
+      {
+        "line": 1351,
+        "text": "\"shop.item.accessory_bag_leather.name\": \"Кожаная сумка\","
+      },
+      {
+        "line": 1352,
+        "text": "\"shop.item.accessory_bag_leather.desc\": \"Профессиональный вид.\","
+      },
+      {
+        "line": 1353,
+        "text": "\"shop.item.accessory_bag_designer.name\": \"Дизайнерская сумка\","
+      },
+      {
+        "line": 1354,
+        "text": "\"shop.item.accessory_bag_designer.desc\": \"Модный аксессуар.\","
+      },
+      {
+        "line": 1355,
+        "text": "\"shop.item.accessory_bag_luxury.name\": \"Люксовая сумка\","
+      },
+      {
+        "line": 1356,
+        "text": "\"shop.item.accessory_bag_luxury.desc\": \"Высокая мода.\","
+      },
+      {
+        "line": 1357,
+        "text": "\"shop.item.accessory_bag_elite.name\": \"Элитная сумка\","
+      },
+      {
+        "line": 1358,
+        "text": "\"shop.item.accessory_bag_elite.desc\": \"Эксклюзивная работа.\","
+      },
+      {
+        "line": 1359,
+        "text": "\"shop.item.accessory_glasses_basic.name\": \"Очки\","
+      },
+      {
+        "line": 1360,
+        "text": "\"shop.item.accessory_glasses_basic.desc\": \"Четкое зрение.\","
+      },
+      {
+        "line": 1361,
+        "text": "\"shop.item.accessory_glasses_fashion.name\": \"Модные очки\","
+      },
+      {
+        "line": 1362,
+        "text": "\"shop.item.accessory_glasses_fashion.desc\": \"Стильная оправа.\","
+      },
+      {
+        "line": 1363,
+        "text": "\"shop.item.accessory_glasses_designer.name\": \"Дизайнерские очки\","
+      },
+      {
+        "line": 1364,
+        "text": "\"shop.item.accessory_glasses_designer.desc\": \"Премиум оптика.\","
+      },
+      {
+        "line": 1365,
+        "text": "\"shop.item.accessory_glasses_luxury.name\": \"Люксовые очки\","
+      },
+      {
+        "line": 1366,
+        "text": "\"shop.item.accessory_glasses_luxury.desc\": \"Элитная оправа.\","
+      },
+      {
+        "line": 1367,
+        "text": "\"shop.item.sub_gym_basic.name\": \"Спортзал\","
+      },
+      {
+        "line": 1368,
+        "text": "\"shop.item.sub_gym_basic.desc\": \"Здоровье и фитнес.\","
+      },
+      {
+        "line": 1369,
+        "text": "\"shop.item.sub_gym_premium.name\": \"Премиум зал\","
+      },
+      {
+        "line": 1370,
+        "text": "\"shop.item.sub_gym_premium.desc\": \"Лучшее оборудование.\","
+      },
+      {
+        "line": 1371,
+        "text": "\"shop.item.sub_gym_elite.name\": \"Элитный фитнес-клуб\","
+      },
+      {
+        "line": 1372,
+        "text": "\"shop.item.sub_gym_elite.desc\": \"Фитнес уровня звезд.\","
+      },
+      {
+        "line": 1373,
+        "text": "\"shop.item.sub_club_social.name\": \"Социальный клуб\","
+      },
+      {
+        "line": 1374,
+        "text": "\"shop.item.sub_club_social.desc\": \"Нетворкинг и события.\","
+      },
+      {
+        "line": 1375,
+        "text": "\"shop.item.sub_club_exclusive.name\": \"Эксклюзивный клуб\","
+      },
+      {
+        "line": 1376,
+        "text": "\"shop.item.sub_club_exclusive.desc\": \"VIP нетворкинг.\","
+      },
+      {
+        "line": 1377,
+        "text": "\"shop.item.sub_club_elite.name\": \"Элитный клуб\","
+      },
+      {
+        "line": 1378,
+        "text": "\"shop.item.sub_club_elite.desc\": \"Круг миллиардеров.\","
+      },
+      {
+        "line": 1379,
+        "text": "\"shop.item.sub_streaming.name\": \"Стриминг\","
+      },
+      {
+        "line": 1380,
+        "text": "\"shop.item.sub_streaming.desc\": \"Развлечения дома.\","
+      },
+      {
+        "line": 1381,
+        "text": "\"shop.item.sub_streaming_premium.name\": \"Премиум стриминг\","
+      },
+      {
+        "line": 1382,
+        "text": "\"shop.item.sub_streaming_premium.desc\": \"Весь контент.\","
+      },
+      {
+        "line": 1383,
+        "text": "\"shop.item.sub_coworking.name\": \"Коворкинг\","
+      },
+      {
+        "line": 1384,
+        "text": "\"shop.item.sub_coworking.desc\": \"Рабочее место.\","
+      },
+      {
+        "line": 1385,
+        "text": "\"shop.item.sub_coworking_premium.name\": \"Премиум коворкинг\","
+      },
+      {
+        "line": 1386,
+        "text": "\"shop.item.sub_coworking_premium.desc\": \"Элитное рабочее место.\","
+      },
+      {
+        "line": 1387,
+        "text": "\"shop.item.sub_learning.name\": \"Онлайн обучение\","
+      },
+      {
+        "line": 1388,
+        "text": "\"shop.item.sub_learning.desc\": \"Постоянное развитие.\","
+      },
+      {
+        "line": 1389,
+        "text": "\"shop.item.sub_learning_premium.name\": \"Премиум обучение\","
+      },
+      {
+        "line": 1390,
+        "text": "\"shop.item.sub_learning_premium.desc\": \"Мастер-классы и менторы.\","
+      },
+      {
+        "line": 1391,
+        "text": "\"shop.item.sub_meditation.name\": \"Приложение для медитации\","
+      },
+      {
+        "line": 1392,
+        "text": "\"shop.item.sub_meditation.desc\": \"Ментальное здоровье.\","
+      },
+      {
+        "line": 1393,
+        "text": "\"shop.item.sub_therapy.name\": \"Сеансы терапии\","
+      },
+      {
+        "line": 1394,
+        "text": "\"shop.item.sub_therapy.desc\": \"Психологическая помощь.\","
+      },
+      {
+        "line": 1395,
+        "text": "\"shop.item.sub_personal_chef.name\": \"Личный повар\","
+      },
+      {
+        "line": 1396,
+        "text": "\"shop.item.sub_personal_chef.desc\": \"Изысканные блюда каждый день.\","
+      },
+      {
+        "line": 1397,
+        "text": "\"shop.item.sub_personal_trainer.name\": \"Личный тренер\","
+      },
+      {
+        "line": 1398,
+        "text": "\"shop.item.sub_personal_trainer.desc\": \"Персональный коучинг.\","
+      },
+      {
+        "line": 1399,
+        "text": "\"shop.item.sub_concierge.name\": \"Консьерж-сервис\","
+      },
+      {
+        "line": 1400,
+        "text": "\"shop.item.sub_concierge.desc\": \"Помощь 24/7.\","
+      },
+      {
+        "line": 1401,
+        "text": "\"shop.item.decor_basic.name\": \"Базовая мебель\","
+      },
+      {
+        "line": 1402,
+        "text": "\"shop.item.decor_basic.desc\": \"Функционально.\","
+      },
+      {
+        "line": 1403,
+        "text": "\"shop.item.decor_simple.name\": \"Простой декор\","
+      },
+      {
+        "line": 1404,
+        "text": "\"shop.item.decor_simple.desc\": \"Уютные детали.\","
+      },
+      {
+        "line": 1405,
+        "text": "\"shop.item.decor_modern.name\": \"Модный декор\","
+      },
+      {
+        "line": 1406,
+        "text": "\"shop.item.decor_modern.desc\": \"Современный стиль.\","
+      },
+      {
+        "line": 1407,
+        "text": "\"shop.item.decor_luxury.name\": \"Люксовый декор\","
+      },
+      {
+        "line": 1408,
+        "text": "\"shop.item.decor_luxury.desc\": \"Премиум дизайн.\","
+      },
+      {
+        "line": 1409,
+        "text": "\"shop.item.decor_elite.name\": \"Элитный декор\","
+      },
+      {
+        "line": 1410,
+        "text": "\"shop.item.decor_elite.desc\": \"Интерьер как в журнале.\","
+      },
+      {
+        "line": 1411,
+        "text": "\"shop.item.decor_art_collection.name\": \"Коллекция искусства\","
+      },
+      {
+        "line": 1412,
+        "text": "\"shop.item.decor_art_collection.desc\": \"Музейное качество.\","
+      },
+      {
+        "line": 1413,
+        "text": "\"relationships.title\": \"Отношения\","
+      },
+      {
+        "line": 1414,
+        "text": "\"relationships.section.partnerKids\": \"Партнер и дети\","
+      },
+      {
+        "line": 1415,
+        "text": "\"relationships.section.family\": \"Родители и сиблинги\","
+      },
+      {
+        "line": 1416,
+        "text": "\"relationships.section.friends\": \"Друзья\","
+      },
+      {
+        "line": 1417,
+        "text": "\"relationships.section.pets\": \"Питомцы\","
+      },
+      {
+        "line": 1418,
+        "text": "\"relationships.status.deceased\": \"умер\","
+      },
+      {
+        "line": 1419,
+        "text": "\"relationships.none.partner\": \"Нет партнера\","
+      },
+      {
+        "line": 1420,
+        "text": "\"relationships.none.kids\": \"Нет детей\","
+      },
+      {
+        "line": 1421,
+        "text": "\"relationships.none.siblings\": \"Нет братьев/сестер\","
+      },
+      {
+        "line": 1422,
+        "text": "\"relationships.none.friends\": \"Нет близких друзей\","
+      },
+      {
+        "line": 1423,
+        "text": "\"relationships.none.pets\": \"Нет питомцев\","
+      },
+      {
+        "line": 1424,
+        "text": "\"richlist.title\": \"Список богатейших\","
+      },
+      {
+        "line": 1425,
+        "text": "\"richlist.rank\": \"Ранг\","
+      },
+      {
+        "line": 1426,
+        "text": "\"richlist.name\": \"Имя\","
+      },
+      {
+        "line": 1427,
+        "text": "\"richlist.country\": \"Страна\","
+      },
+      {
+        "line": 1428,
+        "text": "\"richlist.industry\": \"Индустрия\","
+      },
+      {
+        "line": 1429,
+        "text": "\"richlist.netWorth\": \"Капитал\","
+      },
+      {
+        "line": 1430,
+        "text": "\"richlist.top10\": \"Топ 10\","
+      },
+      {
+        "line": 1431,
+        "text": "\"richlist.position.belowThreshold\": \"Вас пока нет в списке. Минимум: {threshold}\","
+      },
+      {
+        "line": 1432,
+        "text": "\"richlist.position.onList\": \"Вы #{rank} в мире.\","
+      },
+      {
+        "line": 1433,
+        "text": "\"richlist.passed\": \"Вы только что обошли {name} в списке богатейших!\","
+      },
+      {
+        "line": 1434,
+        "text": "\"richlist.industry.tech\": \"Технологии\","
+      },
+      {
+        "line": 1435,
+        "text": "\"richlist.industry.finance\": \"Финансы\","
+      },
+      {
+        "line": 1436,
+        "text": "\"richlist.industry.energy\": \"Энергетика\","
+      },
+      {
+        "line": 1437,
+        "text": "\"richlist.industry.realestate\": \"Недвижимость\","
+      },
+      {
+        "line": 1438,
+        "text": "\"richlist.industry.retail\": \"Ритейл\","
+      },
+      {
+        "line": 1439,
+        "text": "\"richlist.industry.media\": \"Медиа\","
+      },
+      {
+        "line": 1440,
+        "text": "\"richlist.industry.health\": \"Медицина\","
+      },
+      {
+        "line": 1441,
+        "text": "\"richlist.industry.manufacturing\": \"Производство\","
+      },
+      {
+        "line": 1442,
+        "text": "\"richlist.industry.transport\": \"Транспорт\","
+      },
+      {
+        "line": 1443,
+        "text": "\"richlist.industry.gaming\": \"Гейминг\","
+      },
+      {
+        "line": 1444,
+        "text": "\"richlist.industry.player\": \"Вы\","
+      },
+      {
+        "line": 1445,
+        "text": "\"ui.expectedReturn\": \"Доходность\","
+      },
+      {
+        "line": 1446,
+        "text": "\"ui.risk\": \"Риск\","
+      },
+      {
+        "line": 1447,
+        "text": "\"ui.sell\": \"Продать\","
+      },
+      {
+        "line": 1448,
+        "text": "\"invest.stocks\": \"Акции\","
+      },
+      {
+        "line": 1449,
+        "text": "\"invest.realestate\": \"Недвижимость\","
+      },
+      {
+        "line": 1450,
+        "text": "\"invest.crypto\": \"Крипта\","
+      },
+      {
+        "line": 1451,
+        "text": "\"invest.business\": \"Бизнес\","
+      },
+      {
+        "line": 1452,
+        "text": "\"ui.chooseFocus\": \"Выберите, на чем сосредоточиться в этом году\","
+      },
+      {
+        "line": 1453,
+        "text": "\"ui.currentStatus\": \"Текущий статус\","
+      },
+      {
+        "line": 1454,
+        "text": "\"ui.status\": \"Статус\","
+      },
+      {
+        "line": 1455,
+        "text": "\"ui.status.baby\": \"Вы младенец. Зависите от родителей.\","
+      },
+      {
+        "line": 1456,
+        "text": "\"ui.status.child\": \"Вы растете. Школа - ваш главный фокус.\","
+      },
+      {
+        "line": 1457,
+        "text": "\"ui.status.teen\": \"Подростковые годы. Средняя школа и друзья.\","
+      },
+      {
+        "line": 1458,
+        "text": "\"ui.relationshipScore\": \"Отношения\","
+      },
+      {
+        "line": 1459,
+        "text": "\"ui.grades\": \"Оценки\","
+      },
+      {
+        "line": 1460,
+        "text": "\"ui.noChildren\": \"Детей пока нет\","
+      },
+      {
+        "line": 1461,
+        "text": "\"ui.lifeComplete\": \"Жизнь завершена\","
+      },
+      {
+        "line": 1462,
+        "text": "\"ui.livedYears\": \"Прожито {years} лет\","
+      },
+      {
+        "line": 1463,
+        "text": "\"ui.finalNetWorth\": \"Финальный капитал\","
+      },
+      {
+        "line": 1464,
+        "text": "\"ui.maxNetWorth\": \"Пиковый капитал\","
+      },
+      {
+        "line": 1465,
+        "text": "\"ui.yearsWorked\": \"Лет работы\","
+      },
+      {
+        "line": 1466,
+        "text": "\"ui.citiesVisited\": \"Посещено городов\","
+      },
+      {
+        "line": 1467,
+        "text": "\"ui.eventsExperienced\": \"Событий\","
+      },
+      {
+        "line": 1468,
+        "text": "\"ui.costOfLiving\": \"Стоимость жизни\","
+      },
+      {
+        "line": 1469,
+        "text": "\"ui.availableJobs\": \"Доступные вакансии\","
+      },
+      {
+        "line": 1470,
+        "text": "\"ui.reroll.spendGems\": \"Обновить ({cost} gems)\","
+      },
+      {
+        "line": 1471,
+        "text": "\"ui.achievementUnlocked\": \"Достижение разблокировано\","
+      },
+      {
+        "line": 1472,
+        "text": "\"marriage.single\": \"Холост/Не замужем\","
+      },
+      {
+        "line": 1473,
+        "text": "\"marriage.dating\": \"В отношениях\","
+      },
+      {
+        "line": 1474,
+        "text": "\"marriage.married\": \"В браке\","
+      },
+      {
+        "line": 1475,
+        "text": "\"marriage.divorced\": \"В разводе\","
+      },
+      {
+        "line": 1476,
+        "text": "\"marriage.widowed\": \"Вдовец/Вдова\","
+      },
+      {
+        "line": 1477,
+        "text": "\"event.school.title\": \"Первый день в школе\","
+      },
+      {
+        "line": 1478,
+        "text": "\"event.school.desc\": \"Это твой первый день! Ты видишь две группы детей. Одни играют, у других крутые игрушки.\","
+      },
+      {
+        "line": 1479,
+        "text": "\"event.school.choice.sport\": \"Играть в спорт\","
+      },
+      {
+        "line": 1480,
+        "text": "\"event.school.choice.toys\": \"Смотреть игрушки\","
+      },
+      {
+        "line": 1481,
+        "text": "\"event.school.choice.read\": \"Читать одному\","
+      },
+      {
+        "line": 1482,
+        "text": "\"event.drama.title\": \"Семейная драма\","
+      },
+      {
+        "line": 1483,
+        "text": "\"event.drama.desc\": \"Ты слышишь, как родители громко ссорятся.\","
+      },
+      {
+        "line": 1484,
+        "text": "\"event.drama.choice.hide\": \"Спрятаться в комнате\","
+      },
+      {
+        "line": 1485,
+        "text": "\"event.drama.choice.cry\": \"Заплакать\","
+      },
+      {
+        "line": 1486,
+        "text": "\"event.talent.title\": \"Талант обнаружен!\","
+      },
+      {
+        "line": 1487,
+        "text": "\"event.talent.desc\": \"Учитель поражен твоей работой. У тебя талант!\","
+      },
+      {
+        "line": 1488,
+        "text": "\"event.talent.choice.practice\": \"Тренироваться!\","
+      },
+      {
+        "line": 1489,
+        "text": "\"event.goals.title\": \"Жизненные цели\","
+      },
+      {
+        "line": 1490,
+        "text": "\"event.goals.desc\": \"Ты задумываешься, чего хочешь достичь.\","
+      },
+      {
+        "line": 1491,
+        "text": "\"event.goals.choice.inspired\": \"Я готов!\","
+      },
+      {
+        "line": 1492,
+        "text": "\"app_title\": \"Живой или Мертвый: Симулятор Жизни (Тест: АБВГД абвгд Ёё Ққ Ұұ Әә)\","
+      },
+      {
+        "line": 1493,
+        "text": "\"goals.title\": \"Чеклист жизни\","
+      },
+      {
+        "line": 1494,
+        "text": "\"goals.graduate\": \"Окончить университет\","
+      },
+      {
+        "line": 1495,
+        "text": "\"goals.job\": \"Получить работу мечты\","
+      },
+      {
+        "line": 1496,
+        "text": "\"goals.love\": \"Найти любовь\","
+      },
+      {
+        "line": 1497,
+        "text": "\"goals.home\": \"Купить первый дом\","
+      },
+      {
+        "line": 1498,
+        "text": "\"goals.family\": \"Завести семью\","
+      },
+      {
+        "line": 1499,
+        "text": "\"goals.millionaire\": \"Стать миллионером\","
+      },
+      {
+        "line": 1500,
+        "text": "\"goals.travel\": \"Посетить 10 городов\","
+      },
+      {
+        "line": 1501,
+        "text": "\"goals.age100\": \"Дожить до 100\","
+      },
+      {
+        "line": 1502,
+        "text": "\"skills.title\": \"Навыки\","
+      },
+      {
+        "line": 1503,
+        "text": "\"skills.sports\": \"Спорт\","
+      },
+      {
+        "line": 1504,
+        "text": "\"skills.business\": \"Бизнес\","
+      },
+      {
+        "line": 1505,
+        "text": "\"skills.investing\": \"Инвестиции\","
+      },
+      {
+        "line": 1506,
+        "text": "\"skills.career\": \"Карьера\","
+      },
+      {
+        "line": 1507,
+        "text": "\"skills.social\": \"Общение\","
+      },
+      {
+        "line": 1508,
+        "text": "\"skills.mainHobby\": \"Главное хобби\","
+      },
+      {
+        "line": 1509,
+        "text": "\"skills.otherHobbies\": \"Другие хобби\","
+      },
+      {
+        "line": 1510,
+        "text": "\"skills.noHobby\": \"Хобби пока нет. Попробуй что-то новое!\","
+      },
+      {
+        "line": 1511,
+        "text": "\"skills.noBonus\": \"Достигни уровня 30+ для бонусов\","
+      },
+      {
+        "line": 1512,
+        "text": "\"skills.section.main\": \"Основные навыки\","
+      },
+      {
+        "line": 1513,
+        "text": "\"skills.section.hobbies\": \"Хобби\","
+      },
+      {
+        "line": 1514,
+        "text": "\"skills.section.effects\": \"Активные бонусы\","
+      },
+      {
+        "line": 1515,
+        "text": "\"skills.level.novice\": \"Новичок\","
+      },
+      {
+        "line": 1516,
+        "text": "\"skills.level.beginner\": \"Начинающий\","
+      },
+      {
+        "line": 1517,
+        "text": "\"skills.level.intermediate\": \"Средний\","
+      },
+      {
+        "line": 1518,
+        "text": "\"skills.level.proficient\": \"Опытный\","
+      },
+      {
+        "line": 1519,
+        "text": "\"skills.level.expert\": \"Эксперт\","
+      },
+      {
+        "line": 1520,
+        "text": "\"skills.level.master\": \"Мастер\","
+      },
+      {
+        "line": 1521,
+        "text": "\"skills.effect.sports\": \"Лучше здоровье, спортивная карьера\","
+      },
+      {
+        "line": 1522,
+        "text": "\"skills.effect.business\": \"Успех в бизнесе\","
+      },
+      {
+        "line": 1523,
+        "text": "\"skills.effect.investing\": \"Выше доходность, меньше потерь\","
+      },
+      {
+        "line": 1524,
+        "text": "\"skills.effect.career\": \"Быстрый рост, стабильность\","
+      },
+      {
+        "line": 1525,
+        "text": "\"skills.effect.social\": \"Связи и отношения\","
+      },
+      {
+        "line": 1526,
+        "text": "\"skills.bonus.health\": \"Бонус здоровья\","
+      },
+      {
+        "line": 1527,
+        "text": "\"skills.bonus.business\": \"Бонус бизнеса\","
+      },
+      {
+        "line": 1528,
+        "text": "\"skills.bonus.investing\": \"Бонус инвестиций\","
+      },
+      {
+        "line": 1529,
+        "text": "\"skills.bonus.career\": \"Бонус карьеры\","
+      },
+      {
+        "line": 1530,
+        "text": "\"skills.bonus.social\": \"Бонус общения\","
+      },
+      {
+        "line": 1531,
+        "text": "\"skills.hobby.music\": \"Музыка\","
+      },
+      {
+        "line": 1532,
+        "text": "\"skills.hobby.music.desc\": \"Вырази себя через мелодию\","
+      },
+      {
+        "line": 1533,
+        "text": "\"skills.hobby.art\": \"Искусство\","
+      },
+      {
+        "line": 1534,
+        "text": "\"skills.hobby.art.desc\": \"Создавай шедевры\","
+      },
+      {
+        "line": 1535,
+        "text": "\"skills.hobby.coding\": \"Программирование\","
+      },
+      {
+        "line": 1536,
+        "text": "\"skills.hobby.coding.desc\": \"Создавай софт и приложения\","
+      },
+      {
+        "line": 1537,
+        "text": "\"skills.hobby.cooking\": \"Готовка\","
+      },
+      {
+        "line": 1538,
+        "text": "\"skills.hobby.cooking.desc\": \"Кулинарное мастерство\","
+      },
+      {
+        "line": 1539,
+        "text": "\"skills.hobby.gaming\": \"Гейминг\","
+      },
+      {
+        "line": 1540,
+        "text": "\"skills.hobby.gaming.desc\": \"Соревнуйся и развлекайся\","
+      },
+      {
+        "line": 1541,
+        "text": "\"skills.hobby.photography\": \"Фотография\","
+      },
+      {
+        "line": 1542,
+        "text": "\"skills.hobby.photography.desc\": \"Лови моменты\","
+      },
+      {
+        "line": 1543,
+        "text": "\"skills.hobby.writing\": \"Писательство\","
+      },
+      {
+        "line": 1544,
+        "text": "\"skills.hobby.writing.desc\": \"Рассказывай истории\","
+      },
+      {
+        "line": 1545,
+        "text": "\"personality.optimistic\": \"Оптимист\","
+      },
+      {
+        "line": 1546,
+        "text": "\"personality.ambitious\": \"Амбициозный\","
+      },
+      {
+        "line": 1547,
+        "text": "\"personality.creative\": \"Креативный\","
+      },
+      {
+        "line": 1548,
+        "text": "\"personality.athletic\": \"Атлетичный\","
+      },
+      {
+        "line": 1549,
+        "text": "\"personality.intellectual\": \"Интеллектуал\","
+      },
+      {
+        "line": 1550,
+        "text": "\"personality.lazy\": \"Ленивый\","
+      },
+      {
+        "line": 1551,
+        "text": "\"personality.kind\": \"Добрый\","
+      },
+      {
+        "line": 1552,
+        "text": "\"personality.serious\": \"Серьезный\","
+      },
+      {
+        "line": 1553,
+        "text": "\"personality.funny\": \"Забавный\","
+      },
+      {
+        "line": 1554,
+        "text": "\"personality.adventurous\": \"Авантюрный\","
+      },
+      {
+        "line": 1555,
+        "text": "\"city.almaty\": \"Алматы, Казахстан\","
+      },
+      {
+        "line": 1556,
+        "text": "\"city.dubai\": \"Дубай, ОАЭ\","
+      },
+      {
+        "line": 1557,
+        "text": "\"city.newYork\": \"Нью-Йорк, США\","
+      },
+      {
+        "line": 1558,
+        "text": "\"city.tokyo\": \"Токио, Япония\","
+      },
+      {
+        "line": 1559,
+        "text": "\"city.paris\": \"Париж, Франция\","
+      },
+      {
+        "line": 1560,
+        "text": "\"city.london\": \"Лондон, Великобритания\","
+      },
+      {
+        "line": 1561,
+        "text": "\"city.singapore\": \"Сингапур\","
+      },
+      {
+        "line": 1562,
+        "text": "\"city.hongKong\": \"Гонконг\","
+      },
+      {
+        "line": 1563,
+        "text": "\"city.bangkok\": \"Бангкок, Таиланд\","
+      },
+      {
+        "line": 1564,
+        "text": "\"city.moscow\": \"Москва, Россия\","
+      },
+      {
+        "line": 1565,
+        "text": "\"job.unemployed\": \"Безработный\","
+      },
+      {
+        "line": 1566,
+        "text": "\"job.janitor\": \"Уборщик\","
+      },
+      {
+        "line": 1567,
+        "text": "\"job.retailWorker\": \"Продавец\","
+      },
+      {
+        "line": 1568,
+        "text": "\"job.waiter\": \"Официант\","
+      },
+      {
+        "line": 1569,
+        "text": "\"job.fastFoodWorker\": \"Работник фастфуда\","
+      },
+      {
+        "line": 1570,
+        "text": "\"job.deliveryDriver\": \"Курьер\","
+      },
+      {
+        "line": 1571,
+        "text": "\"job.mechanic\": \"Механик\","
+      },
+      {
+        "line": 1572,
+        "text": "\"job.electrician\": \"Электрик\","
+      },
+      {
+        "line": 1573,
+        "text": "\"job.constructionWorker\": \"Строитель\","
+      },
+      {
+        "line": 1574,
+        "text": "\"job.securityGuard\": \"Охранник\","
+      },
+      {
+        "line": 1575,
+        "text": "\"job.driver\": \"Водитель\","
+      },
+      {
+        "line": 1576,
+        "text": "\"job.teacher\": \"Учитель\","
+      },
+      {
+        "line": 1577,
+        "text": "\"job.nurse\": \"Медсестра\","
+      },
+      {
+        "line": 1578,
+        "text": "\"job.programmer\": \"Программист\","
+      },
+      {
+        "line": 1579,
+        "text": "\"job.engineer\": \"Инженер\","
+      },
+      {
+        "line": 1580,
+        "text": "\"job.accountant\": \"Бухгалтер\","
+      },
+      {
+        "line": 1581,
+        "text": "\"job.lawyer\": \"Юрист\","
+      },
+      {
+        "line": 1582,
+        "text": "\"job.doctor\": \"Врач\","
+      },
+      {
+        "line": 1583,
+        "text": "\"job.architect\": \"Архитектор\","
+      },
+      {
+        "line": 1584,
+        "text": "\"job.scientist\": \"Ученый\","
+      },
+      {
+        "line": 1585,
+        "text": "\"job.marketingManager\": \"Маркетолог\","
+      },
+      {
+        "line": 1589,
+        "text": "\"job.artist\": \"Художник\","
+      },
+      {
+        "line": 1590,
+        "text": "\"job.musician\": \"Музыкант\","
+      },
+      {
+        "line": 1591,
+        "text": "\"job.actor\": \"Актер\","
+      },
+      {
+        "line": 1592,
+        "text": "\"job.model\": \"Модель\","
+      },
+      {
+        "line": 1593,
+        "text": "\"job.influencer\": \"Инфлюенсер\","
+      },
+      {
+        "line": 1594,
+        "text": "\"job.entrepreneur\": \"Предприниматель\","
+      },
+      {
+        "line": 1595,
+        "text": "\"event.birth.title\": \"Ты родился\","
+      },
+      {
+        "line": 1596,
+        "text": "\"event.birth.desc\": \"Начинается новая жизнь.\","
+      },
+      {
+        "line": 1597,
+        "text": "\"event.birth.choice.start\": \"Начать\","
+      },
+      {
+        "line": 1598,
+        "text": "\"event.childhood_park.title\": \"День в парке\","
+      },
+      {
+        "line": 1599,
+        "text": "\"event.childhood_park.desc\": \"Родители привели тебя в парк.\","
+      },
+      {
+        "line": 1600,
+        "text": "\"event.childhood_park.choice.play\": \"Играть\","
+      },
+      {
+        "line": 1601,
+        "text": "\"event.childhood_park.choice.makeFriends\": \"Искать друзей\","
+      },
+      {
+        "line": 1602,
+        "text": "\"event.childhood_kindergarten.title\": \"Детский сад\","
+      },
+      {
+        "line": 1603,
+        "text": "\"event.childhood_kindergarten.desc\": \"Первый день в саду. Волнуешься?\","
+      },
+      {
+        "line": 1604,
+        "text": "\"event.childhood_kindergarten.choice.excited\": \"Радоваться\","
+      },
+      {
+        "line": 1605,
+        "text": "\"event.childhood_kindergarten.choice.cry\": \"Плакать\","
+      },
+      {
+        "line": 1606,
+        "text": "\"event.childhood_learning.title\": \"Учимся читать\","
+      },
+      {
+        "line": 1607,
+        "text": "\"event.childhood_learning.desc\": \"Родители учат тебя читать.\","
+      },
+      {
+        "line": 1608,
+        "text": "\"event.childhood_learning.choice.study\": \"Учиться\","
+      },
+      {
+        "line": 1609,
+        "text": "\"event.childhood_learning.choice.play\": \"Играть\","
+      },
+      {
+        "line": 1610,
+        "text": "\"event.childhood_pet.title\": \"Питомец?\","
+      },
+      {
+        "line": 1611,
+        "text": "\"event.childhood_pet.desc\": \"Семья думает о питомце.\","
+      },
+      {
+        "line": 1612,
+        "text": "\"event.childhood_pet.choice.dog\": \"Собака\","
+      },
+      {
+        "line": 1613,
+        "text": "\"event.childhood_pet.choice.cat\": \"Кошка\","
+      },
+      {
+        "line": 1614,
+        "text": "\"event.childhood_pet.choice.no\": \"Нет\","
+      },
+      {
+        "line": 1615,
+        "text": "\"event.childhood_school_start.title\": \"Школа\","
+      },
+      {
+        "line": 1616,
+        "text": "\"event.childhood_school_start.desc\": \"Первый раз в первый класс!\","
+      },
+      {
+        "line": 1617,
+        "text": "\"event.childhood_school_start.choice.eager\": \"Хочу учиться\","
+      },
+      {
+        "line": 1618,
+        "text": "\"event.childhood_school_start.choice.nervous\": \"Боюсь\","
+      },
+      {
+        "line": 1619,
+        "text": "\"event.childhood_talent.title\": \"Талант\","
+      },
+      {
+        "line": 1620,
+        "text": "\"event.childhood_talent.desc\": \"Учитель заметил твой талант.\","
+      },
+      {
+        "line": 1621,
+        "text": "\"event.childhood_talent.choice.music\": \"Музыка\","
+      },
+      {
+        "line": 1622,
+        "text": "\"event.childhood_talent.choice.sports\": \"Спорт\","
+      },
+      {
+        "line": 1623,
+        "text": "\"event.childhood_talent.choice.art\": \"Искусство\","
+      },
+      {
+        "line": 1624,
+        "text": "\"event.childhood_bully.title\": \"Хулиган\","
+      },
+      {
+        "line": 1625,
+        "text": "\"event.childhood_bully.desc\": \"Тебя обижают в школе.\","
+      },
+      {
+        "line": 1626,
+        "text": "\"event.childhood_bully.choice.fight\": \"Драться\","
+      },
+      {
+        "line": 1627,
+        "text": "\"event.childhood_bully.choice.tell\": \"Рассказать\","
+      },
+      {
+        "line": 1628,
+        "text": "\"event.childhood_bully.choice.hide\": \"Убежать\","
+      },
+      {
+        "line": 1629,
+        "text": "\"event.childhood_birthday.title\": \"День рождения\","
+      },
+      {
+        "line": 1630,
+        "text": "\"event.childhood_birthday.desc\": \"Твой день! Как праздновать?\","
+      },
+      {
+        "line": 1631,
+        "text": "\"event.childhood_birthday.choice.party\": \"Вечеринка\","
+      },
+      {
+        "line": 1632,
+        "text": "\"event.childhood_birthday.choice.small\": \"С семьей\","
+      },
+      {
+        "line": 1633,
+        "text": "\"event.childhood_sick.title\": \"Болезнь\","
+      },
+      {
+        "line": 1634,
+        "text": "\"event.childhood_sick.desc\": \"Ты простудился.\","
+      },
+      {
+        "line": 1635,
+        "text": "\"event.childhood_sick.choice.rest\": \"Отдыхать\","
+      },
+      {
+        "line": 1636,
+        "text": "\"event.childhood_sick.choice.medicine\": \"Лекарства\","
+      },
+      {
+        "line": 1637,
+        "text": "\"event.childhood_vacation.title\": \"Каникулы\","
+      },
+      {
+        "line": 1638,
+        "text": "\"event.childhood_vacation.desc\": \"Семья планирует отпуск.\","
+      },
+      {
+        "line": 1639,
+        "text": "\"event.childhood_vacation.choice.beach\": \"Пляж\","
+      },
+      {
+        "line": 1640,
+        "text": "\"event.childhood_vacation.choice.stay\": \"Дома\","
+      },
+      {
+        "line": 1641,
+        "text": "\"event.childhood_grades.title\": \"Оценки\","
+      },
+      {
+        "line": 1642,
+        "text": "\"event.childhood_grades.desc\": \"Табель успеваемости. Могло быть лучше.\","
+      },
+      {
+        "line": 1643,
+        "text": "\"event.childhood_grades.choice.study\": \"Учиться лучше\","
+      },
+      {
+        "line": 1644,
+        "text": "\"event.childhood_grades.choice.balance\": \"Баланс\","
+      },
+      {
+        "line": 1645,
+        "text": "\"event.childhood_friend.title\": \"Новые друзья\","
+      },
+      {
+        "line": 1646,
+        "text": "\"event.childhood_friend.desc\": \"Дети хотят дружить.\","
+      },
+      {
+        "line": 1647,
+        "text": "\"event.childhood_friend.choice.best\": \"Один друг\","
+      },
+      {
+        "line": 1648,
+        "text": "\"event.childhood_friend.choice.many\": \"Много друзей\","
+      },
+      {
+        "line": 1649,
+        "text": "\"event.childhood_competition.title\": \"Соревнование\","
+      },
+      {
+        "line": 1650,
+        "text": "\"event.childhood_competition.desc\": \"Школьный конкурс.\","
+      },
+      {
+        "line": 1651,
+        "text": "\"event.childhood_competition.choice.enter\": \"Участвовать\","
+      },
+      {
+        "line": 1652,
+        "text": "\"event.childhood_competition.choice.skip\": \"Пропустить\","
+      },
+      {
+        "line": 1653,
+        "text": "\"event.childhood_accident.title\": \"Травма\","
+      },
+      {
+        "line": 1654,
+        "text": "\"event.childhood_accident.desc\": \"Ты упал и ушибся.\","
+      },
+      {
+        "line": 1655,
+        "text": "\"event.childhood_accident.choice.hospital\": \"В больницу\","
+      },
+      {
+        "line": 1656,
+        "text": "\"event.teen_puberty.title\": \"Взросление\","
+      },
+      {
+        "line": 1657,
+        "text": "\"event.teen_puberty.desc\": \"Тело меняется. Пубертат.\","
+      },
+      {
+        "line": 1658,
+        "text": "\"event.teen_puberty.choice.embrace\": \"Принять\","
+      },
+      {
+        "line": 1659,
+        "text": "\"event.teen_puberty.choice.struggle\": \"Сложно\","
+      },
+      {
+        "line": 1660,
+        "text": "\"event.teen_hobby.title\": \"Хобби\","
+      },
+      {
+        "line": 1661,
+        "text": "\"event.teen_hobby.desc\": \"Время найти увлечение.\","
+      },
+      {
+        "line": 1662,
+        "text": "\"event.teen_hobby.choice.sports\": \"Спорт\","
+      },
+      {
+        "line": 1663,
+        "text": "\"event.teen_hobby.choice.music\": \"Музыка\","
+      },
+      {
+        "line": 1664,
+        "text": "\"event.teen_hobby.choice.gaming\": \"Игры\","
+      },
+      {
+        "line": 1665,
+        "text": "\"event.teen_first_crush.title\": \"Первая любовь\","
+      },
+      {
+        "line": 1666,
+        "text": "\"event.teen_first_crush.desc\": \"Тебе кто-то нравится.\","
+      },
+      {
+        "line": 1667,
+        "text": "\"event.teen_first_crush.choice.confess\": \"Признаться\","
+      },
+      {
+        "line": 1668,
+        "text": "\"event.teen_first_crush.choice.shy\": \"Скрывать\","
+      },
+      {
+        "line": 1669,
+        "text": "\"event.teen_bullying.title\": \"Травля\","
+      },
+      {
+        "line": 1670,
+        "text": "\"event.teen_bullying.desc\": \"Кто-то задирает тебя.\","
+      },
+      {
+        "line": 1671,
+        "text": "\"event.teen_bullying.choice.stand\": \"Постоять за себя\","
+      },
+      {
+        "line": 1672,
+        "text": "\"event.teen_bullying.choice.ignore\": \"Игнорировать\","
+      },
+      {
+        "line": 1673,
+        "text": "\"event.teen_bullying.choice.report\": \"Пожаловаться\","
+      },
+      {
+        "line": 1674,
+        "text": "\"event.teen_exam.title\": \"Экзамен\","
+      },
+      {
+        "line": 1675,
+        "text": "\"event.teen_exam.desc\": \"Важные экзамены.\","
+      },
+      {
+        "line": 1676,
+        "text": "\"event.teen_exam.choice.study\": \"Зубрить\","
+      },
+      {
+        "line": 1677,
+        "text": "\"event.teen_exam.choice.balance\": \"Готовиться умеренно\","
+      },
+      {
+        "line": 1678,
+        "text": "\"event.teen_exam.choice.skip\": \"Забить\","
+      },
+      {
+        "line": 1679,
+        "text": "\"event.teen_part_time.title\": \"Подработка\","
+      },
+      {
+        "line": 1680,
+        "text": "\"event.teen_part_time.desc\": \"Можно найти работу.\","
+      },
+      {
+        "line": 1681,
+        "text": "\"event.teen_part_time.choice.work\": \"Работать\","
+      },
+      {
+        "line": 1682,
+        "text": "\"event.teen_part_time.choice.focus\": \"Только учеба\","
+      },
+      {
+        "line": 1683,
+        "text": "\"event.teen_popularity.title\": \"Популярность\","
+      },
+      {
+        "line": 1684,
+        "text": "\"event.teen_popularity.desc\": \"Школьная иерархия сложна.\","
+      },
+      {
+        "line": 1685,
+        "text": "\"event.teen_popularity.choice.popular\": \"Быть популярным\","
+      },
+      {
+        "line": 1686,
+        "text": "\"event.teen_popularity.choice.nerdy\": \"Быть умным\","
+      },
+      {
+        "line": 1687,
+        "text": "\"event.teen_popularity.choice.average\": \"Быть обычным\","
+      },
+      {
+        "line": 1688,
+        "text": "\"event.teen_sports_team.title\": \"Школьная команда\","
+      },
+      {
+        "line": 1689,
+        "text": "\"event.teen_sports_team.desc\": \"Тебя зовут в команду.\","
+      },
+      {
+        "line": 1690,
+        "text": "\"event.teen_sports_team.choice.join\": \"Вступить\","
+      },
+      {
+        "line": 1691,
+        "text": "\"event.teen_sports_team.choice.decline\": \"Отказать\","
+      },
+      {
+        "line": 1692,
+        "text": "\"event.teen_sports_scholarship.title\": \"Спорт. стипендия\","
+      },
+      {
+        "line": 1693,
+        "text": "\"event.teen_sports_scholarship.desc\": \"Предлагают стипендию за спорт.\","
+      },
+      {
+        "line": 1694,
+        "text": "\"event.teen_sports_scholarship.choice.accept\": \"Принять\","
+      },
+      {
+        "line": 1695,
+        "text": "\"event.teen_sports_scholarship.choice.decline\": \"Отказаться\","
+      },
+      {
+        "line": 1696,
+        "text": "\"event.teen_prom.title\": \"Выпускной бал\","
+      },
+      {
+        "line": 1697,
+        "text": "\"event.teen_prom.desc\": \"Бал на носу!\","
+      },
+      {
+        "line": 1698,
+        "text": "\"event.teen_prom.choice.go\": \"Идти\","
+      },
+      {
+        "line": 1699,
+        "text": "\"event.teen_prom.choice.skip\": \"Пропустить\","
+      },
+      {
+        "line": 1700,
+        "text": "\"event.teen_driving.title\": \"Водительские права\","
+      },
+      {
+        "line": 1701,
+        "text": "\"event.teen_driving.desc\": \"Можно получить права.\","
+      },
+      {
+        "line": 1702,
+        "text": "\"event.teen_driving.choice.license\": \"Получить права\","
+      },
+      {
+        "line": 1703,
+        "text": "\"event.teen_driving.choice.wait\": \"Подождать\","
+      },
+      {
+        "line": 1704,
+        "text": "\"event.teen_social_media.title\": \"Соцсети\","
+      },
+      {
+        "line": 1705,
+        "text": "\"event.teen_social_media.desc\": \"Все сидят в соцсетях.\","
+      },
+      {
+        "line": 1706,
+        "text": "\"event.teen_social_media.choice.active\": \"Быть активным\","
+      },
+      {
+        "line": 1707,
+        "text": "\"event.teen_social_media.choice.minimal\": \"Минимально\","
+      },
+      {
+        "line": 1708,
+        "text": "\"event.teen_rebellion.title\": \"Бунт\","
+      },
+      {
+        "line": 1709,
+        "text": "\"event.teen_rebellion.desc\": \"Хочется нарушать правила.\","
+      },
+      {
+        "line": 1710,
+        "text": "\"event.teen_rebellion.choice.rebel\": \"Бунтовать\","
+      },
+      {
+        "line": 1711,
+        "text": "\"event.teen_rebellion.choice.obey\": \"Слушаться\","
+      },
+      {
+        "line": 1712,
+        "text": "\"event.teen_graduation.title\": \"Выпуск из школы\","
+      },
+      {
+        "line": 1713,
+        "text": "\"event.teen_graduation.desc\": \"Школа позади!\","
+      },
+      {
+        "line": 1714,
+        "text": "\"event.teen_graduation.choice.celebrate\": \"Отпраздновать\","
+      },
+      {
+        "line": 1715,
+        "text": "\"event.adulthood_start.title\": \"18 лет\","
+      },
+      {
+        "line": 1716,
+        "text": "\"event.adulthood_start.desc\": \"Ты взрослый. Что дальше?\","
+      },
+      {
+        "line": 1717,
+        "text": "\"event.adulthood_start.choice.stayHome\": \"Жить с родителями\","
+      },
+      {
+        "line": 1718,
+        "text": "\"event.adulthood_start.choice.university\": \"Университет\","
+      },
+      {
+        "line": 1719,
+        "text": "\"event.adulthood_start.choice.work\": \"Работа\","
+      },
+      {
+        "line": 1720,
+        "text": "\"event.university_life.title\": \"Универ\","
+      },
+      {
+        "line": 1721,
+        "text": "\"event.university_life.desc\": \"Год в университете.\","
+      },
+      {
+        "line": 1722,
+        "text": "\"event.university_life.choice.study\": \"Учеба\","
+      },
+      {
+        "line": 1723,
+        "text": "\"event.university_life.choice.party\": \"Тусовки\","
+      },
+      {
+        "line": 1724,
+        "text": "\"event.university_life.choice.balance\": \"Баланс\","
+      },
+      {
+        "line": 1725,
+        "text": "\"event.university_graduation.title\": \"Выпуск из ВУЗа\","
+      },
+      {
+        "line": 1726,
+        "text": "\"event.university_graduation.desc\": \"Диплом твой!\","
+      },
+      {
+        "line": 1727,
+        "text": "\"event.university_graduation.choice.graduate\": \"С отличием\","
+      },
+      {
+        "line": 1728,
+        "text": "\"event.university_graduation.choice.dropout\": \"Отчислиться\","
+      },
+      {
+        "line": 1729,
+        "text": "\"event.job_search.title\": \"Поиск работы\","
+      },
+      {
+        "line": 1730,
+        "text": "\"event.job_search.desc\": \"Пора найти работу.\","
+      },
+      {
+        "line": 1731,
+        "text": "\"event.job_search.choice.entry\": \"Начальная позиция\","
+      },
+      {
+        "line": 1732,
+        "text": "\"event.job_search.choice.skilled\": \"Специалист\","
+      },
+      {
+        "line": 1733,
+        "text": "\"event.job_search.choice.pro\": \"Профи\","
+      },
+      {
+        "line": 1734,
+        "text": "\"event.relationship_meet.title\": \"Особая встреча\","
+      },
+      {
+        "line": 1735,
+        "text": "\"event.relationship_meet.desc\": \"Ты встречаешь кого-то особенного.\","
+      },
+      {
+        "line": 1736,
+        "text": "\"event.relationship_meet.choice.date\": \"Пригласить\","
+      },
+      {
+        "line": 1737,
+        "text": "\"event.relationship_meet.choice.skip\": \"Мимо\","
+      },
+      {
+        "line": 1738,
+        "text": "\"event.relationship_propose.title\": \"Брак?\","
+      },
+      {
+        "line": 1739,
+        "text": "\"event.relationship_propose.desc\": \"Время сделать предложение?\","
+      },
+      {
+        "line": 1740,
+        "text": "\"event.relationship_propose.choice.propose\": \"Сделать предложение\","
+      },
+      {
+        "line": 1741,
+        "text": "\"event.relationship_propose.choice.wait\": \"Ждать\","
+      },
+      {
+        "line": 1742,
+        "text": "\"event.first_apartment.title\": \"Переезд\","
+      },
+      {
+        "line": 1743,
+        "text": "\"event.first_apartment.desc\": \"Пора жить отдельно.\","
+      },
+      {
+        "line": 1744,
+        "text": "\"event.first_apartment.choice.rent\": \"Снять квартиру\","
+      },
+      {
+        "line": 1745,
+        "text": "\"event.first_apartment.choice.stay\": \"С родителями\","
+      },
+      {
+        "line": 1746,
+        "text": "\"event.move_city.title\": \"Шанс переехать\","
+      },
+      {
+        "line": 1747,
+        "text": "\"event.move_city.desc\": \"Можно переехать в другой город.\","
+      },
+      {
+        "line": 1748,
+        "text": "\"event.move_city.choice.newYork\": \"В Нью-Йорк\","
+      },
+      {
+        "line": 1749,
+        "text": "\"event.move_city.choice.tokyo\": \"В Токио\","
+      },
+      {
+        "line": 1750,
+        "text": "\"event.move_city.choice.dubai\": \"В Дубай\","
+      },
+      {
+        "line": 1751,
+        "text": "\"event.move_city.choice.stay\": \"Остаться\","
+      },
+      {
+        "line": 1752,
+        "text": "\"event.career_promotion.title\": \"Повышение!\","
+      },
+      {
+        "line": 1753,
+        "text": "\"event.career_promotion.desc\": \"Босс предлагает повышение.\","
+      },
+      {
+        "line": 1754,
+        "text": "\"event.career_promotion.choice.accept\": \"Принять\","
+      },
+      {
+        "line": 1755,
+        "text": "\"event.career_promotion.choice.decline\": \"Отказать\","
+      },
+      {
+        "line": 1756,
+        "text": "\"event.first_investment.title\": \"Инвестиции?\","
+      },
+      {
+        "line": 1757,
+        "text": "\"event.first_investment.desc\": \"Есть сбережения. Инвестировать?\","
+      },
+      {
+        "line": 1758,
+        "text": "\"event.first_investment.choice.stocks\": \"Акции\","
+      },
+      {
+        "line": 1759,
+        "text": "\"event.first_investment.choice.crypto\": \"Крипта\","
+      },
+      {
+        "line": 1760,
+        "text": "\"event.first_investment.choice.save\": \"Копить\","
+      },
+      {
+        "line": 1761,
+        "text": "\"event.have_child.title\": \"Ребенок?\","
+      },
+      {
+        "line": 1762,
+        "text": "\"event.have_child.desc\": \"Вы обсуждаете ребенка.\","
+      },
+      {
+        "line": 1763,
+        "text": "\"event.have_child.choice.yes\": \"Завести ребенка\","
+      },
+      {
+        "line": 1764,
+        "text": "\"event.have_child.choice.notYet\": \"Не сейчас\","
+      },
+      {
+        "line": 1765,
+        "text": "\"event.buy_car.title\": \"Машина?\","
+      },
+      {
+        "line": 1766,
+        "text": "\"event.buy_car.desc\": \"Думаешь о покупке авто.\","
+      },
+      {
+        "line": 1767,
+        "text": "\"event.buy_car.choice.cheap\": \"Дешевое авто\","
+      },
+      {
+        "line": 1768,
+        "text": "\"event.buy_car.choice.mid\": \"Хорошее авто\","
+      },
+      {
+        "line": 1769,
+        "text": "\"event.buy_car.choice.skip\": \"Не покупать\","
+      },
+      {
+        "line": 1770,
+        "text": "\"event.buy_house.title\": \"Дом?\","
+      },
+      {
+        "line": 1771,
+        "text": "\"event.buy_house.desc\": \"Можешь позволить себе жилье.\","
+      },
+      {
+        "line": 1772,
+        "text": "\"event.buy_house.choice.buy\": \"Купить\","
+      },
+      {
+        "line": 1773,
+        "text": "\"event.buy_house.choice.wait\": \"Копить дальше\","
+      },
+      {
+        "line": 1774,
+        "text": "\"event.midlife_reflection.title\": \"Кризис среднего возраста\","
+      },
+      {
+        "line": 1775,
+        "text": "\"event.midlife_reflection.desc\": \"Ты думаешь о жизни.\","
+      },
+      {
+        "line": 1776,
+        "text": "\"event.midlife_reflection.choice.change\": \"Нужны перемены\","
+      },
+      {
+        "line": 1777,
+        "text": "\"event.midlife_reflection.choice.content\": \"Все хорошо\","
+      },
+      {
+        "line": 1778,
+        "text": "\"event.career_burnout.title\": \"Выгорание\","
+      },
+      {
+        "line": 1779,
+        "text": "\"event.career_burnout.desc\": \"Работа утомляет.\","
+      },
+      {
+        "line": 1780,
+        "text": "\"event.career_burnout.choice.vacation\": \"Отпуск\","
+      },
+      {
+        "line": 1781,
+        "text": "\"event.career_burnout.choice.push\": \"Терпеть\","
+      },
+      {
+        "line": 1782,
+        "text": "\"event.career_burnout.choice.quit\": \"Уволиться\","
+      },
+      {
+        "line": 1783,
+        "text": "\"event.marriage_anniversary.title\": \"Годовщина\","
+      },
+      {
+        "line": 1784,
+        "text": "\"event.marriage_anniversary.desc\": \"Еще один год вместе!\","
+      },
+      {
+        "line": 1785,
+        "text": "\"event.marriage_anniversary.choice.celebrate\": \"Отпраздновать\","
+      },
+      {
+        "line": 1786,
+        "text": "\"event.marriage_anniversary.choice.simple\": \"Ужин дома\","
+      },
+      {
+        "line": 1787,
+        "text": "\"event.divorce.title\": \"Проблемы в браке\","
+      },
+      {
+        "line": 1788,
+        "text": "\"event.divorce.desc\": \"Брак трещит по швам.\","
+      },
+      {
+        "line": 1789,
+        "text": "\"event.divorce.choice.divorce\": \"Развод\","
+      },
+      {
+        "line": 1790,
+        "text": "\"event.divorce.choice.counseling\": \"К психологу\","
+      },
+      {
+        "line": 1791,
+        "text": "\"event.health_checkup.title\": \"Осмотр врача\","
+      },
+      {
+        "line": 1792,
+        "text": "\"event.health_checkup.desc\": \"Пора к врачу.\","
+      },
+      {
+        "line": 1793,
+        "text": "\"event.health_checkup.choice.full\": \"Полный чек-ап\","
+      },
+      {
+        "line": 1794,
+        "text": "\"event.health_checkup.choice.skip\": \"Пропустить\","
+      },
+      {
+        "line": 1795,
+        "text": "\"event.business_opportunity.title\": \"Бизнес-шанс\","
+      },
+      {
+        "line": 1796,
+        "text": "\"event.business_opportunity.desc\": \"Предлагают вложиться в бизнес.\","
+      },
+      {
+        "line": 1797,
+        "text": "\"event.business_opportunity.choice.invest\": \"Вложить\","
+      },
+      {
+        "line": 1798,
+        "text": "\"event.business_opportunity.choice.pass\": \"Отказать\","
+      },
+      {
+        "line": 1799,
+        "text": "\"event.child_graduation.title\": \"Выпускной ребенка\","
+      },
+      {
+        "line": 1800,
+        "text": "\"event.child_graduation.desc\": \"Твой ребенок выпускается!\","
+      },
+      {
+        "line": 1801,
+        "text": "\"event.child_graduation.choice.celebrate\": \"Вечеринка\","
+      },
+      {
+        "line": 1802,
+        "text": "\"event.child_graduation.choice.proud\": \"Скромно\","
+      },
+      {
+        "line": 1803,
+        "text": "\"event.real_estate.title\": \"Недвижимость\","
+      },
+      {
+        "line": 1804,
+        "text": "\"event.real_estate.desc\": \"Можно купить инвестиционную недвижимость.\","
+      },
+      {
+        "line": 1805,
+        "text": "\"event.real_estate.choice.invest\": \"Купить\","
+      },
+      {
+        "line": 1806,
+        "text": "\"event.real_estate.choice.skip\": \"Пропустить\","
+      },
+      {
+        "line": 1807,
+        "text": "\"event.lottery.title\": \"Лотерея\","
+      },
+      {
+        "line": 1808,
+        "text": "\"event.lottery.desc\": \"Испытаешь удачу?\","
+      },
+      {
+        "line": 1809,
+        "text": "\"event.lottery.choice.play\": \"Купить билет\","
+      },
+      {
+        "line": 1810,
+        "text": "\"event.lottery.choice.skip\": \"Нет\","
+      },
+      {
+        "line": 1811,
+        "text": "\"event.inheritance.title\": \"Наследство\","
+      },
+      {
+        "line": 1812,
+        "text": "\"event.inheritance.desc\": \"Родственник оставил наследство.\","
+      },
+      {
+        "line": 1813,
+        "text": "\"event.inheritance.choice.accept\": \"Принять\","
+      },
+      {
+        "line": 1814,
+        "text": "\"event.lawsuit.title\": \"Суд\","
+      },
+      {
+        "line": 1815,
+        "text": "\"event.lawsuit.desc\": \"На тебя подали в суд.\","
+      },
+      {
+        "line": 1816,
+        "text": "\"event.lawsuit.choice.fight\": \"Бороться\","
+      },
+      {
+        "line": 1817,
+        "text": "\"event.lawsuit.choice.settle\": \"Договориться\","
+      },
+      {
+        "line": 1818,
+        "text": "\"event.retirement.title\": \"Пенсия\","
+      },
+      {
+        "line": 1819,
+        "text": "\"event.retirement.desc\": \"Готов уйти на покой?\","
+      },
+      {
+        "line": 1820,
+        "text": "\"event.retirement.choice.retire\": \"На пенсию\","
+      },
+      {
+        "line": 1821,
+        "text": "\"event.retirement.choice.continue\": \"Работать\","
+      },
+      {
+        "line": 1822,
+        "text": "\"event.grandchild.title\": \"Внуки!\","
+      },
+      {
+        "line": 1823,
+        "text": "\"event.grandchild.desc\": \"У тебя родился внук!\","
+      },
+      {
+        "line": 1824,
+        "text": "\"event.grandchild.choice.celebrate\": \"Ура!\","
+      },
+      {
+        "line": 1825,
+        "text": "\"event.health_decline.title\": \"Здоровье\","
+      },
+      {
+        "line": 1826,
+        "text": "\"event.health_decline.desc\": \"Здоровье подводит.\","
+      },
+      {
+        "line": 1827,
+        "text": "\"event.health_decline.choice.treatment\": \"Лечиться\","
+      },
+      {
+        "line": 1828,
+        "text": "\"event.health_decline.choice.accept\": \"Принять\","
+      },
+      {
+        "line": 1829,
+        "text": "\"event.wisdom.title\": \"Мудрость\","
+      },
+      {
+        "line": 1830,
+        "text": "\"event.wisdom.desc\": \"Ты многое понял за эти годы.\","
+      },
+      {
+        "line": 1831,
+        "text": "\"event.wisdom.choice.share\": \"Поделиться\","
+      },
+      {
+        "line": 1832,
+        "text": "\"event.wisdom.choice.reflect\": \"Подумать\","
+      },
+      {
+        "line": 1833,
+        "text": "\"event.bucket_list.title\": \"Список желаний\","
+      },
+      {
+        "line": 1834,
+        "text": "\"event.bucket_list.desc\": \"Пора исполнять мечты.\","
+      },
+      {
+        "line": 1835,
+        "text": "\"event.bucket_list.choice.travel\": \"Путешествовать\","
+      },
+      {
+        "line": 1836,
+        "text": "\"event.bucket_list.choice.stay\": \"Быть с семьей\","
+      },
+      {
+        "line": 1837,
+        "text": "\"event.partner_death.title\": \"Утрата\","
+      },
+      {
+        "line": 1838,
+        "text": "\"event.partner_death.desc\": \"Твой партнер ушел из жизни.\","
+      },
+      {
+        "line": 1839,
+        "text": "\"event.partner_death.choice.mourn\": \"Скорбеть\","
+      },
+      {
+        "line": 1840,
+        "text": "\"event.legacy.title\": \"Наследие\","
+      },
+      {
+        "line": 1841,
+        "text": "\"event.legacy.desc\": \"Что ты оставишь после себя?\","
+      },
+      {
+        "line": 1842,
+        "text": "\"event.legacy.choice.charity\": \"Благотворительность\","
+      },
+      {
+        "line": 1843,
+        "text": "\"event.legacy.choice.family\": \"Семье\","
+      },
+      {
+        "line": 1844,
+        "text": "\"event.car_accident.title\": \"Авария\","
+      },
+      {
+        "line": 1845,
+        "text": "\"event.car_accident.desc\": \"Ты попал в аварию.\","
+      },
+      {
+        "line": 1846,
+        "text": "\"event.car_accident.choice.recover\": \"Лечиться\","
+      },
+      {
+        "line": 1847,
+        "text": "\"event.natural_disaster.title\": \"Катастрофа\","
+      },
+      {
+        "line": 1848,
+        "text": "\"event.natural_disaster.desc\": \"Природное бедствие.\","
+      },
+      {
+        "line": 1849,
+        "text": "\"event.natural_disaster.choice.survive\": \"Выжить и отроиться\","
+      },
+      {
+        "line": 1850,
+        "text": "\"event.viral_moment.title\": \"Вирусность\","
+      },
+      {
+        "line": 1851,
+        "text": "\"event.viral_moment.desc\": \"Ты стал известен в интернете!\","
+      },
+      {
+        "line": 1852,
+        "text": "\"event.viral_moment.choice.embrace\": \"Хайпануть\","
+      },
+      {
+        "line": 1853,
+        "text": "\"event.viral_moment.choice.ignore\": \"Игнорировать\","
+      },
+      {
+        "line": 1854,
+        "text": "\"event.jackpot.title\": \"Джекпот!\","
+      },
+      {
+        "line": 1855,
+        "text": "\"event.jackpot.desc\": \"Крупный выигрыш!\","
+      },
+      {
+        "line": 1856,
+        "text": "\"event.jackpot.choice.collect\": \"Забрать\","
+      },
+      {
+        "line": 1857,
+        "text": "\"event.robbery.title\": \"Ограбление\","
+      },
+      {
+        "line": 1858,
+        "text": "\"event.robbery.desc\": \"Тебя грабят!\","
+      },
+      {
+        "line": 1859,
+        "text": "\"event.robbery.choice.fight\": \"Драться\","
+      },
+      {
+        "line": 1860,
+        "text": "\"event.robbery.choice.comply\": \"Отдать все\","
+      },
+      {
+        "line": 1861,
+        "text": "\"event.stock_crash.title\": \"Биржевой крах\","
+      },
+      {
+        "line": 1862,
+        "text": "\"event.stock_crash.desc\": \"Рынок рухнул!\","
+      },
+      {
+        "line": 1863,
+        "text": "\"event.stock_crash.choice.sell\": \"Продать все\","
+      },
+      {
+        "line": 1864,
+        "text": "\"event.stock_crash.choice.hold\": \"Держать\","
+      },
+      {
+        "line": 1865,
+        "text": "\"event.crypto_boom.title\": \"Крипто-бум\","
+      },
+      {
+        "line": 1866,
+        "text": "\"event.crypto_boom.desc\": \"Крипта летит вверх!\","
+      },
+      {
+        "line": 1867,
+        "text": "\"event.crypto_boom.choice.invest\": \"Инвестировать\","
+      },
+      {
+        "line": 1868,
+        "text": "\"event.crypto_boom.choice.skip\": \"Рисковано\","
+      },
+      {
+        "line": 1869,
+        "text": "\"event.stranger_help.title\": \"Незнакомец\","
+      },
+      {
+        "line": 1870,
+        "text": "\"event.stranger_help.desc\": \"Кому-то нужна помощь.\","
+      },
+      {
+        "line": 1871,
+        "text": "\"event.stranger_help.choice.help\": \"Помочь\","
+      },
+      {
+        "line": 1872,
+        "text": "\"event.stranger_help.choice.walk\": \"Мимо\","
+      },
+      {
+        "line": 1873,
+        "text": "\"ui.assets\": \"Имущество\","
+      },
+      {
+        "line": 1874,
+        "text": "\"assets.title\": \"Имущество\","
+      },
+      {
+        "line": 1875,
+        "text": "\"assets.house\": \"Жильё\","
+      },
+      {
+        "line": 1876,
+        "text": "\"assets.car\": \"Машина\","
+      },
+      {
+        "line": 1877,
+        "text": "\"assets.current\": \"Текущее\","
+      },
+      {
+        "line": 1878,
+        "text": "\"assets.available\": \"Доступно в {city}\","
+      },
+      {
+        "line": 1879,
+        "text": "\"assets.none\": \"Нет\","
+      },
+      {
+        "line": 1880,
+        "text": "\"assets.buy\": \"Купить\","
+      },
+      {
+        "line": 1881,
+        "text": "\"assets.sell\": \"Продать\","
+      },
+      {
+        "line": 1882,
+        "text": "\"assets.sellFor\": \"Продать за {amount}\","
+      },
+      {
+        "line": 1883,
+        "text": "\"assets.buyFor\": \"Купить за {amount}\","
+      },
+      {
+        "line": 1884,
+        "text": "\"assets.notEnough\": \"Недостаточно денег\","
+      },
+      {
+        "line": 1885,
+        "text": "\"assets.close\": \"Закрыть\","
+      },
+      {
+        "line": 1886,
+        "text": "\"summary.cause.old_age\": \"Старость\","
+      },
+      {
+        "line": 1887,
+        "text": "\"summary.cause.poor_health\": \"Плохое здоровье\","
+      },
+      {
+        "line": 1888,
+        "text": "\"summary.cause.accident\": \"Несчастный случай\","
+      },
+      {
+        "line": 1889,
+        "text": "\"summary.cause.bankruptcy\": \"Банкротство\","
+      },
+      {
+        "line": 1890,
+        "text": "\"summary.cause.burnout\": \"Сильное выгорание\","
+      },
+      {
+        "line": 1891,
+        "text": "\"summary.cause.unknown\": \"Неизвестно\","
+      },
+      {
+        "line": 1892,
+        "text": "\"summary.headlines\": \"Заголовки жизни\","
+      },
+      {
+        "line": 1893,
+        "text": "\"summary.nearMisses\": \"Почти достигнуто\","
+      },
+      {
+        "line": 1894,
+        "text": "\"summary.achievements\": \"Достижения\","
+      },
+      {
+        "line": 1895,
+        "text": "\"summary.continueAsChild\": \"Продолжить за ребенка\","
+      },
+      {
+        "line": 1896,
+        "text": "\"summary.newLife\": \"Новая жизнь\","
+      },
+      {
+        "line": 1897,
+        "text": "\"summary.tryAgain\": \"Попробовать снова\","
+      },
+      {
+        "line": 1898,
+        "text": "\"summary.bestResults\": \"Лучшие результаты\","
+      },
+      {
+        "line": 1899,
+        "text": "\"summary.bestAge\": \"Возраст рекорд\","
+      },
+      {
+        "line": 1900,
+        "text": "\"summary.noNearMiss\": \"Ровная жизнь без сожалений!\","
+      },
+      {
+        "line": 1901,
+        "text": "\"ui.confirmRestart\": \"Вы уверены, что хотите начать заново? Весь прогресс будет утерян.\","
+      },
+      {
+        "line": 1902,
+        "text": "\"onboarding.welcome_title\": \"Добро пожаловать!\","
+      },
+      {
+        "line": 1903,
+        "text": "\"onboarding.step1_desc\": \"Твоя жизнь начинается. Делай выбор и создавай судьбу.\","
+      },
+      {
+        "line": 1904,
+        "text": "\"onboarding.stats_title\": \"Следи за статами\","
+      },
+      {
+        "line": 1905,
+        "text": "\"onboarding.step1_5_desc\": \"Следи за Здоровьем, Счастьем и Энергией. Не дай им упасть до нуля!\","
+      },
+      {
+        "line": 1906,
+        "text": "\"onboarding.great_job\": \"Отлично!\","
+      },
+      {
+        "line": 1907,
+        "text": "\"onboarding.step2_desc\": \"Ты заработал деньги и опыт. Время идет вперед.\","
+      },
+      {
+        "line": 1908,
+        "text": "\"ui.intro_action\": \"Работать ($100)\","
+      },
+      {
+        "line": 1909,
+        "text": "\"onboarding.tap_here\": \"Нажми здесь, чтобы начать!\","
+      },
+      {
+        "line": 1910,
+        "text": "\"onboarding.next_year_tip\": \"Теперь переходи к следующему году!\","
+      },
+      {
+        "line": 1911,
+        "text": "\"event_lottery_win.desc\": \"Ты проверил билет... и выиграл!\","
+      },
+      {
+        "line": 1912,
+        "text": "\"event_lottery_win.choice.0\": \"Забрать приз ($100,000)\","
+      },
+      {
+        "line": 1913,
+        "text": "\"event_viral_video.desc\": \"Видео с тобой завирусилось за ночь.\","
+      },
+      {
+        "line": 1914,
+        "text": "\"event_viral_video.choice.0\": \"Монетизировать!\","
+      },
+      {
+        "line": 1915,
+        "text": "\"event_viral_video.choice.1\": \"Удалить (Приватность)\","
+      },
+      {
+        "line": 1916,
+        "text": "\"event_inheritance.desc\": \"Дальний родственник оставил тебе небольшое состояние.\","
+      },
+      {
+        "line": 1917,
+        "text": "\"event_inheritance.choice.0\": \"Принять наследство\","
+      },
+      {
+        "line": 1918,
+        "text": "\"event_chronic_illness.desc\": \"Диагностировано хроническое заболевание. Нужно лечение.\","
+      },
+      {
+        "line": 1919,
+        "text": "\"event_chronic_illness.choice.0\": \"Лучшее лечение (-$10,000)\","
+      },
+      {
+        "line": 1920,
+        "text": "\"event_chronic_illness.choice.1\": \"Ждать\","
+      },
+      {
+        "line": 1921,
+        "text": "\"event_scam_victim.desc\": \"Ты попался на удочку мошенников. Сбережения пропали.\","
+      },
+      {
+        "line": 1922,
+        "text": "\"event_scam_victim.choice.0\": \"Заявить (Шанс возврата)\","
+      },
+      {
+        "line": 1923,
+        "text": "\"event_scam_victim.choice.1\": \"Смириться\","
+      },
+      {
+        "line": 1924,
+        "text": "\"event_house_fire.desc\": \"Пожар дома! Ты спасся, но вещи сгорели.\","
+      },
+      {
+        "line": 1925,
+        "text": "\"event_house_fire.choice.0\": \"Отстроить\","
+      },
+      {
+        "line": 1926,
+        "text": "\"event_lost_wallet.desc\": \"Ты не можешь найти кошелек.\","
+      },
+      {
+        "line": 1927,
+        "text": "\"event_lost_wallet.choice.0\": \"Блокировать карты\","
+      },
+      {
+        "line": 1928,
+        "text": "\"event_found_pet.desc\": \"Бродячий кот увязался за тобой.\","
+      },
+      {
+        "line": 1929,
+        "text": "\"event_found_pet.choice.0\": \"Приютить\","
+      },
+      {
+        "line": 1930,
+        "text": "\"event_found_pet.choice.1\": \"Игнорировать\","
+      },
+      {
+        "line": 1931,
+        "text": "\"event_flat_tire.desc\": \"Спустило колесо перед важной встречей.\","
+      },
+      {
+        "line": 1932,
+        "text": "\"event_flat_tire.choice.0\": \"Починить самому\","
+      },
+      {
+        "line": 1933,
+        "text": "\"event_flat_tire.choice.1\": \"Эвакуатор (-$200)\","
+      },
+      {
+        "line": 1934,
+        "text": "\"event_rainy_day.desc\": \"Ливень, а зонта нет.\","
+      },
+      {
+        "line": 1935,
+        "text": "\"event_rainy_day.choice.0\": \"Бежать\","
+      },
+      {
+        "line": 1936,
+        "text": "\"event_rainy_day.choice.1\": \"Купить зонт (-$20)\","
+      },
+      {
+        "line": 1937,
+        "text": "\"event_book_club.desc\": \"Друг зовет в книжный клуб.\","
+      },
+      {
+        "line": 1938,
+        "text": "\"event_book_club.choice.0\": \"Вступить\","
+      },
+      {
+        "line": 1939,
+        "text": "\"event_book_club.choice.1\": \"Отказаться\","
+      },
+      {
+        "line": 1940,
+        "text": "\"event_street_performer.desc\": \"Уличный музыкант играет твою любимую песню.\","
+      },
+      {
+        "line": 1941,
+        "text": "\"event_street_performer.choice.0\": \"Дать $5\","
+      },
+      {
+        "line": 1942,
+        "text": "\"event_street_performer.choice.1\": \"Пройти мимо\","
+      },
+      {
+        "line": 1943,
+        "text": "\"ui.year_idle_message\": \"Нажми \\\"Действия\\\" чтобы прожить год\","
+      },
+      {
+        "line": 1944,
+        "text": "\"ui.gameTitle\": \"Живой или Мертвый\","
+      },
+      {
+        "line": 1945,
+        "text": "\"ctrl_got_sick.title\": \"Вы заболели\","
+      },
+      {
+        "line": 1946,
+        "text": "\"ctrl_got_sick.desc\": \"Вы чувствуете себя неважно. Что будете делать?\","
+      },
+      {
+        "line": 1947,
+        "text": "\"ctrl_got_sick.choice.rest\": \"Отдохнуть\","
+      },
+      {
+        "line": 1948,
+        "text": "\"ctrl_got_sick.choice.push\": \"Работать через силу\","
+      },
+      {
+        "line": 1949,
+        "text": "\"country.kz\": \"Казахстан\","
+      },
+      {
+        "line": 1950,
+        "text": "\"city.almaty\": \"Алматы\","
+      },
+      {
+        "line": 1951,
+        "text": "\"city.astana\": \"Астана\","
+      },
+      {
+        "line": 1952,
+        "text": "\"country.ru\": \"Россия\","
+      },
+      {
+        "line": 1953,
+        "text": "\"city.moscow\": \"Москва\","
+      },
+      {
+        "line": 1954,
+        "text": "\"city.spb\": \"Санкт-Петербург\","
+      },
+      {
+        "line": 1955,
+        "text": "\"country.ae\": \"ОАЭ\","
+      },
+      {
+        "line": 1956,
+        "text": "\"city.dubai\": \"Дубай\","
+      },
+      {
+        "line": 1957,
+        "text": "\"city.abuDhabi\": \"Абу-Даби\","
+      },
+      {
+        "line": 1958,
+        "text": "\"country.us\": \"США\","
+      },
+      {
+        "line": 1959,
+        "text": "\"city.newYork\": \"Нью-Йорк\","
+      },
+      {
+        "line": 1960,
+        "text": "\"city.losAngeles\": \"Лос-Анджелес\","
+      },
+      {
+        "line": 1961,
+        "text": "\"country.jp\": \"Япония\","
+      },
+      {
+        "line": 1962,
+        "text": "\"city.tokyo\": \"Токио\","
+      },
+      {
+        "line": 1963,
+        "text": "\"city.osaka\": \"Осака\","
+      },
+      {
+        "line": 1964,
+        "text": "\"country.fr\": \"Франция\","
+      },
+      {
+        "line": 1965,
+        "text": "\"city.paris\": \"Париж\","
+      },
+      {
+        "line": 1966,
+        "text": "\"city.lyon\": \"Лион\","
+      },
+      {
+        "line": 1967,
+        "text": "\"country.gb\": \"Великобритания\","
+      },
+      {
+        "line": 1968,
+        "text": "\"city.london\": \"Лондон\","
+      },
+      {
+        "line": 1969,
+        "text": "\"city.manchester\": \"Манчестер\","
+      },
+      {
+        "line": 1970,
+        "text": "\"country.sg\": \"Сингапур\","
+      },
+      {
+        "line": 1971,
+        "text": "\"city.singapore\": \"Сингапур\","
+      },
+      {
+        "line": 1972,
+        "text": "\"country.hk\": \"Гонконг\","
+      },
+      {
+        "line": 1973,
+        "text": "\"city.hongKong\": \"Гонконг\","
+      },
+      {
+        "line": 1974,
+        "text": "\"country.th\": \"Таиланд\","
+      },
+      {
+        "line": 1975,
+        "text": "\"city.bangkok\": \"Бангкок\","
+      },
+      {
+        "line": 1976,
+        "text": "\"city.phuket\": \"Пхукет\","
+      },
+      {
+        "line": 1977,
+        "text": "\"country.ca\": \"Канада\","
+      },
+      {
+        "line": 1978,
+        "text": "\"city.toronto\": \"Торонто\","
+      },
+      {
+        "line": 1979,
+        "text": "\"city.vancouver\": \"Ванкувер\","
+      },
+      {
+        "line": 1980,
+        "text": "\"country.mx\": \"Мексика\","
+      },
+      {
+        "line": 1981,
+        "text": "\"city.mexicoCity\": \"Мехико\","
+      },
+      {
+        "line": 1982,
+        "text": "\"city.cancun\": \"Канкун\","
+      },
+      {
+        "line": 1983,
+        "text": "\"country.br\": \"Бразилия\","
+      },
+      {
+        "line": 1984,
+        "text": "\"city.saoPaulo\": \"Сан-Паулу\","
+      },
+      {
+        "line": 1985,
+        "text": "\"city.rio\": \"Рио-де-Жанейро\","
+      },
+      {
+        "line": 1986,
+        "text": "\"country.ar\": \"Аргентина\","
+      },
+      {
+        "line": 1987,
+        "text": "\"city.buenosAires\": \"Буэнос-Айрес\","
+      },
+      {
+        "line": 1988,
+        "text": "\"city.cordoba\": \"Кордова\","
+      },
+      {
+        "line": 1989,
+        "text": "\"country.cl\": \"Чили\","
+      },
+      {
+        "line": 1990,
+        "text": "\"city.santiago\": \"Сантьяго\","
+      },
+      {
+        "line": 1991,
+        "text": "\"city.valparaiso\": \"Вальпараисо\","
+      },
+      {
+        "line": 1992,
+        "text": "\"country.de\": \"Германия\","
+      },
+      {
+        "line": 1993,
+        "text": "\"city.berlin\": \"Берлин\","
+      },
+      {
+        "line": 1994,
+        "text": "\"city.munich\": \"Мюнхен\","
+      },
+      {
+        "line": 1995,
+        "text": "\"country.it\": \"Италия\","
+      },
+      {
+        "line": 1996,
+        "text": "\"city.rome\": \"Рим\","
+      },
+      {
+        "line": 1997,
+        "text": "\"city.milan\": \"Милан\","
+      },
+      {
+        "line": 1998,
+        "text": "\"country.es\": \"Испания\","
+      },
+      {
+        "line": 1999,
+        "text": "\"city.madrid\": \"Мадрид\","
+      },
+      {
+        "line": 2000,
+        "text": "\"city.barcelona\": \"Барселона\","
+      },
+      {
+        "line": 2001,
+        "text": "\"country.nl\": \"Нидерланды\","
+      },
+      {
+        "line": 2002,
+        "text": "\"city.amsterdam\": \"Амстердам\","
+      },
+      {
+        "line": 2003,
+        "text": "\"city.rotterdam\": \"Роттердам\","
+      },
+      {
+        "line": 2004,
+        "text": "\"country.se\": \"Швеция\","
+      },
+      {
+        "line": 2005,
+        "text": "\"city.stockholm\": \"Стокгольм\","
+      },
+      {
+        "line": 2006,
+        "text": "\"city.gothenburg\": \"Гётеборг\","
+      },
+      {
+        "line": 2007,
+        "text": "\"country.au\": \"Австралия\","
+      },
+      {
+        "line": 2008,
+        "text": "\"city.sydney\": \"Сидней\","
+      },
+      {
+        "line": 2009,
+        "text": "\"city.melbourne\": \"Мельбурн\","
+      },
+      {
+        "line": 2010,
+        "text": "\"country.nz\": \"Новая Зеландия\","
+      },
+      {
+        "line": 2011,
+        "text": "\"city.auckland\": \"Окленд\","
+      },
+      {
+        "line": 2012,
+        "text": "\"city.wellington\": \"Веллингтон\","
+      },
+      {
+        "line": 2013,
+        "text": "\"country.cn\": \"Китай\","
+      },
+      {
+        "line": 2014,
+        "text": "\"city.shanghai\": \"Шанхай\","
+      },
+      {
+        "line": 2015,
+        "text": "\"city.beijing\": \"Пекин\","
+      },
+      {
+        "line": 2016,
+        "text": "\"city.shenzhen\": \"Шэньчжэнь\","
+      },
+      {
+        "line": 2017,
+        "text": "\"country.in\": \"Индия\","
+      },
+      {
+        "line": 2018,
+        "text": "\"city.mumbai\": \"Мумбаи\","
+      },
+      {
+        "line": 2019,
+        "text": "\"city.delhi\": \"Дели\","
+      },
+      {
+        "line": 2020,
+        "text": "\"city.bengaluru\": \"Бангалор\","
+      },
+      {
+        "line": 2021,
+        "text": "\"country.kr\": \"Южная Корея\","
+      },
+      {
+        "line": 2022,
+        "text": "\"city.seoul\": \"Сеул\","
+      },
+      {
+        "line": 2023,
+        "text": "\"city.busan\": \"Пусан\","
+      },
+      {
+        "line": 2024,
+        "text": "\"country.vn\": \"Вьетнам\","
+      },
+      {
+        "line": 2025,
+        "text": "\"city.hanoi\": \"Ханой\","
+      },
+      {
+        "line": 2026,
+        "text": "\"city.hcmc\": \"Хошимин\","
+      },
+      {
+        "line": 2027,
+        "text": "\"city.daNang\": \"Дананг\","
+      },
+      {
+        "line": 2028,
+        "text": "\"country.id\": \"Индонезия\","
+      },
+      {
+        "line": 2029,
+        "text": "\"city.jakarta\": \"Джакарта\","
+      },
+      {
+        "line": 2030,
+        "text": "\"city.bali\": \"Бали\","
+      },
+      {
+        "line": 2031,
+        "text": "\"city.surabaya\": \"Сурабая\","
+      },
+      {
+        "line": 2032,
+        "text": "\"country.my\": \"Малайзия\","
+      },
+      {
+        "line": 2033,
+        "text": "\"city.kualaLumpur\": \"Куала-Лумпур\","
+      },
+      {
+        "line": 2034,
+        "text": "\"city.penang\": \"Пенанг\","
+      },
+      {
+        "line": 2035,
+        "text": "\"country.ph\": \"Филиппины\","
+      },
+      {
+        "line": 2036,
+        "text": "\"city.manila\": \"Манила\","
+      },
+      {
+        "line": 2037,
+        "text": "\"city.cebu\": \"Себу\","
+      },
+      {
+        "line": 2038,
+        "text": "\"country.pk\": \"Пакистан\","
+      },
+      {
+        "line": 2039,
+        "text": "\"city.karachi\": \"Карачи\","
+      },
+      {
+        "line": 2040,
+        "text": "\"city.lahore\": \"Лахор\","
+      },
+      {
+        "line": 2041,
+        "text": "\"country.bd\": \"Бангладеш\","
+      },
+      {
+        "line": 2042,
+        "text": "\"city.dhaka\": \"Дакка\","
+      },
+      {
+        "line": 2043,
+        "text": "\"city.chittagong\": \"Читтагонг\","
+      },
+      {
+        "line": 2044,
+        "text": "\"country.lk\": \"Шри-Ланка\","
+      },
+      {
+        "line": 2045,
+        "text": "\"city.colombo\": \"Коломбо\","
+      },
+      {
+        "line": 2046,
+        "text": "\"city.kandy\": \"Канди\","
+      },
+      {
+        "line": 2047,
+        "text": "\"country.np\": \"Непал\","
+      },
+      {
+        "line": 2048,
+        "text": "\"city.kathmandu\": \"Катманду\","
+      },
+      {
+        "line": 2049,
+        "text": "\"city.pokhara\": \"Покхара\","
+      },
+      {
+        "line": 2050,
+        "text": "\"country.tw\": \"Тайвань\","
+      },
+      {
+        "line": 2051,
+        "text": "\"city.taipei\": \"Тайбэй\","
+      },
+      {
+        "line": 2052,
+        "text": "\"city.kaohsiung\": \"Гаосюн\","
+      },
+      {
+        "line": 2053,
+        "text": "\"country.ua\": \"Украина\","
+      },
+      {
+        "line": 2054,
+        "text": "\"city.kyiv\": \"Киев\","
+      },
+      {
+        "line": 2055,
+        "text": "\"city.lviv\": \"Львов\","
+      },
+      {
+        "line": 2056,
+        "text": "\"country.by\": \"Беларусь\","
+      },
+      {
+        "line": 2057,
+        "text": "\"city.minsk\": \"Минск\","
+      },
+      {
+        "line": 2058,
+        "text": "\"city.brest\": \"Брест\","
+      },
+      {
+        "line": 2059,
+        "text": "\"country.uz\": \"Узбекистан\","
+      },
+      {
+        "line": 2060,
+        "text": "\"city.tashkent\": \"Ташкент\","
+      },
+      {
+        "line": 2061,
+        "text": "\"city.samarkand\": \"Самарканд\","
+      },
+      {
+        "line": 2062,
+        "text": "\"country.ge\": \"Грузия\","
+      },
+      {
+        "line": 2063,
+        "text": "\"city.tbilisi\": \"Тбилиси\","
+      },
+      {
+        "line": 2064,
+        "text": "\"city.batumi\": \"Батуми\","
+      },
+      {
+        "line": 2065,
+        "text": "\"country.am\": \"Армения\","
+      },
+      {
+        "line": 2066,
+        "text": "\"city.yerevan\": \"Ереван\","
+      },
+      {
+        "line": 2067,
+        "text": "\"city.gyumri\": \"Гюмри\","
+      },
+      {
+        "line": 2068,
+        "text": "\"country.az\": \"Азербайджан\","
+      },
+      {
+        "line": 2069,
+        "text": "\"city.baku\": \"Баку\","
+      },
+      {
+        "line": 2070,
+        "text": "\"city.ganja\": \"Гянджа\","
+      },
+      {
+        "line": 2071,
+        "text": "\"country.kg\": \"Кыргызстан\","
+      },
+      {
+        "line": 2072,
+        "text": "\"city.bishkek\": \"Бишкек\","
+      },
+      {
+        "line": 2073,
+        "text": "\"city.osh\": \"Ош\","
+      },
+      {
+        "line": 2074,
+        "text": "\"country.md\": \"Молдова\","
+      },
+      {
+        "line": 2075,
+        "text": "\"city.chisinau\": \"Кишинев\","
+      },
+      {
+        "line": 2076,
+        "text": "\"city.balti\": \"Бельцы\","
+      },
+      {
+        "line": 2077,
+        "text": "\"country.tr\": \"Турция\","
+      },
+      {
+        "line": 2078,
+        "text": "\"city.istanbul\": \"Стамбул\","
+      },
+      {
+        "line": 2079,
+        "text": "\"city.ankara\": \"Анкара\","
+      },
+      {
+        "line": 2080,
+        "text": "\"country.sa\": \"Саудовская Аравия\","
+      },
+      {
+        "line": 2081,
+        "text": "\"city.riyadh\": \"Эр-Рияд\","
+      },
+      {
+        "line": 2082,
+        "text": "\"city.jeddah\": \"Джидда\","
+      },
+      {
+        "line": 2083,
+        "text": "\"country.qa\": \"Катар\","
+      },
+      {
+        "line": 2084,
+        "text": "\"city.doha\": \"Доха\","
+      },
+      {
+        "line": 2085,
+        "text": "\"city.alWakrah\": \"Эль-Вакра\","
+      },
+      {
+        "line": 2086,
+        "text": "\"country.il\": \"Израиль\","
+      },
+      {
+        "line": 2087,
+        "text": "\"city.telAviv\": \"Тель-Авив\","
+      },
+      {
+        "line": 2088,
+        "text": "\"city.jerusalem\": \"Иерусалим\","
+      },
+      {
+        "line": 2089,
+        "text": "\"country.ir\": \"Иран\","
+      },
+      {
+        "line": 2090,
+        "text": "\"city.tehran\": \"Тегеран\","
+      },
+      {
+        "line": 2091,
+        "text": "\"city.isfahan\": \"Исфахан\","
+      },
+      {
+        "line": 2092,
+        "text": "\"country.eg\": \"Египет\","
+      },
+      {
+        "line": 2093,
+        "text": "\"city.cairo\": \"Каир\","
+      },
+      {
+        "line": 2094,
+        "text": "\"city.alexandria\": \"Александрия\","
+      },
+      {
+        "line": 2095,
+        "text": "\"country.ma\": \"Марокко\","
+      },
+      {
+        "line": 2096,
+        "text": "\"city.casablanca\": \"Касабланка\","
+      },
+      {
+        "line": 2097,
+        "text": "\"city.marrakesh\": \"Марракеш\","
+      },
+      {
+        "line": 2098,
+        "text": "\"country.za\": \"ЮАР\","
+      },
+      {
+        "line": 2099,
+        "text": "\"city.johannesburg\": \"Йоханнесбург\","
+      },
+      {
+        "line": 2100,
+        "text": "\"city.capeTown\": \"Кейптаун\","
+      },
+      {
+        "line": 2101,
+        "text": "\"country.ng\": \"Нигерия\","
+      },
+      {
+        "line": 2102,
+        "text": "\"city.lagos\": \"Лагос\","
+      },
+      {
+        "line": 2103,
+        "text": "\"city.abuja\": \"Абуджа\","
+      },
+      {
+        "line": 2104,
+        "text": "\"country.ke\": \"Кения\","
+      },
+      {
+        "line": 2105,
+        "text": "\"city.nairobi\": \"Найроби\","
+      },
+      {
+        "line": 2106,
+        "text": "\"city.mombasa\": \"Момбаса\","
+      },
+      {
+        "line": 2107,
+        "text": "\"iap.supportPack.title\": \"Комфортная версия\","
+      },
+      {
+        "line": 2108,
+        "text": "\"iap.supportPack.desc\": \"Убирает навязчивую рекламу и делает игру комфортнее. Вы по-прежнему можете смотреть рекламу добровольно, если хотите получить помощь.\","
+      },
+      {
+        "line": 2109,
+        "text": "\"iap.btn.buy\": \"Подробнее (199 ₽)\","
+      },
+      {
+        "line": 2110,
+        "text": "\"iap.btn.active\": \"✔ Комфортная версия\","
+      },
+      {
+        "line": 2111,
+        "text": "\"iap.restore\": \"Восстановить покупки\","
+      },
+      {
+        "line": 2112,
+        "text": "\"iap.thanks\": \"Спасибо за поддержку ❤️\""
+      }
+    ]
+  },
+  {
+    "file": "js\\jobs.js",
+    "issues": [
+      {
+        "line": 46,
+        "text": "name: { en: \"Janitor\", ru: \"Уборщик\" },"
+      },
+      {
+        "line": 61,
+        "text": "name: { en: \"Fast Food Worker\", ru: \"Работник фастфуда\" },"
+      },
+      {
+        "line": 76,
+        "text": "name: { en: \"Retail Worker\", ru: \"Продавец\" },"
+      },
+      {
+        "line": 91,
+        "text": "name: { en: \"Security Guard\", ru: \"Охранник\" },"
+      },
+      {
+        "line": 106,
+        "text": "name: { en: \"Delivery Driver\", ru: \"Курьер\" },"
+      },
+      {
+        "line": 156,
+        "text": "name: { en: \"Teacher\", ru: \"Учитель\" },"
+      },
+      {
+        "line": 171,
+        "text": "name: { en: \"Nurse\", ru: \"Медсестра\" },"
+      },
+      {
+        "line": 186,
+        "text": "name: { en: \"Mechanic\", ru: \"Механик\" },"
+      },
+      {
+        "line": 201,
+        "text": "name: { en: \"Accountant\", ru: \"Бухгалтер\" },"
+      },
+      {
+        "line": 216,
+        "text": "name: { en: \"Programmer\", ru: \"Программист\" },"
+      },
+      {
+        "line": 234,
+        "text": "name: { en: \"Engineer\", ru: \"Инженер\" },"
+      },
+      {
+        "line": 308,
+        "text": "name: { en: \"CEO\", ru: \"Генеральный директор\" },"
+      },
+      {
+        "line": 326,
+        "text": "name: { en: \"Influencer\", ru: \"Блогер\" },"
+      },
+      {
+        "line": 366,
+        "text": "name: { en: \"Fast Food Manager\", ru: \"Менеджер фастфуда\" },"
+      },
+      {
+        "line": 381,
+        "text": "name: { en: \"Retail Manager\", ru: \"Менеджер магазина\" },"
+      },
+      {
+        "line": 396,
+        "text": "name: { en: \"Middle Manager\", ru: \"Менеджер среднего звена\" },"
+      },
+      {
+        "line": 411,
+        "text": "name: { en: \"School Principal\", ru: \"Директор школы\" },"
+      },
+      {
+        "line": 426,
+        "text": "name: { en: \"Shop Owner\", ru: \"Владелец мастерской\" },"
+      },
+      {
+        "line": 441,
+        "text": "name: { en: \"Senior Developer\", ru: \"Старший разработчик\" },"
+      },
+      {
+        "line": 456,
+        "text": "name: { en: \"Law Firm Partner\", ru: \"Партнер юр. фирмы\" },"
+      }
+    ]
+  },
+  {
+    "file": "js\\selfdevelopment.js",
+    "issues": [
+      {
+        "line": 1269,
+        "text": "\"edu.none\": \"Без образования\","
+      },
+      {
+        "line": 1270,
+        "text": "\"edu.elementary\": \"Начальная школа\","
+      },
+      {
+        "line": 1271,
+        "text": "\"edu.middle_school\": \"Средняя школа\","
+      },
+      {
+        "line": 1272,
+        "text": "\"edu.high_school\": \"Старшая школа\","
+      },
+      {
+        "line": 1273,
+        "text": "\"edu.university\": \"Университет\","
+      },
+      {
+        "line": 1274,
+        "text": "\"edu.masters\": \"Магистратура\","
+      },
+      {
+        "line": 1275,
+        "text": "\"edu.phd\": \"Докторантура\","
+      },
+      {
+        "line": 1276,
+        "text": "\"edu.certification\": \"Сертификация\","
+      },
+      {
+        "line": 1277,
+        "text": "\"edu.enroll\": \"Поступить\","
+      },
+      {
+        "line": 1278,
+        "text": "\"edu.graduate\": \"Выпуск\","
+      },
+      {
+        "line": 1279,
+        "text": "\"edu.dropout\": \"Отчисление\","
+      },
+      {
+        "line": 1280,
+        "text": "\"edu.gpa\": \"Средний балл\","
+      },
+      {
+        "line": 1281,
+        "text": "\"edu.years_remaining\": \"Осталось лет\","
+      },
+      {
+        "line": 1282,
+        "text": "\"edu.scholarship\": \"Стипендия\","
+      },
+      {
+        "line": 1283,
+        "text": "\"edu.exam_passed\": \"Экзамен сдан\","
+      },
+      {
+        "line": 1284,
+        "text": "\"edu.exam_failed\": \"Экзамен не сдан\","
+      },
+      {
+        "line": 1285,
+        "text": "\"career.level.intern\": \"Стажёр\","
+      },
+      {
+        "line": 1286,
+        "text": "\"career.level.junior\": \"Младший специалист\","
+      },
+      {
+        "line": 1287,
+        "text": "\"career.level.mid\": \"Специалист\","
+      },
+      {
+        "line": 1288,
+        "text": "\"career.level.senior\": \"Старший специалист\","
+      },
+      {
+        "line": 1289,
+        "text": "\"career.level.lead\": \"Руководитель группы\","
+      },
+      {
+        "line": 1290,
+        "text": "\"career.level.manager\": \"Менеджер\","
+      },
+      {
+        "line": 1291,
+        "text": "\"career.level.director\": \"Директор\","
+      },
+      {
+        "line": 1292,
+        "text": "\"career.level.vp\": \"Вице-президент\","
+      },
+      {
+        "line": 1293,
+        "text": "\"career.level.clevel\": \"Топ-менеджер\","
+      },
+      {
+        "line": 1294,
+        "text": "\"career.promotion\": \"Повышение\","
+      },
+      {
+        "line": 1295,
+        "text": "\"career.path_to_top\": \"Путь к вершине\","
+      },
+      {
+        "line": 1296,
+        "text": "\"career.years_at_level\": \"Лет на уровне\","
+      },
+      {
+        "line": 1297,
+        "text": "\"career.promotion_chance\": \"Шанс повышения\","
+      },
+      {
+        "line": 1298,
+        "text": "\"business.state.idea\": \"Идея\","
+      },
+      {
+        "line": 1299,
+        "text": "\"business.state.launch\": \"Запуск\","
+      },
+      {
+        "line": 1300,
+        "text": "\"business.state.struggling\": \"Трудности\","
+      },
+      {
+        "line": 1301,
+        "text": "\"business.state.breakeven\": \"Безубыточность\","
+      },
+      {
+        "line": 1302,
+        "text": "\"business.state.growth\": \"Рост\","
+      },
+      {
+        "line": 1303,
+        "text": "\"business.state.profitable\": \"Прибыльность\","
+      },
+      {
+        "line": 1304,
+        "text": "\"business.state.scaling\": \"Масштабирование\","
+      },
+      {
+        "line": 1305,
+        "text": "\"business.state.exit\": \"Выход\","
+      },
+      {
+        "line": 1306,
+        "text": "\"business.state.failed\": \"Провал\","
+      },
+      {
+        "line": 1307,
+        "text": "\"business.type.freelance\": \"Фриланс\","
+      },
+      {
+        "line": 1308,
+        "text": "\"business.type.ecommerce\": \"Электронная коммерция\","
+      },
+      {
+        "line": 1309,
+        "text": "\"business.type.consulting\": \"Консалтинг\","
+      },
+      {
+        "line": 1310,
+        "text": "\"business.type.restaurant\": \"Ресторан\","
+      },
+      {
+        "line": 1311,
+        "text": "\"business.type.tech_startup\": \"Техно-стартап\","
+      },
+      {
+        "line": 1312,
+        "text": "\"business.type.real_estate\": \"Недвижимость\","
+      },
+      {
+        "line": 1313,
+        "text": "\"business.type.franchise\": \"Франшиза\","
+      },
+      {
+        "line": 1315,
+        "text": "\"business.start\": \"Начать бизнес\","
+      },
+      {
+        "line": 1316,
+        "text": "\"business.valuation\": \"Оценка\","
+      },
+      {
+        "line": 1317,
+        "text": "\"business.monthly_revenue\": \"Месячный доход\","
+      },
+      {
+        "line": 1318,
+        "text": "\"business.investor_offer\": \"Предложение инвестора\","
+      },
+      {
+        "line": 1319,
+        "text": "\"business.exit_opportunity\": \"Возможность выхода\","
+      },
+      {
+        "line": 1320,
+        "text": "\"business.partner_conflict\": \"Конфликт с партнёром\","
+      },
+      {
+        "line": 1321,
+        "text": "\"business.market_change\": \"Изменение рынка\","
+      },
+      {
+        "line": 1322,
+        "text": "\"invest.type.savings\": \"Вклады\","
+      },
+      {
+        "line": 1323,
+        "text": "\"invest.type.bonds\": \"Облигации\","
+      },
+      {
+        "line": 1324,
+        "text": "\"invest.type.index_funds\": \"Индексные фонды\","
+      },
+      {
+        "line": 1325,
+        "text": "\"invest.type.stocks\": \"Акции\","
+      },
+      {
+        "line": 1326,
+        "text": "\"invest.type.real_estate\": \"Недвижимость\","
+      },
+      {
+        "line": 1327,
+        "text": "\"invest.type.crypto\": \"Криптовалюта\","
+      },
+      {
+        "line": 1328,
+        "text": "\"invest.type.startups\": \"Стартапы\","
+      },
+      {
+        "line": 1329,
+        "text": "\"invest.portfolio\": \"Портфель\","
+      },
+      {
+        "line": 1330,
+        "text": "\"invest.total_value\": \"Общая стоимость\","
+      },
+      {
+        "line": 1331,
+        "text": "\"invest.total_return\": \"Общая доходность\","
+      },
+      {
+        "line": 1332,
+        "text": "\"invest.risk_level\": \"Уровень риска\","
+      },
+      {
+        "line": 1333,
+        "text": "\"invest.diversification\": \"Диверсификация\","
+      },
+      {
+        "line": 1334,
+        "text": "\"invest.buy\": \"Купить\","
+      },
+      {
+        "line": 1335,
+        "text": "\"invest.sell\": \"Продать\","
+      },
+      {
+        "line": 1336,
+        "text": "\"invest.risk.low\": \"Низкий\","
+      },
+      {
+        "line": 1337,
+        "text": "\"invest.risk.moderate\": \"Умеренный\","
+      },
+      {
+        "line": 1338,
+        "text": "\"invest.risk.high\": \"Высокий\","
+      },
+      {
+        "line": 1339,
+        "text": "\"invest.risk.very_high\": \"Очень высокий\","
+      },
+      {
+        "line": 1340,
+        "text": "\"selfdev.title\": \"Саморазвитие\","
+      },
+      {
+        "line": 1341,
+        "text": "\"selfdev.education\": \"Образование\","
+      },
+      {
+        "line": 1342,
+        "text": "\"selfdev.career\": \"Карьера\","
+      },
+      {
+        "line": 1343,
+        "text": "\"selfdev.business\": \"Бизнес\","
+      },
+      {
+        "line": 1344,
+        "text": "\"selfdev.investing\": \"Инвестиции\","
+      },
+      {
+        "line": 1345,
+        "text": "\"selfdev.current_stage\": \"Текущий этап\","
+      },
+      {
+        "line": 1346,
+        "text": "\"selfdev.next_steps\": \"Следующие шаги\","
+      },
+      {
+        "line": 1347,
+        "text": "\"selfdev.progress\": \"Прогресс\","
+      },
+      {
+        "line": 1348,
+        "text": "\"selfdev.requirements\": \"Требования\","
+      },
+      {
+        "line": 1349,
+        "text": "\"selfdev.cost\": \"Стоимость\""
+      }
+    ]
+  },
+  {
+    "file": "js\\update_actions.js",
+    "issues": [
+      {
+        "line": 15,
+        "text": "title: { en: \"Switch to Organic Diet\", ru: \"Перейти на органическую диету\" },"
+      },
+      {
+        "line": 16,
+        "text": "description: { en: \"Eat exclusively healthy, organic foods.\", ru: \"Питаться исключительно здоровой пищей. Очень дорого.\" },"
+      },
+      {
+        "line": 27,
+        "text": "title: { en: \"Switch to Balanced Diet\", ru: \"Сбалансированная диета\" },"
+      },
+      {
+        "line": 28,
+        "text": "description: { en: \"Eat a normal, balanced diet.\", ru: \"Питаться нормально. Средняя цена.\" },"
+      },
+      {
+        "line": 39,
+        "text": "title: { en: \"Switch to Junk Food\", ru: \"Питаться фастфудом\" },"
+      },
+      {
+        "line": 40,
+        "text": "description: { en: \"Eat cheap junk food to save money.\", ru: \"Питаться дешевой едой для экономии. Вредит здоровью.\" },"
+      }
+    ]
+  },
+  {
+    "file": "js\\update_jobs.js",
+    "issues": [
+      {
+        "line": 12,
+        "text": "name: { en: \"Fast Food Manager\", ru: \"Менеджер фастфуда\" },"
+      },
+      {
+        "line": 27,
+        "text": "name: { en: \"Retail Manager\", ru: \"Менеджер магазина\" },"
+      },
+      {
+        "line": 42,
+        "text": "name: { en: \"Middle Manager\", ru: \"Менеджер среднего звена\" },"
+      },
+      {
+        "line": 57,
+        "text": "name: { en: \"School Principal\", ru: \"Директор школы\" },"
+      },
+      {
+        "line": 72,
+        "text": "name: { en: \"Shop Owner\", ru: \"Владелец мастерской\" },"
+      },
+      {
+        "line": 87,
+        "text": "name: { en: \"Senior Developer\", ru: \"Старший разработчик\" },"
+      },
+      {
+        "line": 102,
+        "text": "name: { en: \"Law Firm Partner\", ru: \"Партнер юр. фирмы\" },"
+      }
+    ]
+  }
+]

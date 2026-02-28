@@ -24,27 +24,27 @@
         {
             id: "ctrl_found_money",
             tag: EVENT_TAGS.MINOR_POSITIVE,
-            title: { en: "Found Money! ??", ru: "Found Money! ??" },
+            title: { en: "Found Money!", ru: "Found Money!" },
             description: { en: "You found $200 on the street. What do you do?", ru: "You found $200 on the street. What do you do?" },
             minAge: 12, maxAge: 80,
             statTriggers: { moneyBelow: 5000 }, // More likely when broke
             cooldown: 10,
             choices: [
-                { id: "keep", label: { en: "Keep it ??", ru: "Keep it ??" }, effects: { moneyDelta: 200, happinessDelta: 3 } },
-                { id: "donate", label: { en: "Donate it ??", ru: "Donate it ??" }, effects: { happinessDelta: 5, stressDelta: -5 } }
+                { id: "keep", label: { en: "Keep it", ru: "Keep it" }, effects: { moneyDelta: 200, happinessDelta: 3 } },
+                { id: "donate", label: { en: "Donate it", ru: "Donate it" }, effects: { happinessDelta: 5, stressDelta: -5 } }
             ]
         },
         {
             id: "ctrl_promotion_offer",
             tag: EVENT_TAGS.MINOR_POSITIVE,
-            title: { en: "Promotion Offer! ??", ru: "Promotion Offer! ??" },
+            title: { en: "Promotion Offer!", ru: "Promotion Offer!" },
             description: { en: "Your boss offers you a promotion. More money, but more responsibility.", ru: "Your boss offers you a promotion. More money, but more responsibility." },
             minAge: 22, maxAge: 60,
             requiresJob: true,
             cooldown: 5,
             choices: [
-                { id: "accept", label: { en: "Accept (+$3000, +Stress) ??", ru: "Accept (+$3000, +Stress) ??" }, effects: { moneyDelta: 3000, stressDelta: 15, happinessDelta: 5 } },
-                { id: "decline", label: { en: "Decline (Keep balance) ??", ru: "Decline (Keep balance) ??" }, effects: { happinessDelta: 2, stressDelta: -5 } }
+                { id: "accept", label: { en: "Accept (+$3000, +Stress)", ru: "Accept (+$3000, +Stress)" }, effects: { moneyDelta: 3000, stressDelta: 15, happinessDelta: 5 } },
+                { id: "decline", label: { en: "Decline (Keep balance)", ru: "Decline (Keep balance)" }, effects: { happinessDelta: 2, stressDelta: -5 } }
             ]
         },
 
@@ -52,27 +52,27 @@
         {
             id: "ctrl_car_breakdown",
             tag: EVENT_TAGS.MINOR_NEGATIVE,
-            title: { en: "Car Breakdown ????", ru: "Car Breakdown ????" },
+            title: { en: "Car Breakdown", ru: "Car Breakdown" },
             description: { en: "Your car broke down on the highway. Repair costs are high.", ru: "Your car broke down on the highway. Repair costs are high." },
             minAge: 18, maxAge: 80,
             requiresCar: true,
             cooldown: 8,
             choices: [
-                { id: "fix", label: { en: "Fix it (-$800) ??", ru: "Fix it (-$800) ??" }, effects: { moneyDelta: -800, stressDelta: 5 } },
-                { id: "sell", label: { en: "Sell it for parts ??", ru: "Sell it for parts ??" }, effects: { moneyDelta: 500, happinessDelta: -5, carChange: null } }
+                { id: "fix", label: { en: "Fix it (-$800)", ru: "Fix it (-$800)" }, effects: { moneyDelta: -800, stressDelta: 5 } },
+                { id: "sell", label: { en: "Sell it for parts", ru: "Sell it for parts" }, effects: { moneyDelta: 500, happinessDelta: -5, carChange: null } }
             ]
         },
         {
             id: "ctrl_got_sick",
             tag: EVENT_TAGS.MINOR_NEGATIVE,
-            title: { en: "Fell Sick ??", ru: "Fell Sick ??" },
+            title: { en: "Fell Sick", ru: "Fell Sick" },
             description: { en: "You caught a bad flu. You need rest, but work is piling up.", ru: "You caught a bad flu. You need rest, but work is piling up." },
             minAge: 5, maxAge: 90,
             statTriggers: { healthBelow: 50 }, // More likely when health is low
             cooldown: 3,
             choices: [
-                { id: "rest", label: { en: "Rest at home (-Work) ???", ru: "Rest at home (-Work) ???" }, effects: { healthDelta: 10, moneyDelta: -500, stressDelta: -10 } },
-                { id: "push", label: { en: "Push through (-Health) ??", ru: "Push through (-Health) ??" }, effects: { healthDelta: -10, moneyDelta: 200, stressDelta: 10 } }
+                { id: "rest", label: { en: "Rest at home (-Work)", ru: "Rest at home (-Work)" }, effects: { healthDelta: 10, moneyDelta: -500, stressDelta: -10 } },
+                { id: "push", label: { en: "Push through (-Health)", ru: "Push through (-Health)" }, effects: { healthDelta: -10, moneyDelta: 200, stressDelta: 10 } }
             ]
         },
 
@@ -80,29 +80,29 @@
         {
             id: "ctrl_lottery_win",
             tag: EVENT_TAGS.MAJOR_POSITIVE,
-            title: { en: "Lottery Win! ??", ru: "Lottery Win! ??" },
+            title: { en: "Lottery Win!", ru: "Lottery Win!" },
             description: { en: "You won $10,000 in the lottery! What will you do with it?", ru: "You won $10,000 in the lottery! What will you do with it?" },
             minAge: 18, maxAge: 80,
             maxPerLife: 1,
             baseChance: 0.02, // Very rare
             cooldown: 999,
             choices: [
-                { id: "invest", label: { en: "Invest wisely ??", ru: "Invest wisely ??" }, effects: { moneyDelta: 10000, intelligenceDelta: 2 } },
-                { id: "splurge", label: { en: "Splurge on fun! ??", ru: "Splurge on fun! ??" }, effects: { moneyDelta: 5000, happinessDelta: 15 } }
+                { id: "invest", label: { en: "Invest wisely", ru: "Invest wisely" }, effects: { moneyDelta: 10000, intelligenceDelta: 2 } },
+                { id: "splurge", label: { en: "Splurge on fun!", ru: "Splurge on fun!" }, effects: { moneyDelta: 5000, happinessDelta: 15 } }
             ]
         },
         {
             id: "ctrl_inheritance",
             tag: EVENT_TAGS.MAJOR_POSITIVE,
-            title: { en: "Inheritance ??", ru: "Inheritance ??" },
+            title: { en: "Inheritance", ru: "Inheritance" },
             description: { en: "A distant relative passed away and left you $15,000.", ru: "A distant relative passed away and left you $15,000." },
             minAge: 30, maxAge: 70,
             maxPerLife: 1,
             baseChance: 0.03,
             cooldown: 999,
             choices: [
-                { id: "accept", label: { en: "Accept gratefully ??", ru: "Accept gratefully ??" }, effects: { moneyDelta: 15000, happinessDelta: -2 } },
-                { id: "share", label: { en: "Share with family ????????", ru: "Share with family ????????" }, effects: { moneyDelta: 7500, happinessDelta: 8 } }
+                { id: "accept", label: { en: "Accept gratefully", ru: "Accept gratefully" }, effects: { moneyDelta: 15000, happinessDelta: -2 } },
+                { id: "share", label: { en: "Share with family", ru: "Share with family" }, effects: { moneyDelta: 7500, happinessDelta: 8 } }
             ]
         },
 
@@ -110,27 +110,27 @@
         {
             id: "ctrl_medical_emergency",
             tag: EVENT_TAGS.MAJOR_NEGATIVE,
-            title: { en: "Medical Emergency ??", ru: "Medical Emergency ??" },
+            title: { en: "Medical Emergency", ru: "Medical Emergency" },
             description: { en: "You need emergency surgery. Without it, your health is at serious risk.", ru: "You need emergency surgery. Without it, your health is at serious risk." },
             minAge: 25, maxAge: 90,
             statTriggers: { healthBelow: 30 }, // More likely when health critical
             cooldown: 10,
             choices: [
-                { id: "surgery", label: { en: "Emergency surgery (-$8000) ??", ru: "Emergency surgery (-$8000) ??" }, effects: { moneyDelta: -8000, healthDelta: 30, stressDelta: 10 } },
-                { id: "risk", label: { en: "Risk it (Dangerous!) ??", ru: "Risk it (Dangerous!) ??" }, effects: { healthDelta: -25, happinessDelta: -10, stressDelta: 20 } }
+                { id: "surgery", label: { en: "Emergency surgery (-$8000)", ru: "Emergency surgery (-$8000)" }, effects: { moneyDelta: -8000, healthDelta: 30, stressDelta: 10 } },
+                { id: "risk", label: { en: "Risk it (Dangerous!)", ru: "Risk it (Dangerous!)" }, effects: { healthDelta: -25, happinessDelta: -10, stressDelta: 20 } }
             ]
         },
         {
             id: "ctrl_job_loss",
             tag: EVENT_TAGS.MAJOR_NEGATIVE,
-            title: { en: "Laid Off ??", ru: "Laid Off ??" },
+            title: { en: "Laid Off", ru: "Laid Off" },
             description: { en: "The company is downsizing. You've lost your job.", ru: "The company is downsizing. You've lost your job." },
             minAge: 20, maxAge: 60,
             requiresJob: true,
             cooldown: 8,
             choices: [
-                { id: "severance", label: { en: "Take severance (+$2000) ??", ru: "Take severance (+$2000) ??" }, effects: { moneyDelta: 2000, happinessDelta: -10, stressDelta: 15, jobChange: "unemployed" } },
-                { id: "sue", label: { en: "Sue for wrongful termination ??", ru: "Sue for wrongful termination ??" }, effects: { moneyDelta: -3000, stressDelta: 25, intelligenceDelta: 2, jobChange: "unemployed" } }
+                { id: "severance", label: { en: "Take severance (+$2000)", ru: "Take severance (+$2000)" }, effects: { moneyDelta: 2000, happinessDelta: -10, stressDelta: 15, jobChange: "unemployed" } },
+                { id: "sue", label: { en: "Sue for wrongful termination", ru: "Sue for wrongful termination" }, effects: { moneyDelta: -3000, stressDelta: 25, intelligenceDelta: 2, jobChange: "unemployed" } }
             ]
         },
 
@@ -138,21 +138,21 @@
         {
             id: "ctrl_marriage_proposal",
             tag: EVENT_TAGS.LIFECHANGING,
-            title: { en: "Marriage Proposal ??", ru: "Marriage Proposal ??" },
+            title: { en: "Marriage Proposal", ru: "Marriage Proposal" },
             description: { en: "Your partner proposes marriage. This is a huge decision.", ru: "Your partner proposes marriage. This is a huge decision." },
             minAge: 20, maxAge: 50,
             requiresPartner: true,
             maxPerLife: 2,
             cooldown: 10,
             choices: [
-                { id: "accept", label: { en: "Say yes! ??", ru: "Say yes! ??" }, effects: { happinessDelta: 20, moneyDelta: -5000, marriageStart: true } },
-                { id: "decline", label: { en: "Not ready... ??", ru: "Not ready... ??" }, effects: { happinessDelta: -15, stressDelta: 10, relationshipEnd: true } }
+                { id: "accept", label: { en: "Say yes!", ru: "Say yes!" }, effects: { happinessDelta: 20, moneyDelta: -5000, marriageStart: true } },
+                { id: "decline", label: { en: "Not ready...", ru: "Not ready..." }, effects: { happinessDelta: -15, stressDelta: 10, relationshipEnd: true } }
             ]
         },
         {
             id: "ctrl_divorce_papers",
             tag: EVENT_TAGS.LIFECHANGING,
-            title: { en: "Divorce Papers ????", ru: "Divorce Papers ????" },
+            title: { en: "Divorce Papers", ru: "Divorce Papers" },
             description: { en: "Your spouse wants a divorce. There's no going back.", ru: "Your spouse wants a divorce. There's no going back." },
             minAge: 25, maxAge: 70,
             requiresMarried: true,
@@ -160,35 +160,35 @@
             maxPerLife: 1,
             cooldown: 999,
             choices: [
-                { id: "contest", label: { en: "Contest it (-$10000) ??", ru: "Contest it (-$10000) ??" }, effects: { moneyDelta: -10000, stressDelta: 30, happinessDelta: -10 } },
-                { id: "accept", label: { en: "Accept and move on ??", ru: "Accept and move on ??" }, effects: { moneyDelta: -5000, happinessDelta: -20, divorceStart: true } }
+                { id: "contest", label: { en: "Contest it (-$10000)", ru: "Contest it (-$10000)" }, effects: { moneyDelta: -10000, stressDelta: 30, happinessDelta: -10 } },
+                { id: "accept", label: { en: "Accept and move on", ru: "Accept and move on" }, effects: { moneyDelta: -5000, happinessDelta: -20, divorceStart: true } }
             ]
         },
         {
             id: "ctrl_child_born",
             tag: EVENT_TAGS.LIFECHANGING,
-            title: { en: "A Child is Born! ??", ru: "A Child is Born! ??" },
+            title: { en: "A Child is Born!", ru: "A Child is Born!" },
             description: { en: "Congratulations! You have a new baby. Life will never be the same.", ru: "Congratulations! You have a new baby. Life will never be the same." },
             minAge: 20, maxAge: 45,
             requiresMarried: true,
             maxPerLife: 3,
             cooldown: 3,
             choices: [
-                { id: "celebrate", label: { en: "Celebrate! ??", ru: "Celebrate! ??" }, effects: { happinessDelta: 25, moneyDelta: -3000, stressDelta: 15, triggerChild: true } }
+                { id: "celebrate", label: { en: "Celebrate!", ru: "Celebrate!" }, effects: { happinessDelta: 25, moneyDelta: -3000, stressDelta: 15, triggerChild: true } }
             ]
         },
         {
             id: "ctrl_terminal_diagnosis",
             tag: EVENT_TAGS.LIFECHANGING,
-            title: { en: "Terminal Diagnosis ??", ru: "Terminal Diagnosis ??" },
+            title: { en: "Terminal Diagnosis", ru: "Terminal Diagnosis" },
             description: { en: "The doctor delivers devastating news. You have limited time left.", ru: "The doctor delivers devastating news. You have limited time left." },
             minAge: 50, maxAge: 100,
             statTriggers: { healthBelow: 20 },
             maxPerLife: 1,
             cooldown: 999,
             choices: [
-                { id: "fight", label: { en: "Fight it with everything ??", ru: "Fight it with everything ??" }, effects: { moneyDelta: -20000, healthDelta: 10, stressDelta: 25, happinessDelta: 5 } },
-                { id: "accept", label: { en: "Accept peacefully ???", ru: "Accept peacefully ???" }, effects: { happinessDelta: -5, stressDelta: -20, healthDelta: -20 } }
+                { id: "fight", label: { en: "Fight it with everything", ru: "Fight it with everything" }, effects: { moneyDelta: -20000, healthDelta: 10, stressDelta: 25, happinessDelta: 5 } },
+                { id: "accept", label: { en: "Accept peacefully", ru: "Accept peacefully" }, effects: { happinessDelta: -5, stressDelta: -20, healthDelta: -20 } }
             ]
         }
     ];

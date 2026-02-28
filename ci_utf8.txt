@@ -1,0 +1,287 @@
+﻿==========================================
+ЁЯЪА STARTING RELEASE QUALITY GATE
+==========================================
+
+тП│ Running: Duplicate Methods Check... тЭМ FAILED (9ms)
+тП│ Running: Local Script Src Verification... тЬЕ (2ms)
+тП│ Running: Placeholder Icons Check... тЭМ FAILED (26ms)
+тП│ Running: Mojibake Encoding Check... тЭМ FAILED (91ms)
+тП│ Running: Asset Integrity Validation... тЬЕ (66ms)
+тП│ Running: Director Sanity Tests... тЬЕ (57ms)
+тП│ Running: Balance Simulation Tests... тЬЕ (66ms)
+тП│ Running: General Smoke Tests... тЬЕ (308ms)
+тП│ Running: Visual Regression Playwright Tests... тЬЕ (27488ms)
+
+==========================================
+ЁЯУК RELEASE PIPELINE REPORT
+==========================================
+тЭМ Duplicate Methods Check             [9ms]
+тЬЕ Local Script Src Verification       [2ms]
+тЭМ Placeholder Icons Check             [26ms]
+тЭМ Mojibake Encoding Check             [91ms]
+тЬЕ Asset Integrity Validation          [66ms]
+тЬЕ Director Sanity Tests               [57ms]
+тЬЕ Balance Simulation Tests            [66ms]
+тЬЕ General Smoke Tests                 [308ms]
+тЬЕ Visual Regression Playwright Tests  [27488ms]
+==========================================
+node : 
+строка:1 знак:1
++ node scripts/release-
+gate.js > 
+ci_output.txt 2>&1
++ ~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~
+    + CategoryInfo     
+         : NotSpecifi  
+  ed: (:String) [],    
+ RemoteException
+    + FullyQualifiedEr 
+   rorId : NativeComm  
+  andError
+ 
+ЁЯЪи MERGE BLOCKED: 
+Critical defects found 
+in the pipeline.
+Please fix the failing 
+checks above before 
+releasing.
+
+--- FAILURE DETAILS ---
+
+[Duplicate Methods 
+Check]:
+Found duplicates:
+- js\player_core.js: 
+Duplicate method 
+`applyEffects()`
+
+[Placeholder Icons 
+Check]:
+Found placeholders:
+- 
+js\achievements.js:359 
+-> found placeholder
+- 
+js\achievements.js:488 
+-> found placeholder
+- 
+js\achievements.js:518 
+-> found placeholder
+- 
+js\achievements.js:530 
+-> found placeholder
+- js\actions.js:56 -> 
+found placeholder
+- js\actions.js:57 -> 
+found placeholder
+- js\actions.js:58 -> 
+found placeholder
+- js\actions.js:59 -> 
+found placeholder
+- js\actions.js:60 -> 
+found placeholder
+- js\actions.js:61 -> 
+found placeholder
+- js\actions.js:62 -> 
+found placeholder
+- js\actions.js:63 -> 
+found placeholder
+- js\actions.js:64 -> 
+found placeholder
+- js\actions.js:65 -> 
+found placeholder
+- js\actions.js:66 -> 
+found placeholder
+- js\actions.js:67 -> 
+found placeholder
+- js\actions.js:68 -> 
+found placeholder
+- js\actions.js:278 -> 
+found placeholder
+- js\actions.js:298 -> 
+found placeholder
+- js\actions.js:318 -> 
+found placeholder
+- js\actions.js:340 -> 
+found placeholder
+- js\actions.js:371 -> 
+found placeholder
+- js\actions.js:396 -> 
+found placeholder
+- js\actions.js:414 -> 
+found placeholder
+- js\actions.js:432 -> 
+found placeholder
+- js\actions.js:450 -> 
+found placeholder
+- js\actions.js:468 -> 
+found placeholder
+- js\actions.js:489 -> 
+found placeholder
+- js\actions.js:506 -> 
+found placeholder
+- js\actions.js:528 -> 
+found placeholder
+- js\actions.js:548 -> 
+found placeholder
+- js\actions.js:632 -> 
+found placeholder
+- js\actions.js:652 -> 
+found placeholder
+- js\actions.js:674 -> 
+found placeholder
+- js\actions.js:699 -> 
+found placeholder
+- js\actions.js:719 -> 
+found placeholder
+- js\actions.js:741 -> 
+found placeholder
+- js\actions.js:766 -> 
+found placeholder
+- js\actions.js:792 -> 
+found placeholder
+- js\actions.js:822 -> 
+found placeholder
+- js\actions.js:881 -> 
+found placeholder
+- js\actions.js:906 -> 
+found placeholder
+- js\actions.js:931 -> 
+found placeholder
+- js\actions.js:956 -> 
+found placeholder
+- js\actions.js:981 -> 
+found placeholder
+- js\actions.js:1006 
+-> found placeholder
+- js\actions.js:1031 
+-> found placeholder
+- js\actions.js:1056 
+-> found placeholder
+- js\actions.js:1086 
+-> found placeholder
+- js\actions.js:1114 
+-> found placeholder
+- js\actions.js:1145 
+-> found placeholder
+- js\actions.js:1174 
+-> found placeholder
+- js\actions.js:1204 
+-> found placeholder
+- js\actions.js:1226 
+-> found placeholder
+- js\actions.js:1248 
+-> found placeholder
+- js\actions.js:1272 
+-> found placeholder
+- js\actions.js:1300 
+-> found placeholder
+- js\actions.js:1339 
+-> found placeholder
+- js\actions.js:1359 
+-> found placeholder
+- js\actions.js:1376 
+-> found placeholder
+- js\actions.js:1394 
+-> found placeholder
+- js\actions.js:1412 
+-> found placeholder
+- js\actions.js:1432 
+-> found placeholder
+- js\actions.js:1449 
+-> found placeholder
+- js\actions.js:1466 
+-> found placeholder
+- js\actions.js:1482 
+-> found placeholder
+- js\actions.js:1501 
+-> found placeholder
+- js\actions.js:1518 
+-> found placeholder
+- js\actions.js:1554 
+-> found placeholder
+- js\actions.js:1576 
+-> found placeholder
+- js\actions.js:1593 
+-> found placeholder
+- js\actions.js:1611 
+-> found placeholder
+- js\actions.js:1628 
+-> found placeholder
+- js\actions.js:1648 
+-> found placeholder
+- js\actions.js:1665 
+-> found placeholder
+- js\actions.js:1682 
+-> found placeholder
+- js\actions.js:1718 
+-> found placeholder
+- js\actions.js:1736 
+-> found placeholder
+- js\actions.js:1753 
+-> found placeholder
+- js\actions.js:1774 
+-> found placeholder
+- js\actions.js:1801 
+-> found placeholder
+- js\actions.js:1827 
+-> found placeholder
+- js\actions.js:1848 
+-> found placeholder
+- js\actions.js:1874 
+-> found placeholder
+- js\actions.js:1898 
+-> found placeholder
+- js\actions.js:1924 
+-> found placeholder
+- js\selfdevelopment.js
+:157 -> found 
+placeholder
+- js\selfdevelopment.js
+:166 -> found 
+placeholder
+- js\selfdevelopment.js
+:176 -> found 
+placeholder
+- js\selfdevelopment.js
+:187 -> found 
+placeholder
+- js\selfdevelopment.js
+:197 -> found 
+placeholder
+- js\selfdevelopment.js
+:207 -> found 
+placeholder
+- js\selfdevelopment.js
+:224 -> found 
+placeholder
+- js\selfdevelopment.js
+:231 -> found 
+placeholder
+- js\selfdevelopment.js
+:238 -> found 
+placeholder
+- js\selfdevelopment.js
+:245 -> found 
+placeholder
+- js\selfdevelopment.js
+:252 -> found 
+placeholder
+- js\selfdevelopment.js
+:259 -> found 
+placeholder
+- js\selfdevelopment.js
+:266 -> found 
+placeholder
+
+[Mojibake Encoding 
+Check]:
+=== Encoding & i18n 
+integrity check ===
+
+
+тЪая╕П  1253 
+warning(s) found.
+

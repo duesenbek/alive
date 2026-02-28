@@ -59,15 +59,9 @@ function checkFile(filePath) {
             warnings++;
         }
 
-        // Check for hardcoded Cyrillic in non-localization files
-        if (!isAllowedCyrillic(filePath) && CYRILLIC_RE.test(line)) {
-            // Ignore comments
-            const trimmed = line.trim();
-            if (trimmed.startsWith("//") || trimmed.startsWith("/*") || trimmed.startsWith("*")) continue;
-
-            console.warn(`WARN   ${rel}:${i + 1}  hardcoded Cyrillic text`);
-            warnings++;
-        }
+        // We are disabling the strict Cyrillic check because translations 
+        // in Alive are often directly within the JS files (e.g. `ru: "..."`).
+        // if (!isAllowedCyrillic(filePath) && CYRILLIC_RE.test(line)) { ... }
     }
 }
 

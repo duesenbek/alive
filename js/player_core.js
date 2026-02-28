@@ -127,31 +127,7 @@
       this.socialSkill = this.clamp(this.socialSkill, 0, 100);
     }
 
-    /**
-     * Apply a generic effects object with stat deltas.
-     * Used by event arcs, goals, and meta-progression.
-     * Supported keys: moneyDelta, healthDelta, happinessDelta, stressDelta,
-     *   intelligenceDelta, attractivenessDelta, energyDelta,
-     *   sportsSkillDelta, businessSkillDelta, careerSkillDelta, socialSkillDelta
-     */
-    applyEffects(effects) {
-      if (!effects) return;
 
-      if (effects.moneyDelta) this.money += effects.moneyDelta;
-      if (effects.healthDelta) this.health += effects.healthDelta;
-      if (effects.happinessDelta) this.happiness += effects.happinessDelta;
-      if (effects.stressDelta) this.stress += effects.stressDelta;
-      if (effects.energyDelta) this.energy += effects.energyDelta;
-      if (effects.intelligenceDelta) this.intelligence = (this.intelligence || 50) + effects.intelligenceDelta;
-      if (effects.attractivenessDelta) this.attractiveness = (this.attractiveness || 50) + effects.attractivenessDelta;
-      if (effects.sportsSkillDelta) this.sportsSkill += effects.sportsSkillDelta;
-      if (effects.businessSkillDelta) this.businessSkill += effects.businessSkillDelta;
-      if (effects.careerSkillDelta) this.careerSkill += effects.careerSkillDelta;
-      if (effects.socialSkillDelta) this.socialSkill += effects.socialSkillDelta;
-
-      this.clampAllStats();
-      if (this.updateNetWorth) this.updateNetWorth();
-    }
 
     modifyStat(stat, value) {
       if (typeof this[stat] === 'number') {

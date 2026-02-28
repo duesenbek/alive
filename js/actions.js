@@ -11,7 +11,7 @@
     return Math.min(max, Math.max(min, n));
   }
 
-    function diminishingReturn(baseGain, currentSkill, timesUsed) {
+  function diminishingReturn(baseGain, currentSkill, timesUsed) {
     if (baseGain <= 0) return baseGain;
     const skill = clamp(currentSkill || 0, 0, 100);
     const uses = Math.max(0, timesUsed || 0);
@@ -53,19 +53,19 @@
   }
 
   const EFFECT_ICONS = {
-    moneyDelta: "??",
-    intelligenceDelta: "??",
-    healthDelta: "??",
-    happinessDelta: "??",
-    stressDelta: "??",
-    followersDelta: "??",
-    relationshipScoreDelta: "??",
-    sportsSkillDelta: "???",
-    businessSkillDelta: "??",
-    investingSkillDelta: "??",
-    careerSkillDelta: "??",
-    socialSkillDelta: "??",
-    hobbySkillDelta: "??"
+    moneyDelta: "💵",
+    intelligenceDelta: "🧠",
+    healthDelta: "❤️",
+    happinessDelta: "😊",
+    stressDelta: "😰",
+    followersDelta: "👥",
+    relationshipScoreDelta: "💖",
+    sportsSkillDelta: "⚽",
+    businessSkillDelta: "💼",
+    investingSkillDelta: "📈",
+    careerSkillDelta: "👔",
+    socialSkillDelta: "🤝",
+    hobbySkillDelta: "🎨"
   };
 
   function patchI18n() {
@@ -275,7 +275,7 @@
   const actions = [
     {
       id: "work_harder",
-      icon: "??",
+      icon: "🎓",
       titleKey: "action.work_harder.title",
       descKey: "action.work_harder.desc",
       previewEffects: [
@@ -295,7 +295,7 @@
     },
     {
       id: "call_family",
-      icon: "??",
+      icon: "🎭",
       titleKey: "action.call_family.title",
       descKey: "action.call_family.desc",
       previewEffects: [
@@ -315,7 +315,7 @@
     },
     {
       id: "visit_family",
-      icon: "??",
+      icon: "💡",
       titleKey: "action.visit_family.title",
       descKey: "action.visit_family.desc",
       previewEffects: [
@@ -337,7 +337,7 @@
     },
     {
       id: "hangout_friends",
-      icon: "??",
+      icon: "🤝",
       titleKey: "action.hangout_friends.title",
       descKey: "action.hangout_friends.desc",
       previewEffects: [
@@ -368,7 +368,7 @@
     },
     {
       id: "adopt_pet",
-      icon: "??",
+      icon: "🤝",
       titleKey: "action.adopt_pet.title",
       descKey: "action.adopt_pet.desc",
       previewEffects: [
@@ -393,7 +393,7 @@
     },
     {
       id: "walk_dog",
-      icon: "??",
+      icon: "🤝",
       titleKey: "action.walk_dog.title",
       descKey: "action.walk_dog.desc",
       previewEffects: [
@@ -411,7 +411,7 @@
     },
     {
       id: "play_with_pet",
-      icon: "??",
+      icon: "🏥",
       titleKey: "action.play_with_pet.title",
       descKey: "action.play_with_pet.desc",
       previewEffects: [
@@ -429,7 +429,7 @@
     },
     {
       id: "study",
-      icon: "??",
+      icon: "💪",
       titleKey: "action.study.title",
       descKey: "action.study.desc",
       previewEffects: [
@@ -447,7 +447,7 @@
     },
     {
       id: "train",
-      icon: "???",
+      icon: "🚀",
       titleKey: "action.train.title",
       descKey: "action.train.desc",
       previewEffects: [
@@ -465,7 +465,7 @@
     },
     {
       id: "socialize",
-      icon: "??",
+      icon: "⭐",
       titleKey: "action.socialize.title",
       descKey: "action.socialize.desc",
       previewEffects: [
@@ -486,7 +486,7 @@
     },
     {
       id: "find_partner",
-      icon: "??",
+      icon: "🚗",
       titleKey: "action.find_partner.title",
       descKey: "action.find_partner.desc",
       previewEffects: [
@@ -503,7 +503,7 @@
     },
     {
       id: "post_social",
-      icon: "??",
+      icon: "🎭",
       titleKey: "action.post_social.title",
       descKey: "action.post_social.desc",
       previewEffects: [
@@ -525,7 +525,7 @@
     },
     {
       id: "invest_stocks",
-      icon: "??",
+      icon: "🤝",
       titleKey: "action.invest_stocks.title",
       descKey: "action.invest_stocks.desc",
       previewEffects: [
@@ -545,7 +545,7 @@
     },
     {
       id: "practice_hobby",
-      icon: "??",
+      icon: "🚀",
       titleKey: "action.practice_hobby.title",
       descKey: "action.practice_hobby.desc",
       previewEffects: [
@@ -629,7 +629,7 @@
     },
     {
       id: "browse_cars",
-      icon: "??",
+      icon: "🚗",
       titleKey: "action.browse_cars.title",
       descKey: "action.browse_cars.desc",
       previewEffects: [
@@ -649,7 +649,7 @@
 
     {
       id: "start_blog",
-      icon: "??",
+      icon: "🚀",
       titleKey: "action.start_blog.title",
       descKey: "action.start_blog.desc",
       previewEffects: [
@@ -671,7 +671,7 @@
 
     {
       id: "post_content",
-      icon: "??",
+      icon: "🛠️",
       titleKey: "action.post_content.title",
       descKey: "action.post_content.desc",
       previewEffects: [
@@ -696,7 +696,7 @@
 
     {
       id: "weekend_trip",
-      icon: "??",
+      icon: "🔥",
       titleKey: "action.weekend_trip.title",
       descKey: "action.weekend_trip.desc",
       previewEffects: [
@@ -716,7 +716,7 @@
 
     {
       id: "serious_study",
-      icon: "??",
+      icon: "⭐",
       titleKey: "action.serious_study.title",
       descKey: "action.serious_study.desc",
       previewEffects: [
@@ -738,7 +738,7 @@
 
     {
       id: "date_search",
-      icon: "??",
+      icon: "🤝",
       titleKey: "action.date_search.title",
       descKey: "action.date_search.desc",
       previewEffects: [
@@ -763,7 +763,7 @@
 
     {
       id: "propose_marriage",
-      icon: "??",
+      icon: "✨",
       titleKey: "action.propose_marriage.title",
       descKey: "action.propose_marriage.desc",
       previewEffects: [
@@ -789,7 +789,7 @@
 
     {
       id: "try_for_child",
-      icon: "??",
+      icon: "✨",
       titleKey: "action.try_for_child.title",
       descKey: "action.try_for_child.desc",
       previewEffects: [
@@ -819,7 +819,7 @@
 
     {
       id: "romantic_date",
-      icon: "??",
+      icon: "🏅",
       titleKey: "action.romantic_date.title",
       descKey: "action.romantic_date.desc",
       previewEffects: [
@@ -849,7 +849,7 @@
 
     {
       id: "marriage_counseling",
-      icon: "?????",
+      icon: "💡",
       titleKey: "action.marriage_counseling.title",
       descKey: "action.marriage_counseling.desc",
       previewEffects: [
@@ -878,7 +878,7 @@
 
     {
       id: "buy_house_apartment",
-      icon: "??",
+      icon: "🏅",
       titleKey: "action.buy_house.apartment.title",
       previewEffects: [
         { type: "moneyDelta", value: "-" },
@@ -903,7 +903,7 @@
 
     {
       id: "buy_house_condo",
-      icon: "??",
+      icon: "⭐",
       titleKey: "action.buy_house.condo.title",
       previewEffects: [
         { type: "moneyDelta", value: "-" },
@@ -928,7 +928,7 @@
 
     {
       id: "buy_house_house",
-      icon: "??",
+      icon: "🎯",
       titleKey: "action.buy_house.house.title",
       previewEffects: [
         { type: "moneyDelta", value: "-" },
@@ -953,7 +953,7 @@
 
     {
       id: "buy_house_mansion",
-      icon: "??",
+      icon: "🎓",
       titleKey: "action.buy_house.mansion.title",
       previewEffects: [
         { type: "moneyDelta", value: "-" },
@@ -978,7 +978,7 @@
 
     {
       id: "buy_car_cheap",
-      icon: "??",
+      icon: "🚗",
       titleKey: "action.buy_car.cheap.title",
       previewEffects: [
         { type: "moneyDelta", value: "-" },
@@ -1003,7 +1003,7 @@
 
     {
       id: "buy_car_mid",
-      icon: "??",
+      icon: "🎓",
       titleKey: "action.buy_car.mid.title",
       previewEffects: [
         { type: "moneyDelta", value: "-" },
@@ -1028,7 +1028,7 @@
 
     {
       id: "buy_car_luxury",
-      icon: "??",
+      icon: "🎭",
       titleKey: "action.buy_car.luxury.title",
       previewEffects: [
         { type: "moneyDelta", value: "-" },
@@ -1053,7 +1053,7 @@
 
     {
       id: "buy_car_sports",
-      icon: "???",
+      icon: "⭐",
       titleKey: "action.buy_car.sports.title",
       previewEffects: [
         { type: "moneyDelta", value: "-" },
@@ -1083,7 +1083,7 @@
 
     {
       id: "call_family",
-      icon: "??",
+      icon: "🎓",
       titleKey: "action.call_family.title",
       descKey: "action.call_family.desc",
       previewEffects: [
@@ -1111,7 +1111,7 @@
 
     {
       id: "visit_family",
-      icon: "??",
+      icon: "🚀",
       titleKey: "action.visit_family.title",
       descKey: "action.visit_family.desc",
       previewEffects: [
@@ -1142,7 +1142,7 @@
 
     {
       id: "hangout_friends",
-      icon: "??",
+      icon: "🎭",
       titleKey: "action.hangout_friends.title",
       descKey: "action.hangout_friends.desc",
       previewEffects: [
@@ -1171,7 +1171,7 @@
 
     {
       id: "make_friends",
-      icon: "??",
+      icon: "🔥",
       titleKey: "action.make_friends.title",
       descKey: "action.make_friends.desc",
       previewEffects: [
@@ -1201,7 +1201,7 @@
 
     {
       id: "adopt_dog",
-      icon: "??",
+      icon: "🏠",
       titleKey: "action.adopt_dog.title",
       descKey: "action.adopt_dog.desc",
       previewEffects: [
@@ -1223,7 +1223,7 @@
 
     {
       id: "adopt_cat",
-      icon: "??",
+      icon: "🚀",
       titleKey: "action.adopt_cat.title",
       descKey: "action.adopt_cat.desc",
       previewEffects: [
@@ -1245,7 +1245,7 @@
 
     {
       id: "walk_dog",
-      icon: "??",
+      icon: "🎯",
       titleKey: "action.walk_dog.title",
       descKey: "action.walk_dog.desc",
       previewEffects: [
@@ -1269,7 +1269,7 @@
 
     {
       id: "play_with_pet",
-      icon: "??",
+      icon: "⭐",
       titleKey: "action.play_with_pet.title",
       descKey: "action.play_with_pet.desc",
       previewEffects: [
@@ -1297,7 +1297,7 @@
     // SPORTS SKILL
     {
       id: "gym_workout",
-      icon: "??",
+      icon: "🎉",
       titleKey: "action.gym_workout.title",
       descKey: "action.gym_workout.desc",
       previewEffects: [
@@ -1318,7 +1318,7 @@
     },
     {
       id: "join_sports_team",
-      icon: "?",
+      icon: "🏥",
       titleKey: "action.join_sports_team.title",
       descKey: "action.join_sports_team.desc",
       previewEffects: [
@@ -1336,7 +1336,7 @@
     },
     {
       id: "run_marathon_training",
-      icon: "??",
+      icon: "⭐",
       titleKey: "action.marathon_training.title",
       descKey: "action.marathon_training.desc",
       previewEffects: [
@@ -1356,7 +1356,7 @@
     // BUSINESS SKILL
     {
       id: "read_business_books",
-      icon: "??",
+      icon: "📈",
       titleKey: "action.read_business_books.title",
       descKey: "action.read_business_books.desc",
       previewEffects: [
@@ -1373,7 +1373,7 @@
     },
     {
       id: "attend_business_seminar",
-      icon: "??",
+      icon: "⭐",
       titleKey: "action.business_seminar.title",
       descKey: "action.business_seminar.desc",
       previewEffects: [
@@ -1391,7 +1391,7 @@
     },
     {
       id: "network_at_events",
-      icon: "??",
+      icon: "📈",
       titleKey: "action.network_events.title",
       descKey: "action.network_events.desc",
       previewEffects: [
@@ -1409,7 +1409,7 @@
     },
     {
       id: "start_side_project",
-      icon: "??",
+      icon: "⭐",
       titleKey: "action.side_project.title",
       descKey: "action.side_project.desc",
       previewEffects: [
@@ -1429,7 +1429,7 @@
     // INVESTING SKILL
     {
       id: "study_investing",
-      icon: "??",
+      icon: "🚗",
       titleKey: "action.study_investing.title",
       descKey: "action.study_investing.desc",
       previewEffects: [
@@ -1446,7 +1446,7 @@
     },
     {
       id: "follow_markets",
-      icon: "??",
+      icon: "🎓",
       titleKey: "action.follow_markets.title",
       descKey: "action.follow_markets.desc",
       previewEffects: [
@@ -1463,7 +1463,7 @@
     },
     {
       id: "paper_trading",
-      icon: "??",
+      icon: "🏅",
       titleKey: "action.paper_trading.title",
       descKey: "action.paper_trading.desc",
       previewEffects: [
@@ -1479,7 +1479,7 @@
     },
     {
       id: "investment_course",
-      icon: "??",
+      icon: "🛠️",
       titleKey: "action.investment_course.title",
       descKey: "action.investment_course.desc",
       previewEffects: [
@@ -1498,7 +1498,7 @@
     // CAREER SKILL
     {
       id: "professional_development",
-      icon: "??",
+      icon: "🛠️",
       titleKey: "action.professional_dev.title",
       descKey: "action.professional_dev.desc",
       previewEffects: [
@@ -1515,7 +1515,7 @@
     },
     {
       id: "get_certification",
-      icon: "??",
+      icon: "🛠️",
       titleKey: "action.get_certification.title",
       descKey: "action.get_certification.desc",
       previewEffects: [
@@ -1533,7 +1533,7 @@
     },
     {
       id: "mentor_junior",
-      icon: "?????",
+      icon: "⭐",
       titleKey: "action.mentor_junior.title",
       descKey: "action.mentor_junior.desc",
       previewEffects: [
@@ -1551,7 +1551,7 @@
     },
     {
       id: "work_overtime",
-      icon: "??",
+      icon: "🚗",
       titleKey: "action.work_overtime.title",
       descKey: "action.work_overtime.desc",
       previewEffects: [
@@ -1573,7 +1573,7 @@
     // SOCIAL SKILL
     {
       id: "join_club",
-      icon: "??",
+      icon: "💡",
       titleKey: "action.join_club.title",
       descKey: "action.join_club.desc",
       previewEffects: [
@@ -1590,7 +1590,7 @@
     },
     {
       id: "public_speaking",
-      icon: "???",
+      icon: "🏆",
       titleKey: "action.public_speaking.title",
       descKey: "action.public_speaking.desc",
       previewEffects: [
@@ -1608,7 +1608,7 @@
     },
     {
       id: "volunteer_work",
-      icon: "??",
+      icon: "🏠",
       titleKey: "action.volunteer_work.title",
       descKey: "action.volunteer_work.desc",
       previewEffects: [
@@ -1625,7 +1625,7 @@
     },
     {
       id: "host_party",
-      icon: "??",
+      icon: "🎉",
       titleKey: "action.host_party.title",
       descKey: "action.host_party.desc",
       previewEffects: [
@@ -1645,7 +1645,7 @@
     // HOBBY SKILLS
     {
       id: "learn_music",
-      icon: "??",
+      icon: "🎯",
       titleKey: "action.learn_music.title",
       descKey: "action.learn_music.desc",
       previewEffects: [
@@ -1662,7 +1662,7 @@
     },
     {
       id: "learn_art",
-      icon: "??",
+      icon: "💪",
       titleKey: "action.learn_art.title",
       descKey: "action.learn_art.desc",
       previewEffects: [
@@ -1679,7 +1679,7 @@
     },
     {
       id: "learn_coding",
-      icon: "??",
+      icon: "🎭",
       titleKey: "action.learn_coding.title",
       descKey: "action.learn_coding.desc",
       previewEffects: [
@@ -1697,7 +1697,7 @@
     },
     {
       id: "learn_cooking",
-      icon: "?????",
+      icon: "🎓",
       titleKey: "action.learn_cooking.title",
       descKey: "action.learn_cooking.desc",
       previewEffects: [
@@ -1715,7 +1715,7 @@
     },
     {
       id: "learn_gaming",
-      icon: "??",
+      icon: "🌟",
       titleKey: "action.learn_gaming.title",
       descKey: "action.learn_gaming.desc",
       previewEffects: [
@@ -1733,7 +1733,7 @@
     },
     {
       id: "learn_photography",
-      icon: "??",
+      icon: "✨",
       titleKey: "action.learn_photography.title",
       descKey: "action.learn_photography.desc",
       previewEffects: [
@@ -1750,7 +1750,7 @@
     },
     {
       id: "learn_writing",
-      icon: "??",
+      icon: "🛠️",
       titleKey: "action.learn_writing.title",
       descKey: "action.learn_writing.desc",
       previewEffects: [
@@ -1771,7 +1771,7 @@
     // ============================================================================
     {
       id: "take_vacation",
-      icon: "???",
+      icon: "🎉",
       titleKey: "action.take_vacation.title",
       descKey: "action.take_vacation.desc",
       previewEffects: [
@@ -1798,7 +1798,7 @@
     },
     {
       id: "see_therapist",
-      icon: "??",
+      icon: "💡",
       titleKey: "action.see_therapist.title",
       descKey: "action.see_therapist.desc",
       previewEffects: [
@@ -1824,7 +1824,7 @@
     },
     {
       id: "take_nap",
-      icon: "??",
+      icon: "🎯",
       titleKey: "action.take_nap.title",
       descKey: "action.take_nap.desc",
       previewEffects: [
@@ -1845,7 +1845,7 @@
     },
     {
       id: "go_shopping",
-      icon: "???",
+      icon: "🚗",
       titleKey: "action.go_shopping.title",
       descKey: "action.go_shopping.desc",
       previewEffects: [
@@ -1871,7 +1871,7 @@
     },
     {
       id: "stay_home_relax",
-      icon: "??",
+      icon: "💡",
       titleKey: "action.stay_home_relax.title",
       descKey: "action.stay_home_relax.desc",
       previewEffects: [
@@ -1895,7 +1895,7 @@
     },
     {
       id: "throw_party",
-      icon: "??",
+      icon: "💡",
       titleKey: "action.throw_party.title",
       descKey: "action.throw_party.desc",
       previewEffects: [
@@ -1921,7 +1921,7 @@
     },
     {
       id: "spa_day",
-      icon: "??",
+      icon: "🏥",
       titleKey: "action.spa_day.title",
       descKey: "action.spa_day.desc",
       previewEffects: [

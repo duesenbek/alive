@@ -241,7 +241,7 @@
     },
     {
       id: "career_10_years",
-      icon: "?",
+      icon: "🛠️",
       nameKey: "ach.career_10_years.name",
       descKey: "ach.career_10_years.desc",
       category: "career",
@@ -318,7 +318,7 @@
     },
     {
       id: "children_3",
-      icon: "???????????",
+      icon: "🌟",
       nameKey: "ach.children_3.name",
       descKey: "ach.children_3.desc",
       category: "family",
@@ -356,7 +356,7 @@
     },
     {
       id: "cities_5",
-      icon: "???",
+      icon: "📈",
       nameKey: "ach.cities_5.name",
       descKey: "ach.cities_5.desc",
       category: "travel",
@@ -430,7 +430,7 @@
     },
     {
       id: "attractiveness_90",
-      icon: "?",
+      icon: "🤝",
       nameKey: "ach.attractiveness_90.name",
       descKey: "ach.attractiveness_90.desc",
       category: "stats",
@@ -438,7 +438,7 @@
     },
     {
       id: "all_stats_70",
-      icon: "?",
+      icon: "🏠",
       nameKey: "ach.all_stats_70.name",
       descKey: "ach.all_stats_70.desc",
       category: "stats",
@@ -474,7 +474,7 @@
     },
     {
       id: "crypto_investor",
-      icon: "?",
+      icon: "✨",
       nameKey: "ach.crypto_investor.name",
       descKey: "ach.crypto_investor.desc",
       category: "investment",
@@ -485,7 +485,7 @@
     },
     {
       id: "real_estate_investor",
-      icon: "???",
+      icon: "💡",
       nameKey: "ach.real_estate_investor.name",
       descKey: "ach.real_estate_investor.desc",
       category: "investment",
@@ -515,7 +515,7 @@
     },
     {
       id: "survivor",
-      icon: "???",
+      icon: "🎯",
       nameKey: "ach.survivor.name",
       descKey: "ach.survivor.desc",
       category: "special",
@@ -527,7 +527,7 @@
     },
     {
       id: "bounce_back",
-      icon: "???",
+      icon: "🌟",
       nameKey: "ach.bounce_back.name",
       descKey: "ach.bounce_back.desc",
       category: "special",
