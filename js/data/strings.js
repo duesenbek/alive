@@ -157,7 +157,7 @@
     "career.available_jobs": "Job Listings",
     "job.req": "Requirements",
     "job.apply": "Apply Now",
-    "job.hired": "Hired!",
+    "job.hired": "You are now a",
     "business.start": "Start Business",
     "business.valuation": "Valuation",
     "business.monthly_revenue": "Monthly Revenue",
@@ -1341,7 +1341,12 @@
     "invest.risk.very_high": "Very High Risk",
     "selfdev.next_steps": "Next Steps",
     "selfdev.requirements": "Requirements",
-    "selfdev.cost": "Cost"
+    "selfdev.cost": "Cost",
+    "city.none_desc": "No description available for {city}",
+    "city.node_desc": "No description available for {city}",
+    "ui.please_wait": "Please wait...",
+    "business.empire_desc": "Build your empire from the ground up",
+    "business.choose_path": "Choose Your Path"
 },
     ru: {
     "ui.gameTitle": "Alive",
@@ -1499,7 +1504,7 @@
     "career.available_jobs": "Вакансии",
     "job.req": "Требования",
     "job.apply": "Подать заявку",
-    "job.hired": "Принят!",
+    "job.hired": "Теперь вы",
     "business.start": "Начать бизнес",
     "business.valuation": "Оценка",
     "business.monthly_revenue": "Месячный доход",
@@ -2611,7 +2616,12 @@
     "invest.risk.very_high": "Очень высокий",
     "selfdev.next_steps": "Следующие шаги",
     "selfdev.requirements": "Требования",
-    "selfdev.cost": "Стоимость"
+    "selfdev.cost": "Стоимость",
+    "city.none_desc": "Нет описания для {city}",
+    "city.node_desc": "Нет описания для {city}",
+    "ui.please_wait": "Пожалуйста, подождите...",
+    "business.empire_desc": "Постройте свою империю с нуля",
+    "business.choose_path": "Выберите свой путь"
 }
   };
 })(window);

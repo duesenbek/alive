@@ -886,7 +886,7 @@
       const content = el("div", "cityContent");
 
       // Description
-      const desc = el("div", "cityDesc", city.description ? t("city.desc." + cityId) : t("city.node_desc", { city: getCityDisplayName(cityId) }));
+      const desc = el("div", "cityDesc", city.description ? t("city.desc." + cityId) : t("city.node_desc", { city: getCityDisplayName(cityId) }) || t("city.none_desc", { city: getCityDisplayName(cityId) }));
       // Fallback if description key is same as output
       if (desc.textContent === "city.desc." + cityId) {
         desc.textContent = city.description?.en || `Welcome to ${getCityDisplayName(cityId)}. A great place to live.`;
@@ -978,7 +978,7 @@
         if (Alive.relationships && Alive.relationships.spendFamilyTime) {
           const res = Alive.relationships.spendFamilyTime(p, person);
           if (res.success) {
-            this.showToast(t("relationships.spentTime", { name: person.name }), "success");
+            this.showToast(t("relationships.spendTime", { name: person.name }), "success");
             overlay.remove();
             this.render(); // Refresh UI to update bars
 
@@ -3149,7 +3149,7 @@
       hamburger.onclick = () => {
         // Prevent menu toggle during game transitions
         if (this.game?.isProcessingYear) {
-          this.showToast("Please wait...");
+          this.showToast(t("ui.please_wait") || "Please wait...");
           return;
         }
         this.isMenuOpen = !this.isMenuOpen;
@@ -4619,12 +4619,12 @@
         empty.innerHTML = `
           <div class="selfDevEmptyIcon"><i class="ph ph-rocket"></i></div>
           <div class="selfDevEmptyTitle">${t("business.start")}</div>
-          <div class="selfDevEmptyDesc">Build your empire from the ground up</div>
+          <div class="selfDevEmptyDesc">${t("business.empire_desc") || "Build your empire from the ground up"}</div>
         `;
         container.appendChild(empty);
 
         // Business Types
-        const typesTitle = el("h3", "statusCardTitle", "Choose Your Path");
+        const typesTitle = el("h3", "statusCardTitle", t("business.choose_path") || "Choose Your Path");
         typesTitle.style.margin = "24px 0 16px";
         container.appendChild(typesTitle);
 

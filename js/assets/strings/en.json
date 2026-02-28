@@ -1299,5 +1299,11 @@
   "selfdev.next_steps": "Next Steps",
   "selfdev.progress": "Progress",
   "selfdev.requirements": "Requirements",
-  "selfdev.cost": "Cost"
+  "selfdev.cost": "Cost",
+  "city.none_desc": "No description available for {city}",
+  "city.node_desc": "No description available for {city}",
+  "ui.please_wait": "Please wait...",
+  "job.hired": "You are now a",
+  "business.empire_desc": "Build your empire from the ground up",
+  "business.choose_path": "Choose Your Path"
 }
