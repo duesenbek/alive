@@ -35,6 +35,9 @@
       baseTexts = global.Alive.strings[currentLanguage];
     }
 
+    // Apply immediately so synchronous initialization doesn't miss base keys
+    texts = { ...baseTexts, ...texts };
+
     try {
       // Add cache buster to avoid stale strings during dev
       const response = await fetch(`js/assets/strings/${currentLanguage}.json?v=${Date.now()}`);
@@ -46,7 +49,6 @@
 
     } catch (e) {
       console.warn("[i18n] Error loading strings from JSON, falling back to bundled:", e);
-      texts = baseTexts;
       if (Object.keys(texts).length > 0) {
         loaded = true;
         console.log(`[i18n] Loaded ${Object.keys(texts).length} keys from bundled source.`);
