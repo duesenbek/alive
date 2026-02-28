@@ -3647,7 +3647,7 @@
       goals.forEach(g => {
         const item = el("div", "goalItem " + (g.done ? "done" : ""));
         item.innerHTML = `
-          <div class="goalCheck">${g.done ? "✕" : "❌"}</div>
+          <div class="goalCheck">${g.done ? "✓" : "❌"}</div>
           <div class="goalLabel">${t(g.label)}</div>
         `;
         list.appendChild(item);
@@ -4389,7 +4389,7 @@
 
         const indicator = el("div", "progressStepIndicator");
         const dot = el("div", "progressStepDot" + (isCompleted ? " completed" : isCurrent ? " current" : " locked"));
-        dot.textContent = isCompleted ? "✕" : (index + 1);
+        dot.textContent = isCompleted ? "✓" : (index + 1);
         indicator.appendChild(dot);
 
         if (index < stages.length - 1) {
@@ -4509,7 +4509,7 @@
         }
 
         const dot = el("div", "careerLevelDot" + (isCompleted ? " completed" : isCurrent ? " current" : " locked"));
-        dot.textContent = isCompleted ? "✕" : (index + 1);
+        dot.textContent = isCompleted ? "✓" : (index + 1);
         levelEl.appendChild(dot);
 
         const label = el("div", "careerLevelLabel" + (isCurrent ? " current" : ""), t(level.nameKey));

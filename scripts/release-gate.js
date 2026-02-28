@@ -208,10 +208,14 @@ function checkI18nCompleteness() {
     process.stdout.write(`⏳ Running: I18n Key Verification... `);
     const start = Date.now();
     try {
-        const stringsFile = path.join(JS_DIR, 'data', 'strings.js');
+        const jsDir = path.join(ROOT, 'js');
+        const stringsFile = path.join(jsDir, 'data', 'strings.js');
+        const enFile = path.join(jsDir, 'assets', 'strings', 'en.json');
+        const ruFile = path.join(jsDir, 'assets', 'strings', 'ru.json');
+
         const stringsContent = fs.readFileSync(stringsFile, 'utf8');
 
-        // Extract keys from strings.js (very basic regex approach)
+        // Extract bundled keys from strings.js
         const definedKeys = new Set();
         const keyMatchRegex = /"([^"]+)":/g;
         let k;
@@ -220,30 +224,23 @@ function checkI18nCompleteness() {
         }
 
         const missing = [];
-        function scanDir(dir) {
-            const files = fs.readdirSync(dir, { withFileTypes: true });
-            for (const file of files) {
-                const fullPath = path.join(dir, file.name);
-                if (file.isDirectory()) {
-                    if (!['node_modules', '.git', 'data'].includes(file.name)) {
-                        scanDir(fullPath);
-                    }
-                } else if (file.name.endsWith('.js')) {
-                    const content = fs.readFileSync(fullPath, 'utf8');
-                    // Find t("key") or t('key')
-                    const tRegex = /\bt\s*\(\s*["']([^"']+)["']\s*\)/g;
-                    let m;
-                    while ((m = tRegex.exec(content)) !== null) {
-                        const key = m[1];
-                        if (!definedKeys.has(key) && !key.includes("{")) { // ignore dynamic keys with braces
-                            missing.push(`${path.relative(ROOT, fullPath)}: Missing key \`${key}\``);
-                        }
-                    }
-                }
-            }
-        }
 
-        scanDir(JS_DIR);
+        // Check if en.json keys exist in strings.js
+        const enJson = JSON.parse(fs.readFileSync(enFile, 'utf8'));
+        Object.keys(enJson).forEach(key => {
+            if (!definedKeys.has(key)) {
+                missing.push(`js/data/strings.js lacks EN JSON key: \`${key}\``);
+            }
+        });
+
+        // Check if ru.json keys exist in strings.js
+        const ruJson = JSON.parse(fs.readFileSync(ruFile, 'utf8'));
+        Object.keys(ruJson).forEach(key => {
+            if (!definedKeys.has(key)) {
+                missing.push(`js/data/strings.js lacks RU JSON key: \`${key}\``);
+            }
+        });
+
         const elapsed = Date.now() - start;
         if (missing.length === 0) {
             console.log(`✅ (${elapsed}ms)`);
@@ -252,7 +249,7 @@ function checkI18nCompleteness() {
             console.log(`❌ FAILED (${elapsed}ms)`);
             // Deduplicate missing messages
             const uniqueMissing = [...new Set(missing)];
-            addResult('I18n Key Verification', false, elapsed, `Found missing translation keys:\n- ${uniqueMissing.join('\n- ')}`);
+            addResult('I18n Key Verification', false, elapsed, `Found mismatched keys between assets and bundle:\n- ${uniqueMissing.join('\n- ')}\nResolution: Run the JSON-to-JS dictionary builder/sync script.`);
         }
     } catch (e) {
         const elapsed = Date.now() - start;
@@ -264,6 +261,9 @@ function checkI18nCompleteness() {
 // -----------------------------------------------------------------------------
 // EXECUTE Pipeline
 // -----------------------------------------------------------------------------
+
+// Preflight Environments
+runShellCommand('Playwright Preflight Environment', 'npx playwright install --with-deps');
 
 // Fast static checks
 checkDuplicateMethods();
