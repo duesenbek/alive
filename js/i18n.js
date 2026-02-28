@@ -30,29 +30,32 @@
 
     console.log(`[i18n] Loading language: ${currentLanguage}`);
 
-    // Robustness: Check bundled strings first to avoid fetch/local file issues
+    let baseTexts = {};
     if (global.Alive && global.Alive.strings && global.Alive.strings[currentLanguage]) {
-      texts = global.Alive.strings[currentLanguage];
-      loaded = true;
-      console.log(`[i18n] Loaded ${Object.keys(texts).length} keys from bundled source.`);
-      global.dispatchEvent(new CustomEvent("alive:languageChanged", { detail: { lang: currentLanguage } }));
-      return;
+      baseTexts = global.Alive.strings[currentLanguage];
     }
 
     try {
       // Add cache buster to avoid stale strings during dev
       const response = await fetch(`js/assets/strings/${currentLanguage}.json?v=${Date.now()}`);
       if (!response.ok) throw new Error("Failed to load strings");
-      texts = await response.json();
+      const jsonTexts = await response.json();
+      texts = { ...baseTexts, ...jsonTexts };
       loaded = true;
-      console.log(`[i18n] Loaded ${Object.keys(texts).length} keys.`);
-
-      // Notify system
-      global.dispatchEvent(new CustomEvent("alive:languageChanged", { detail: { lang: currentLanguage } }));
+      console.log(`[i18n] Loaded ${Object.keys(texts).length} keys (merged JSON over bundled).`);
 
     } catch (e) {
-      console.error("[i18n] Error loading strings:", e);
-      // Fallback?
+      console.warn("[i18n] Error loading strings from JSON, falling back to bundled:", e);
+      texts = baseTexts;
+      if (Object.keys(texts).length > 0) {
+        loaded = true;
+        console.log(`[i18n] Loaded ${Object.keys(texts).length} keys from bundled source.`);
+      }
+    }
+
+    if (loaded) {
+      // Notify system
+      global.dispatchEvent(new CustomEvent("alive:languageChanged", { detail: { lang: currentLanguage } }));
     }
   }
 
