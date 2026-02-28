@@ -228,9 +228,9 @@
       ? Alive.AssetResolver.resolveBuildingImage(housingId)
       : "";
 
-    // Data lookup for emoji (still goes through Assets directly)
-    const b = Alive.Assets && Alive.Assets.getBuildingById
-      ? Alive.Assets.getBuildingById(housingId)
+    // Data lookup for emoji (goes through the normalized resolver)
+    const b = Alive.AssetResolver
+      ? Alive.AssetResolver.resolveBuilding(housingId)
       : null;
 
     let emoji = "🏠";
@@ -252,9 +252,9 @@
       ? Alive.AssetResolver.resolveTransportImage(carId)
       : "";
 
-    // Data lookup for emoji (still goes through Assets directly)
-    const v = Alive.Assets && Alive.Assets.getVehicleById
-      ? Alive.Assets.getVehicleById(carId)
+    // Data lookup for emoji
+    const v = Alive.AssetResolver
+      ? Alive.AssetResolver.resolveTransport(carId)
       : null;
 
     let emoji = "🚗";
@@ -2653,7 +2653,7 @@
         <div class="assetsRow">
           <div class="assetsLeft">
             <div class="assetsLabel">${t("assets.current")}</div>
-            <div class="assetsValue">${currentCar ? (Alive.Assets?.getVehicleById(currentCar)?.name || currentCar) : t("assets.none")}</div>
+            <div class="assetsValue">${currentCar ? (Alive.AssetResolver?.resolveTransport(currentCar)?.name || currentCar) : t("assets.none")}</div>
           </div>
           <div class="assetsRight">
             <div class="assetsPrice">${formatMoney(currentCarValue)}</div>

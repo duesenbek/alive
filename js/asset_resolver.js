@@ -130,6 +130,30 @@
         return img;
     }
 
+    // ── Unified Object Resolvers ───────────────────────────────────────────
+
+    /**
+     * Resolve a building object natively by its ID.
+     * @param {string} id - Building ID (e.g. "building_1" or "house_1")
+     * @returns {object|null} Building object
+     */
+    function resolveBuilding(id) {
+        if (!id) return null;
+        const { id: normalizedId } = normalizeId(id, "building_");
+        return Alive.Assets && Alive.Assets.getBuildingById ? Alive.Assets.getBuildingById(normalizedId) : null;
+    }
+
+    /**
+     * Resolve a transport object natively by its ID.
+     * @param {string} id - Transport ID (e.g. "transport_1" or "vehicle_1")
+     * @returns {object|null} Vehicle object
+     */
+    function resolveTransport(id) {
+        if (!id) return null;
+        const { id: normalizedId } = normalizeId(id, "transport_");
+        return Alive.Assets && Alive.Assets.getVehicleById ? Alive.Assets.getVehicleById(normalizedId) : null;
+    }
+
     // ── Export ─────────────────────────────────────────────────────────────
 
     Alive.AssetResolver = {
@@ -137,6 +161,9 @@
         resolveBuildingImage,
         resolveTransportImage,
         resolveCharacterImage,
+
+        resolveBuilding,
+        resolveTransport,
 
         // Backward-compatible aliases
         buildingImage: resolveBuildingImage,

@@ -1084,5 +1084,6 @@
   "ui.please_wait": "Пожалуйста, подождите...",
   "job.hired": "Теперь вы",
   "business.empire_desc": "Постройте свою империю с нуля",
-  "business.choose_path": "Выберите свой путь"
+  "business.choose_path": "Выберите свой путь",
+  "ui.self_improvement": "Саморазвитие"
 }

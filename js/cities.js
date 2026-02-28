@@ -391,8 +391,8 @@
 
     // Check if buildingId is provided and valid (it could be "apartment" legacy string or ID)
     // If it's a new ID, we look it up.
-    if (Alive.Assets && Alive.Assets.getBuildingById) {
-      const building = Alive.Assets.getBuildingById(buildingId);
+    if (Alive.AssetResolver && Alive.AssetResolver.resolveBuilding) {
+      const building = Alive.AssetResolver.resolveBuilding(buildingId);
       if (building) {
         // Assuming monthly rent is ~0.8% of value if not specified
         rent = Math.round(building.price * 0.008);
@@ -424,10 +424,10 @@
     const city = getCityById(cityId);
     if (!city || !city.availableBuildingIds) return [];
 
-    if (!Alive.Assets || !Alive.Assets.getBuildingById) return [];
+    if (!Alive.AssetResolver || !Alive.AssetResolver.resolveBuilding) return [];
 
     return city.availableBuildingIds.map(id => {
-      const b = Alive.Assets.getBuildingById(id);
+      const b = Alive.AssetResolver.resolveBuilding(id);
       if (!b) return null;
       // Adjust price by city multiplier? User said "Deduct its price...".
       // Usually real estate varies by city.
@@ -444,10 +444,10 @@
     const city = getCityById(cityId);
     if (!city || !city.availableVehicleIds) return [];
 
-    if (!Alive.Assets || !Alive.Assets.getVehicleById) return [];
+    if (!Alive.AssetResolver || !Alive.AssetResolver.resolveTransport) return [];
 
     return city.availableVehicleIds.map(id => {
-      const v = Alive.Assets.getVehicleById(id);
+      const v = Alive.AssetResolver.resolveTransport(id);
       if (!v) return null;
       // Cars might be slightly more expensive in expensive cities (taxes/shipping)
       return {
